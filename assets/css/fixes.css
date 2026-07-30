@@ -1,0 +1,25 @@
+
+/* Shared multi-page and accessibility fixes */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 3px solid rgba(231, 34, 47, .4) !important;
+  outline-offset: 3px;
+}
+button { font: inherit; }
+.icon-btn { background: transparent; }
+#return-to-top { border: 0; }
+.form-message { min-height: 24px; margin-top: 8px; font-size: 13px; }
+.form-message.success { color: #146c43; }
+.form-message.error { color: #b02a37; }
+.page-placeholder { min-height: 62vh; padding: 170px 0 100px; text-align: center; }
+.page-placeholder .placeholder-box { max-width: 780px; margin: 0 auto; padding: 50px 30px; border: 1px solid var(--border-color); border-radius: 24px; background: rgba(255,255,255,.94); }
+.bg-wrapper::before {
+  pointer-events: none;
+  z-index: 0;
+}
+.page-placeholder h1 { font-family: "Rajdhani", sans-serif; font-size: clamp(42px, 7vw, 76px); font-weight: 700; color: #1d1d1f; }
+.page-placeholder p { max-width: 610px; margin: 15px auto 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
