@@ -20,3 +20,5 @@ Open `http://localhost:5500/`.
 - Back-to-home links on placeholder pages corrected.
 
 The Products, Solutions, Insights and Contact pages remain placeholders until their designs are supplied.
+# Econiya
+Econiya website in html,css and js 
