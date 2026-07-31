@@ -479,9 +479,103 @@ function initVantaHeroDots() {
   );
 }
 
+function initGlobalButtonAnimations() {
+  /*
+   * Apply the Who We Are-style animation to ordinary
+   * Bootstrap buttons without manually changing every
+   * HTML button.
+   */
+  const buttons = document.querySelectorAll(
+    "a.btn, button.btn"
+  );
+
+  buttons.forEach((button) => {
+    /*
+     * Exclude controls that should remain icon-only or
+     * already have their own custom animation.
+     */
+    if (
+      button.matches(
+        [
+          ".econ-who-button",
+          ".icon-btn",
+          ".navbar-toggler",
+          "#return-to-top",
+          ".product-prev",
+          ".product-next",
+          ".story-prev",
+          ".story-next"
+        ].join(",")
+      )
+    ) {
+      return;
+    }
+
+    if (button.dataset.animationReady === "true") {
+      return;
+    }
+
+    /*
+     * Read only the direct text inside the button.
+     * Existing icons are preserved.
+     */
+    const textNodes = Array.from(button.childNodes).filter(
+      (node) =>
+        node.nodeType === Node.TEXT_NODE &&
+        node.textContent.trim()
+    );
+
+    const buttonText = textNodes
+      .map((node) => node.textContent.trim())
+      .join(" ")
+      .trim();
+
+    /*
+     * Skip buttons that do not contain direct text.
+     */
+    if (!buttonText) {
+      return;
+    }
+
+    textNodes.forEach((node) => {
+      node.remove();
+    });
+
+    const textWrap = document.createElement("span");
+    textWrap.className = "universal-button-text-wrap";
+
+    const firstText = document.createElement("span");
+    firstText.className =
+      "universal-button-text universal-button-text-one";
+    firstText.textContent = buttonText;
+
+    const secondText = document.createElement("span");
+    secondText.className =
+      "universal-button-text universal-button-text-two";
+    secondText.textContent = buttonText;
+
+    textWrap.append(firstText, secondText);
+
+    /*
+     * Put the animated text before the existing arrow icon.
+     */
+    button.insertBefore(textWrap, button.firstChild);
+
+    const overlay = document.createElement("span");
+    overlay.className = "universal-button-overlay";
+    overlay.setAttribute("aria-hidden", "true");
+
+    button.appendChild(overlay);
+
+    button.classList.add("universal-animated-btn");
+    button.dataset.animationReady = "true";
+  });
+}
+
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards();  initVantaHeroDots();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards();  initVantaHeroDots();  initGlobalButtonAnimations();
+
 
 
 

@@ -1653,42 +1653,98 @@ header .nav-link svg{
     }
 }
 
-/*------- Scroll to Top Style Start -------*/
- #return-to-top {
-   position: absolute;
-   top: -22px;
-   right: 70px;
-   background: var(--primary);
-   width: 40px;
-   height: 40px;
-   display: block;
-   text-decoration: none;
-   -webkit-border-radius: 35px;
-   -moz-border-radius: 35px;
-   border-radius: 35px;
-   -webkit-transition: all 0.3s linear;
-   -moz-transition: all 0.3s ease;
-   -ms-transition: all 0.3s ease;
-   -o-transition: all 0.3s ease;
-   transition: all 0.3s ease;
+/* =========================================================
+   FIXED SCROLL-TO-TOP BUTTON
+========================================================= */
+
+#return-to-top {
+  position: absolute;
+  top: -22px;
+  right: 70px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  color: #ffffff;
+  background: var(--primary);
+
+  border: 0;
+  border-radius: 50%;
+
+  text-decoration: none;
+  overflow: hidden;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
- #return-to-top i {
-   color: #fff;
-   margin: 0;
-   position: relative;
-   left: 10px;
-   top: 8px;
-   font-size: 19px;
-   -webkit-transition: all 0.3s ease;
-   -moz-transition: all 0.3s ease;
-   -ms-transition: all 0.3s ease;
-   -o-transition: all 0.3s ease;
-   transition: all 0.3s ease;
+
+#return-to-top i {
+  position: static;
+
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 1;
+
+  /*
+   * Reset the old left/top offsets and generic
+   * button-arrow transformations.
+   */
+  inset: auto;
+  transform: none;
+
+  transition:
+    transform 0.3s ease;
 }
- #return-to-top:hover {
-   background: var(--dark-red);
+
+#return-to-top:hover {
+  color: #ffffff;
+  background: var(--dark-red);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(123, 37, 34, 0.25);
 }
- 
+
+#return-to-top:hover i {
+  transform: translateY(-2px);
+}
+
+/*
+ * Strong reset in case a generic .btn i rule
+ * affects this icon.
+ */
+.btn#return-to-top i,
+#return-to-top.btn:hover i {
+  left: auto;
+  top: auto;
+  transform: none;
+}
+
+#return-to-top.btn:hover i {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767.98px) {
+  #return-to-top {
+    right: 20px;
+
+    width: 42px;
+    height: 42px;
+  }
+}
 
 
 /*==========================================
@@ -4914,5 +4970,226 @@ line-height:28px;
 @media (prefers-reduced-motion: reduce) {
   .vanta-dots-hero .vanta-canvas {
     display: none !important;
+  }
+}
+
+
+/* =========================================================
+   GLOBAL BUTTON ANIMATION
+   Matches the Who We Are Explore More interaction
+========================================================= */
+
+.universal-animated-btn {
+  --button-main-color: var(--primary);
+  --button-hover-color: var(--primary);
+  --button-overlay-color: #ffffff;
+  --button-hover-text: var(--primary);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Keep content above the animated overlay */
+
+.universal-animated-btn > *:not(.universal-button-overlay) {
+  position: relative;
+  z-index: 3;
+}
+
+/* Text viewport */
+
+.universal-button-text-wrap {
+  position: relative;
+  z-index: 3;
+
+  display: inline-block;
+  min-width: max-content;
+  height: 20px;
+  overflow: hidden;
+}
+
+/* Both text copies */
+
+.universal-button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: max-content;
+  min-width: 100%;
+
+  line-height: 20px;
+  white-space: nowrap;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.universal-button-text-one {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: translateY(0);
+}
+
+.universal-button-text-two {
+  top: 0;
+  left: 0;
+  transform: translateY(110%);
+}
+/* Sliding background */
+
+.universal-button-overlay {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  pointer-events: none;
+  background: var(--button-overlay-color);
+
+  transform: translateY(105%);
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover animation */
+
+.universal-animated-btn:hover {
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+.universal-animated-btn:hover .universal-button-text-one {
+  transform: translateY(-110%);
+}
+
+.universal-animated-btn:hover .universal-button-text-two {
+  transform: translateY(0);
+}
+
+.universal-animated-btn:hover .universal-button-overlay {
+  transform: translateY(0);
+}
+
+/* Arrow movement */
+
+.universal-animated-btn > i,
+.universal-animated-btn > svg,
+.universal-animated-btn .bi {
+  position: relative;
+  z-index: 3;
+
+  transition:
+    color 0.35s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.universal-animated-btn:hover > i,
+.universal-animated-btn:hover > svg,
+.universal-animated-btn:hover .bi {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   PRIMARY RED BUTTONS
+========================================================= */
+
+.btn-primary.universal-animated-btn {
+  --button-overlay-color: #ffffff;
+  --button-hover-text: var(--primary);
+  --button-hover-color: var(--primary);
+
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary.universal-animated-btn:hover,
+.btn-primary.universal-animated-btn:focus,
+.btn-primary.universal-animated-btn:active {
+  color: var(--primary);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   OUTLINE BUTTONS
+========================================================= */
+
+.btn-outline.universal-animated-btn {
+  --button-overlay-color: var(--primary);
+  --button-hover-text: #ffffff;
+  --button-hover-color: var(--primary);
+
+  color: #222020;
+  background: transparent;
+}
+
+.btn-outline.universal-animated-btn:hover,
+.btn-outline.universal-animated-btn:focus {
+  color: #ffffff;
+  background: transparent;
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   WHITE BUTTONS
+========================================================= */
+
+.btn-white.universal-animated-btn {
+  --button-overlay-color: var(--primary);
+  --button-hover-text: #ffffff;
+  --button-hover-color: #ffffff;
+
+  color: var(--primary);
+  background: #ffffff;
+}
+
+.btn-white.universal-animated-btn:hover {
+  color: #ffffff;
+  background: #ffffff;
+}
+
+/* Newsletter submit button */
+
+.newsletter-form .universal-animated-btn {
+  flex-shrink: 0;
+}
+
+/* Do not allow the universal animation to affect scroll-to-top */
+
+#return-to-top.universal-animated-btn {
+  transform: none;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .universal-animated-btn,
+  .universal-button-text,
+  .universal-button-overlay,
+  .universal-animated-btn > i,
+  .universal-animated-btn > svg {
+    transition: none;
+  }
+
+  .universal-button-text-one {
+    position: relative;
+    transform: none;
+  }
+
+  .universal-button-text-two,
+  .universal-button-overlay {
+    display: none;
   }
 }
