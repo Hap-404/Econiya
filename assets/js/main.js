@@ -381,102 +381,511 @@ function initExpertiseParallaxCards() {
 }
 
 
-function initVantaHeroDots() {
-  const heroElements = document.querySelectorAll(
-    ".vanta-dots-hero"
-  );
+// function initVantaHeroDots() {
+//   const heroElements = document.querySelectorAll(
+//     ".vanta-dots-hero"
+//   );
 
-  if (!heroElements.length) {
+//   if (!heroElements.length) {
+//     return;
+//   }
+
+//   /*
+//    * Do not initialize WebGL animation for users who
+//    * have requested reduced motion.
+//    */
+//   const prefersReducedMotion = window.matchMedia(
+//     "(prefers-reduced-motion: reduce)"
+//   ).matches;
+
+//   if (prefersReducedMotion) {
+//     return;
+//   }
+
+//   /*
+//    * Fail safely when either CDN script did not load.
+//    * The hero will continue using its white CSS fallback.
+//    */
+//   if (
+//     typeof window.THREE === "undefined" ||
+//     typeof window.VANTA === "undefined" ||
+//     typeof window.VANTA.DOTS !== "function"
+//   ) {
+//     console.warn(
+//       "Vanta DOTS could not start because Three.js or Vanta was not loaded."
+//     );
+
+//     return;
+//   }
+
+//   const vantaEffects = [];
+
+//   heroElements.forEach((heroElement) => {
+//     const effect = window.VANTA.DOTS({
+//       el: heroElement,
+
+//       /*
+//        * Interaction
+//        */
+//       mouseControls: false,
+//       touchControls: false,
+//       gyroControls: false,
+
+//       /*
+//        * Required sizing values
+//        */
+//       minHeight: 200,
+//       minWidth: 200,
+//       scale: 1,
+//       scaleMobile: 1,
+
+//       /*
+//        * Econiya brand colors
+//        *
+//        * --primary:  #e7222f
+//        * --dark-red: #7b2522
+//        */
+//       color: 0xe7222f,
+//       color2: 0x7b2522,
+//       backgroundColor: 0xffffff,
+
+//       /*
+//        * DOTS appearance
+//        */
+//       size: 5,
+//       spacing: 30,
+//       showLines: false
+//     });
+
+//     vantaEffects.push(effect);
+//   });
+
+//   /*
+//    * Clean up the WebGL canvases when leaving the page.
+//    */
+//   window.addEventListener(
+//     "pagehide",
+//     () => {
+//       vantaEffects.forEach((effect) => {
+//         if (
+//           effect &&
+//           typeof effect.destroy === "function"
+//         ) {
+//           effect.destroy();
+//         }
+//       });
+//     },
+//     { once: true }
+//   );
+// }
+
+
+
+function initHeroParticleBackgrounds() {
+  const heroSections = document.querySelectorAll(".particle-hero");
+
+  if (!heroSections.length) {
     return;
   }
 
-  /*
-   * Do not initialize WebGL animation for users who
-   * have requested reduced motion.
-   */
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  if (prefersReducedMotion) {
-    return;
-  }
+  const hasFinePointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+  ).matches;
 
-  /*
-   * Fail safely when either CDN script did not load.
-   * The hero will continue using its white CSS fallback.
-   */
-  if (
-    typeof window.THREE === "undefined" ||
-    typeof window.VANTA === "undefined" ||
-    typeof window.VANTA.DOTS !== "function"
-  ) {
-    console.warn(
-      "Vanta DOTS could not start because Three.js or Vanta was not loaded."
+  heroSections.forEach((heroSection) => {
+    const canvas = heroSection.querySelector(
+      ".hero-particle-canvas"
     );
 
-    return;
+    if (!canvas) {
+      return;
+    }
+
+    const ctx = canvas.getContext("2d");
+
+    if (!ctx) {
+      return;
+    }
+
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+    let animationFrame = null;
+    let lastFrameTime = 0;
+
+    const particles = [];
+
+    const pointer = {
+      x: 0,
+      y: 0,
+      active: false
+    };
+
+    /*
+     * Econiya brand red:
+     * #e7222f
+     */
+    const particleColor = {
+      r: 231,
+      g: 34,
+      b: 47
+    };
+
+   function getParticleCount() {
+  const area = width * height;
+
+  if (window.innerWidth <= 575) {
+    return Math.min(
+      190,
+      Math.max(110, Math.floor(area / 3000))
+    );
   }
 
-  const vantaEffects = [];
+  if (window.innerWidth <= 991) {
+    return Math.min(
+      300,
+      Math.max(180, Math.floor(area / 2400))
+    );
+  }
 
-  heroElements.forEach((heroElement) => {
-    const effect = window.VANTA.DOTS({
-      el: heroElement,
+  return Math.min(
+    520,
+    Math.max(340, Math.floor(area / 1200))
+  );
+}
+    function createParticle() {
+      const x = Math.random() * width;
+      const y = Math.random() * height;
+
+      return {
+        x,
+        y,
+
+        /*
+         * Used as a gentle home position.
+         */
+        baseX: x,
+        baseY: y,
+
+        velocityX:
+          (Math.random() - 0.5) * 0.32,
+
+        velocityY:
+          (Math.random() - 0.5) * 0.32,
+
+        /*
+         * Repulsion velocity added by the cursor.
+         */
+        forceX: 0,
+        forceY: 0,
+
+        radius:
+          0.85 + Math.random() * 2.3,
+
+        opacity:
+          0.42 + Math.random() * 0.38,
+
+        phase:
+          Math.random() * Math.PI * 2,
+
+        phaseSpeed:
+          0.004 + Math.random() * 0.012
+      };
+    }
+
+    function buildParticles() {
+      particles.length = 0;
+
+      const count = getParticleCount();
+
+      for (let index = 0; index < count; index += 1) {
+        particles.push(createParticle());
+      }
+    }
+
+    function resizeCanvas() {
+      const rect = heroSection.getBoundingClientRect();
+
+      width = Math.max(1, rect.width);
+      height = Math.max(1, rect.height);
+
+      dpr = Math.min(
+        window.devicePixelRatio || 1,
+        2
+      );
+
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+
+      ctx.setTransform(
+        dpr,
+        0,
+        0,
+        dpr,
+        0,
+        0
+      );
+
+      buildParticles();
+    }
+
+    function updatePointer(event) {
+      const rect = heroSection.getBoundingClientRect();
+
+      pointer.x = event.clientX - rect.left;
+      pointer.y = event.clientY - rect.top;
+      pointer.active = true;
+    }
+
+    function clearPointer() {
+      pointer.active = false;
+    }
+
+    function updateParticle(particle, deltaMultiplier) {
+      particle.phase +=
+        particle.phaseSpeed * deltaMultiplier;
 
       /*
-       * Interaction
+       * Small natural floating movement.
        */
-      mouseControls: false,
-      touchControls: false,
-      gyroControls: false,
+      const driftX =
+        Math.sin(particle.phase) * 0.07;
+
+      const driftY =
+        Math.cos(particle.phase * 0.83) * 0.07;
 
       /*
-       * Required sizing values
+       * Mouse repulsion.
        */
-      minHeight: 200,
-      minWidth: 200,
-      scale: 1,
-      scaleMobile: 1,
+      if (pointer.active && hasFinePointer) {
+        const dx = particle.x - pointer.x;
+        const dy = particle.y - pointer.y;
 
-      /*
-       * Econiya brand colors
-       *
-       * --primary:  #e7222f
-       * --dark-red: #7b2522
-       */
-      color: 0xe7222f,
-      color2: 0x7b2522,
-      backgroundColor: 0xffffff,
+        const distanceSquared =
+          dx * dx + dy * dy;
 
-      /*
-       * DOTS appearance
-       */
-      size: 5,
-      spacing: 30,
-      showLines: false
-    });
+        const repulsionRadius = 150;
+        const radiusSquared =
+          repulsionRadius * repulsionRadius;
 
-    vantaEffects.push(effect);
-  });
-
-  /*
-   * Clean up the WebGL canvases when leaving the page.
-   */
-  window.addEventListener(
-    "pagehide",
-    () => {
-      vantaEffects.forEach((effect) => {
         if (
-          effect &&
-          typeof effect.destroy === "function"
+          distanceSquared > 0 &&
+          distanceSquared < radiusSquared
         ) {
-          effect.destroy();
+          const distance = Math.sqrt(distanceSquared);
+
+          const normalizedX = dx / distance;
+          const normalizedY = dy / distance;
+
+          const strength =
+            1 - distance / repulsionRadius;
+
+          /*
+           * Strong near the cursor,
+           * gentle near the outer radius.
+           */
+          const force =
+            strength * strength * 3.4;
+
+          particle.forceX +=
+            normalizedX * force;
+
+          particle.forceY +=
+            normalizedY * force;
+        }
+      }
+
+      /*
+       * Friction makes particles settle naturally after
+       * the mouse leaves.
+       */
+      particle.forceX *= 0.91;
+      particle.forceY *= 0.91;
+
+      particle.x +=
+        (
+          particle.velocityX +
+          driftX +
+          particle.forceX
+        ) * deltaMultiplier;
+
+      particle.y +=
+        (
+          particle.velocityY +
+          driftY +
+          particle.forceY
+        ) * deltaMultiplier;
+
+      /*
+       * Very gentle pull toward the original area.
+       * This prevents permanent empty regions after
+       * repeated cursor movement.
+       */
+      particle.x +=
+        (particle.baseX - particle.x) *
+        0.0007 *
+        deltaMultiplier;
+
+      particle.y +=
+        (particle.baseY - particle.y) *
+        0.0007 *
+        deltaMultiplier;
+
+      /*
+       * Wrap on all four edges.
+       * Particles never accumulate below the hero.
+       */
+      const margin = 8;
+
+      if (particle.x < -margin) {
+        particle.x = width + margin;
+        particle.baseX = particle.x;
+      } else if (particle.x > width + margin) {
+        particle.x = -margin;
+        particle.baseX = particle.x;
+      }
+
+      if (particle.y < -margin) {
+        particle.y = height + margin;
+        particle.baseY = particle.y;
+      } else if (particle.y > height + margin) {
+        particle.y = -margin;
+        particle.baseY = particle.y;
+      }
+    }
+
+    function drawParticle(particle) {
+      ctx.beginPath();
+
+      ctx.arc(
+        particle.x,
+        particle.y,
+        particle.radius,
+        0,
+        Math.PI * 2
+      );
+
+      ctx.fillStyle =
+        `rgba(${particleColor.r}, ` +
+        `${particleColor.g}, ` +
+        `${particleColor.b}, ` +
+        `${particle.opacity})`;
+
+      ctx.fill();
+    }
+
+    function drawStaticFrame() {
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach((particle) => {
+        drawParticle(particle);
+      });
+    }
+
+    function animate(timestamp) {
+      /*
+       * Normalize movement so it remains similar on
+       * 60 Hz and high-refresh-rate monitors.
+       */
+      const elapsed =
+        lastFrameTime === 0
+          ? 16.67
+          : Math.min(32, timestamp - lastFrameTime);
+
+      lastFrameTime = timestamp;
+
+      const deltaMultiplier =
+        elapsed / 16.67;
+
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach((particle) => {
+        updateParticle(
+          particle,
+          deltaMultiplier
+        );
+
+        drawParticle(particle);
+      });
+
+      animationFrame =
+        requestAnimationFrame(animate);
+    }
+
+    resizeCanvas();
+
+    if (prefersReducedMotion) {
+      drawStaticFrame();
+    } else {
+      animationFrame =
+        requestAnimationFrame(animate);
+    }
+
+    if (
+      hasFinePointer &&
+      !prefersReducedMotion
+    ) {
+      heroSection.addEventListener(
+        "pointermove",
+        updatePointer
+      );
+
+      heroSection.addEventListener(
+        "pointerenter",
+        updatePointer
+      );
+
+      heroSection.addEventListener(
+        "pointerleave",
+        clearPointer
+      );
+    }
+
+    const resizeObserver =
+      new ResizeObserver(() => {
+        resizeCanvas();
+
+        if (prefersReducedMotion) {
+          drawStaticFrame();
         }
       });
-    },
-    { once: true }
-  );
+
+    resizeObserver.observe(heroSection);
+
+    window.addEventListener(
+      "pagehide",
+      () => {
+        if (animationFrame !== null) {
+          cancelAnimationFrame(animationFrame);
+        }
+
+        resizeObserver.disconnect();
+
+        heroSection.removeEventListener(
+          "pointermove",
+          updatePointer
+        );
+
+        heroSection.removeEventListener(
+          "pointerenter",
+          updatePointer
+        );
+
+        heroSection.removeEventListener(
+          "pointerleave",
+          clearPointer
+        );
+      },
+      { once: true }
+    );
+  });
 }
 
 function initGlobalButtonAnimations() {
@@ -574,7 +983,8 @@ function initGlobalButtonAnimations() {
 
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards();  initVantaHeroDots();  initGlobalButtonAnimations();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds();
+
 
 
 
