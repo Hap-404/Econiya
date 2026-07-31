@@ -16,13 +16,14 @@
    background:#fff;
 }
  .bg-wrapper::before{
-   content:"";
+   /* content:"";
    position:absolute;
    inset:-120px;
    background-image: linear-gradient(#a3a1a1 1px, transparent 1px), linear-gradient(90deg,#a3a1a1 1px, transparent 1px);
    background-size:50px 50px;
    opacity:0.15;
-   animation:gridMove 2.5s linear infinite;
+   animation:gridMove 2.5s linear infinite; */
+   display: none;
 }
 @keyframes gridMove{
     from{
@@ -4761,5 +4762,157 @@ line-height:28px;
 
   .expertise-icon-box::after {
     right: -23px;
+  }
+}
+
+
+/* =========================================================
+   VANTA DOTS HERO BACKGROUND
+   Used on homepage and About-page heroes
+========================================================= */
+
+.vanta-dots-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  /*
+    This is also the fallback when Vanta or WebGL
+    cannot initialize.
+  */
+  background-color: #ffffff;
+}
+
+/*
+  Vanta automatically adds a canvas with the
+  class "vanta-canvas".
+*/
+.vanta-dots-hero .vanta-canvas {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  /*
+    Keep the animation subtle enough that the text
+    and hero image remain the primary focus.
+  */
+  opacity: 0.78;
+}
+
+/*
+  Keep every existing hero element above the canvas.
+*/
+.vanta-dots-hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/*
+  The existing background grid is applied through
+  .bg-wrapper::before. Give the hero an opaque base
+  so that grid does not show through the Vanta area.
+*/
+.vanta-dots-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 18% 25%,
+      rgba(231, 34, 47, 0.055),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(123, 37, 34, 0.045),
+      transparent 38%
+    ),
+    #ffffff;
+
+  pointer-events: none;
+}
+
+/*
+  Slightly fade the effect near the left text area.
+  This improves heading readability without hiding
+  the dots completely.
+*/
+.vanta-dots-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.62) 0%,
+      rgba(255, 255, 255, 0.25) 38%,
+      rgba(255, 255, 255, 0.06) 68%,
+      transparent 100%
+    );
+}
+
+/*
+  Ensure content remains above the readability overlay.
+*/
+.vanta-dots-hero > .container {
+  z-index: 3;
+}
+
+/* Homepage hero-specific canvas height safety */
+.hero.vanta-dots-hero {
+  min-height: 720px;
+}
+
+/* About hero-specific canvas height safety */
+.about-hero.vanta-dots-hero {
+  min-height: 720px;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .hero.vanta-dots-hero,
+  .about-hero.vanta-dots-hero {
+    min-height: auto;
+  }
+
+  .vanta-dots-hero .vanta-canvas {
+    opacity: 0.78;
+  }
+
+  .vanta-dots-hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.45) 0%,
+        rgba(255, 255, 255, 0.12) 55%,
+        transparent 100%
+      );
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .vanta-dots-hero .vanta-canvas {
+    opacity: 0.65;
+  }
+}
+
+/*
+  Vanta is not initialized for users who request
+  reduced motion, but this also provides a safe CSS
+  fallback.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .vanta-dots-hero .vanta-canvas {
+    display: none !important;
   }
 }

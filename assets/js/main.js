@@ -380,9 +380,109 @@ function initExpertiseParallaxCards() {
   });
 }
 
+
+function initVantaHeroDots() {
+  const heroElements = document.querySelectorAll(
+    ".vanta-dots-hero"
+  );
+
+  if (!heroElements.length) {
+    return;
+  }
+
+  /*
+   * Do not initialize WebGL animation for users who
+   * have requested reduced motion.
+   */
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    return;
+  }
+
+  /*
+   * Fail safely when either CDN script did not load.
+   * The hero will continue using its white CSS fallback.
+   */
+  if (
+    typeof window.THREE === "undefined" ||
+    typeof window.VANTA === "undefined" ||
+    typeof window.VANTA.DOTS !== "function"
+  ) {
+    console.warn(
+      "Vanta DOTS could not start because Three.js or Vanta was not loaded."
+    );
+
+    return;
+  }
+
+  const vantaEffects = [];
+
+  heroElements.forEach((heroElement) => {
+    const effect = window.VANTA.DOTS({
+      el: heroElement,
+
+      /*
+       * Interaction
+       */
+      mouseControls: false,
+      touchControls: false,
+      gyroControls: false,
+
+      /*
+       * Required sizing values
+       */
+      minHeight: 200,
+      minWidth: 200,
+      scale: 1,
+      scaleMobile: 1,
+
+      /*
+       * Econiya brand colors
+       *
+       * --primary:  #e7222f
+       * --dark-red: #7b2522
+       */
+      color: 0xe7222f,
+      color2: 0x7b2522,
+      backgroundColor: 0xffffff,
+
+      /*
+       * DOTS appearance
+       */
+      size: 5,
+      spacing: 30,
+      showLines: false
+    });
+
+    vantaEffects.push(effect);
+  });
+
+  /*
+   * Clean up the WebGL canvases when leaving the page.
+   */
+  window.addEventListener(
+    "pagehide",
+    () => {
+      vantaEffects.forEach((effect) => {
+        if (
+          effect &&
+          typeof effect.destroy === "function"
+        ) {
+          effect.destroy();
+        }
+      });
+    },
+    { once: true }
+  );
+}
+
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards();  initVantaHeroDots();
+
 
 
   });
