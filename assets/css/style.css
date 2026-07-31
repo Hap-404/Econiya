@@ -4669,7 +4669,7 @@ letter-spacing: normal;
   height: 100%;
 
   pointer-events: none;
-  opacity: 1;
+  opacity: 0.70;
 }
 
 /* Existing hero content */
@@ -4701,13 +4701,13 @@ letter-spacing: normal;
   }
 
   .hero-particle-canvas {
-    opacity: 0.85;
+    opacity: 0.62;
   }
 }
 
 @media (max-width: 767.98px) {
   .hero-particle-canvas {
-    opacity: 0.72;
+    opacity: 0.5;
   }
 }
 

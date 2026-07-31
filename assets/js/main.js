@@ -584,10 +584,10 @@ function initHeroParticleBackgrounds() {
         forceY: 0,
 
         radius:
-          0.85 + Math.random() * 2.3,
+          0.85 + Math.random() * 2.1,
 
         opacity:
-          0.42 + Math.random() * 0.38,
+          0.42 + Math.random() * 0.12,
 
         phase:
           Math.random() * Math.PI * 2,
