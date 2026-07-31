@@ -23,3 +23,155 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+
+/* =========================================================
+   FINAL HOMEPAGE TYPOGRAPHY CONSISTENCY
+   Matches Our Solutions and Our Story exactly
+========================================================= */
+
+/* Shared section eyebrow */
+
+.econ-who-eyebrow,
+.expertise-eyebrow {
+  display: inline-block;
+
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+/* Shared main section heading */
+
+.econ-who-title,
+.expertise-heading h2 {
+  margin: 10px 0 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 60px;
+  letter-spacing: normal;
+}
+
+/*
+  Preserve the line break in Who We Are without changing
+  the typography.
+*/
+
+.econ-who-title .gradient-text {
+  display: block;
+}
+
+/* Exact same red gradient used by Solutions and Story */
+
+.econ-who-title .gradient-text,
+.expertise-heading h2 .gradient-text {
+  color: transparent !important;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      #e7222f 0%,
+      #7b2522 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/* Shared introduction/body typography */
+
+.econ-who-text p,
+.expertise-heading p {
+  color: #484444;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: normal;
+}
+
+/* Keep existing layout-specific spacing */
+
+.econ-who-text p {
+  margin: 0 0 30px;
+}
+
+.econ-who-text p:last-child {
+  margin-bottom: 0;
+}
+
+.expertise-heading p {
+  max-width: 750px;
+  margin: 15px auto 0;
+}
+
+/* =========================================================
+   RESPONSIVE MATCHING
+========================================================= */
+
+@media (max-width: 1199.98px) {
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .econ-who-eyebrow,
+  .expertise-eyebrow {
+    font-size: 14px;
+  }
+
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .econ-who-text p,
+  .expertise-heading p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+}

@@ -548,13 +548,13 @@ function initHeroParticleBackgrounds() {
   if (window.innerWidth <= 991) {
     return Math.min(
       300,
-      Math.max(180, Math.floor(area / 2400))
+      Math.max(180, Math.floor(area / 4400))
     );
   }
 
   return Math.min(
     520,
-    Math.max(340, Math.floor(area / 1200))
+    Math.max(340, Math.floor(area / 900))
   );
 }
     function createParticle() {

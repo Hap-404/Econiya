@@ -3477,8 +3477,7 @@ line-height:28px;
 
 .econ-who-title span {
   display: block;
-  color: #d92332;
-  font-size: 53px ;
+  font-size: inherit;
 }
 
 .econ-who-divider-wrap {
@@ -4008,11 +4007,11 @@ line-height:28px;
   display: block;
   margin-bottom: 13px;
 
-  color: #ed1c2d;
-  font-size: 12px;
-  font-weight: 600;
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.3;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
 }
 
@@ -4020,15 +4019,13 @@ line-height:28px;
   margin: 0;
 
   color: #242326;
-  font-size: clamp(38px, 4vw, 54px);
-  font-weight: 750;
-  line-height: 1.08;
-  letter-spacing: -0.04em;
+  font-size: 54px;
+font-weight: 800;
+line-height: 60px;
+letter-spacing: normal;
 }
 
-.expertise-heading h2 span {
-  color: #c52631;
-}
+
 
 .expertise-heading p {
   max-width: 710px;
@@ -4120,139 +4117,7 @@ line-height:28px;
    ROUNDED ICON NOTCH
 ========================================================= */
 
-.expertise-icon-dock {
-  position: absolute;
-  top: -27px;
-  left: 22px;
-  z-index: 5;
 
-  width: 66px;
-  height: 66px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(237, 28, 45, 0.2);
-  border-radius: 19px;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 7px 0 #ffffff,
-    0 11px 20px rgba(55, 25, 30, 0.05);
-
-  transform: translateZ(60px);
-  transform-style: preserve-3d;
-
-  transition:
-    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
-    border-color 300ms ease;
-}
-
-/*
-  These circles blend the icon dock into the card border,
-  creating a smooth rounded notch rather than pointed ends.
-*/
-
-.expertise-icon-dock::before,
-.expertise-icon-dock::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-
-  width: 18px;
-  height: 18px;
-
-  border-radius: 50%;
-  background: transparent;
-}
-
-.expertise-icon-dock::before {
-  left: -18px;
-
-  box-shadow:
-  11px -8px 0 0 #ffffff;
-}
-
-.expertise-icon-dock::after {
-  right: -18px;
-
-  box-shadow:
-    0px -20px 0 0 #ffffff;
-}
-
-.expertise-tilt-card:hover .expertise-icon-dock {
-  border-color: rgba(237, 28, 45, 0.65);
-  transform: translateZ(76px) translateY(-4px);
-}
-
-/* =========================================================
-   SVG ICON BOX
-========================================================= */
-
-.expertise-icon-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 48px;
-  height: 48px;
-
-  overflow: hidden;
-  border-radius: 14px;
-
-  background: rgba(237, 28, 45, 0.09);
-
-  transition:
-    background-color 300ms ease,
-    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.expertise-svg-icon {
-  display: block;
-  width: 31px;
-  height: 31px;
-
-  object-fit: contain;
-
-  /*
-    This makes a dark SVG red.
-    Remove this filter when your SVG is already red.
-  */
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(18%)
-    sepia(99%)
-    saturate(3606%)
-    hue-rotate(346deg)
-    brightness(102%)
-    contrast(87%);
-
-  transition:
-    filter 300ms ease,
-    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/*
-  Hide broken-image symbols while SVG files have not
-  yet been added. The icon boxes remain visible.
-*/
-
-.expertise-svg-icon.icon-missing {
-  visibility: hidden;
-}
-
-.expertise-tilt-card:hover .expertise-icon-box {
-  background: #ed1c2d;
-  transform: scale(1.05);
-}
-
-.expertise-tilt-card:hover .expertise-svg-icon {
-  filter: brightness(0) invert(1);
-  transform: scale(1.06);
-}
 
 /* =========================================================
    CARD GLARE
@@ -4614,53 +4479,6 @@ line-height:28px;
 
 /*
   Main U-shaped notch border.
-*/
- .expertise-icon-dock::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 24px;
-    left: -1px;
-    width: 65px;
-    height: 40px;
-    border-right: 1px solid var(--expertise-border);
-    border-bottom: 1px solid var(--expertise-border);
-    border-left: 1px solid var(--expertise-border);
-    border-radius: 0 0 18px 18px;
-    background: var(--expertise-card-bg);
-}
-
-/* =========================================================
-   CONNECT BOTH TOP-BORDER ENDS
-========================================================= */
-
-/*
-  These short horizontal lines connect the card's top
-  border directly to both sides of the notch.
-*/
-.expertise-icon-box::before,
-.expertise-icon-box::after {
-  content: "";
-  position: absolute;
-  z-index: -3;
-
-  top: 31px;
-
-  width: 18px;
-  height: 1px;
-
-  background: var(--expertise-border);
-  border-radius: 999px;
-}
-
-.expertise-icon-box::before {
-  left: -33px;
-  width: 37px;
-}
-
-.expertise-icon-box::after {
-  right: -26px;
-}
 
 /* =========================================================
    INNER PALE-PINK ICON BOX
@@ -5118,5 +4936,424 @@ line-height:28px;
   .universal-button-text-two,
   .universal-button-overlay {
     display: none;
+  }
+}
+
+
+/* =========================================================
+   FINAL FULLY CONNECTED CARD NOTCH
+========================================================= */
+
+.expertise-tilt-card {
+  --expertise-border: rgba(237, 28, 45, 0.28);
+  --expertise-card-bg: #ffffff;
+
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+
+  border: 1px solid var(--expertise-border);
+  border-radius: 20px;
+  background: var(--expertise-card-bg);
+}
+
+/*
+  Remove the straight top-border section behind the icon.
+  This mask sits directly on the card, so it cannot drift
+  away from the card border.
+*/
+.expertise-tilt-card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 18px;
+  z-index: 4;
+
+  width: 50px;
+  height: 4px;
+
+  background: var(--expertise-card-bg);
+  pointer-events: none;
+}
+
+/*
+  Draw one complete U-shaped notch directly from the card.
+  Its two upper endpoints meet the original top border.
+*/
+.expertise-tilt-card::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 16px;
+  z-index: 4;
+
+  width: 70px;
+  height: 40px;
+
+  border-right: 1px solid var(--expertise-border);
+  border-bottom: 1px solid var(--expertise-border);
+  border-left: 1px solid var(--expertise-border);
+
+  border-radius: 3px 0px 18px 18px;
+  background: var(--expertise-card-bg);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   ICON POSITION
+========================================================= */
+
+.expertise-icon-dock {
+  position: absolute;
+  top: -27px;
+  left: 19px;
+  z-index: 8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+
+  transform: translateZ(60px);
+  transform-style: preserve-3d;
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+  Completely disable all previous connector pseudo-elements.
+*/
+.expertise-icon-dock::before,
+.expertise-icon-dock::after,
+.expertise-icon-box::before,
+.expertise-icon-box::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* =========================================================
+   INNER PINK ICON BOX
+========================================================= */
+
+.expertise-icon-box {
+  position: relative;
+  z-index: 9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  overflow: hidden;
+  border: 0;
+  border-radius: 14px;
+
+  background: rgba(237, 28, 45, 0.09);
+  box-shadow: none;
+
+  transition:
+    background-color 300ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.expertise-tilt-card:hover {
+  --expertise-border: rgba(237, 28, 45, 0.78);
+  border-color: var(--expertise-border);
+}
+
+.expertise-tilt-card:hover .expertise-icon-dock {
+  transform:
+    translateZ(76px)
+    translateY(-3px);
+}
+
+.expertise-tilt-card:hover .expertise-icon-box {
+  background: #ed1c2d;
+  transform: scale(1.04);
+}
+
+.expertise-tilt-card:hover .expertise-svg-icon {
+  filter: brightness(0) invert(1);
+  transform: scale(1.05);
+}
+
+/* First card active appearance */
+
+.expertise-card-column:first-child .expertise-tilt-card {
+  --expertise-border: #ed1c2d;
+  border-color: #ed1c2d;
+}
+
+.expertise-card-column:first-child .expertise-icon-box {
+  background: #ed1c2d;
+}
+
+.expertise-card-column:first-child .expertise-svg-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .expertise-tilt-card::before {
+    left: 13px;
+    width: 74px;
+  }
+
+  .expertise-tilt-card::after {
+    left: 13px;
+    width: 74px;
+    height: 37px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .expertise-icon-dock {
+    top: -24px;
+    left: 20px;
+
+    width: 60px;
+    height: 60px;
+  }
+
+  .expertise-icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 13px;
+  }
+
+  .expertise-svg-icon {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+
+
+/* =========================================================
+   UNIFIED SECTION TYPOGRAPHY
+   Matches Our Solutions and Our Story
+========================================================= */
+
+/* ---------------------------------------------------------
+   Shared font family
+--------------------------------------------------------- */
+
+.econ-who-section,
+.expertise-parallax,
+.econ-who-section h2,
+.expertise-parallax h2,
+.econ-who-section p,
+.expertise-parallax p,
+.econ-who-section span,
+.expertise-parallax span {
+  font-family: "Inter", sans-serif;
+}
+
+/* ---------------------------------------------------------
+   Section eyebrow / small red heading
+--------------------------------------------------------- */
+
+.econ-who-eyebrow,
+.expertise-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------
+   Main section titles
+   Same as .section-head h2
+--------------------------------------------------------- */
+
+.econ-who-title,
+.expertise-heading h2 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 60px;
+  letter-spacing: normal;
+}
+
+/* Red title parts */
+
+.econ-who-title span,
+.expertise-heading h2 span {
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+/*
+  Important:
+  This overrides your existing fixed 53px value on the
+  Who We Are red title span.
+*/
+
+.econ-who-title span {
+  display: block;
+  font-size: inherit;
+}
+
+/* ---------------------------------------------------------
+   Section introductory and body paragraphs
+--------------------------------------------------------- */
+
+.econ-who-text p,
+.expertise-heading p {
+  color: #484444;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+/* Expertise centered paragraph width */
+
+.expertise-heading p {
+  max-width: 750px;
+  margin: 15px auto 0;
+}
+
+/* Who We Are body paragraph spacing */
+
+.econ-who-text p {
+  margin: 0 0 30px;
+}
+
+.econ-who-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   Expertise card typography
+--------------------------------------------------------- */
+
+.expertise-card-label {
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.expertise-card-content h3 {
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+.expertise-card-content p {
+  color: #484444;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.expertise-card-link {
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE TYPOGRAPHY
+========================================================= */
+
+@media (max-width: 1199.98px) {
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .econ-who-eyebrow,
+  .expertise-eyebrow {
+    font-size: 14px;
+  }
+
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  .econ-who-text p,
+  .expertise-heading p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+  .expertise-card-content h3 {
+    font-size: 20px;
+  }
+
+  .expertise-card-content p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .econ-who-title,
+  .expertise-heading h2 {
+    font-size: 34px;
+    line-height: 40px;
   }
 }
