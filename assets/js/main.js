@@ -151,8 +151,239 @@
     });
   }
 
+
+  function initEconWhoAnimation() {
+  const sections = document.querySelectorAll(".econ-who-section");
+
+  if (!sections.length) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  sections.forEach((section) => {
+    if (prefersReducedMotion) {
+      section.classList.add(
+        "is-visible",
+        "animation-complete"
+      );
+
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+
+          /*
+           * Start the subtle floating movement only after
+           * all entrance animations have completed.
+           */
+          window.setTimeout(() => {
+            entry.target.classList.add(
+              "animation-complete"
+            );
+          }, 1600);
+
+          /*
+           * Run the entrance animation only once.
+           */
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.17,
+        rootMargin: "0px 0px -8% 0px"
+      }
+    );
+
+    observer.observe(section);
+  });
+}
+
+  
+function initExpertiseParallaxCards() {
+  const section = document.querySelector(".expertise-parallax");
+  const cards = document.querySelectorAll(".expertise-tilt-card");
+  const icons = document.querySelectorAll(".expertise-svg-icon");
+
+  if (!section || !cards.length) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const supportsFinePointer = window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+  ).matches;
+
+  /*
+   * Keep each icon box visible when its SVG file has not
+   * been downloaded yet. This hides only the browser's
+   * broken-image symbol.
+   */
+  icons.forEach((icon) => {
+    const hideMissingIcon = () => {
+      icon.classList.add("icon-missing");
+    };
+
+    const showLoadedIcon = () => {
+      icon.classList.remove("icon-missing");
+    };
+
+    icon.addEventListener("error", hideMissingIcon);
+    icon.addEventListener("load", showLoadedIcon);
+
+    if (icon.complete && icon.naturalWidth === 0) {
+      hideMissingIcon();
+    }
+  });
+
+  /*
+   * Section entrance animation.
+   */
+  if (prefersReducedMotion) {
+    section.classList.add("is-visible");
+  } else {
+    const sectionObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.13,
+        rootMargin: "0px 0px -7% 0px"
+      }
+    );
+
+    sectionObserver.observe(section);
+  }
+
+  /*
+   * Do not enable pointer tilt on touch devices or when
+   * reduced motion is enabled.
+   */
+  if (prefersReducedMotion || !supportsFinePointer) {
+    return;
+  }
+
+  cards.forEach((card) => {
+    let animationFrame = null;
+    let currentRotateX = 0;
+    let currentRotateY = 0;
+    let targetRotateX = 0;
+    let targetRotateY = 0;
+
+    const maximumRotation = 10;
+
+    const renderTilt = () => {
+      /*
+       * Interpolation produces a soft spring-like motion
+       * instead of directly snapping to the cursor.
+       */
+      currentRotateX +=
+        (targetRotateX - currentRotateX) * 0.16;
+
+      currentRotateY +=
+        (targetRotateY - currentRotateY) * 0.16;
+
+      card.style.transform = `
+        perspective(1000px)
+        rotateX(${currentRotateX}deg)
+        rotateY(${currentRotateY}deg)
+        translateZ(0)
+      `;
+
+      const movementRemaining =
+        Math.abs(targetRotateX - currentRotateX) +
+        Math.abs(targetRotateY - currentRotateY);
+
+      if (movementRemaining > 0.01) {
+        animationFrame = requestAnimationFrame(renderTilt);
+      } else {
+        animationFrame = null;
+      }
+    };
+
+    const requestRender = () => {
+      if (animationFrame === null) {
+        animationFrame = requestAnimationFrame(renderTilt);
+      }
+    };
+
+    card.addEventListener("pointerenter", () => {
+      card.classList.remove("is-returning");
+    });
+
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+
+      const pointerX = event.clientX - bounds.left;
+      const pointerY = event.clientY - bounds.top;
+
+      const normalizedX = pointerX / bounds.width;
+      const normalizedY = pointerY / bounds.height;
+
+      /*
+       * Values range approximately between -10 and +10.
+       * Vertical rotation is inverted for natural movement.
+       */
+      targetRotateY =
+        (normalizedX - 0.5) * maximumRotation * 2;
+
+      targetRotateX =
+        (0.5 - normalizedY) * maximumRotation * 2;
+
+      card.style.setProperty(
+        "--mouse-x",
+        `${normalizedX * 100}%`
+      );
+
+      card.style.setProperty(
+        "--mouse-y",
+        `${normalizedY * 100}%`
+      );
+
+      requestRender();
+    });
+
+    card.addEventListener("pointerleave", () => {
+      targetRotateX = 0;
+      targetRotateY = 0;
+
+      card.classList.add("is-returning");
+
+      card.style.setProperty("--mouse-x", "50%");
+      card.style.setProperty("--mouse-y", "50%");
+
+      requestRender();
+
+      window.setTimeout(() => {
+        card.classList.remove("is-returning");
+      }, 720);
+    });
+  });
+}
+
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards();
+
+
   });
 })(jQuery);
