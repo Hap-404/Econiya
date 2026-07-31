@@ -4109,14 +4109,14 @@ line-height:28px;
   left: -18px;
 
   box-shadow:
-    8px -8px 0 0 #ffffff;
+  11px -8px 0 0 #ffffff;
 }
 
 .expertise-icon-dock::after {
   right: -18px;
 
   box-shadow:
-    -8px -8px 0 0 #ffffff;
+    0px -20px 0 0 #ffffff;
 }
 
 .expertise-tilt-card:hover .expertise-icon-dock {
@@ -4491,7 +4491,7 @@ line-height:28px;
 }
 
 /* =========================================================
-   FIGMA-STYLE INTEGRATED ICON NOTCH
+   FINAL CONNECTED FIGMA-STYLE ICON NOTCH
 ========================================================= */
 
 .expertise-tilt-card {
@@ -4506,11 +4506,7 @@ line-height:28px;
   background: var(--expertise-card-bg);
 }
 
-/*
-  The dock is only a positioning wrapper.
-  It has no visible border, background or shadow.
-*/
-
+/* Positioning wrapper only */
 .expertise-icon-dock {
   position: absolute;
   top: -26px;
@@ -4525,7 +4521,6 @@ line-height:28px;
   height: 64px;
 
   border: 0;
-  border-radius: 0;
   background: transparent;
   box-shadow: none;
 
@@ -4536,103 +4531,76 @@ line-height:28px;
     transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* =========================================================
-   WHITE NOTCH BACKGROUND
-========================================================= */
-
 /*
-  This white shape removes the original straight card border
-  behind the icon and creates the cut-out area.
+  White mask hides only the straight card border
+  behind the notch.
 */
-
 .expertise-icon-dock::before {
   content: "";
   position: absolute;
   z-index: -2;
 
   top: 25px;
-  left: -10px;
+  left: -1px;
 
-  width: 84px;
-  height: 39px;
+  width: 66px;
+  height: 40px;
 
   background: var(--expertise-card-bg);
 }
 
 /*
-  This pseudo-element draws the rounded U-shaped border
-  around the icon.
+  Main U-shaped notch border.
 */
-
-.expertise-icon-dock::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-
-  top: 24px;
-  left: -9px;
-
-  width: 82px;
-  height: 39px;
-
-  border-right: 1px solid var(--expertise-border);
-  border-bottom: 1px solid var(--expertise-border);
-  border-left: 1px solid var(--expertise-border);
-
-  border-radius: 0 0 17px 17px;
-
-  background: var(--expertise-card-bg);
+ .expertise-icon-dock::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 24px;
+    left: -1px;
+    width: 65px;
+    height: 40px;
+    border-right: 1px solid var(--expertise-border);
+    border-bottom: 1px solid var(--expertise-border);
+    border-left: 1px solid var(--expertise-border);
+    border-radius: 0 0 18px 18px;
+    background: var(--expertise-card-bg);
 }
 
 /* =========================================================
-   CURVED TOP-BORDER SHOULDERS
+   CONNECT BOTH TOP-BORDER ENDS
 ========================================================= */
 
 /*
-  These two shapes connect the straight top border to
-  the rounded notch without pointed ends.
+  These short horizontal lines connect the card's top
+  border directly to both sides of the notch.
 */
-
 .expertise-icon-box::before,
 .expertise-icon-box::after {
   content: "";
   position: absolute;
   z-index: -3;
 
-  top: 26px;
+  top: 31px;
 
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 1px;
 
-  background: transparent;
+  background: var(--expertise-border);
+  border-radius: 999px;
 }
 
 .expertise-icon-box::before {
-  left: -26px;
-
-  border-top-right-radius: 17px;
-
-  box-shadow:
-    8px -8px 0 0 var(--expertise-card-bg);
-
-  border-top: 1px solid var(--expertise-border);
-  border-right: 1px solid var(--expertise-border);
+  left: -33px;
+  width: 37px;
 }
 
 .expertise-icon-box::after {
   right: -26px;
-
-  border-top-left-radius: 17px;
-
-  box-shadow:
-    -8px -8px 0 0 var(--expertise-card-bg);
-
-  border-top: 1px solid var(--expertise-border);
-  border-left: 1px solid var(--expertise-border);
 }
 
 /* =========================================================
-   PALE-PINK ICON BOX
+   INNER PALE-PINK ICON BOX
 ========================================================= */
 
 .expertise-icon-box {
@@ -4656,10 +4624,6 @@ line-height:28px;
     background-color 300ms ease,
     transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-/* =========================================================
-   SVG ICON
-========================================================= */
 
 .expertise-svg-icon {
   display: block;
@@ -4714,15 +4678,7 @@ line-height:28px;
   transform: scale(1.05);
 }
 
-/* =========================================================
-   OPTIONAL FIRST-CARD ACTIVE STATE
-========================================================= */
-
-/*
-  Keep these rules only when the first card should appear
-  active like the Figma reference.
-*/
-
+/* First card active appearance */
 .expertise-card-column:first-child .expertise-tilt-card {
   --expertise-border: #ed1c2d;
   border-color: #ed1c2d;
@@ -4736,10 +4692,7 @@ line-height:28px;
   filter: brightness(0) invert(1);
 }
 
-/* =========================================================
-   CONTENT POSITION
-========================================================= */
-
+/* Keep content below the notch */
 .expertise-card-content {
   padding-top: 65px;
 }
@@ -4769,17 +4722,17 @@ line-height:28px;
 
   .expertise-icon-dock::before {
     top: 23px;
-    left: -9px;
+    left: -7px;
 
-    width: 78px;
-    height: 37px;
+    width: 74px;
+    height: 38px;
   }
 
   .expertise-icon-dock::after {
-    top: 22px;
-    left: -8px;
+    top: 23px;
+    left: -7px;
 
-    width: 76px;
+    width: 74px;
     height: 37px;
 
     border-radius: 0 0 16px 16px;
@@ -4796,11 +4749,17 @@ line-height:28px;
     height: 27px;
   }
 
+  .expertise-icon-box::before,
+  .expertise-icon-box::after {
+    top: 29px;
+    width: 16px;
+  }
+
   .expertise-icon-box::before {
-    left: -24px;
+    left: -23px;
   }
 
   .expertise-icon-box::after {
-    right: -24px;
+    right: -23px;
   }
 }
