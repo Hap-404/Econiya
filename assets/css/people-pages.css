@@ -38,138 +38,107 @@
 
 
 
+
 /* =========================================================
-   CAREERS — LOCATION CTA
-   FINAL FIGMA MATCH
+   CAREERS LOCATION CTA
+   Reuses the homepage .cta-content design
 ========================================================= */
 
 .careers-page .career-location-cta {
-  padding: 38px 0 78px;
-  background: #ffffff;
+  padding: 40px 0 90px;
 }
 
-.careers-page .career-location-shell {
-  position: relative;
-  overflow: hidden;
+/*
+  The homepage class already provides:
+  - gradient background
+  - rounded corners
+  - overflow hidden
+  - moving glow support
+  - white heading styles
+*/
 
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.72fr);
-  align-items: stretch;
-  gap: 24px;
-
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 34px 34px 34px 36px;
-
-  color: #ffffff;
-
-  border-radius: 20px;
-
-  background:
-    radial-gradient(
-      circle at 93% 82%,
-      rgba(255, 68, 77, 0.5),
-      transparent 32%
-    ),
-    linear-gradient(
-      118deg,
-      #e11b2b 0%,
-      #ce1725 48%,
-      #97151d 100%
-    );
+.careers-page .career-location-cta-content {
+  padding: 50px;
 }
 
-/* Soft texture/glow */
+/* Keep all actual content above the liquid glow */
 
-.careers-page .career-location-shell::after {
-  content: "";
-  position: absolute;
-  right: -100px;
-  bottom: -150px;
-
-  width: 470px;
-  height: 470px;
-
-  pointer-events: none;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 73, 83, 0.42),
-      rgba(255, 73, 83, 0.1) 48%,
-      transparent 72%
-    );
-
-  filter: blur(20px);
-}
-
-/* =========================================================
-   LEFT CONTENT
-========================================================= */
-
-.careers-page .career-location-content {
+.careers-page .career-location-layout {
   position: relative;
   z-index: 2;
 
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(290px, 0.62fr);
+  align-items: stretch;
+  gap: 38px;
+}
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.careers-page .career-location-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   min-width: 0;
-  padding: 2px 0;
 }
 
-.careers-page .career-location-eyebrow {
-  display: block;
-  margin-bottom: 9px;
+.careers-page .career-location-main .section-head {
+  margin: 0;
+  text-align: left;
+}
 
-  color: rgba(255, 255, 255, 0.9);
+.careers-page .career-location-main .super-head {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #ffffff;
 
   font-family: "Inter", sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.3;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
 }
 
-.careers-page .career-location-content h2 {
-  max-width: 620px;
+.careers-page .career-location-main h2 {
+  max-width: 720px;
   margin: 0;
 
   color: #ffffff;
 
   font-family: "Inter", sans-serif;
-  font-size: clamp(36px, 3.25vw, 50px);
+  font-size: clamp(42px, 4vw, 58px);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.05;
   letter-spacing: -0.035em;
 }
 
 /* =========================================================
-   LOCATION CARDS
+   LOCATION GRID
 ========================================================= */
 
 .careers-page .career-location-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 11px;
+  gap: 12px;
 
-  max-width: 690px;
-  margin-top: 24px;
+  max-width: 760px;
+  margin-top: 27px;
 }
 
 .careers-page .career-location-card {
-  min-width: 0;
-  padding: 12px 14px;
+  padding: 14px 16px;
 
   color: #ffffff;
-  background: rgba(155, 13, 25, 0.14);
+
+  background: rgba(255, 255, 255, 0.025);
 
   border: 1px solid rgba(255, 255, 255, 0.32);
-  border-radius: 13px;
+  border-radius: 14px;
 
   transition:
     transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -179,7 +148,7 @@
 
 .careers-page .career-location-card:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.62);
+  border-color: rgba(255, 255, 255, 0.66);
 
   transform: translateY(-3px);
 }
@@ -190,7 +159,7 @@
 }
 
 .careers-page .career-location-card strong {
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 
   color: #ffffff;
 
@@ -204,54 +173,54 @@
   color: rgba(255, 255, 255, 0.82);
 
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
   line-height: 1.45;
 }
 
 /* =========================================================
-   RIGHT WHITE CONTACT CARD
+   WHITE CONTACT CARD
 ========================================================= */
 
-.careers-page .career-role-contact {
+.careers-page .career-location-contact {
   position: relative;
-  z-index: 3;
+  z-index: 2;
 
   display: flex;
   flex-direction: column;
-  align-self: stretch;
+  justify-content: center;
 
   min-width: 0;
-  padding: 23px 22px 20px;
+  padding: 25px 23px;
 
-  color: #29272b;
+  color: #222020;
   background: #ffffff;
 
   border-radius: 20px;
 
   box-shadow:
-    0 16px 38px rgba(67, 8, 15, 0.14);
+    0 18px 38px rgba(60, 7, 13, 0.16);
 }
 
-.careers-page .career-role-contact h3 {
-  margin: 0 0 9px;
+.careers-page .career-location-contact h3 {
+  margin: 0 0 11px;
 
-  color: #29272b;
+  color: #222020;
 
   font-family: "Inter", sans-serif;
-  font-size: 27px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
 }
 
-.careers-page .career-role-contact p {
-  margin: 0 0 15px;
+.careers-page .career-location-contact p {
+  margin: 0 0 16px;
 
-  color: #5f5a60;
+  color: #5c575d;
 
   font-family: "Inter", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.55;
 }
@@ -260,15 +229,22 @@
    EMAIL BUTTON
 ========================================================= */
 
-.careers-page .career-email-button {
-  display: flex;
+.careers-page .career-email-cta {
+  /*
+    Variables used by the shared homepage button animation.
+  */
+  --button-overlay-color: #ffffff;
+  --button-hover-text: var(--primary);
+  --button-hover-color: var(--primary);
+
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
   width: 100%;
-  min-height: 42px;
-  padding: 8px 14px;
+  min-height: 43px;
+  padding: 8px 15px;
 
   color: #ffffff;
   background: var(--primary);
@@ -280,40 +256,26 @@
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
-
-  transition:
-    background-color 280ms ease,
-    border-color 280ms ease,
-    transform 280ms ease,
-    box-shadow 280ms ease;
 }
-
-.careers-page .career-email-button:hover {
+/* .careers-page .career-email-cta:hover {
   color: #ffffff;
   background: var(--dark-red);
   border-color: var(--dark-red);
 
   transform: translateY(-2px);
-
-  box-shadow:
-    0 9px 22px rgba(123, 37, 34, 0.22);
-}
-
-.careers-page .career-email-button i {
-  font-size: 14px;
-}
+} */
 
 /* =========================================================
-   UPLOAD CONTROL
+   UPLOAD BUTTON
 ========================================================= */
 
-.careers-page .career-upload-button {
+.careers-page .career-upload-cta {
   display: block;
   width: 100%;
   margin-top: 9px;
 }
 
-.careers-page .career-upload-button input {
+.careers-page .career-upload-cta input {
   position: absolute;
 
   width: 1px;
@@ -324,17 +286,17 @@
   pointer-events: none;
 }
 
-.careers-page .career-upload-button > span {
+.careers-page .career-upload-cta > span {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 9px;
 
   width: 100%;
-  min-height: 42px;
-  padding: 8px 14px;
+  min-height: 43px;
+  padding: 8px 15px;
 
-  color: #343136;
+  color: #282529;
   background: #ffffff;
 
   border: 1px solid var(--border-color);
@@ -343,7 +305,6 @@
   font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  line-height: 1;
 
   cursor: pointer;
 
@@ -354,16 +315,12 @@
     transform 280ms ease;
 }
 
-.careers-page .career-upload-button:hover > span {
+.careers-page .career-upload-cta:hover > span {
   color: var(--primary);
-  background: #fff6f7;
+  background: #fff5f6;
   border-color: var(--primary);
 
   transform: translateY(-2px);
-}
-
-.careers-page .career-upload-button i {
-  font-size: 15px;
 }
 
 /* =========================================================
@@ -376,22 +333,21 @@
   align-self: flex-start;
   gap: 6px;
 
-  margin-top: 13px;
+  margin-top: 14px;
 
-  color: #4f4a50;
+  color: #4d484e;
 
   font-family: "Inter", sans-serif;
   font-size: 10px;
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-.careers-page .career-people-link i {
-  transition: transform 250ms ease;
+  line-height: 1.4;
 }
 
 .careers-page .career-people-link:hover {
   color: var(--primary);
+}
+
+.careers-page .career-people-link i {
+  transition: transform 250ms ease;
 }
 
 .careers-page .career-people-link:hover i {
@@ -403,19 +359,17 @@
 ========================================================= */
 
 @media (max-width: 991.98px) {
-  .careers-page .career-location-shell {
+  .careers-page .career-location-cta-content {
+    padding: 42px;
+  }
+
+  .careers-page .career-location-layout {
     grid-template-columns: 1fr;
-    gap: 28px;
-
-    padding: 34px;
+    gap: 30px;
   }
 
-  .careers-page .career-location-grid {
-    max-width: none;
-  }
-
-  .careers-page .career-role-contact {
-    max-width: 600px;
+  .careers-page .career-location-contact {
+    max-width: 580px;
   }
 }
 
@@ -425,27 +379,56 @@
 
 @media (max-width: 767.98px) {
   .careers-page .career-location-cta {
-    padding: 28px 0 60px;
+    padding: 30px 0 65px;
   }
 
-  .careers-page .career-location-shell {
-    padding: 26px 20px;
-    border-radius: 18px;
+  .careers-page .career-location-cta-content {
+    padding: 32px 22px;
+
+    border-radius: 22px;
   }
 
-  .careers-page .career-location-content h2 {
-    font-size: 36px;
+  .careers-page .career-location-main h2 {
+    font-size: 38px;
   }
 
   .careers-page .career-location-grid {
     grid-template-columns: 1fr;
   }
 
-  .careers-page .career-role-contact {
-    padding: 22px 18px;
+  .careers-page .career-location-contact {
+    padding: 23px 18px;
   }
+}
+/* =========================================================
+   CAREERS EMAIL BUTTON — UNIVERSAL ANIMATION FIX
+========================================================= */
 
-  .careers-page .career-role-contact h3 {
-    font-size: 24px;
-  }
+.careers-page .career-email-cta.universal-animated-btn:hover,
+.careers-page .career-email-cta.universal-animated-btn:focus,
+.careers-page .career-email-cta.universal-animated-btn:active {
+  color: var(--primary);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Both generated text copies inherit the correct colors */
+
+.careers-page
+  .career-email-cta
+  .universal-button-text-one {
+  color: #ffffff;
+}
+
+.careers-page
+  .career-email-cta
+  .universal-button-text-two {
+  color: var(--primary);
+}
+
+/* Envelope remains visible before and during hover */
+
+.careers-page .career-email-cta > i,
+.careers-page .career-email-cta .bi {
+  color: inherit;
 }

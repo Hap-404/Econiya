@@ -1276,9 +1276,47 @@ function initCareerCvUpload() {
   });
 }
 
+function initCtaEffect() {
+  const ctaElements = document.querySelectorAll(
+    ".cta-content"
+  );
+
+  if (
+    !ctaElements.length ||
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches
+  ) {
+    return;
+  }
+
+  ctaElements.forEach((cta) => {
+    const blob = cta.querySelector(".cta-liquid");
+
+    if (!blob) {
+      return;
+    }
+
+    cta.addEventListener("mousemove", (event) => {
+      const rect = cta.getBoundingClientRect();
+
+      blob.style.left =
+        `${event.clientX - rect.left}px`;
+
+      blob.style.top =
+        `${event.clientY - rect.top}px`;
+    });
+
+    cta.addEventListener("mouseleave", () => {
+      blob.style.left = "78%";
+      blob.style.top = "50%";
+    });
+  });
+}
+
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload()
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
 
