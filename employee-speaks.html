@@ -46,7 +46,7 @@
               <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav main-menu">
                   <li class="nav-item">
-                    <a class="nav-link active" href="index.html"
+                    <a class="nav-link" href="index.html"
                       >Home
                       <svg
                         class="wave"
@@ -66,7 +66,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html"
+                    <a class="nav-link active" aria-current="page" href="about.html"
                       >About Us
                       <svg
                         class="wave"
@@ -192,7 +192,7 @@
             </div>
           </nav>
         </header>
-    <section class="people-hero-body">
+    <section class="people-hero-body employee-hero-body">
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-5 scroll-reveal" data-reveal="left">
@@ -206,30 +206,80 @@
           </div>
           <div class="col-lg-7 scroll-reveal" data-reveal="right">
             <div class="people-hero-media animation-slot" data-animation-slot="hero-media">
-              <img src="assets/images/employee/emp-hero.png" alt="Econiya employees collaborating around industrial equipment" />
+              <img src="assets/images/employee/emp-hero.png" alt="Econiya employees collaborating around industrial equipment" data-image-slot="employee-hero" />
               <div class="people-count-badge">
                 <div class="people-avatars" aria-hidden="true">
-                  <img src="assets/images/about/founder.webp" alt="" />
-                  <img src="assets/images/innovation.webp" alt="" />
-                  <img src="assets/images/manufacturing.webp" alt="" />
-                  <img src="assets/images/healthcare.webp" alt="" />
+                  <img src="assets/images/employee/doc.png" alt="" />
+                  <img src="assets/images/employee/field.png" alt="" />
+                  <img src="assets/images/employee/head.png" alt="" />
+                  <img src="assets/images/employee/opt-person.png" alt="" />
                 </div>
                 <div><strong>1,240+ Econiyans</strong><span>Across 14 countries</span></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="people-stats row g-4 scroll-reveal" data-reveal="up">
-          <div class="col-lg-3 col-sm-6"><article><strong>94%</strong><span>Employee approval rating</span><i class="bi bi-person-badge"></i></article></div>
-          <div class="col-lg-3 col-sm-6"><article><strong>5.7 ★</strong><span>Average years of tenure</span><i class="bi bi-person-badge"></i></article></div>
-          <div class="col-lg-3 col-sm-6"><article><strong>38</strong><span>Nationalities on team</span><i class="bi bi-person-badge"></i></article></div>
-          <div class="col-lg-3 col-sm-6"><article><strong>72h</strong><span>Learning hours per year</span><i class="bi bi-person-badge"></i></article></div>
-        </div>
+       <div
+  class="people-stats employee-hero-stats row g-4 scroll-reveal"
+  data-reveal="up"
+>
+  <div class="col-lg-3 col-sm-6">
+    <article>
+      <strong>94%</strong>
+      <span>Employee approval rating</span>
+
+      <img
+        src="assets/images/career/iot.svg"
+        alt=""
+        class="employee-stat-icon"
+      />
+    </article>
+  </div>
+
+  <div class="col-lg-3 col-sm-6">
+    <article>
+      <strong>5.7 ★</strong>
+      <span>Average years of tenure</span>
+
+      <img
+        src="assets/images/career/iot.svg"
+        alt=""
+        class="employee-stat-icon"
+      />
+    </article>
+  </div>
+
+  <div class="col-lg-3 col-sm-6">
+    <article>
+      <strong>38</strong>
+      <span>Nationalities on team</span>
+
+      <img
+        src="assets/images/career/iot.svg"
+        alt=""
+        class="employee-stat-icon"
+      />
+    </article>
+  </div>
+
+  <div class="col-lg-3 col-sm-6">
+    <article>
+      <strong>72h</strong>
+      <span>Learning hours per year</span>
+
+      <img
+        src="assets/images/career/iot.svg"
+        alt=""
+        class="employee-stat-icon"
+      />
+    </article>
+  </div>
+</div>
       </div>
     </section>
   </div>
 
-  <section class="people-section employee-spotlight" id="employee-stories">
+  <section class="people-section employee-spotlight employee-spotlight-section" id="employee-stories">
     <div class="container">
       <div class="section-head text-center scroll-reveal" data-reveal="up">
         <span class="super-head">SPOTLIGHT</span>
@@ -237,7 +287,7 @@
         <p>Tap through the spotlights below to hear from engineering, field operations, R&amp;D, product and quality.</p>
       </div>
       <div class="spotlight-shell animation-slot scroll-reveal" data-reveal="up" data-animation-slot="spotlight-slider">
-        <div class="spotlight-image"><img id="spotlightImage" src="assets/images/employee/opt-person.png" alt="Employee spotlight" /><div class="spotlight-caption"><span id="spotlightDept">Operations</span><h3 id="spotlightName">Ananya Rao</h3><p id="spotlightRole">Senior Manufacturing Engineer</p></div></div>
+        <div class="spotlight-image"><img id="spotlightImage" src="assets/images/employee/opt-person.png" alt="Employee spotlight" data-image-slot="employee-spotlight" /><div class="spotlight-caption"><span id="spotlightDept">Operations</span><h3 id="spotlightName">Ananya Rao</h3><p id="spotlightRole">Senior Manufacturing Engineer</p></div></div>
         <article class="spotlight-quote">
           <div class="quote-mark">“</div>
           <blockquote id="spotlightQuote">Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.</blockquote>
@@ -247,41 +297,41 @@
         </article>
       </div>
       <div class="employee-tabs" role="tablist">
-        <button class="employee-tab active" role="tab" data-story="0" type="button"><img src="assets/images/employee/opt-person.png" alt="" /><span><strong>Ananya Rao</strong><small>Operations</small></span></button>
-        <button class="employee-tab" role="tab" data-story="1" type="button"><img src="assets/images/employee/doc.png" alt="" /><span><strong>Rohit Verma</strong><small>Research</small></span></button>
-        <button class="employee-tab" role="tab" data-story="2" type="button"><img src="assets/images/employee/pm.png" alt="" /><span><strong>Priya Nair</strong><small>Product</small></span></button>
-        <button class="employee-tab" role="tab" data-story="3" type="button"><img src="assets/images/employee/field.png" alt="" /><span><strong>Karan Mehta</strong><small>Customer Success</small></span></button>
-        <button class="employee-tab" role="tab" data-story="4" type="button"><img src="assets/images/employee/" alt="" /><span><strong>Meera Iyer</strong><small>Quality</small></span></button>
+        <button class="employee-tab active" role="tab" aria-selected="true" data-story="0" type="button"><img src="assets/images/employee/opt-person.png" alt="" /><span><strong>Ananya Rao</strong><small>Operations</small></span></button>
+        <button class="employee-tab" role="tab" aria-selected="false" data-story="1" type="button"><img src="assets/images/employee/doc.png" alt="" /><span><strong>Rohit Verma</strong><small>Research</small></span></button>
+        <button class="employee-tab" role="tab" aria-selected="false" data-story="2" type="button"><img src="assets/images/employee/pm.png" alt="" /><span><strong>Priya Nair</strong><small>Product</small></span></button>
+        <button class="employee-tab" role="tab" aria-selected="false" data-story="3" type="button"><img src="assets/images/employee/field.png" alt="" /><span><strong>Karan Mehta</strong><small>Customer Success</small></span></button>
+        <button class="employee-tab" role="tab" aria-selected="false" data-story="4" type="button"><img src="assets/images/employee/qa.png" alt="" /><span><strong>Meera Iyer</strong><small>Quality</small></span></button>
       </div>
     </div>
   </section>
 
-  <section class="people-section story-library" id="story-library">
+  <section class="people-section story-library employee-story-library" id="story-library">
     <div class="container">
       <div class="section-head text-center scroll-reveal" data-reveal="up"><span class="super-head">STORY LIBRARY</span><h2>Real People, <span class="gradient-text">Real Work.</span></h2><p>A cross-section of the teams that ship, service and support Econiya every single day.</p></div>
       <div class="row g-4">
-        <div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/manufacturing.webp" alt="Ananya Rao" /><span>Operations</span></div><div class="story-copy"><div class="story-person"><div><h3>Ananya Rao</h3><p>Senior Manufacturing Engineer</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
-<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/about/founder.webp" alt="Rohit Verma" /><span>Research & Development</span></div><div class="story-copy"><div class="story-person"><div><h3>Rohit Verma</h3><p>R&D Firmware Engineer</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
-<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/healthcare.webp" alt="Priya Nair" /><span>Product</span></div><div class="story-copy"><div class="story-person"><div><h3>Priya Nair</h3><p>Product Manager, IoT Platform</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
-<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/energy.webp" alt="Karan Mehta" /><span>Customer Success</span></div><div class="story-copy"><div class="story-person"><div><h3>Karan Mehta</h3><p>Field Service Lead</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
-<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/public-safety.webp" alt="Meera Iyer" /><span>Quality</span></div><div class="story-copy"><div class="story-person"><div><h3>Meera Iyer</h3><p>Quality Assurance Specialist</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
-<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/innovation.webp" alt="Arvind Sharma" /><span>Strategy</span></div><div class="story-copy"><div class="story-person"><div><h3>Arvind Sharma</h3><p>Head of Solutions Architecture</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+        <div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/employee/opt-person.png" alt="Ananya Rao" /><span>Operations</span></div><div class="story-copy"><div class="story-person"><div><h3>Ananya Rao</h3><p>Senior Manufacturing Engineer</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/employee/doc.png" alt="Rohit Verma" /><span>Research & Development</span></div><div class="story-copy"><div class="story-person"><div><h3>Rohit Verma</h3><p>R&D Firmware Engineer</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/employee/pm.png" alt="Priya Nair" /><span>Product</span></div><div class="story-copy"><div class="story-person"><div><h3>Priya Nair</h3><p>Product Manager, IoT Platform</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/employee/field.png" alt="Karan Mehta" /><span>Customer Success</span></div><div class="story-copy"><div class="story-person"><div><h3>Karan Mehta</h3><p>Field Service Lead</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/employee/qa.png" alt="Meera Iyer" /><span>Quality</span></div><div class="story-copy"><div class="story-person"><div><h3>Meera Iyer</h3><p>Quality Assurance Specialist</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/employee/head.png" alt="Arvind Sharma" /><span>Strategy</span></div><div class="story-copy"><div class="story-person"><div><h3>Arvind Sharma</h3><p>Head of Solutions Architecture</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
       </div>
     </div>
   </section>
 
-  <section class="people-section video-diaries">
+  <section class="people-section video-diaries employee-video-diaries">
     <div class="container">
       <div class="video-heading scroll-reveal" data-reveal="up"><div><span class="super-head">VIDEO DIARIES</span><h2>The People Behind <span class="gradient-text">Econiya</span></h2></div><p>Short, unscripted films from our engineers — filmed on-site in our factory, R&amp;D centre and customer facilities.</p></div>
       <div class="row g-4 animation-slot" data-animation-slot="video-carousel">
-        <div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/manufacturing.webp" alt="Ananya Rao video diary poster" /><button class="video-play" type="button" aria-label="Play Ananya Rao video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Ananya Rao · Senior Manufacturing Engineer</p></div></article></div>
-<div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/about/founder.webp" alt="Rohit Verma video diary poster" /><button class="video-play" type="button" aria-label="Play Rohit Verma video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Rohit Verma · R&D Firmware Engineer</p></div></article></div>
-<div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/healthcare.webp" alt="Priya Nair video diary poster" /><button class="video-play" type="button" aria-label="Play Priya Nair video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Priya Nair · Product Manager, IoT Platform</p></div></article></div>
+        <div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/employee/opt-person.png" alt="Ananya Rao video diary poster" /><button class="video-play" type="button" aria-label="Play Ananya Rao video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Ananya Rao · Senior Manufacturing Engineer</p></div></article></div>
+<div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/employee/field.png" alt="Rohit Verma video diary poster" /><button class="video-play" type="button" aria-label="Play Rohit Verma video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Rohit Verma · R&D Firmware Engineer</p></div></article></div>
+<div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/employee/qa.png" alt="Priya Nair video diary poster" /><button class="video-play" type="button" aria-label="Play Priya Nair video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Priya Nair · Product Manager, IoT Platform</p></div></article></div>
       </div>
     </div>
   </section>
 
-  <section class="people-cta scroll-reveal" data-reveal="up"><div class="container"><div class="cta-content"><span class="super-head">JOIN THE TEAM</span><h2>Want to be the next voice on this page?</h2><p>We are hiring across engineering, R&amp;D, field operations and product. See where you fit — and how far you can go.</p><div class="section-btn"><a class="btn btn-white" href="careers.html#open-positions">See Open Roles <i class="bi bi-arrow-right"></i></a><a class="btn btn-outline" href="contact.html">Talk to a Recruiter <i class="bi bi-arrow-right"></i></a></div></div></div></section>
+  <section class="people-cta employee-page-cta scroll-reveal" data-reveal="up"><div class="container"><div class="cta-content"><span class="super-head">JOIN THE TEAM</span><h2>Want to be the next voice on this page?</h2><p>We are hiring across engineering, R&amp;D, field operations and product. See where you fit — and how far you can go.</p><div class="section-btn"><a class="btn btn-white" href="careers.html#open-positions">See Open Roles <i class="bi bi-arrow-right"></i></a><a class="btn btn-outline" href="contact.html">Talk to a Recruiter <i class="bi bi-arrow-right"></i></a></div></div></div></section>
 </main>
 
 <div

@@ -1168,3 +1168,1974 @@
   }
 }
 
+/* =========================================================
+   EMPLOYEE SPEAKS — FINAL FIGMA-ALIGNED RESPONSIVE LAYOUT
+   This block intentionally comes last so it can override the
+   shared People Pages defaults without affecting Careers.
+========================================================= */
+
+/* ---------------------------------------------------------
+   HERO SURFACE
+--------------------------------------------------------- */
+
+.employee-speaks-page .people-hero {
+  overflow: visible;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(231, 34, 47, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 34, 47, 0.045) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.employee-speaks-page .people-hero > .hero-particle-canvas {
+  display: none;
+}
+
+.employee-speaks-page .people-hero > header {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.employee-speaks-page .employee-hero-body {
+  padding: 34px 0 58px;
+}
+
+.employee-speaks-page .employee-hero-body > .container {
+  max-width: 1180px;
+}
+
+.employee-speaks-page .employee-hero-body .row {
+  --bs-gutter-x: 52px;
+  align-items: center;
+}
+
+.employee-speaks-page .employee-hero-body .col-lg-5 {
+  flex: 0 0 42%;
+  width: 42%;
+}
+
+.employee-speaks-page .employee-hero-body .col-lg-7 {
+  flex: 0 0 58%;
+  width: 58%;
+}
+
+.employee-speaks-page .employee-hero-body .super-head {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.employee-speaks-page .employee-hero-body h1 {
+  max-width: 520px;
+  margin: 0 0 23px;
+  font-size: clamp(49px, 4.55vw, 65px);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.employee-speaks-page .employee-hero-body p {
+  max-width: 510px;
+  margin: 0 0 26px;
+  color: #5d585e;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.employee-speaks-page .employee-hero-body .section-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.employee-speaks-page .employee-hero-body .section-btn .btn {
+  min-height: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+/* ---------------------------------------------------------
+   HERO IMAGE AND TEAM BADGE
+--------------------------------------------------------- */
+
+.employee-speaks-page .people-hero-media {
+  position: relative;
+  min-height: 0;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+}
+
+.employee-speaks-page .people-hero-media > img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 26px;
+}
+
+.employee-speaks-page .people-count-badge {
+  left: -34px;
+  bottom: -24px;
+  z-index: 4;
+  gap: 12px;
+  padding: 10px 16px 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 34px rgba(44, 22, 25, 0.13);
+}
+
+.employee-speaks-page .people-count-badge strong {
+  font-size: 15px;
+  line-height: 1.15;
+}
+
+.employee-speaks-page .people-count-badge span {
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+.employee-speaks-page .people-avatars img {
+  width: 34px;
+  height: 34px;
+}
+
+/* ---------------------------------------------------------
+   HERO STATS
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-hero-stats {
+  margin-top: 72px;
+}
+
+.employee-speaks-page .employee-hero-stats article {
+  min-height: 108px;
+  padding: 20px 20px 18px;
+  border-radius: 16px;
+}
+
+.employee-speaks-page .employee-hero-stats strong {
+  font-size: 31px;
+  line-height: 1;
+}
+
+.employee-speaks-page .employee-hero-stats span {
+  display: block;
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.employee-speaks-page .employee-hero-stats i {
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  font-size: 15px;
+}
+
+/* ---------------------------------------------------------
+   SHARED EMPLOYEE SECTION RHYTHM
+--------------------------------------------------------- */
+
+.employee-speaks-page .people-section {
+  padding: 76px 0;
+}
+
+.employee-speaks-page .people-section .section-head {
+  margin-bottom: 46px;
+}
+
+.employee-speaks-page .people-section .section-head .super-head {
+  font-size: 12px;
+  letter-spacing: 0.075em;
+}
+
+.employee-speaks-page .people-section h2 {
+  font-size: clamp(39px, 3.7vw, 54px);
+}
+
+/* ---------------------------------------------------------
+   SPOTLIGHT
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-spotlight-section {
+  background: #ffffff;
+}
+
+.employee-speaks-page .spotlight-shell {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.03fr);
+  max-width: 1080px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  background: #ffffff;
+}
+
+.employee-speaks-page .spotlight-image {
+  min-height: 520px;
+  border-radius: 0;
+}
+
+.employee-speaks-page .spotlight-quote {
+  min-width: 0;
+  padding: 42px;
+  border: 0;
+  border-radius: 0;
+}
+
+.employee-speaks-page .quote-mark {
+  height: 46px;
+  font-size: 70px;
+}
+
+.employee-speaks-page .spotlight-quote blockquote {
+  margin: 12px 0 17px;
+  font-size: 27px;
+  line-height: 1.27;
+}
+
+.employee-speaks-page .spotlight-quote > p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.employee-speaks-page .proud-moment {
+  margin: 17px 0;
+}
+
+.employee-speaks-page .employee-tabs {
+  max-width: 1080px;
+  margin: 24px auto 0;
+  gap: 11px;
+}
+
+.employee-speaks-page .employee-tab {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 6px 10px;
+}
+
+.employee-speaks-page .employee-tab img {
+  width: 34px;
+  height: 34px;
+}
+
+/* ---------------------------------------------------------
+   STORY LIBRARY
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-story-library {
+  background: linear-gradient(180deg, #ffffff 0%, #fffafa 100%);
+}
+
+.employee-speaks-page .employee-story-library .container {
+  max-width: 1180px;
+}
+
+.employee-speaks-page .employee-story-card {
+  border-radius: 17px;
+}
+
+.employee-speaks-page .story-photo {
+  height: 285px;
+}
+
+.employee-speaks-page .story-copy {
+  padding: 17px;
+}
+
+.employee-speaks-page .story-person h3 {
+  font-size: 18px;
+}
+
+.employee-speaks-page .story-person p,
+.employee-speaks-page .story-person small {
+  margin: 2px 0 0;
+  font-size: 10px;
+}
+
+.employee-speaks-page .story-copy blockquote {
+  margin: 13px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.employee-speaks-page .story-copy .location {
+  font-size: 10px;
+}
+
+/* ---------------------------------------------------------
+   VIDEO DIARIES
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-video-diaries .container {
+  max-width: 1180px;
+}
+
+.employee-speaks-page .video-heading {
+  margin-bottom: 34px;
+}
+
+.employee-speaks-page .video-diary-card {
+  height: 390px;
+  border-radius: 18px;
+}
+
+.employee-speaks-page .video-play {
+  width: 46px;
+  height: 46px;
+}
+
+.employee-speaks-page .video-copy {
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+}
+
+.employee-speaks-page .video-copy h3 {
+  font-size: 19px;
+}
+
+/* ---------------------------------------------------------
+   PAGE CTA
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-page-cta {
+  padding: 30px 0 70px;
+}
+
+.employee-speaks-page .employee-page-cta .container {
+  max-width: 1180px;
+}
+
+.employee-speaks-page .employee-page-cta .cta-content {
+  padding: 48px;
+  border-radius: 22px;
+}
+
+.employee-speaks-page .employee-page-cta h2 {
+  max-width: 900px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .employee-speaks-page .employee-hero-body .col-lg-5,
+  .employee-speaks-page .employee-hero-body .col-lg-7 {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .employee-speaks-page .employee-hero-body .row {
+    --bs-gutter-y: 34px;
+  }
+
+  .employee-speaks-page .employee-hero-body h1,
+  .employee-speaks-page .employee-hero-body p {
+    max-width: 720px;
+  }
+
+  .employee-speaks-page .people-hero-media {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .employee-speaks-page .people-hero-media > img {
+    height: 460px;
+  }
+
+  .employee-speaks-page .people-count-badge {
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .employee-speaks-page .employee-hero-stats {
+    margin-top: 34px;
+  }
+
+  .employee-speaks-page .spotlight-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .employee-speaks-page .spotlight-image {
+    min-height: 480px;
+    border-radius: 0;
+  }
+
+  .employee-speaks-page .employee-tabs {
+    justify-content: flex-start;
+  }
+
+  .employee-speaks-page .employee-tab {
+    flex: 0 0 175px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  /* Header and menu */
+  .employee-speaks-page .people-hero > header {
+    position: relative;
+    z-index: 1000;
+    min-height: 58px;
+    padding: 6px 0;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 1px 0 rgba(231, 34, 47, 0.08);
+  }
+
+  .employee-speaks-page header .navbar {
+    position: relative;
+    min-height: 46px;
+    padding: 0;
+  }
+
+  .employee-speaks-page header .navbar > .container {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .employee-speaks-page header .navbar-brand {
+    position: relative;
+    z-index: 1003;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .employee-speaks-page header .navbar-brand img {
+    display: block;
+    width: 112px;
+    max-width: 112px;
+    height: auto;
+  }
+
+  .employee-speaks-page header .navbar-toggler {
+    position: relative;
+    z-index: 1004;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-left: auto;
+    padding: 0;
+    color: var(--primary);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+  }
+
+  .employee-speaks-page header .navbar-ml {
+    display: none !important;
+  }
+
+  .employee-speaks-page header .navbar-collapse:not(.show):not(.collapsing) {
+    display: none !important;
+  }
+
+  .employee-speaks-page header .navbar-collapse {
+    position: absolute;
+    top: calc(100% + 7px);
+    right: 12px;
+    left: 12px;
+    z-index: 1002;
+    width: auto;
+    margin: 0;
+    padding: 9px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 18px 40px rgba(37, 24, 27, 0.16);
+  }
+
+  .employee-speaks-page header .navbar-collapse.collapsing,
+  .employee-speaks-page header .navbar-collapse.show {
+    display: block !important;
+  }
+
+  .employee-speaks-page header .main-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 4px;
+    background: #ffffff;
+    border: 0;
+  }
+
+  .employee-speaks-page header .main-menu .nav-item {
+    width: 100%;
+  }
+
+  .employee-speaks-page header .main-menu .nav-link {
+    display: block;
+    width: 100%;
+    padding: 11px 12px !important;
+    border-radius: 9px;
+  }
+
+  .employee-speaks-page header .main-menu .nav-link:hover,
+  .employee-speaks-page header .main-menu .nav-link.active {
+    color: var(--primary);
+    background: #fff1f2;
+  }
+
+  .employee-speaks-page header .main-menu .wave {
+    display: none !important;
+  }
+
+  /* Hero */
+  .employee-speaks-page .employee-hero-body {
+    padding: 25px 0 38px;
+  }
+
+  .employee-speaks-page .employee-hero-body > .container,
+  .employee-speaks-page .people-section > .container,
+  .employee-speaks-page .people-cta > .container {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .employee-speaks-page .employee-hero-body .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 25px;
+  }
+
+  .employee-speaks-page .employee-hero-body .super-head {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .employee-speaks-page .employee-hero-body h1 {
+    margin-bottom: 15px;
+    font-size: 39px;
+    line-height: 1.01;
+  }
+
+  .employee-speaks-page .employee-hero-body p {
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 1.62;
+  }
+
+  .employee-speaks-page .employee-hero-body .section-btn {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .employee-speaks-page .employee-hero-body .section-btn .btn {
+    width: min(100%, 215px);
+    min-height: 45px;
+    justify-content: space-between;
+    margin: 0 !important;
+  }
+
+  .employee-speaks-page .people-hero-media {
+    width: 100%;
+    margin: 0;
+  }
+
+  .employee-speaks-page .people-hero-media > img {
+    width: 100%;
+    height: 270px;
+    border-radius: 18px;
+  }
+
+  .employee-speaks-page .people-count-badge {
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    gap: 9px;
+    padding: 8px 10px;
+  }
+
+  .employee-speaks-page .people-count-badge strong {
+    font-size: 12px;
+  }
+
+  .employee-speaks-page .people-count-badge span {
+    font-size: 8px;
+  }
+
+  .employee-speaks-page .people-avatars img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .employee-speaks-page .employee-hero-stats {
+    margin-top: 18px;
+    --bs-gutter-y: 10px;
+  }
+
+  .employee-speaks-page .employee-hero-stats > div {
+    width: 100%;
+  }
+
+  .employee-speaks-page .employee-hero-stats article {
+    min-height: 78px;
+    padding: 15px 16px;
+    border-radius: 14px;
+  }
+
+  .employee-speaks-page .employee-hero-stats strong {
+    font-size: 26px;
+  }
+
+  .employee-speaks-page .employee-hero-stats span {
+    margin-top: 8px;
+    font-size: 10px;
+  }
+
+  .employee-speaks-page .employee-hero-stats i {
+    top: 13px;
+    right: 13px;
+    width: 31px;
+    height: 31px;
+  }
+
+  /* Shared section spacing */
+  .employee-speaks-page .people-section {
+    padding: 44px 0;
+  }
+
+  .employee-speaks-page .people-section .section-head {
+    margin-bottom: 27px;
+  }
+
+  .employee-speaks-page .people-section .section-head .super-head {
+    font-size: 10px;
+  }
+
+  .employee-speaks-page .people-section h2 {
+    font-size: 31px;
+    line-height: 1.06;
+  }
+
+  .employee-speaks-page .people-section .section-head p {
+    margin-top: 9px;
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  /* Spotlight */
+  .employee-speaks-page .spotlight-shell {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+  }
+
+  .employee-speaks-page .spotlight-image {
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .employee-speaks-page .spotlight-caption {
+    right: 18px;
+    bottom: 17px;
+    left: 18px;
+  }
+
+  .employee-speaks-page .spotlight-caption h3 {
+    font-size: 21px;
+  }
+
+  .employee-speaks-page .spotlight-quote {
+    padding: 22px 18px;
+  }
+
+  .employee-speaks-page .quote-mark {
+    height: 35px;
+    font-size: 55px;
+  }
+
+  .employee-speaks-page .spotlight-quote blockquote {
+    margin: 8px 0 13px;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .employee-speaks-page .spotlight-quote > p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .employee-speaks-page .proud-moment {
+    margin: 13px 0;
+    padding: 10px 12px;
+  }
+
+  .employee-speaks-page .employee-tabs {
+    justify-content: flex-start;
+    gap: 8px;
+    margin-top: 16px;
+    padding-bottom: 6px;
+  }
+
+  .employee-speaks-page .employee-tab {
+    flex: 0 0 150px;
+    min-width: 150px;
+    padding: 6px 9px;
+  }
+
+  .employee-speaks-page .employee-tab img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Story cards */
+  .employee-speaks-page .employee-story-library .row {
+    --bs-gutter-y: 14px;
+  }
+
+  .employee-speaks-page .employee-story-card {
+    border-radius: 16px;
+  }
+
+  .employee-speaks-page .story-photo {
+    height: 245px;
+  }
+
+  .employee-speaks-page .story-copy {
+    padding: 15px;
+  }
+
+  .employee-speaks-page .story-person h3 {
+    font-size: 17px;
+  }
+
+  .employee-speaks-page .story-copy blockquote {
+    margin: 11px 0;
+    font-size: 12px;
+    line-height: 1.48;
+  }
+
+  /* Videos */
+  .employee-speaks-page .video-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .employee-speaks-page .video-heading > p {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  .employee-speaks-page .employee-video-diaries .row {
+    --bs-gutter-y: 14px;
+  }
+
+  .employee-speaks-page .video-diary-card {
+    height: 330px;
+    border-radius: 16px;
+  }
+
+  .employee-speaks-page .video-copy h3 {
+    font-size: 17px;
+  }
+
+  /* CTA */
+  .employee-speaks-page .employee-page-cta {
+    padding: 25px 0 48px;
+  }
+
+  .employee-speaks-page .employee-page-cta .cta-content {
+    padding: 28px 20px;
+    border-radius: 18px;
+  }
+
+  .employee-speaks-page .employee-page-cta h2 {
+    font-size: 31px;
+    line-height: 1.06;
+  }
+
+  .employee-speaks-page .employee-page-cta p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  .employee-speaks-page .employee-page-cta .section-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .employee-speaks-page .employee-page-cta .section-btn .btn {
+    width: min(100%, 220px);
+    justify-content: space-between;
+    margin: 0 !important;
+  }
+
+  /* Newsletter and footer */
+  .employee-speaks-page footer {
+    padding-top: 35px;
+  }
+
+  .employee-speaks-page .newsletter {
+    padding-top: 0;
+    padding-bottom: 28px;
+  }
+
+  .employee-speaks-page .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .employee-speaks-page .newsletter-form .btn {
+    width: 100%;
+  }
+}
+
+/* Extra-small phones */
+@media (max-width: 399.98px) {
+  .employee-speaks-page .employee-hero-body h1 {
+    font-size: 35px;
+  }
+
+  .employee-speaks-page .people-hero-media > img {
+    height: 235px;
+  }
+
+  .employee-speaks-page .people-count-badge {
+    transform: scale(0.92);
+    transform-origin: left bottom;
+  }
+
+  .employee-speaks-page .spotlight-image {
+    min-height: 310px;
+    height: 310px;
+  }
+
+  .employee-speaks-page .people-section h2,
+  .employee-speaks-page .employee-page-cta h2 {
+    font-size: 28px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .employee-speaks-page .people-hero-media > img,
+  .employee-speaks-page .employee-story-card,
+  .employee-speaks-page .story-photo img,
+  .employee-speaks-page .video-play {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   EMPLOYEE SPEAKS — HERO PARTICLES, MOBILE TEAM BADGE,
+   AND FULLY VISIBLE CLICKABLE PROFILE TABS
+   Keep this block at the absolute end of people-pages.css
+========================================================= */
+
+/* Restore the same animated particle background used by the shared hero. */
+.employee-speaks-page .people-hero {
+  position: relative;
+  overflow: hidden;
+
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.employee-speaks-page .people-hero > .hero-particle-canvas {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.26;
+  pointer-events: none;
+}
+
+/* Keep all real hero content above the canvas. */
+.employee-speaks-page .people-hero > header,
+.employee-speaks-page .employee-hero-body {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ensure every employee profile control is genuinely clickable. */
+.employee-speaks-page .employee-tab {
+  position: relative;
+  z-index: 1;
+
+  cursor: pointer;
+  touch-action: manipulation;
+
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.employee-speaks-page .employee-tab:hover,
+.employee-speaks-page .employee-tab:focus-visible,
+.employee-speaks-page .employee-tab.active,
+.employee-speaks-page .employee-tab[aria-selected="true"] {
+  color: #222020;
+  background: #fff7f8;
+  border-color: var(--primary);
+
+  box-shadow:
+    0 8px 22px rgba(112, 25, 33, 0.08);
+
+  transform: translateY(-2px);
+}
+
+.employee-speaks-page .employee-tab:focus-visible {
+  outline: 3px solid rgba(231, 34, 47, 0.16);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  /*
+    Reset the inherited 390px media height. This was the reason
+    the team badge appeared far below the actual hero image.
+  */
+  .employee-speaks-page .people-hero-media {
+    position: relative;
+
+    width: 100%;
+    height: 270px;
+    min-height: 270px;
+    margin: 0;
+
+    overflow: visible;
+    perspective: 900px;
+  }
+
+  .employee-speaks-page .people-hero-media > img {
+    display: block;
+
+    width: 100%;
+    height: 270px;
+    min-height: 270px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 18px;
+  }
+
+  /*
+    Place the 1,240+ Econiyans badge directly over the image.
+    The shadow and slight lift create the requested floating 3D look.
+  */
+  .employee-speaks-page .people-count-badge {
+    position: absolute;
+    right: auto;
+    bottom: 12px;
+    left: 12px;
+    z-index: 6;
+
+    width: min(86%, 330px);
+    max-width: calc(100% - 24px);
+
+    gap: 9px;
+    padding: 8px 12px 8px 9px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(231, 34, 47, 0.18);
+    border-radius: 999px;
+
+    box-shadow:
+      0 16px 30px rgba(47, 25, 29, 0.2),
+      0 5px 12px rgba(47, 25, 29, 0.1);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    transform:
+      translate3d(0, 0, 32px)
+      rotateX(0.01deg);
+  }
+
+  .employee-speaks-page .people-count-badge strong {
+    font-size: 12px;
+    line-height: 1.08;
+  }
+
+  .employee-speaks-page .people-count-badge span {
+    margin-top: 2px;
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  .employee-speaks-page .people-avatars {
+    flex: 0 0 auto;
+  }
+
+  .employee-speaks-page .people-avatars img {
+    width: 26px;
+    height: 26px;
+    margin-left: -6px;
+
+    border-width: 2px;
+  }
+
+  .employee-speaks-page .people-avatars img:first-child {
+    margin-left: 0;
+  }
+
+  /*
+    Show every profile inside the phone width.
+    No horizontal clipping or off-screen tabs.
+  */
+  .employee-speaks-page .employee-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+    gap: 8px;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 16px 0 0;
+    padding: 0;
+
+    overflow: visible;
+  }
+
+  .employee-speaks-page .employee-tab {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr);
+    align-items: center;
+    gap: 7px;
+
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+
+    padding: 6px 8px;
+
+    text-align: left;
+  }
+
+  /*
+    Center the fifth profile on its own row instead of letting it
+    hang outside the viewport.
+  */
+  .employee-speaks-page .employee-tab:nth-child(5) {
+    grid-column: 1 / -1;
+    width: calc(50% - 4px);
+    justify-self: center;
+  }
+
+  .employee-speaks-page .employee-tab img {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .employee-speaks-page .employee-tab span {
+    min-width: 0;
+  }
+
+  .employee-speaks-page .employee-tab strong,
+  .employee-speaks-page .employee-tab small {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .employee-speaks-page .employee-tab strong {
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  .employee-speaks-page .employee-tab small {
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  /* Prevent touch devices from keeping a lifted hover state. */
+  .employee-speaks-page .employee-tab:hover {
+    transform: none;
+  }
+
+  .employee-speaks-page .employee-tab.active,
+  .employee-speaks-page .employee-tab[aria-selected="true"] {
+    transform: translateY(-1px);
+  }
+}
+
+/* Very narrow phones: keep all five controls usable. */
+@media (max-width: 379.98px) {
+  .employee-speaks-page .people-hero-media,
+  .employee-speaks-page .people-hero-media > img {
+    height: 238px;
+    min-height: 238px;
+  }
+
+  .employee-speaks-page .people-count-badge {
+    width: calc(100% - 20px);
+    max-width: none;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .employee-speaks-page .employee-tabs {
+    gap: 7px;
+  }
+
+  .employee-speaks-page .employee-tab {
+    grid-template-columns: 27px minmax(0, 1fr);
+    padding: 6px;
+  }
+
+  .employee-speaks-page .employee-tab img {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .employee-speaks-page .employee-tab,
+  .employee-speaks-page .people-count-badge {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   EMPLOYEE SPEAKS — FINAL SECTION SPACING, MOBILE NAV,
+   AND 3D SPOTLIGHT
+========================================================= */
+
+/* ---------------------------------------------------------
+   TIGHTER DESKTOP / LAPTOP SECTION RHYTHM
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-hero-body {
+  padding-top: 28px;
+  padding-bottom: 42px;
+}
+
+.employee-speaks-page .employee-hero-stats {
+  margin-top: 46px;
+}
+
+.employee-speaks-page .people-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.employee-speaks-page .people-section .section-head {
+  margin-bottom: 32px;
+}
+
+.employee-speaks-page .employee-story-library {
+  padding-top: 52px;
+  padding-bottom: 56px;
+}
+
+.employee-speaks-page .employee-video-diaries {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+.employee-speaks-page .employee-page-cta {
+  padding-top: 18px;
+  padding-bottom: 54px;
+}
+
+/* ---------------------------------------------------------
+   FIGMA-LIKE 3D SPOTLIGHT COMPOSITION
+--------------------------------------------------------- */
+
+.employee-speaks-page .employee-spotlight-section {
+  overflow: visible;
+}
+
+.employee-speaks-page .spotlight-shell {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: minmax(0, 58%) minmax(0, 48%);
+  align-items: center;
+
+  max-width: 1080px;
+  margin: 0 auto;
+
+  overflow: visible;
+
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.employee-speaks-page .spotlight-image {
+  position: relative;
+  z-index: 1;
+
+  min-height: 500px;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 46px rgba(40, 23, 27, 0.14);
+
+  transform:
+    translateZ(0)
+    rotateY(0.001deg);
+
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms ease;
+}
+
+.employee-speaks-page .spotlight-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.employee-speaks-page .spotlight-quote {
+  position: relative;
+  z-index: 3;
+
+  min-width: 0;
+  margin-left: -58px;
+  padding: 38px 38px 34px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(231, 34, 47, 0.22);
+  border-radius: 20px;
+
+  box-shadow:
+    0 24px 54px rgba(56, 24, 31, 0.15),
+    0 8px 20px rgba(56, 24, 31, 0.08);
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  transform:
+    translateZ(52px)
+    translateY(18px);
+
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 500ms ease;
+}
+
+.employee-speaks-page .spotlight-shell:hover .spotlight-image {
+  transform:
+    translateZ(8px)
+    translateX(-4px)
+    rotateY(0.7deg);
+
+  box-shadow:
+    0 26px 58px rgba(40, 23, 27, 0.18);
+}
+
+.employee-speaks-page .spotlight-shell:hover .spotlight-image img {
+  transform: scale(1.025);
+}
+
+.employee-speaks-page .spotlight-shell:hover .spotlight-quote {
+  transform:
+    translateZ(66px)
+    translateY(12px)
+    translateX(4px);
+
+  box-shadow:
+    0 30px 64px rgba(56, 24, 31, 0.18),
+    0 10px 24px rgba(56, 24, 31, 0.09);
+}
+
+/* Keep the department badge fully inside the image. */
+.employee-speaks-page .spotlight-caption {
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+
+  overflow: visible;
+}
+
+.employee-speaks-page #spotlightDept {
+  position: static !important;
+
+  display: inline-flex;
+  align-items: center;
+
+  width: max-content;
+  max-width: 100%;
+
+  margin: 0 0 8px;
+  padding: 5px 10px;
+
+  color: #373337;
+  background: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, 0.12);
+
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+
+  transform: none !important;
+}
+
+.employee-speaks-page .spotlight-caption h3 {
+  margin-top: 0;
+}
+
+/* Tabs remain below the 3D composition. */
+.employee-speaks-page .employee-tabs {
+  position: relative;
+  z-index: 5;
+
+  margin-top: 36px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .employee-speaks-page .people-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .employee-speaks-page .spotlight-shell {
+    display: block;
+    max-width: 760px;
+  }
+
+  .employee-speaks-page .spotlight-image {
+    min-height: 470px;
+    height: 470px;
+  }
+
+  .employee-speaks-page .spotlight-quote {
+    margin:
+      -34px
+      24px
+      0;
+
+    padding: 32px;
+
+    transform: translateZ(36px);
+  }
+
+  .employee-speaks-page .spotlight-shell:hover .spotlight-image,
+  .employee-speaks-page .spotlight-shell:hover .spotlight-quote {
+    transform: none;
+  }
+
+  .employee-speaks-page .employee-tabs {
+    margin-top: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  /* -------------------------------------------------------
+     MOBILE MENU PUSHES CONTENT DOWN INSTEAD OF COVERING HERO
+  ------------------------------------------------------- */
+
+  .employee-speaks-page .people-hero > header {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .employee-speaks-page header .navbar > .container {
+    flex-wrap: wrap;
+  }
+
+  .employee-speaks-page header .navbar-collapse {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    z-index: auto;
+
+    flex-basis: 100%;
+
+    width: 100%;
+    margin-top: 8px;
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+
+    box-shadow:
+      0 13px 28px rgba(37, 24, 27, 0.12);
+  }
+
+  .employee-speaks-page header .navbar-collapse:not(.show):not(.collapsing) {
+    display: none !important;
+  }
+
+  .employee-speaks-page header .navbar-collapse.show,
+  .employee-speaks-page header .navbar-collapse.collapsing {
+    display: block !important;
+  }
+
+  .employee-speaks-page header .main-menu {
+    width: 100%;
+  }
+
+  /* -------------------------------------------------------
+     COMPACT MOBILE SECTION SPACING
+  ------------------------------------------------------- */
+
+  .employee-speaks-page .employee-hero-body {
+    padding-top: 20px;
+    padding-bottom: 28px;
+  }
+
+  .employee-speaks-page .employee-hero-stats {
+    margin-top: 14px;
+  }
+
+  .employee-speaks-page .people-section {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .employee-speaks-page .people-section .section-head {
+    margin-bottom: 20px;
+  }
+
+  .employee-speaks-page .employee-story-library {
+    padding-top: 32px;
+    padding-bottom: 36px;
+  }
+
+  .employee-speaks-page .employee-video-diaries {
+    padding-top: 34px;
+    padding-bottom: 36px;
+  }
+
+  .employee-speaks-page .employee-page-cta {
+    padding-top: 14px;
+    padding-bottom: 38px;
+  }
+
+  /* -------------------------------------------------------
+     RESPONSIVE 3D SPOTLIGHT
+  ------------------------------------------------------- */
+
+  .employee-speaks-page .spotlight-shell {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    overflow: visible;
+
+    perspective: none;
+  }
+
+  .employee-speaks-page .spotlight-image {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    min-height: 330px;
+    height: 330px;
+
+    border-radius: 18px;
+
+    box-shadow:
+      0 15px 34px rgba(40, 23, 27, 0.14);
+
+    transform: none;
+  }
+
+  .employee-speaks-page .spotlight-caption {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .employee-speaks-page #spotlightDept {
+    margin-bottom: 7px;
+    padding: 5px 9px;
+
+    font-size: 9px;
+  }
+
+  .employee-speaks-page .spotlight-caption h3 {
+    font-size: 21px;
+  }
+
+  .employee-speaks-page .spotlight-caption p {
+    font-size: 11px;
+  }
+
+  .employee-speaks-page .spotlight-quote {
+    position: relative;
+    z-index: 3;
+
+    margin:
+      -18px
+      10px
+      0;
+
+    padding: 22px 17px 20px;
+
+    border-radius: 16px;
+
+    box-shadow:
+      0 18px 38px rgba(56, 24, 31, 0.13);
+
+    transform: none;
+  }
+
+  .employee-speaks-page .quote-mark {
+    height: 34px;
+    font-size: 52px;
+  }
+
+  .employee-speaks-page .spotlight-quote blockquote {
+    margin: 7px 0 12px;
+
+    font-size: 19px;
+    line-height: 1.24;
+  }
+
+  .employee-speaks-page .spotlight-quote > p {
+    font-size: 10.5px;
+    line-height: 1.58;
+  }
+
+  .employee-speaks-page .proud-moment {
+    margin: 12px 0;
+  }
+
+  .employee-speaks-page .employee-tabs {
+    margin-top: 18px;
+  }
+
+  /* Remove hover transforms on touch screens. */
+  .employee-speaks-page .spotlight-shell:hover .spotlight-image,
+  .employee-speaks-page .spotlight-shell:hover .spotlight-quote,
+  .employee-speaks-page .spotlight-shell:hover .spotlight-image img {
+    transform: none;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 379.98px) {
+  .employee-speaks-page .spotlight-image {
+    min-height: 295px;
+    height: 295px;
+  }
+
+  .employee-speaks-page .spotlight-quote {
+    margin-right: 7px;
+    margin-left: 7px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .employee-speaks-page .spotlight-quote blockquote {
+    font-size: 18px;
+  }
+}
+
+/* Reduced motion keeps functionality without movement. */
+@media (prefers-reduced-motion: reduce) {
+  .employee-speaks-page .spotlight-image,
+  .employee-speaks-page .spotlight-image img,
+  .employee-speaks-page .spotlight-quote {
+    transition: none;
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   EMPLOYEE SPEAKS — SHARP SPOTLIGHT RENDERING FIX
+   Removes GPU rasterization blur while preserving the
+   overlapping 3D-style composition.
+========================================================= */
+
+.employee-speaks-page .spotlight-shell {
+  perspective: none;
+  transform-style: flat;
+}
+
+/*
+  Fractional 3D transforms were forcing the browser to rasterize
+  the image and text onto GPU layers, which made both look soft.
+*/
+.employee-speaks-page .spotlight-image,
+.employee-speaks-page .spotlight-quote,
+.employee-speaks-page .spotlight-shell:hover .spotlight-image,
+.employee-speaks-page .spotlight-shell:hover .spotlight-quote {
+  transform: none;
+}
+
+/* Keep the image crisp at its rendered size. */
+.employee-speaks-page .spotlight-image {
+  backface-visibility: visible;
+  -webkit-font-smoothing: auto;
+}
+
+.employee-speaks-page .spotlight-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  image-rendering: auto;
+  backface-visibility: visible;
+  transform: none;
+
+  transition:
+    filter 350ms ease,
+    opacity 350ms ease;
+}
+
+/*
+  Disable image scaling on hover. Scaling a raster image by 1.025
+  introduces interpolation blur.
+*/
+.employee-speaks-page .spotlight-shell:hover .spotlight-image img {
+  transform: none;
+  filter: brightness(1.015);
+}
+
+/*
+  A backdrop blur on the quote panel can also soften text because
+  the complete element may be composited as one bitmap.
+*/
+.employee-speaks-page .spotlight-quote {
+  background: #ffffff;
+
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Preserve the depth effect using overlap and shadows only. */
+.employee-speaks-page .spotlight-image {
+  box-shadow:
+    0 20px 46px rgba(40, 23, 27, 0.14);
+}
+
+.employee-speaks-page .spotlight-quote {
+  box-shadow:
+    0 24px 54px rgba(56, 24, 31, 0.15),
+    0 8px 20px rgba(56, 24, 31, 0.08);
+}
+
+.employee-speaks-page .spotlight-shell:hover .spotlight-image {
+  box-shadow:
+    0 24px 54px rgba(40, 23, 27, 0.17);
+}
+
+.employee-speaks-page .spotlight-shell:hover .spotlight-quote {
+  box-shadow:
+    0 30px 64px rgba(56, 24, 31, 0.18),
+    0 10px 24px rgba(56, 24, 31, 0.09);
+}
+
+/*
+  Keep all text aligned to whole CSS pixels. This prevents
+  subpixel text rasterization in Chromium.
+*/
+.employee-speaks-page .spotlight-quote,
+.employee-speaks-page .spotlight-quote * {
+  translate: none;
+}
+
+/* Mobile and tablet remain sharp as well. */
+@media (max-width: 991.98px) {
+  .employee-speaks-page .spotlight-image,
+  .employee-speaks-page .spotlight-quote {
+    transform: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+
+
+
+
+/* =========================================================
+   EMPLOYEE SPEAKS — RESPONSIVE HERO STATS
+   Add at the absolute bottom of people-pages.css
+========================================================= */
+
+/* Keep the row balanced on larger screens */
+.employee-speaks-page .employee-hero-stats {
+  align-items: stretch;
+}
+
+.employee-speaks-page .employee-hero-stats > div {
+  display: flex;
+}
+
+.employee-speaks-page .employee-hero-stats article {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 108px;
+  padding: 20px 58px 18px 20px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(231, 34, 47, 0.25);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.employee-speaks-page .employee-hero-stats strong {
+  display: block;
+
+  margin: 0;
+
+  color: #222020;
+
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.employee-speaks-page .employee-hero-stats article > span {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #625d63;
+
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+/* Custom SVG icon */
+.employee-speaks-page .employee-stat-icon {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+
+  display: block;
+
+  box-sizing: content-box;
+
+  width: 22px;
+  height: 22px;
+  padding: 7px;
+
+  object-fit: contain;
+
+  background: #fff0f1;
+  border-radius: 11px;
+}
+
+/* =========================================================
+   TABLET — TWO COLUMNS
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .employee-speaks-page .employee-hero-stats {
+    --bs-gutter-x: 14px;
+    --bs-gutter-y: 14px;
+  }
+
+  .employee-speaks-page .employee-hero-stats > div {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .employee-speaks-page .employee-hero-stats article {
+    min-height: 96px;
+    padding: 17px 52px 16px 17px;
+  }
+
+  .employee-speaks-page .employee-hero-stats strong {
+    font-size: 28px;
+  }
+
+  .employee-speaks-page .employee-hero-stats article > span {
+    margin-top: 9px;
+    font-size: 10px;
+  }
+
+  .employee-speaks-page .employee-stat-icon {
+    top: 14px;
+    right: 14px;
+
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+  }
+}
+
+/* =========================================================
+   MOBILE — COMPACT 2 × 2 GRID
+========================================================= */
+
+@media (max-width: 575.98px) {
+  .employee-speaks-page .employee-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    width: 100%;
+    margin-top: 16px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .employee-speaks-page .employee-hero-stats > div {
+    display: flex;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: 0;
+  }
+
+  .employee-speaks-page .employee-hero-stats article {
+    min-height: 96px;
+
+    padding:
+      15px
+      43px
+      14px
+      14px;
+
+    border-radius: 13px;
+  }
+
+  .employee-speaks-page .employee-hero-stats strong {
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .employee-speaks-page .employee-hero-stats article > span {
+    margin-top: 8px;
+
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+  .employee-speaks-page .employee-stat-icon {
+    top: 12px;
+    right: 12px;
+
+    width: 17px;
+    height: 17px;
+    padding: 5px;
+
+    border-radius: 9px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 359.98px) {
+  .employee-speaks-page .employee-hero-stats {
+    gap: 8px;
+  }
+
+  .employee-speaks-page .employee-hero-stats article {
+    min-height: 91px;
+
+    padding:
+      13px
+      38px
+      12px
+      12px;
+  }
+
+  .employee-speaks-page .employee-hero-stats strong {
+    font-size: 22px;
+  }
+
+  .employee-speaks-page .employee-hero-stats article > span {
+    font-size: 8px;
+  }
+
+  .employee-speaks-page .employee-stat-icon {
+    top: 10px;
+    right: 10px;
+
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+  }
+}
