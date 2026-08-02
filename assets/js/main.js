@@ -134,16 +134,95 @@ function initHeroScroll() {
   }
 
   function initSwipers() {
-    if (typeof Swiper === "undefined") return;
-    const storyEl = document.querySelector(".story-slider");
-    if (storyEl) {
-      const storySwiper = new Swiper(storyEl, {
-        slidesPerView: 4, spaceBetween: 80, speed: 700, loop: true,
-        navigation: { nextEl: ".story-next", prevEl: ".story-prev" },
-        breakpoints: { 320: { slidesPerView: 2, spaceBetween: 30 }, 768: { slidesPerView: 3, spaceBetween: 50 }, 1200: { slidesPerView: 4, spaceBetween: 80 } }
-      });
-      document.querySelectorAll(".story-year").forEach((item, index) => item.addEventListener("click", () => storySwiper.slideToLoop(index)));
+ 
+    const storyEl = document.querySelector(".home-story .story-slider");
+
+if (storyEl) {
+  const storySwiper = new Swiper(storyEl, {
+    slidesPerView: 4,
+    spaceBetween: 70,
+    speed: 650,
+    loop: true,
+
+    navigation: {
+      nextEl: ".home-story .story-next",
+      prevEl: ".home-story .story-prev",
+    },
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1.7,
+        spaceBetween: 18,
+      },
+
+      576: {
+        slidesPerView: 2.25,
+        spaceBetween: 26,
+      },
+
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 44,
+      },
+
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 70,
+      },
+    },
+  });
+
+  /*
+   * Important:
+   * Swiper arrows only move the year timeline.
+   * They do not select or reveal a milestone.
+   */
+
+  storyEl.addEventListener("click", (event) => {
+    const yearButton = event.target.closest(".story-year");
+
+    if (!yearButton) {
+      return;
     }
+
+    const clickedMilestone = yearButton.closest(
+      ".story-milestone"
+    );
+
+    if (!clickedMilestone) {
+      return;
+    }
+
+    /*
+     * Remove the previously revealed milestone.
+     */
+    storyEl
+      .querySelectorAll(".story-milestone.is-selected")
+      .forEach((milestone) => {
+        milestone.classList.remove("is-selected");
+
+        const button =
+          milestone.querySelector(".story-year");
+
+        button?.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+      });
+
+    /*
+     * Reveal only the milestone whose red dot/year
+     * was clicked.
+     */
+    clickedMilestone.classList.add("is-selected");
+
+    yearButton.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+  });
+}
+
     const productEl = document.querySelector(".productSwiper");
     if (productEl) {
       new Swiper(productEl, {
@@ -212,24 +291,235 @@ function initHeroScroll() {
     modalElement.addEventListener("hidden.bs.modal", () => { modalImage.src = ""; });
   }
 
+  // function initSiteSearch() {
+  //   const form = document.querySelector("#siteSearchForm");
+  //   if (!form) return;
+  //   const routes = [
+  //     { words: ["about", "company", "story"], url: "about.html" },
+  //     { words: ["product", "radio", "detection"], url: "products.html" },
+  //     { words: ["solution", "service", "industry"], url: "solutions.html" },
+  //     { words: ["insight", "blog", "article", "news"], url: "insights.html" },
+  //     { words: ["contact", "quote", "email", "phone"], url: "contact.html" }
+  //   ];
+  //   form.addEventListener("submit", (event) => {
+  //     event.preventDefault();
+  //     const query = String(new FormData(form).get("q") || "").trim().toLowerCase();
+  //     const match = routes.find((route) => route.words.some((word) => query.includes(word)));
+  //     window.location.href = match ? match.url : "index.html";
+  //   });
+  // }
+
   function initSiteSearch() {
-    const form = document.querySelector("#siteSearchForm");
-    if (!form) return;
-    const routes = [
-      { words: ["about", "company", "story"], url: "about.html" },
-      { words: ["product", "radio", "detection"], url: "products.html" },
-      { words: ["solution", "service", "industry"], url: "solutions.html" },
-      { words: ["insight", "blog", "article", "news"], url: "insights.html" },
-      { words: ["contact", "quote", "email", "phone"], url: "contact.html" }
-    ];
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const query = String(new FormData(form).get("q") || "").trim().toLowerCase();
-      const match = routes.find((route) => route.words.some((word) => query.includes(word)));
-      window.location.href = match ? match.url : "index.html";
-    });
+  const searchWrapper = document.getElementById(
+    "headerInlineSearch"
+  );
+
+  const searchToggle = document.getElementById(
+    "headerSearchToggle"
+  );
+
+  const searchClose = document.getElementById(
+    "headerSearchClose"
+  );
+
+  const searchForm = document.getElementById(
+    "headerSearchForm"
+  );
+
+  const searchInput = document.getElementById(
+    "headerSearchInput"
+  );
+
+  const navbar = searchWrapper?.closest(".navbar");
+
+  if (
+    !searchWrapper ||
+    !searchToggle ||
+    !searchClose ||
+    !searchForm ||
+    !searchInput ||
+    !navbar
+  ) {
+    return;
   }
 
+  const routes = [
+    {
+      words: [
+        "about",
+        "company",
+        "story",
+        "team",
+      ],
+      url: "about.html",
+    },
+    {
+      words: [
+        "product",
+        "products",
+        "radio",
+        "detection",
+        "device",
+      ],
+      url: "products.html",
+    },
+    {
+      words: [
+        "solution",
+        "solutions",
+        "service",
+        "services",
+        "industry",
+        "automation",
+      ],
+      url: "solutions.html",
+    },
+    {
+      words: [
+        "insight",
+        "insights",
+        "blog",
+        "article",
+        "news",
+      ],
+      url: "insights.html",
+    },
+    {
+      words: [
+        "career",
+        "careers",
+        "job",
+        "jobs",
+        "role",
+        "hiring",
+      ],
+      url: "careers.html",
+    },
+    {
+      words: [
+        "contact",
+        "quote",
+        "email",
+        "phone",
+        "inquiry",
+      ],
+      url: "contact.html",
+    },
+  ];
+
+  let focusTimer;
+
+  const openSearch = () => {
+    window.clearTimeout(focusTimer);
+
+    searchWrapper.classList.add("is-open");
+    navbar.classList.add("search-is-open");
+
+    searchToggle.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    searchToggle.setAttribute(
+      "aria-label",
+      "Search opened"
+    );
+
+    focusTimer = window.setTimeout(() => {
+      searchInput.focus();
+    }, 250);
+  };
+
+  const closeSearch = ({
+    restoreFocus = true,
+    clearInput = false,
+  } = {}) => {
+    window.clearTimeout(focusTimer);
+
+    searchWrapper.classList.remove("is-open");
+    navbar.classList.remove("search-is-open");
+
+    searchToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    searchToggle.setAttribute(
+      "aria-label",
+      "Open search"
+    );
+
+    if (clearInput) {
+      searchInput.value = "";
+    }
+
+    if (restoreFocus) {
+      searchToggle.focus();
+    }
+  };
+
+  searchToggle.addEventListener("click", () => {
+    if (searchWrapper.classList.contains("is-open")) {
+      closeSearch();
+      return;
+    }
+
+    openSearch();
+  });
+
+  searchClose.addEventListener("click", () => {
+    closeSearch({
+      restoreFocus: true,
+      clearInput: false,
+    });
+  });
+
+  searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const query = searchInput.value
+      .trim()
+      .toLowerCase();
+
+    if (!query) {
+      searchInput.focus();
+      return;
+    }
+
+    const match = routes.find((route) =>
+      route.words.some((word) =>
+        query.includes(word)
+      )
+    );
+
+    window.location.href = match
+      ? match.url
+      : `insights.html?q=${encodeURIComponent(query)}`;
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      searchWrapper.classList.contains("is-open")
+    ) {
+      closeSearch();
+    }
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (!searchWrapper.classList.contains("is-open")) {
+      return;
+    }
+
+    if (searchWrapper.contains(event.target)) {
+      return;
+    }
+
+    closeSearch({
+      restoreFocus: false,
+    });
+  });
+}
 
   function initEconWhoAnimation() {
   const sections = document.querySelectorAll(".econ-who-section");
@@ -1060,6 +1350,182 @@ function initGlobalButtonAnimations() {
   });
 }
 
+function initHomeScrollRevealTargets() {
+  if (!document.body.classList.contains("home-page")) {
+    return;
+  }
+
+  const revealGroups = [
+    {
+      selector:
+        ".hero-stats-section .counter-list",
+      direction: "up",
+    },
+    {
+      selector:
+        ".econ-who-section .econ-who-image-column",
+      direction: "left",
+    },
+    {
+      selector:
+        ".econ-who-section .econ-who-content",
+      direction: "right",
+    },
+    {
+      selector:
+        ".expertise .expertise-heading",
+      direction: "up",
+    },
+    {
+      selector:
+        ".expertise .expertise-card-column",
+      direction: "up",
+    },
+    {
+      selector:
+        ".product-solutions .section-head",
+      direction: "left",
+    },
+    {
+      selector:
+        ".product-solutions .productSwiper",
+      direction: "up",
+    },
+    {
+      selector:
+        ".story-click-reveal .section-head",
+      direction: "up",
+    },
+    {
+      selector:
+        ".story-click-reveal .story-reveal-title",
+      direction: "up",
+    },
+    {
+      selector:
+        ".story-click-reveal .story-slider-wrapper",
+      direction: "up",
+    },
+    {
+      selector:
+        ".industries .section-head",
+      direction: "up",
+    },
+    {
+      selector:
+        ".industries .industry-card",
+      direction: "up",
+    },
+    {
+      selector:
+        ".blogs .section-head",
+      direction: "left",
+    },
+    {
+      selector:
+        ".blogs .blog-card",
+      direction: "up",
+    },
+    {
+      selector:
+        ".logos .section-head",
+      direction: "up",
+    },
+    {
+      selector:
+        ".logos .logo-slider",
+      direction: "up",
+    },
+    {
+      selector:
+        ".cta .cta-content",
+      direction: "up",
+    },
+    {
+      selector:
+        "footer .newsletter",
+      direction: "up",
+    },
+    {
+      selector:
+        "footer .footer-top",
+      direction: "up",
+    },
+  ];
+
+  revealGroups.forEach(({ selector, direction }) => {
+    document
+      .querySelectorAll(selector)
+      .forEach((element) => {
+        element.classList.add(
+          "home-scroll-reveal"
+        );
+
+        element.dataset.homeReveal =
+          direction;
+      });
+  });
+}
+
+function initHomeScrollReveals() {
+  const items = document.querySelectorAll(
+    ".home-page .home-scroll-reveal"
+  );
+
+  if (!items.length) {
+    return;
+  }
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reducedMotion) {
+    items.forEach((item) => {
+      item.classList.add("is-visible");
+    });
+
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries, currentObserver) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const siblings = Array.from(
+          entry.target.parentElement?.children || []
+        );
+
+        const itemIndex = Math.max(
+          0,
+          siblings.indexOf(entry.target)
+        );
+
+        entry.target.style.transitionDelay =
+          `${Math.min(itemIndex * 70, 350)}ms`;
+
+        entry.target.classList.add(
+          "is-visible"
+        );
+
+        currentObserver.unobserve(
+          entry.target
+        );
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -7% 0px",
+    }
+  );
+
+  items.forEach((item) => {
+    observer.observe(item);
+  });
+}
 
 
 function initPageScrollReveals() {
@@ -1316,7 +1782,8 @@ function initCtaEffect() {
 
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initHomeScrollRevealTargets();initHomeScrollReveals();
+initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
 

@@ -2084,3 +2084,1400 @@ button { font: inherit; }
     transition: none;
   }
 }
+
+
+
+/* =========================================================
+   HOME PAGE — SHARED SCROLL REVEALS
+========================================================= */
+
+.home-page .home-scroll-reveal {
+  opacity: 0;
+
+  transform: translate3d(0, 38px, 0);
+
+  filter: blur(6px);
+
+  transition:
+    opacity 700ms ease,
+    transform 850ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 850ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page
+  .home-scroll-reveal[data-home-reveal="left"] {
+  transform: translate3d(-44px, 0, 0);
+}
+
+.home-page
+  .home-scroll-reveal[data-home-reveal="right"] {
+  transform: translate3d(44px, 0, 0);
+}
+
+.home-page .home-scroll-reveal.is-visible {
+  opacity: 1;
+
+  transform: translate3d(0, 0, 0);
+
+  filter: blur(0);
+}
+
+
+
+
+
+
+/* =========================================================
+   HOME STORY — YEAR SCROLL + DOT CLICK REVEAL
+   Arrows scroll only. Red dots reveal milestone content.
+========================================================= */
+
+.home-page .home-story {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 64px;
+  padding-bottom: 70px;
+}
+
+.home-page .home-story .section-head {
+  margin-bottom: 30px;
+}
+
+.home-page .home-story .section-head p {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* =========================================================
+   ARROWS — YEAR SCROLL ONLY
+========================================================= */
+
+.home-page .home-story .story-navigation {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 30px 0 28px;
+}
+
+.home-page .home-story .story-prev,
+.home-page .home-story .story-next {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  font-size: 19px;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.home-page .home-story .story-prev {
+  color: #222020;
+  background: #f1f1f1;
+}
+
+.home-page .home-story .story-next {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.home-page .home-story .story-prev:hover {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.home-page .home-story .story-next:hover {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.home-page .home-story .story-slider-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  padding-left:
+    max(
+      24px,
+      calc((100vw - 1320px) / 2)
+    );
+
+  overflow: hidden;
+}
+
+.home-page .home-story .story-slider {
+  position: relative;
+
+  width: 100%;
+  height: 290px;
+
+  overflow: visible;
+}
+
+.home-page .home-story .story-slider::before {
+  content: "";
+
+  position: absolute;
+  z-index: 0;
+
+  top: 145px;
+  right: 0;
+  left: 0;
+
+  border-top:
+    1px dashed
+    rgba(231, 34, 47, 0.34);
+}
+
+.home-page
+  .home-story
+  .story-slider
+  .swiper-wrapper {
+  align-items: flex-start;
+
+  height: 290px;
+}
+
+.home-page
+  .home-story
+  .story-slider
+  .swiper-slide {
+  position: relative;
+
+  height: 290px;
+
+  overflow: visible;
+}
+
+/* =========================================================
+   MILESTONE
+========================================================= */
+
+.home-page .home-story .story-milestone {
+  position: relative;
+
+  width: 100%;
+  height: 290px;
+}
+
+/* Title above the year */
+
+.home-page .home-story .story-title {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: min(310px, 100%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(14px);
+
+  transition:
+    opacity 350ms ease,
+    visibility 350ms ease,
+    transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page .home-story .story-title h3 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+/* Year and red reveal button */
+
+.home-page .home-story .story-year {
+  position: absolute;
+
+  top: 75px;
+  left: 0;
+  z-index: 2;
+
+  display: block;
+
+  width: 100%;
+  height: 118px;
+
+  margin: 0;
+  padding: 0;
+
+  color: inherit;
+  background: transparent;
+
+  border: 0;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.home-page .home-story .story-year .year {
+  display: block;
+
+  color: #e9e8e8;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(68px, 7vw, 104px);
+  font-weight: 800;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+    color 300ms ease,
+    transform 350ms ease;
+}
+
+/*
+  This red dot is the actual content-reveal button.
+*/
+
+.home-page .home-story .story-dot {
+  position: absolute;
+  z-index: 4;
+
+  top: 61px;
+  left: 50%;
+
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  background: var(--primary);
+
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 1px
+    rgba(231, 34, 47, 0.18);
+
+  transform: translateX(-50%);
+
+  transition:
+    transform 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.home-page .home-story .story-year:hover .story-dot {
+  transform:
+    translateX(-50%)
+    scale(1.18);
+
+  box-shadow:
+    0 0 0 7px
+    rgba(231, 34, 47, 0.1);
+}
+
+/* Description below the year */
+
+.home-page .home-story .story-desc {
+  position: absolute;
+
+  top: 195px;
+  left: 0;
+
+  width: min(300px, 100%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-12px);
+
+  transition:
+    opacity 350ms ease,
+    visibility 350ms ease,
+    transform 450ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page .home-story .story-desc p {
+  margin: 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   SELECTED AFTER RED-DOT CLICK
+========================================================= */
+
+.home-page
+  .home-story
+  .story-milestone.is-selected
+  .story-title,
+.home-page
+  .home-story
+  .story-milestone.is-selected
+  .story-desc {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.home-page
+  .home-story
+  .story-milestone.is-selected
+  .story-year
+  .year {
+  color: rgba(231, 34, 47, 0.18);
+
+  transform: translateY(-2px);
+}
+
+.home-page
+  .home-story
+  .story-milestone.is-selected
+  .story-dot {
+  transform:
+    translateX(-50%)
+    scale(1.2);
+
+  box-shadow:
+    0 0 0 8px
+    rgba(231, 34, 47, 0.1);
+}
+
+/*
+  Important:
+  Swiper's active slide must not reveal content.
+  Only .is-selected reveals it.
+*/
+
+.home-page
+  .home-story
+  .swiper-slide-active
+  .story-title,
+.home-page
+  .home-story
+  .swiper-slide-active
+  .story-desc {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px);
+}
+
+.home-page
+  .home-story
+  .swiper-slide-active
+  .story-milestone.is-selected
+  .story-title,
+.home-page
+  .home-story
+  .swiper-slide-active
+  .story-milestone.is-selected
+  .story-desc {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .home-page .home-story {
+    padding-top: 58px;
+    padding-bottom: 62px;
+  }
+
+  .home-page .home-story .story-slider-wrapper {
+    padding-left: 20px;
+  }
+
+  .home-page .home-story .story-slider,
+  .home-page
+    .home-story
+    .story-slider
+    .swiper-wrapper,
+  .home-page
+    .home-story
+    .story-slider
+    .swiper-slide,
+  .home-page .home-story .story-milestone {
+    height: 260px;
+  }
+
+  .home-page .home-story .story-slider::before {
+    top: 128px;
+  }
+
+  .home-page .home-story .story-year {
+    top: 65px;
+  }
+
+  .home-page .home-story .story-year .year {
+    font-size: 64px;
+  }
+
+  .home-page .home-story .story-dot {
+    top: 52px;
+  }
+
+  .home-page .home-story .story-desc {
+    top: 174px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .home-page .home-story {
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+
+  .home-page .home-story .section-head {
+    margin-bottom: 22px;
+  }
+
+  .home-page .home-story .story-navigation {
+    margin: 22px 0 20px;
+  }
+
+  .home-page .home-story .story-prev,
+  .home-page .home-story .story-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-page .home-story .story-slider-wrapper {
+    padding-left: 14px;
+  }
+
+  .home-page .home-story .story-slider,
+  .home-page
+    .home-story
+    .story-slider
+    .swiper-wrapper,
+  .home-page
+    .home-story
+    .story-slider
+    .swiper-slide,
+  .home-page .home-story .story-milestone {
+    height: 225px;
+  }
+
+  .home-page .home-story .story-slider::before {
+    top: 111px;
+  }
+
+  .home-page .home-story .story-title h3 {
+    font-size: 28px;
+  }
+
+  .home-page .home-story .story-year {
+    top: 56px;
+  }
+
+  .home-page .home-story .story-year .year {
+    font-size: 51px;
+  }
+
+  .home-page .home-story .story-dot {
+    top: 43px;
+
+    width: 16px;
+    height: 16px;
+  }
+
+  .home-page .home-story .story-desc {
+    top: 151px;
+
+    width: min(230px, 100%);
+  }
+
+  .home-page .home-story .story-desc p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .home-story .story-title,
+  .home-page .home-story .story-desc,
+  .home-page .home-story .story-year .year,
+  .home-page .home-story .story-dot {
+    transition: none;
+  }
+}
+
+
+
+/* =========================================================
+   HOME STORY — FINAL SIZE MATCH
+   Matches the timeline proportions on the live Home page
+========================================================= */
+
+@media (min-width: 1200px) {
+  .home-page .home-story {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  /* Heading spacing */
+  .home-page .home-story .section-head {
+    margin-bottom: 15px;
+  }
+
+  .home-page .home-story .section-head h2 {
+    font-size: 54px;
+    line-height: 60px;
+  }
+
+  .home-page .home-story .section-head p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  /* Navigation size and spacing */
+  .home-page .home-story .story-navigation {
+    gap: 16px;
+    margin: 40px 0 80px;
+  }
+
+  .home-page .home-story .story-prev,
+  .home-page .home-story .story-next {
+    width: 48px;
+    height: 48px;
+
+    font-size: 22px;
+  }
+
+  /* Timeline horizontal alignment */
+  .home-page .home-story .story-slider-wrapper {
+    padding-left: calc((100vw - 1320px) / 2);
+  }
+
+  /* Full timeline height */
+  .home-page .home-story .story-slider,
+  .home-page .home-story .story-slider .swiper-wrapper,
+  .home-page .home-story .story-slider .swiper-slide,
+  .home-page .home-story .story-milestone {
+    height: 330px;
+  }
+
+  /* Dashed timeline */
+  .home-page .home-story .story-slider::before {
+    top: 160px;
+  }
+
+  /* Milestone heading */
+  .home-page .home-story .story-title {
+    top: 25px;
+    left: 0;
+
+    width: 320px;
+  }
+
+  .home-page .home-story .story-title h3 {
+    font-size: 48px;
+    line-height: 1.1;
+  }
+
+  /* Large years */
+  .home-page .home-story .story-year {
+    top: 105px;
+    height: 120px;
+  }
+
+  .home-page .home-story .story-year .year {
+    font-size: 110px;
+    line-height: 1;
+  }
+
+  /* Red clickable dot */
+  .home-page .home-story .story-dot {
+    top: 62px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Description below timeline */
+  .home-page .home-story .story-desc {
+    top: 230px;
+    left: 0;
+
+    width: 300px;
+  }
+
+  .home-page .home-story .story-desc p {
+    font-size: 17 px;
+    line-height: 1.55;
+  }
+}
+/* =========================================================
+   HEADER — EXPANDING INLINE SEARCH
+========================================================= */
+
+.home-page header .navbar > .container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+/*
+  Logo must never shrink or become covered.
+*/
+.home-page header .navbar-brand {
+  position: relative;
+  z-index: 5;
+
+  flex: 0 0 auto;
+  flex-shrink: 0;
+}
+
+/*
+  Navigation can smoothly reduce its width when search opens.
+*/
+.home-page header .navbar-collapse {
+  min-width: 0;
+
+  transition:
+    flex-basis 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    max-width 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page header .main-menu {
+  white-space: nowrap;
+
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    padding 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.home-page .header-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 14px;
+
+  min-width: 0;
+}
+
+/* =========================================================
+   SEARCH WRAPPER
+========================================================= */
+
+.home-page .header-inline-search {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 52px;
+  height: 52px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(231, 34, 47, 0.22);
+  border-radius: 999px;
+
+  transition:
+    width 460ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 280ms ease,
+    box-shadow 360ms ease;
+}
+
+.home-page .header-inline-search:hover {
+  border-color: rgba(231, 34, 47, 0.45);
+}
+
+/* Expanded width */
+
+.home-page .header-inline-search.is-open {
+  width: 390px;
+
+  border-color: rgba(231, 34, 47, 0.42);
+
+  box-shadow:
+    0 12px 32px rgba(46, 24, 28, 0.1);
+}
+
+/* =========================================================
+   CLOSED SEARCH BUTTON
+========================================================= */
+
+.home-page .header-search-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+  padding: 0;
+
+  color: #222020;
+  background: #ffffff;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    opacity 180ms ease,
+    visibility 180ms ease,
+    transform 300ms ease;
+}
+
+.home-page .header-search-toggle i {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.home-page .header-search-toggle:hover {
+  color: var(--primary);
+}
+
+.home-page
+  .header-inline-search.is-open
+  .header-search-toggle {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: scale(0.75);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   SEARCH FORM
+========================================================= */
+
+.home-page .header-search-form {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  width: 100%;
+  height: 100%;
+  padding: 5px 6px 5px 17px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(20px);
+
+  transition:
+    opacity 260ms ease 100ms,
+    visibility 260ms ease 100ms,
+    transform 380ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page
+  .header-inline-search.is-open
+  .header-search-form {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
+.home-page .header-search-leading-icon {
+  flex: 0 0 auto;
+
+  color: #767176;
+
+  font-size: 17px;
+}
+
+.home-page .header-search-input {
+  min-width: 0;
+  flex: 1;
+
+  height: 40px;
+  padding: 0 4px;
+
+  color: #222020;
+  background: transparent;
+
+  border: 0;
+  outline: 0;
+
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.home-page .header-search-input::placeholder {
+  color: #8a858a;
+}
+
+.home-page
+  .header-search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* =========================================================
+   SUBMIT AND CLOSE BUTTONS
+========================================================= */
+
+.home-page .header-search-submit,
+.home-page .header-search-close {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    color 250ms ease,
+    background-color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.home-page .header-search-submit {
+  color: #ffffff;
+  background: var(--primary);
+
+  border: 1px solid var(--primary);
+}
+
+.home-page .header-search-close {
+  color: #4c484c;
+  background: #f5f4f4;
+
+  border: 1px solid transparent;
+}
+
+.home-page .header-search-submit:hover {
+  background: var(--dark-red);
+  border-color: var(--dark-red);
+
+  transform: translateX(2px);
+}
+
+.home-page .header-search-close:hover {
+  color: var(--primary);
+  background: #fff0f1;
+  border-color: rgba(231, 34, 47, 0.18);
+}
+
+/* =========================================================
+   OPEN HEADER STATE
+========================================================= */
+
+/*
+  Move the menu slightly left while preserving the logo.
+*/
+.home-page header .navbar.search-is-open .main-menu {
+  transform: translateX(-26px);
+}
+
+/*
+  Hide the quote CTA to free enough width for the search input.
+*/
+.home-page header .header-quote-nav {
+  max-width: 220px;
+
+  overflow: hidden;
+
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+
+  transition:
+    max-width 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease,
+    visibility 220ms ease,
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page
+  header
+  .navbar.search-is-open
+  .header-quote-nav {
+  max-width: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(20px);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   MEDIUM DESKTOPS
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .home-page .header-inline-search.is-open {
+    width: 320px;
+  }
+
+  .home-page header .navbar.search-is-open .main-menu {
+    transform: translateX(-12px);
+  }
+
+  .home-page
+    header
+    .navbar.search-is-open
+    .main-menu
+    .nav-link {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+}
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 1199.98px) {
+  .home-page header .navbar > .container {
+    flex-wrap: wrap;
+  }
+
+  /*
+    Existing mobile navigation remains full width.
+  */
+  .home-page header .navbar-collapse {
+    order: 4;
+
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .home-page .header-actions {
+    margin-left: auto !important;
+  }
+
+  .home-page .header-inline-search.is-open {
+    position: absolute;
+    z-index: 20;
+
+    top: 100%;
+    right: 12px;
+    left: 12px;
+
+    width: auto;
+    max-width: none;
+
+    margin-top: 9px;
+  }
+
+  .home-page
+    header
+    .navbar.search-is-open
+    .main-menu {
+    transform: none;
+  }
+
+  .home-page
+    header
+    .navbar.search-is-open
+    .header-quote-nav {
+    max-width: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-page .header-actions {
+    gap: 8px;
+  }
+
+  .home-page .header-inline-search,
+  .home-page .header-search-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .home-page .header-inline-search.is-open {
+    width: auto;
+  }
+
+  .home-page .header-search-form {
+    padding-left: 13px;
+  }
+
+  .home-page .header-search-input {
+    font-size: 13px;
+  }
+
+  .home-page .header-search-submit,
+  .home-page .header-search-close {
+    width: 36px;
+    height: 36px;
+  }
+
+  /*
+    Hide quote button on very small screens.
+  */
+  .home-page .header-quote-nav {
+    display: none;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page .header-inline-search,
+  .home-page .header-search-toggle,
+  .home-page .header-search-form,
+  .home-page header .main-menu,
+  .home-page header .header-quote-nav {
+    transition: none;
+  }
+}
+
+
+
+
+/* =========================================================
+   HEADER SEARCH — SHRINK LOGO ONLY WHILE SEARCH IS OPEN
+========================================================= */
+
+/* Normal closed state */
+.home-page header .navbar-brand {
+  flex: 0 0 auto;
+  transform: none;
+
+  transition:
+    margin-right 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.home-page header .navbar-brand img {
+  display: block;
+
+  width: 245px;
+  max-width: 245px;
+  height: auto;
+
+  transform-origin: left center;
+
+  transition:
+    width 360ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Search opened */
+.home-page
+  header
+  .navbar.search-is-open
+  .navbar-brand {
+  margin-right: 12px;
+}
+
+.home-page
+  header
+  .navbar.search-is-open
+  .navbar-brand
+  img {
+  width: 195px;
+  max-width: 195px;
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .home-page header .navbar-brand img {
+    width: 245px;
+    max-width: 245px;
+  }
+
+  .home-page
+    header
+    .navbar.search-is-open
+    .navbar-brand
+    img {
+    width: 205px;
+    max-width: 205px;
+  }
+}
+
+/* Standard desktop */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .home-page header .navbar-brand img {
+    width: 225px;
+    max-width: 225px;
+  }
+
+  .home-page
+    header
+    .navbar.search-is-open
+    .navbar-brand
+    img {
+    width: 180px;
+    max-width: 180px;
+  }
+}
+
+/* Do not shrink the logo on tablet/mobile */
+@media (max-width: 1199.98px) {
+  .home-page header .navbar-brand img,
+  .home-page
+    header
+    .navbar.search-is-open
+    .navbar-brand
+    img {
+    width: 112px;
+    max-width: 112px;
+  }
+}
+
+
+/* =========================================================
+   FOOTER MENU — VERTICAL TEXT-SWAP HOVER
+========================================================= */
+
+footer .footer-menu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+footer .footer-menu li {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+footer .footer-menu li:last-child {
+  margin-bottom: 0;
+}
+
+/* Link container */
+
+footer .footer-menu-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  height: 25px;
+  max-width: 100%;
+
+  padding-left: 0;
+
+  overflow: hidden;
+
+  color: inherit;
+
+  font-family: "Inter", sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 25px;
+  text-decoration: none;
+
+  transition:
+    color 300ms ease,
+    padding-left 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Original text */
+
+footer .footer-menu-link > span {
+  display: block;
+
+  white-space: nowrap;
+
+  transform: translateY(0);
+
+  transition:
+    transform 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 280ms ease;
+}
+
+/* Replacement text entering from below */
+
+footer .footer-menu-link::after {
+  content: attr(data-label);
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: block;
+
+  color: var(--primary);
+
+  line-height: 25px;
+  white-space: nowrap;
+
+  transition:
+    top 450ms cubic-bezier(0.22, 1, 0.36, 1),
+    left 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Animated arrow */
+
+footer .footer-menu-link::before {
+  content: "↗";
+
+  position: absolute;
+  top: 50%;
+  left: -18px;
+
+  color: var(--primary);
+
+  font-size: 14px;
+  line-height: 1;
+
+  opacity: 0;
+
+  transform:
+    translateY(-50%)
+    translateX(-6px)
+    rotate(-20deg);
+
+  transition:
+    left 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 260ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover and keyboard focus */
+
+footer .footer-menu-link:hover,
+footer .footer-menu-link:focus-visible {
+  padding-left: 22px;
+
+  color: var(--primary);
+}
+
+/* Move original text upward */
+
+footer .footer-menu-link:hover > span,
+footer .footer-menu-link:focus-visible > span {
+  opacity: 0;
+
+  transform: translateY(-110%);
+}
+
+/* Bring duplicate text upward */
+
+footer .footer-menu-link:hover::after,
+footer .footer-menu-link:focus-visible::after {
+  top: 0;
+  left: 22px;
+}
+
+/* Show arrow */
+
+footer .footer-menu-link:hover::before,
+footer .footer-menu-link:focus-visible::before {
+  left: 0;
+
+  opacity: 1;
+
+  transform:
+    translateY(-50%)
+    translateX(0)
+    rotate(0);
+}
+
+/* Accessible focus state */
+
+footer .footer-menu-link:focus-visible {
+  outline: 2px solid rgba(231, 34, 47, 0.28) !important;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+  footer .footer-menu-link:hover {
+    padding-left: 0;
+    color: inherit;
+  }
+
+  footer .footer-menu-link:hover > span {
+    opacity: 1;
+    transform: none;
+  }
+
+  footer .footer-menu-link:hover::before {
+    left: -18px;
+    opacity: 0;
+  }
+
+  footer .footer-menu-link:hover::after {
+    top: 100%;
+    left: 0;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  footer .footer-menu-link,
+  footer .footer-menu-link > span,
+  footer .footer-menu-link::before,
+  footer .footer-menu-link::after {
+    transition: none;
+  }
+}
