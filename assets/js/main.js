@@ -9,9 +9,16 @@
 
   function initActiveNavigation() {
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const parentPageMap = {
+      "employee-speaks.html": "about.html",
+      "careers.html": "about.html",
+      "team.html": "about.html",
+      "testimonials.html": "about.html"
+    };
+    const activePage = parentPageMap[currentPage] || currentPage;
     document.querySelectorAll("#navMenu .nav-link").forEach((link) => {
       const href = (link.getAttribute("href") || "").split("#")[0];
-      link.classList.toggle("active", href === currentPage);
+      link.classList.toggle("active", href === activePage);
     });
   }
 
@@ -981,9 +988,67 @@ function initGlobalButtonAnimations() {
   });
 }
 
+
+
+function initPageScrollReveals() {
+  const items = document.querySelectorAll('.scroll-reveal');
+  if (!items.length) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduced) { items.forEach((item) => item.classList.add('is-visible')); return; }
+  const observer = new IntersectionObserver((entries, current) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const siblings = Array.from(entry.target.parentElement?.children || []);
+      const index = Math.max(0, siblings.indexOf(entry.target));
+      entry.target.style.transitionDelay = `${Math.min(index * 65, 320)}ms`;
+      entry.target.classList.add('is-visible');
+      current.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  items.forEach((item) => observer.observe(item));
+}
+
+function initEmployeeSpotlight() {
+  const tabs = Array.from(document.querySelectorAll('.employee-tab'));
+  if (!tabs.length) return;
+  const stories = [
+    { name:'Ananya Rao', dept:'Operations', role:'Senior Manufacturing Engineer', image:'assets/images/manufacturing.webp', quote:'Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.', body:'I joined Econiya as a graduate trainee and today I lead the SMT line for Ex/IS-certified detectors. What kept me here is how seriously the company takes ownership.', moment:'Led the zero-defect programme that brought DPPM below 12.' },
+    { name:'Rohit Verma', dept:'Research & Development', role:'R&D Firmware Engineer', image:'assets/images/about/founder.webp', quote:'You get to touch problems very few people in the world are working on.', body:'Our firmware teams work across intrinsic safety, hazardous-area communications and deterministic edge stacks.', moment:'Shipped a new fail-safe radio stack across three product families.' },
+    { name:'Priya Nair', dept:'Product', role:'Product Manager, IoT Platform', image:'assets/images/healthcare.webp', quote:'Our customers are running assets that cannot stop. That focus keeps our roadmap honest.', body:'Product decisions are grounded in field evidence, operator feedback and direct time with industrial teams.', moment:'Turned field feedback into the next-generation monitoring workflow.' },
+    { name:'Karan Mehta', dept:'Customer Success', role:'Field Service Lead', image:'assets/images/energy.webp', quote:'I’ve commissioned sites in 11 countries. The tools, the training, the trust — Econiya prepares you to walk into any control room in the world.', body:'Field service is where engineering meets real operations and every detail becomes visible.', moment:'Completed a refinery commissioning ahead of shutdown schedule.' },
+    { name:'Meera Iyer', dept:'Quality', role:'Quality Assurance Specialist', image:'assets/images/public-safety.webp', quote:'Quality here isn’t a checklist — it is a culture.', body:'From the CEO down, everyone respects the quality sign-off and the evidence behind it.', moment:'Built a traceability system covering the complete production line.' }
+  ];
+  const els={name:document.getElementById('spotlightName'),dept:document.getElementById('spotlightDept'),role:document.getElementById('spotlightRole'),image:document.getElementById('spotlightImage'),quote:document.getElementById('spotlightQuote'),body:document.getElementById('spotlightBody'),moment:document.getElementById('spotlightMoment')};
+  let index=0;
+  const show=(next)=>{ index=(next+stories.length)%stories.length; const story=stories[index]; const shell=document.querySelector('.spotlight-shell'); shell?.classList.add('is-switching'); setTimeout(()=>{ Object.entries(els).forEach(([key,el])=>{ if(!el)return; if(key==='image'){el.src=story.image;el.alt=story.name;} else el.textContent=story[key]; }); tabs.forEach((tab,i)=>tab.classList.toggle('active',i===index)); shell?.classList.remove('is-switching'); },180); };
+  tabs.forEach((tab,i)=>tab.addEventListener('click',()=>show(i)));
+  document.querySelector('.employee-spotlight .story-prev')?.addEventListener('click',()=>show(index-1));
+  document.querySelector('.employee-spotlight .story-next')?.addEventListener('click',()=>show(index+1));
+}
+
+function initCareerJobs() {
+  const rows=Array.from(document.querySelectorAll('.job-row'));
+  const filters=Array.from(document.querySelectorAll('[data-job-filter]'));
+  const search=document.getElementById('jobSearch');
+  const empty=document.getElementById('jobEmpty');
+  if(!rows.length)return;
+  let category='all';
+  const apply=()=>{ const q=(search?.value||'').trim().toLowerCase(); let count=0; rows.forEach(row=>{ const matchesCategory=category==='all'||row.dataset.jobCategory===category; const haystack=`${row.dataset.jobTitle||''} ${row.dataset.jobLocation||''}`; const visible=matchesCategory&&(!q||haystack.includes(q)); row.hidden=!visible; if(visible)count++; }); if(empty)empty.hidden=count!==0; };
+  filters.forEach(button=>button.addEventListener('click',()=>{category=button.dataset.jobFilter||'all';filters.forEach(item=>item.classList.toggle('active',item===button));apply();}));
+  search?.addEventListener('input',apply);
+}
+
+function initVideoPlaceholders() {
+  document.querySelectorAll('[data-video-placeholder]').forEach((button)=>button.addEventListener('click',()=>{
+    button.setAttribute('aria-label','Video placeholder ready for final media');
+    button.innerHTML='<i class="bi bi-hourglass-split"></i>';
+    setTimeout(()=>button.innerHTML='<i class="bi bi-play-fill"></i>',900);
+  }));
+}
+
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();
 
 
 

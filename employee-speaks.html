@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Employee Speaks | Econiya</title>
+  <meta name="description" content="Meet the people behind Econiya's industrial systems, field operations and product innovation." />
+  <link href="assets/images/favicon.ico" rel="icon" type="image/png" />
+  <link href="assets/css/fonts.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/responsive.css" rel="stylesheet" />
+  <link href="assets/css/fixes.css" rel="stylesheet" />
+  <link href="assets/css/people-pages.css" rel="stylesheet" />
+</head>
+<body class="employee-speaks-page">
+<a class="visually-hidden-focusable position-fixed top-0 start-0 p-3 bg-white" href="#main-content" style="z-index:2000">Skip to main content</a>
+
+<main id="main-content">
+  <div class="people-hero particle-hero" id="employee-particle-hero">
+    <canvas class="hero-particle-canvas" aria-hidden="true"></canvas>
+    <header>
+          <nav class="navbar navbar-expand-xl">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  alt="Econiya"
+                  height="60"
+                  src="assets/images/logo.png"
+                  width="245"
+                />
+              </a>
+              <button
+                aria-controls="navMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navMenu"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav main-menu">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="index.html"
+                      >Home
+                      <svg
+                        class="wave"
+                        fill="none"
+                        height="30"
+                        viewbox="0 0 47 30"
+                        width="47"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8.25L6.50993 19.7543C7.5118 22.3099 11.1356 22.2893 12.1083 19.7224L16.019 9.40279C16.9977 6.82024 20.651 6.82023 21.6296 9.40278L25.4929 19.5972C26.4715 22.1798 30.1248 22.1798 31.1035 19.5972L35.03 9.23575C36.0008 6.67422 39.6145 6.64665 40.6242 9.19308L45 20.2292"
+                          stroke="#E7222F"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html"
+                      >About Us
+                      <svg
+                        class="wave"
+                        fill="none"
+                        height="30"
+                        viewbox="0 0 47 30"
+                        width="47"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8.25L6.50993 19.7543C7.5118 22.3099 11.1356 22.2893 12.1083 19.7224L16.019 9.40279C16.9977 6.82024 20.651 6.82023 21.6296 9.40278L25.4929 19.5972C26.4715 22.1798 30.1248 22.1798 31.1035 19.5972L35.03 9.23575C36.0008 6.67422 39.6145 6.64665 40.6242 9.19308L45 20.2292"
+                          stroke="#E7222F"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="products.html"
+                      >Products
+                      <svg
+                        class="wave"
+                        fill="none"
+                        height="30"
+                        viewbox="0 0 47 30"
+                        width="47"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8.25L6.50993 19.7543C7.5118 22.3099 11.1356 22.2893 12.1083 19.7224L16.019 9.40279C16.9977 6.82024 20.651 6.82023 21.6296 9.40278L25.4929 19.5972C26.4715 22.1798 30.1248 22.1798 31.1035 19.5972L35.03 9.23575C36.0008 6.67422 39.6145 6.64665 40.6242 9.19308L45 20.2292"
+                          stroke="#E7222F"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="solutions.html"
+                      >Solutions
+                      <svg
+                        class="wave"
+                        fill="none"
+                        height="30"
+                        viewbox="0 0 47 30"
+                        width="47"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8.25L6.50993 19.7543C7.5118 22.3099 11.1356 22.2893 12.1083 19.7224L16.019 9.40279C16.9977 6.82024 20.651 6.82023 21.6296 9.40278L25.4929 19.5972C26.4715 22.1798 30.1248 22.1798 31.1035 19.5972L35.03 9.23575C36.0008 6.67422 39.6145 6.64665 40.6242 9.19308L45 20.2292"
+                          stroke="#E7222F"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="insights.html"
+                      >Insights
+                      <svg
+                        class="wave"
+                        fill="none"
+                        height="30"
+                        viewbox="0 0 47 30"
+                        width="47"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8.25L6.50993 19.7543C7.5118 22.3099 11.1356 22.2893 12.1083 19.7224L16.019 9.40279C16.9977 6.82024 20.651 6.82023 21.6296 9.40278L25.4929 19.5972C26.4715 22.1798 30.1248 22.1798 31.1035 19.5972L35.03 9.23575C36.0008 6.67422 39.6145 6.64665 40.6242 9.19308L45 20.2292"
+                          stroke="#E7222F"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html"
+                      >Contact Us
+                      <svg
+                        class="wave"
+                        fill="none"
+                        height="30"
+                        viewbox="0 0 47 30"
+                        width="47"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2 8.25L6.50993 19.7543C7.5118 22.3099 11.1356 22.2893 12.1083 19.7224L16.019 9.40279C16.9977 6.82024 20.651 6.82023 21.6296 9.40278L25.4929 19.5972C26.4715 22.1798 30.1248 22.1798 31.1035 19.5972L35.03 9.23575C36.0008 6.67422 39.6145 6.64665 40.6242 9.19308L45 20.2292"
+                          stroke="#E7222F"
+                          stroke-linecap="round"
+                          stroke-width="3"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-ml ms-3 d-flex align-items-center">
+                <button
+                  aria-controls="searchModal"
+                  aria-label="Search"
+                  class="icon-btn"
+                  data-bs-target="#searchModal"
+                  data-bs-toggle="modal"
+                  type="button"
+                >
+                  <i class="bi bi-search"></i>
+                </button>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="btn btn-primary" href="contact.html"
+                      >Get a Quote
+                      <span class="chat-icon-wrap">
+                        <i class="bi bi-chat-dots"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+    <section class="people-hero-body">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 scroll-reveal" data-reveal="left">
+            <span class="super-head">EMPLOYEE SPEAKS</span>
+            <h1>The People<br />Behind Every<br /><span class="gradient-text">Uptime Metric.</span></h1>
+            <p>Engineers, technicians and scientists share what it means to build safety-critical systems at Econiya — in their own words, from their own workstations.</p>
+            <div class="section-btn">
+              <a class="btn btn-primary" href="#employee-stories">Read The Stories <i class="bi bi-arrow-right"></i></a>
+              <a class="btn btn-outline" href="careers.html#open-positions">Explore Open Roles <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-7 scroll-reveal" data-reveal="right">
+            <div class="people-hero-media animation-slot" data-animation-slot="hero-media">
+              <img src="assets/images/about/about-hero.webp" alt="Econiya employees collaborating around industrial equipment" />
+              <div class="people-count-badge">
+                <div class="people-avatars" aria-hidden="true">
+                  <img src="assets/images/about/founder.webp" alt="" />
+                  <img src="assets/images/innovation.webp" alt="" />
+                  <img src="assets/images/manufacturing.webp" alt="" />
+                  <img src="assets/images/healthcare.webp" alt="" />
+                </div>
+                <div><strong>1,240+ Econiyans</strong><span>Across 14 countries</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="people-stats row g-4 scroll-reveal" data-reveal="up">
+          <div class="col-lg-3 col-sm-6"><article><strong>94%</strong><span>Employee approval rating</span><i class="bi bi-person-badge"></i></article></div>
+          <div class="col-lg-3 col-sm-6"><article><strong>5.7 ★</strong><span>Average years of tenure</span><i class="bi bi-person-badge"></i></article></div>
+          <div class="col-lg-3 col-sm-6"><article><strong>38</strong><span>Nationalities on team</span><i class="bi bi-person-badge"></i></article></div>
+          <div class="col-lg-3 col-sm-6"><article><strong>72h</strong><span>Learning hours per year</span><i class="bi bi-person-badge"></i></article></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="people-section employee-spotlight" id="employee-stories">
+    <div class="container">
+      <div class="section-head text-center scroll-reveal" data-reveal="up">
+        <span class="super-head">SPOTLIGHT</span>
+        <h2>Voices <span class="gradient-text">Across Econiya</span></h2>
+        <p>Tap through the spotlights below to hear from engineering, field operations, R&amp;D, product and quality.</p>
+      </div>
+      <div class="spotlight-shell animation-slot scroll-reveal" data-reveal="up" data-animation-slot="spotlight-slider">
+        <div class="spotlight-image"><img id="spotlightImage" src="assets/images/manufacturing.webp" alt="Employee spotlight" /><div class="spotlight-caption"><span id="spotlightDept">Operations</span><h3 id="spotlightName">Ananya Rao</h3><p id="spotlightRole">Senior Manufacturing Engineer</p></div></div>
+        <article class="spotlight-quote">
+          <div class="quote-mark">“</div>
+          <blockquote id="spotlightQuote">Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.</blockquote>
+          <p id="spotlightBody">I joined Econiya as a graduate trainee and today I lead the SMT line for Ex/IS-certified detectors. What kept me here is how seriously the company takes ownership.</p>
+          <div class="proud-moment"><small>PROUD MOMENT</small><strong id="spotlightMoment">Led the zero-defect programme that brought DPPM below 12.</strong></div>
+          <div class="spotlight-footer"><div class="stars">★★★★★</div><div class="story-controls"><button class="story-prev" type="button" aria-label="Previous story"><i class="bi bi-arrow-left"></i></button><button class="story-next" type="button" aria-label="Next story"><i class="bi bi-arrow-right"></i></button></div></div>
+        </article>
+      </div>
+      <div class="employee-tabs" role="tablist">
+        <button class="employee-tab active" role="tab" data-story="0" type="button"><img src="assets/images/manufacturing.webp" alt="" /><span><strong>Ananya Rao</strong><small>Operations</small></span></button>
+        <button class="employee-tab" role="tab" data-story="1" type="button"><img src="assets/images/about/founder.webp" alt="" /><span><strong>Rohit Verma</strong><small>Research</small></span></button>
+        <button class="employee-tab" role="tab" data-story="2" type="button"><img src="assets/images/healthcare.webp" alt="" /><span><strong>Priya Nair</strong><small>Product</small></span></button>
+        <button class="employee-tab" role="tab" data-story="3" type="button"><img src="assets/images/energy.webp" alt="" /><span><strong>Karan Mehta</strong><small>Customer Success</small></span></button>
+        <button class="employee-tab" role="tab" data-story="4" type="button"><img src="assets/images/public-safety.webp" alt="" /><span><strong>Meera Iyer</strong><small>Quality</small></span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="people-section story-library" id="story-library">
+    <div class="container">
+      <div class="section-head text-center scroll-reveal" data-reveal="up"><span class="super-head">STORY LIBRARY</span><h2>Real People, <span class="gradient-text">Real Work.</span></h2><p>A cross-section of the teams that ship, service and support Econiya every single day.</p></div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/manufacturing.webp" alt="Ananya Rao" /><span>Operations</span></div><div class="story-copy"><div class="story-person"><div><h3>Ananya Rao</h3><p>Senior Manufacturing Engineer</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/about/founder.webp" alt="Rohit Verma" /><span>Research & Development</span></div><div class="story-copy"><div class="story-person"><div><h3>Rohit Verma</h3><p>R&D Firmware Engineer</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/healthcare.webp" alt="Priya Nair" /><span>Product</span></div><div class="story-copy"><div class="story-person"><div><h3>Priya Nair</h3><p>Product Manager, IoT Platform</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/energy.webp" alt="Karan Mehta" /><span>Customer Success</span></div><div class="story-copy"><div class="story-person"><div><h3>Karan Mehta</h3><p>Field Service Lead</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/public-safety.webp" alt="Meera Iyer" /><span>Quality</span></div><div class="story-copy"><div class="story-person"><div><h3>Meera Iyer</h3><p>Quality Assurance Specialist</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+<div class="col-lg-4 col-md-6 scroll-reveal" data-reveal="up"><article class="employee-story-card"><div class="story-photo"><img src="assets/images/innovation.webp" alt="Arvind Sharma" /><span>Strategy</span></div><div class="story-copy"><div class="story-person"><div><h3>Arvind Sharma</h3><p>Head of Solutions Architecture</p></div><small><i class="bi bi-clock"></i> 6 years</small></div><blockquote>“Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”</blockquote><p class="location"><i class="bi bi-geo-alt"></i> Karnataka Plant</p></div></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="people-section video-diaries">
+    <div class="container">
+      <div class="video-heading scroll-reveal" data-reveal="up"><div><span class="super-head">VIDEO DIARIES</span><h2>The People Behind <span class="gradient-text">Econiya</span></h2></div><p>Short, unscripted films from our engineers — filmed on-site in our factory, R&amp;D centre and customer facilities.</p></div>
+      <div class="row g-4 animation-slot" data-animation-slot="video-carousel">
+        <div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/manufacturing.webp" alt="Ananya Rao video diary poster" /><button class="video-play" type="button" aria-label="Play Ananya Rao video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Ananya Rao · Senior Manufacturing Engineer</p></div></article></div>
+<div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/about/founder.webp" alt="Rohit Verma video diary poster" /><button class="video-play" type="button" aria-label="Play Rohit Verma video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Rohit Verma · R&D Firmware Engineer</p></div></article></div>
+<div class="col-lg-4 scroll-reveal" data-reveal="up"><article class="video-diary-card"><img src="assets/images/healthcare.webp" alt="Priya Nair video diary poster" /><button class="video-play" type="button" aria-label="Play Priya Nair video" data-video-placeholder="true"><i class="bi bi-play-fill"></i></button><div class="video-copy"><small>2:16</small><h3>Life inside the Karnataka plant</h3><p>Priya Nair · Product Manager, IoT Platform</p></div></article></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="people-cta scroll-reveal" data-reveal="up"><div class="container"><div class="cta-content"><span class="super-head">JOIN THE TEAM</span><h2>Want to be the next voice on this page?</h2><p>We are hiring across engineering, R&amp;D, field operations and product. See where you fit — and how far you can go.</p><div class="section-btn"><a class="btn btn-white" href="careers.html#open-positions">See Open Roles <i class="bi bi-arrow-right"></i></a><a class="btn btn-outline" href="contact.html">Talk to a Recruiter <i class="bi bi-arrow-right"></i></a></div></div></div></section>
+</main>
+
+<div
+      aria-hidden="true"
+      aria-labelledby="searchModalLabel"
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="searchModalLabel">
+              Search Econiya
+            </h2>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              type="button"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex gap-2" id="siteSearchForm">
+              <label class="visually-hidden" for="siteSearchInput">Search</label
+              ><input
+                class="form-control"
+                id="siteSearchInput"
+                name="q"
+                placeholder="Try products, solutions or contact"
+                required=""
+                type="search"
+              /><button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+<footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Newsletter -->
+            <div class="newsletter">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-5">
+                  <span class="super-head">NEWSLETTER</span>
+                  <h3>Field-tested insights, sent monthly.</h3>
+                </div>
+                <div class="col-lg-7">
+                  <form
+                    class="newsletter-form"
+                    id="newsletterForm"
+                    novalidate=""
+                  >
+                    <input
+                      aria-label="Email address"
+                      autocomplete="email"
+                      class="form-control"
+                      id="newsletterEmail"
+                      name="email"
+                      placeholder="Enter your email"
+                      required=""
+                      type="email"
+                    />
+                    <button class="btn btn-primary" type="submit">
+                      Subscribe <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <p aria-live="polite" class="form-message"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="t-border" />
+        <div class="row footer-top">
+          <div class="col-lg-3">
+            <img
+              alt="Econiya"
+              class="footer-logo"
+              height="60"
+              src="assets/images/logo.png"
+              width="245"
+            />
+            <p>
+              Engineering Ex/IS-certified communication, gas detection and
+              industrial automation for the world's most demanding environments.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>PRODUCTS</h5>
+            <ul>
+              <li>
+                <a href="#">Mobile &amp; Tablets</a>
+              </li>
+              <li>
+                <a href="#">Gas Detectors</a>
+              </li>
+              <li>
+                <a href="#">Radios (DMR/PoC)</a>
+              </li>
+              <li>
+                <a href="#">Water Logger</a>
+              </li>
+              <li>
+                <a href="#">POS Machines</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>INDUSTRIES</h5>
+            <ul>
+              <li>
+                <a href="#">Automotive</a>
+              </li>
+              <li>
+                <a href="#">Oil &amp; Gas</a>
+              </li>
+              <li>
+                <a href="#">Agriculture</a>
+              </li>
+              <li>
+                <a href="#">Construction</a>
+              </li>
+              <li>
+                <a href="#">Food Processing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>COMPANY</h5>
+            <ul>
+              <li>
+                <a href="about.html">About Us</a>
+              </li>
+              <li>
+                <a href="team.html">Our Team</a>
+              </li>
+              <li>
+                <a href="careers.html">Careers</a>
+              </li>
+              <li>
+                <a href="insights.html">Blog</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>CONTACT US</h5>
+            <ul class="contact-list">
+              <li>
+                <a class="animation-item" href="mailto:info@econiya.com">
+                  <span class="d-flex flex-shrink-0">
+                    <i class="bi bi-envelope animate_bounce"></i>
+                  </span>
+                  info@econiya.com
+                </a>
+              </li>
+              <li>
+                <a class="animation-item" href="tel:+919876543210">
+                  <span class="d-flex flex-shrink-0">
+                    <i class="bi bi-telephone animate_bounce"></i>
+                  </span>
+                  +91 98765 43210
+                </a>
+              </li>
+              <li class="animation-item">
+                <span class="d-flex flex-shrink-0">
+                  <i class="bi bi-geo-alt animate_bounce"></i>
+                </span>
+                SCO 17-18-19, Second Floor, Sector 17-A, Chandigarh
+              </li>
+            </ul>
+            <div class="social-icons">
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="copyright">
+          <p>© 2026 Econiya. All rights reserved.</p>
+          <ul>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#">Cookie Policy</a>
+            </li>
+          </ul>
+          <!-- Scroll to Top Start -->
+          <button aria-label="Return to top" id="return-to-top" type="button">
+            <i class="bi bi-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+<script src="assets/vendor/jquery/jquery-3.7.1.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
