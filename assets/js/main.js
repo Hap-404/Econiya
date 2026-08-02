@@ -22,18 +22,90 @@
     });
   }
 
-  function initHeroScroll() {
-    const button = document.querySelector(".scroll");
-    const target = document.querySelector(".who");
-    if (!button || !target) return;
-    button.setAttribute("role", "button");
-    button.setAttribute("tabindex", "0");
-    const go = () => target.scrollIntoView({ behavior: "smooth" });
-    button.addEventListener("click", go);
-    button.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); go(); }
+  // function initHeroScroll() {
+  //   const button = document.querySelector(".scroll");
+  //   const target = document.querySelector(".who");
+  //   if (!button || !target) return;
+  //   button.setAttribute("role", "button");
+  //   button.setAttribute("tabindex", "0");
+  //   const go = () => target.scrollIntoView({ behavior: "smooth" });
+  //   button.addEventListener("click", go);
+  //   button.addEventListener("keydown", (event) => {
+  //     if (event.key === "Enter" || event.key === " ") { event.preventDefault(); go(); }
+  //   });
+  // }
+
+function initHeroScroll() {
+  /*
+   * New universal page-hero controls.
+   * Each control declares its own destination through
+   * data-scroll-target.
+   */
+  const universalControls = document.querySelectorAll(
+    ".page-hero-scroll[data-scroll-target]"
+  );
+
+  universalControls.forEach((control) => {
+    const targetSelector = control.dataset.scrollTarget;
+    const target = document.querySelector(targetSelector);
+
+    if (!target) {
+      return;
+    }
+
+    control.addEventListener("click", () => {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
     });
+  });
+
+  /*
+   * Preserve the existing homepage scroll control.
+   */
+  const legacyControl = document.querySelector(
+    ".scroll:not([data-scroll-target])"
+  );
+
+  const legacyTarget = document.querySelector(
+    ".who, .econ-who-section"
+  );
+
+  if (!legacyControl || !legacyTarget) {
+    return;
   }
+
+  legacyControl.setAttribute("role", "button");
+  legacyControl.setAttribute("tabindex", "0");
+
+  const scrollHome = () => {
+    legacyTarget.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  };
+
+  legacyControl.addEventListener(
+    "click",
+    scrollHome
+  );
+
+  legacyControl.addEventListener(
+    "keydown",
+    (event) => {
+      if (
+        event.key === "Enter" ||
+        event.key === " "
+      ) {
+        event.preventDefault();
+        scrollHome();
+      }
+    }
+  );
+}
+
+
 
   function initCounters() {
     const counters = document.querySelectorAll(".counter[data-target]");
@@ -1046,9 +1118,167 @@ function initVideoPlaceholders() {
   }));
 }
 
+function initCareerJobInteractions() {
+  const jobsSection = document.querySelector(
+    ".careers-page .jobs-section"
+  );
+
+  if (!jobsSection) {
+    return;
+  }
+
+  const jobRows = Array.from(
+    jobsSection.querySelectorAll(".job-row")
+  );
+
+  const filterButtons = Array.from(
+    jobsSection.querySelectorAll(
+      ".job-filters [data-job-filter]"
+    )
+  );
+
+  /*
+   * Clicking a job position keeps that row selected.
+   * Clicking another row transfers the selected state.
+   */
+  jobRows.forEach((row) => {
+    row.setAttribute("tabindex", "0");
+
+    const selectRow = (event) => {
+      /*
+       * Let Apply links continue to navigate normally.
+       */
+      if (event.target.closest(".job-apply")) {
+        return;
+      }
+
+      jobRows.forEach((item) => {
+        item.classList.remove("is-selected");
+        item.setAttribute("aria-selected", "false");
+      });
+
+      row.classList.add("is-selected");
+      row.setAttribute("aria-selected", "true");
+    };
+
+    row.addEventListener("click", selectRow);
+
+    row.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Enter" ||
+        event.key === " "
+      ) {
+        event.preventDefault();
+        selectRow(event);
+      }
+    });
+  });
+
+  /*
+   * Keep aria-pressed synchronized with the existing
+   * active filter class.
+   */
+  filterButtons.forEach((button) => {
+    button.setAttribute(
+      "aria-pressed",
+      button.classList.contains("active")
+        ? "true"
+        : "false"
+    );
+
+    button.addEventListener("click", () => {
+      filterButtons.forEach((item) => {
+        const isActive = item === button;
+
+        item.classList.toggle("active", isActive);
+
+        item.setAttribute(
+          "aria-pressed",
+          isActive ? "true" : "false"
+        );
+      });
+
+      /*
+       * Clear a previously selected row when filters change.
+       */
+      jobRows.forEach((row) => {
+        row.classList.remove("is-selected");
+        row.setAttribute("aria-selected", "false");
+      });
+    });
+  });
+}
+
+
+function initCareerHiringProcess() {
+  const timeline = document.querySelector(
+    ".careers-page .career-process-timeline"
+  );
+
+  if (!timeline) {
+    return;
+  }
+
+  const steps = Array.from(
+    timeline.querySelectorAll(".career-process-step")
+  );
+
+  if (!steps.length) {
+    return;
+  }
+
+  const activateStep = (selectedStep) => {
+    steps.forEach((step) => {
+      const isSelected = step === selectedStep;
+
+      step.classList.toggle(
+        "is-active",
+        isSelected
+      );
+
+      step.setAttribute(
+        "aria-pressed",
+        isSelected ? "true" : "false"
+      );
+    });
+  };
+
+  steps.forEach((step) => {
+    step.addEventListener("click", () => {
+      activateStep(step);
+    });
+  });
+}
+
+function initCareerCvUpload() {
+  const input = document.querySelector(
+    "#careerCvUpload"
+  );
+
+  if (!input) {
+    return;
+  }
+
+  const label = input
+    .closest(".career-upload-button")
+    ?.querySelector(".career-upload-label");
+
+  if (!label) {
+    return;
+  }
+
+  input.addEventListener("change", () => {
+    const file = input.files?.[0];
+
+    label.textContent = file
+      ? file.name
+      : "Upload your CV";
+  });
+}
+
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload()
 
 
 
