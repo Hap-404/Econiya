@@ -1791,3 +1791,19 @@ initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPla
 
   });
 })(jQuery);
+
+
+$(document).on('click', 'header .navbar-toggler', function () {
+    var $btn = $(this);
+
+    // Wait for Bootstrap to update aria-expanded
+    setTimeout(function () {
+        var $icon = $btn.find('i');
+
+        if ($btn.attr('aria-expanded') === 'true') {
+            $icon.removeClass('bi-list').addClass('bi-x-lg');
+        } else {
+            $icon.removeClass('bi-x-lg').addClass('bi-list');
+        }
+    }, 10);
+});

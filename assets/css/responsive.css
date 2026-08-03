@@ -144,6 +144,20 @@
          margin-bottom: 20px;
     }
 }
+@media (max-width: 991px) {
+    .hero-certified {
+        left: 20px;
+    }
+    .info-card-top {
+        left: 20px;
+    }
+    .production-grid .step-no {
+        display: none;
+    }
+    .production-item:hover .production-icon {
+        transform: none;
+    }
+}
  @media (max-width: 767px) {
      header .navbar-collapse{
          max-width: 540px;
