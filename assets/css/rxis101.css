@@ -1,0 +1,5309 @@
+.rxis101-page{background:#fff}.rxis101-page main{overflow:hidden}.rxis-hero{position:relative;isolation:isolate;padding:82px 0 70px;background:linear-gradient(180deg,#fff 0%,#fff9f9 100%)}.rxis-hero .hero-particle-canvas{position:absolute;inset:0;z-index:0;width:100%;height:100%;pointer-events:none;opacity:.68}.rxis-hero .container{z-index:2}.rxis-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}.rxis-badges span,.rxis-kicker,.rxis-section-head>span,.rxis-cta-inner>span{font:600 12px/1.2 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#e7222f}.rxis-badges span{padding:7px 11px;border-radius:999px;background:#fff;border:1px solid rgba(231,34,47,.22)}.rxis-badges span+span{color:#fff;background:linear-gradient(135deg,#ff9c2f,#e7222f);border-color:transparent}.rxis-eyebrow{margin:0 0 7px;color:#e7222f;font:600 14px/1.4 Inter,sans-serif}.rxis-hero h1,.rxis-section h2,.rxis-cta h2{font-family:Inter,sans-serif;font-weight:800;letter-spacing:-.045em;color:#222020}.rxis-hero h1{margin:0;font-size:clamp(56px,7vw,94px);line-height:.95}.rxis-hero h2{margin:10px 0 18px;color:#c9222d;font:700 clamp(20px,2.1vw,30px)/1.2 Inter,sans-serif}.rxis-lead{max-width:670px;color:#575258;font-size:16px;line-height:1.75}.rxis-quick-specs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.rxis-quick-specs>div{padding:16px 13px;border:1px solid #f0cfd2;border-radius:14px;background:rgba(255,255,255,.86);box-shadow:0 10px 30px rgba(88,31,37,.04)}.rxis-quick-specs strong,.rxis-quick-specs span{display:block}.rxis-quick-specs strong{font:700 17px/1.2 Inter,sans-serif;color:#222020}.rxis-quick-specs span{margin-top:4px;color:#6f696f;font-size:10px}.rxis-actions{display:flex;flex-wrap:wrap;gap:12px}.rxis-actions .btn{min-height:48px}.rxis-hero-product{position:relative;display:flex;justify-content:center;min-height:590px}.rxis-hero-product img{width:min(310px,62%);height:auto;filter:drop-shadow(0 24px 28px rgba(33,24,25,.18));animation:rxisFloat 5s ease-in-out infinite}.rxis-callout{position:absolute;max-width:150px;padding:10px 13px;border:1px solid rgba(231,34,47,.22);border-radius:999px;background:#fff;color:#555;font-size:10px;box-shadow:0 12px 28px rgba(79,22,29,.08)}.rxis-callout b{display:block;color:#e7222f;font-size:9px}.callout-one{top:17%;right:0}.callout-two{top:42%;left:0}.callout-three{right:2%;bottom:20%}@keyframes rxisFloat{50%{transform:translateY(-12px)}}.rxis-section{padding:72px 0}.rxis-section:nth-of-type(even){background:#fffafa}.rxis-section-head{max-width:780px;margin:0 auto 42px;text-align:center}.rxis-section h2{margin:8px 0 12px;font-size:clamp(36px,4vw,58px);line-height:1.06}.rxis-section h2 em{font-style:normal;color:#c9222d}.rxis-section-head p{max-width:650px;margin:auto;color:#696469;line-height:1.7}.rxis-card-grid{display:grid;gap:18px}.feature-grid{grid-template-columns:repeat(3,1fr)}.rxis-info-card{position:relative;padding:24px;border:1px solid #efd5d7;border-radius:17px;background:#fff;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}.rxis-info-card:hover{transform:translateY(-6px);border-color:#e7222f;box-shadow:0 18px 38px rgba(106,28,36,.09)}.rxis-info-card i{display:grid;place-items:center;width:42px;height:42px;margin-bottom:18px;border-radius:50%;background:#fff0f1;color:#e7222f;font-size:19px}.rxis-info-card h3{margin:0 0 8px;color:#252225;font:700 17px/1.3 Inter,sans-serif}.rxis-info-card p{margin:0;color:#625d63;font-size:14px;line-height:1.65}.rxis-overview{background:#fff}.rxis-dual-product{position:relative;min-height:600px;border-radius:30px;background:linear-gradient(145deg,#ffe8eb,#fff);overflow:hidden}.rxis-dual-product img{position:absolute;bottom:25px;width:54%;filter:drop-shadow(0 22px 24px rgba(46,24,28,.17));transition:transform .5s ease}.rxis-dual-product img:first-child{left:2%;z-index:2}.rxis-dual-product img:last-child{right:2%;transform:scale(.92)}.rxis-dual-product:hover img:first-child{transform:translateX(-8px) rotate(-2deg)}.rxis-dual-product:hover img:last-child{transform:translateX(8px) rotate(2deg) scale(.94)}.rxis-overview h3{margin:0 0 18px;color:#c9222d;font:700 23px/1.3 Inter,sans-serif}.rxis-overview p,.rxis-performance p{color:#5f5a60;line-height:1.75}.rxis-text-link,.rxis-product-card a{display:inline-flex;align-items:center;gap:7px;color:#e7222f;font-weight:600}.rxis-performance{background:#fffafa}.rxis-check-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0 0;padding:0;list-style:none}.rxis-check-list li{position:relative;padding-left:27px;color:#504b51}.rxis-check-list li:before{content:"✓";position:absolute;left:0;top:0;display:grid;place-items:center;width:19px;height:19px;border-radius:50%;background:#fff0f1;color:#e7222f;font-weight:700}.rxis-deployment-card{position:relative;margin:0;border-radius:26px;overflow:hidden;min-height:480px;background:#f3d9dc}.rxis-deployment-card img{width:100%;height:100%;min-height:480px;object-fit:cover;transition:transform .7s ease}.rxis-deployment-card:hover img{transform:scale(1.04)}.rxis-deployment-card figcaption{position:absolute;right:18px;bottom:18px;left:18px;padding:18px;border-radius:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px)}.rxis-deployment-card figcaption span,.rxis-deployment-card figcaption strong{display:block}.rxis-deployment-card figcaption span{color:#e7222f;font-size:11px;font-weight:700}.rxis-deployment-card figcaption strong{margin-top:4px;color:#222;font-size:18px}.rxis-spec-product{display:block;width:min(350px,100%);margin:auto;filter:drop-shadow(0 20px 24px rgba(40,20,24,.15))}.rxis-spec-panel{padding:18px;border-radius:24px;background:#fde7ea}.rxis-spec-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.rxis-spec-tabs button{padding:10px 15px;border:0;border-radius:999px;background:#fff;color:#4c474d;font-size:12px;font-weight:600}.rxis-spec-tabs button.is-active{color:#fff;background:#e7222f}.rxis-spec-content{display:none}.rxis-spec-content.is-active{display:block;animation:rxisPanel .35s ease}.rxis-spec-content dl{margin:0;background:#fff;border-radius:14px;overflow:hidden}.rxis-spec-content dl div{display:grid;grid-template-columns:minmax(150px,.75fr) 1.25fr;gap:20px;padding:13px 16px;border-bottom:1px solid #f2e3e5}.rxis-spec-content dl div:last-child{border:0}.rxis-spec-content dt{font-weight:600;color:#6b656b}.rxis-spec-content dd{margin:0;color:#222;font-weight:600}@keyframes rxisPanel{from{opacity:0;transform:translateY(8px)}}.rxis-cert-grid{display:grid;grid-template-columns:1.1fr repeat(2,1fr);gap:18px}.rxis-cert-feature{grid-row:span 2;padding:28px;border-radius:20px;background:#fce4e7;border:1px solid #efc9cd}.rxis-cert-feature h3{font:800 28px/1.1 Inter,sans-serif;color:#c9222d}.rxis-cert-feature p{color:#5e595e;line-height:1.7}.rxis-industry-grid,.rxis-related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.rxis-industry-card{position:relative;min-height:290px;border-radius:22px;overflow:hidden;background:#eadadd}.rxis-industry-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(20,15,16,.78))}.rxis-industry-card img{width:100%;height:100%;min-height:290px;object-fit:cover;transition:transform .7s ease}.rxis-industry-card:hover img{transform:scale(1.06)}.rxis-industry-card>div{position:absolute;z-index:2;right:0;bottom:24px;left:0;text-align:center;color:#fff}.rxis-industry-card i{display:grid;place-items:center;width:46px;height:46px;margin:0 auto 10px;border-radius:50%;background:#e7222f}.rxis-industry-card h3{margin:0;color:#fff;font-size:22px}.rxis-related{background:#fffafa}.rxis-product-card{display:flex;flex-direction:column;padding:20px;border:1px solid #efd5d7;border-radius:18px;background:#fff;box-shadow:0 14px 34px rgba(72,24,30,.05);transition:transform .35s ease}.rxis-product-card:hover{transform:translateY(-7px)}.rxis-product-card img{width:100%;aspect-ratio:1/1;object-fit:contain;margin-bottom:15px}.rxis-product-card h3{font:700 20px/1.2 Inter,sans-serif}.rxis-product-card small{color:#e7222f;font-size:10px}.rxis-product-card p{color:#676167;line-height:1.6;flex:1}.rxis-cta{padding:0 0 76px}.rxis-cta-inner{padding:42px;border-radius:22px;background:radial-gradient(circle at 90% 20%,rgba(255,255,255,.18),transparent 23%),linear-gradient(135deg,#d71927,#9e111c);color:#fff}.rxis-cta-inner>span{color:#fff;opacity:.85}.rxis-cta h2{margin:8px 0;color:#fff;font-size:clamp(34px,4vw,56px)}.rxis-cta p{max-width:720px;color:rgba(255,255,255,.85)}.rxis-cta .btn{margin:10px 8px 0 0}.rxis-reveal{opacity:0;filter:blur(5px);transform:translateY(34px);transition:opacity .7s ease,transform .85s cubic-bezier(.22,1,.36,1),filter .85s ease}.rxis-reveal[data-reveal="left"]{transform:translateX(-42px)}.rxis-reveal[data-reveal="right"]{transform:translateX(42px)}.rxis-reveal.is-visible{opacity:1;filter:none;transform:none}.rxis-animation-slot{will-change:transform}.rxis-animation-slot.is-pointer-active{transition:transform .18s ease-out}
+@media(max-width:1199.98px){.rxis-hero{padding:64px 0}.rxis-hero-product{min-height:500px}.rxis-quick-specs{grid-template-columns:repeat(2,1fr)}.rxis-section{padding:60px 0}.rxis-cert-grid{grid-template-columns:repeat(2,1fr)}.rxis-cert-feature{grid-row:auto;grid-column:1/-1}}
+@media(max-width:991.98px){.rxis-hero-product{min-height:560px}.rxis-callout{max-width:135px}.feature-grid{grid-template-columns:repeat(2,1fr)}.rxis-dual-product{min-height:520px}.rxis-industry-grid,.rxis-related-grid{grid-template-columns:repeat(2,1fr)}.rxis-industry-card:last-child,.rxis-product-card:last-child{grid-column:1/-1}.rxis-product-card:last-child{max-width:calc(50% - 10px);justify-self:center}.rxis-section-head{margin-bottom:32px}}
+@media(max-width:767.98px){.rxis-hero{padding:46px 0}.rxis-hero h1{font-size:56px}.rxis-lead{font-size:15px}.rxis-actions .btn{width:100%}.rxis-hero-product{min-height:470px;margin-top:12px}.rxis-hero-product img{width:min(260px,65%)}.rxis-callout{font-size:9px;padding:8px 10px}.callout-one{right:4%}.callout-two{left:4%}.rxis-section{padding:48px 0}.feature-grid,.rxis-cert-grid,.rxis-industry-grid,.rxis-related-grid{grid-template-columns:1fr}.rxis-product-card:last-child{grid-column:auto;max-width:none}.rxis-dual-product{min-height:430px}.rxis-check-list{grid-template-columns:1fr}.rxis-spec-content dl div{grid-template-columns:1fr;gap:5px}.rxis-deployment-card,.rxis-deployment-card img{min-height:360px}.rxis-cta{padding-bottom:50px}.rxis-cta-inner{padding:30px 22px}.rxis-cta .btn{width:100%;margin-right:0}}
+@media(max-width:479.98px){.rxis-badges{gap:6px}.rxis-badges span{font-size:9px}.rxis-quick-specs{grid-template-columns:1fr 1fr;gap:9px}.rxis-quick-specs>div{padding:13px 10px}.rxis-hero-product{min-height:410px}.rxis-hero-product img{width:220px}.rxis-callout{max-width:108px}.rxis-dual-product{min-height:360px}.rxis-info-card{padding:20px}.rxis-section h2{font-size:34px}}
+@media(prefers-reduced-motion:reduce){.rxis-reveal{opacity:1;filter:none;transform:none;transition:none}.rxis-hero-product img{animation:none}.rxis-info-card,.rxis-dual-product img,.rxis-industry-card img,.rxis-product-card{transition:none}}
+
+/* =========================================================
+   RxIS101 HERO — FIGMA CONTENT + INTERACTIONS
+========================================================= */
+.rxis-hero .row { min-height: 570px; }
+.rxis-hero .rxis-eyebrow {
+  margin: 12px 0 12px;
+  color: #cf2630;
+  font: 700 clamp(18px, 1.55vw, 25px)/1.2 Inter, sans-serif;
+  letter-spacing: -0.025em;
+  text-transform: none;
+}
+.rxis-hero .rxis-lead { max-width: 650px; margin-bottom: 0; }
+
+/* Quick specification cards */
+.rxis-quick-specs { perspective: 900px; }
+.rxis-quick-specs > .rxis-quick-spec {
+  position: relative;
+  isolation: isolate;
+  min-height: 94px;
+  padding: 20px 14px 15px;
+  overflow: hidden;
+  border: 1px solid rgba(231, 34, 47, .22);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 10px 28px rgba(88, 31, 37, .045);
+  cursor: default;
+  transform: translateZ(0);
+  transition: transform .4s cubic-bezier(.22,1,.36,1), border-color .3s ease, box-shadow .4s ease, background-color .3s ease;
+}
+.rxis-quick-specs > .rxis-quick-spec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(125deg, transparent 15%, rgba(255,255,255,.92) 42%, transparent 67%);
+  transform: translateX(-125%);
+  transition: transform .75s cubic-bezier(.22,1,.36,1);
+}
+.rxis-quick-specs > .rxis-quick-spec::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -32px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: rgba(231,34,47,.07);
+  transform: scale(.75);
+  transition: transform .4s ease, background-color .4s ease;
+}
+.rxis-quick-specs > .rxis-quick-spec:hover,
+.rxis-quick-specs > .rxis-quick-spec:focus-visible {
+  border-color: rgba(231,34,47,.62);
+  background: #fff;
+  box-shadow: 0 18px 38px rgba(111, 27, 36, .12);
+  transform: translateY(-8px) rotateX(3deg);
+  outline: none;
+}
+.rxis-quick-specs > .rxis-quick-spec:hover::before,
+.rxis-quick-specs > .rxis-quick-spec:focus-visible::before { transform: translateX(125%); }
+.rxis-quick-specs > .rxis-quick-spec:hover::after,
+.rxis-quick-specs > .rxis-quick-spec:focus-visible::after { transform: scale(1.15); background: rgba(231,34,47,.1); }
+.rxis-spec-icon {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  display: grid !important;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: #e7222f !important;
+  background: #fff0f1;
+  border-radius: 50%;
+  font-size: 13px !important;
+  opacity: 0;
+  transform: translateY(-7px) scale(.8);
+  transition: opacity .3s ease, transform .4s cubic-bezier(.22,1,.36,1);
+}
+.rxis-quick-spec:hover .rxis-spec-icon,
+.rxis-quick-spec:focus-visible .rxis-spec-icon { opacity: 1; transform: none; }
+.rxis-quick-spec strong { transition: color .3s ease, transform .35s ease; }
+.rxis-quick-spec:hover strong,
+.rxis-quick-spec:focus-visible strong { color: #c9222d; transform: translateY(-2px); }
+
+/* Interactive three-dimensional product stage */
+.rxis-hero-product {
+  isolation: isolate;
+  align-items: center;
+  min-height: 590px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.rxis-phone-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(390px, 76%);
+  min-height: 570px;
+  transform-style: preserve-3d;
+}
+.rxis-phone-tilt {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transform-style: preserve-3d;
+  transition: transform .18s ease-out;
+  animation: rxisPhoneFloat 5.4s ease-in-out infinite;
+}
+.rxis-phone-image {
+  position: relative;
+  z-index: 2;
+  width: min(320px, 80%) !important;
+  max-height: 555px;
+  object-fit: contain;
+  animation: none !important;
+  filter: drop-shadow(0 30px 28px rgba(33,24,25,.22)) !important;
+  transform: translateZ(36px);
+}
+.rxis-phone-glow {
+  position: absolute;
+  z-index: 0;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(231,34,47,.2), rgba(231,34,47,.07) 42%, transparent 72%);
+  filter: blur(12px);
+  animation: rxisGlowPulse 4.4s ease-in-out infinite;
+}
+.rxis-phone-sheen {
+  position: absolute;
+  z-index: 3;
+  top: 10%;
+  left: 22%;
+  width: 34%;
+  height: 66%;
+  border-radius: 48% 38% 52% 38%;
+  background: linear-gradient(105deg, transparent, rgba(255,255,255,.3), transparent 67%);
+  filter: blur(2px);
+  opacity: .45;
+  pointer-events: none;
+  transform: translateZ(54px) skewX(-8deg);
+  animation: rxisSheen 4.8s ease-in-out infinite;
+}
+.rxis-hero-product.is-tilting .rxis-phone-tilt { animation-play-state: paused; }
+
+/* Three animated information pills */
+.rxis-floating-pill {
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 170px;
+  padding: 9px 13px 9px 9px;
+  color: #5b555b;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(231,34,47,.23);
+  border-radius: 999px;
+  box-shadow: 0 13px 30px rgba(83,22,29,.09);
+  font-size: 9px;
+  line-height: 1.25;
+  backdrop-filter: blur(8px);
+  will-change: transform;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+.rxis-floating-pill:hover { border-color: rgba(231,34,47,.65); box-shadow: 0 16px 34px rgba(83,22,29,.14); }
+.rxis-floating-pill b { display: block; color: #e7222f; font-size: 9px; line-height: 1.15; }
+.rxis-pill-icon {
+  display: grid;
+  flex: 0 0 28px;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: #e7222f;
+  background: #fff0f1;
+  border-radius: 50%;
+  font-size: 13px;
+}
+.rxis-floating-pill.callout-one { top: 18%; right: -2%; animation: rxisPillFloatA 4.3s ease-in-out infinite; }
+.rxis-floating-pill.callout-two { top: 42%; left: -4%; animation: rxisPillFloatB 5.1s ease-in-out infinite; }
+.rxis-floating-pill.callout-three { right: 0; bottom: 19%; animation: rxisPillFloatC 4.7s ease-in-out infinite; }
+
+@keyframes rxisPhoneFloat { 0%,100% { transform: translateY(0) rotateZ(0deg); } 50% { transform: translateY(-13px) rotateZ(.45deg); } }
+@keyframes rxisGlowPulse { 0%,100% { opacity: .65; transform: scale(.92); } 50% { opacity: 1; transform: scale(1.08); } }
+@keyframes rxisSheen { 0%,100% { opacity: .25; transform: translate3d(-8px,0,54px) skewX(-8deg); } 50% { opacity: .58; transform: translate3d(18px,-4px,54px) skewX(-8deg); } }
+@keyframes rxisPillFloatA { 0%,100% { transform: translate3d(0,0,55px); } 50% { transform: translate3d(7px,-10px,55px); } }
+@keyframes rxisPillFloatB { 0%,100% { transform: translate3d(0,0,42px); } 50% { transform: translate3d(-7px,9px,42px); } }
+@keyframes rxisPillFloatC { 0%,100% { transform: translate3d(0,0,62px); } 50% { transform: translate3d(8px,8px,62px); } }
+
+@media (max-width: 1199.98px) {
+  .rxis-hero .row { min-height: auto; }
+  .rxis-phone-stage { min-height: 500px; }
+  .rxis-floating-pill.callout-one { right: 1%; }
+  .rxis-floating-pill.callout-two { left: 1%; }
+}
+@media (max-width: 991.98px) {
+  .rxis-phone-stage { width: min(430px, 78%); min-height: 545px; }
+  .rxis-floating-pill.callout-one { right: 7%; }
+  .rxis-floating-pill.callout-two { left: 7%; }
+  .rxis-floating-pill.callout-three { right: 8%; }
+}
+@media (max-width: 767.98px) {
+  .rxis-hero .rxis-eyebrow { font-size: 19px; }
+  .rxis-phone-stage { width: min(330px, 74%); min-height: 440px; }
+  .rxis-phone-image { width: min(255px, 80%) !important; max-height: 430px; }
+  .rxis-floating-pill { max-width: 132px; padding: 7px 9px 7px 7px; font-size: 8px; }
+  .rxis-floating-pill b { font-size: 8px; }
+  .rxis-pill-icon { flex-basis: 24px; width: 24px; height: 24px; font-size: 11px; }
+  .rxis-floating-pill.callout-one { top: 15%; right: 0; }
+  .rxis-floating-pill.callout-two { top: 44%; left: 0; }
+  .rxis-floating-pill.callout-three { right: 0; bottom: 14%; }
+}
+@media (max-width: 479.98px) {
+  .rxis-phone-stage { width: 100%; min-height: 405px; }
+  .rxis-floating-pill { max-width: 112px; }
+  .rxis-floating-pill.callout-one { right: -2%; }
+  .rxis-floating-pill.callout-two { left: -2%; }
+  .rxis-floating-pill.callout-three { right: -2%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rxis-phone-tilt, .rxis-phone-glow, .rxis-phone-sheen, .rxis-floating-pill { animation: none !important; }
+  .rxis-quick-specs > .rxis-quick-spec { transition: none; }
+}
+
+
+
+
+/* =========================================================
+   RxIS101 — KEY FEATURES
+   Figma-aligned final layout
+========================================================= */
+
+.rxis-features {
+  position: relative;
+  overflow: hidden;
+
+  padding: 68px 0 76px;
+
+  background:
+    radial-gradient(
+      circle at 100% 10%,
+      rgba(231, 34, 47, 0.025),
+      transparent 34%
+    ),
+    #ffffff;
+}
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.rxis-features .rxis-section-heading {
+  max-width: 920px;
+  margin: 0 auto 54px;
+
+  text-align: center;
+}
+
+.rxis-features .super-head {
+  display: block;
+
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-features .rxis-section-heading h2 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(38px, 3.8vw, 54px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.rxis-features
+  .rxis-section-heading
+  h2
+  .gradient-text {
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #812420 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.rxis-features .rxis-section-heading p {
+  max-width: 760px;
+
+  margin: 14px auto 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.rxis-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 34px 28px;
+
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   FEATURE CARD
+========================================================= */
+
+.rxis-feature-card {
+  position: relative;
+  isolation: isolate;
+
+  min-height: 230px;
+
+  padding: 57px 28px 27px;
+
+  overflow: visible;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fffdfd 100%
+    );
+
+  border: 1px solid rgba(231, 34, 47, 0.25);
+  border-radius: 18px;
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease;
+}
+
+.rxis-feature-card:hover {
+  border-color: rgba(231, 34, 47, 0.65);
+
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 20px 42px rgba(105, 27, 34, 0.1);
+}
+
+/*
+  White cover behind the icon creates the curved
+  interruption in the card's upper border.
+*/
+
+.rxis-feature-card::before {
+  content: "";
+
+  position: absolute;
+  z-index: 1;
+
+  top: -2px;
+  left: 23px;
+
+  width: 76px;
+  height: 23px;
+
+  background: #ffffff;
+}
+
+/* Soft highlight on hover */
+
+.rxis-feature-card::after {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  top: -25%;
+  left: -45%;
+
+  width: 42%;
+  height: 150%;
+
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      100deg,
+      transparent,
+      rgba(231, 34, 47, 0.035),
+      transparent
+    );
+
+  transform: skewX(-16deg);
+
+  transition:
+    left 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 250ms ease;
+}
+
+.rxis-feature-card:hover::after {
+  left: 115%;
+  opacity: 1;
+}
+
+/* =========================================================
+   ICON NOTCH
+========================================================= */
+
+.rxis-feature-icon-wrap {
+  position: absolute;
+  z-index: 3;
+
+  top: -29px;
+  left: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(231, 34, 47, 0.25);
+  border-radius: 50%;
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.rxis-feature-card:hover
+  .rxis-feature-icon-wrap {
+  border-color: var(--primary);
+
+  transform:
+    translateY(-3px)
+    rotate(-4deg);
+
+  box-shadow:
+    0 9px 22px rgba(231, 34, 47, 0.13);
+}
+
+.rxis-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  color: var(--primary);
+  background: #fff2f3;
+
+  border-radius: 50%;
+
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-feature-icon svg {
+  display: block;
+
+  width: 19px;
+  height: 19px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rxis-feature-card:hover
+  .rxis-feature-icon {
+  color: #ffffff;
+  background: var(--primary);
+
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   CARD TYPOGRAPHY
+========================================================= */
+
+.rxis-feature-card h3 {
+  margin: 0 0 10px;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.rxis-feature-card p {
+  margin: 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SCROLL-REVEAL DELAYS
+========================================================= */
+
+.rxis-feature-card:nth-child(1) {
+  transition-delay: 0ms;
+}
+
+.rxis-feature-card:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.rxis-feature-card:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.rxis-feature-card:nth-child(4) {
+  transition-delay: 70ms;
+}
+
+.rxis-feature-card:nth-child(5) {
+  transition-delay: 140ms;
+}
+
+.rxis-feature-card:nth-child(6) {
+  transition-delay: 210ms;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-features {
+    padding: 62px 0 68px;
+  }
+
+  .rxis-features .rxis-section-heading {
+    margin-bottom: 50px;
+  }
+
+  .rxis-feature-grid {
+    gap: 32px 20px;
+  }
+
+  .rxis-feature-card {
+    min-height: 245px;
+
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .rxis-feature-card h3 {
+    font-size: 16px;
+  }
+
+  .rxis-feature-card p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-features {
+    padding: 58px 0 64px;
+  }
+
+  .rxis-features .rxis-section-heading {
+    max-width: 720px;
+
+    margin-bottom: 50px;
+  }
+
+  .rxis-features .rxis-section-heading h2 {
+    font-size: 44px;
+  }
+
+  .rxis-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 34px 22px;
+  }
+
+  .rxis-feature-card {
+    min-height: 220px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-features {
+    padding: 50px 0 56px;
+  }
+
+  .rxis-features .rxis-section-heading {
+    margin-bottom: 46px;
+  }
+
+  .rxis-features .super-head {
+    font-size: 12px;
+  }
+
+  .rxis-features .rxis-section-heading h2 {
+    font-size: 36px;
+    line-height: 1.1;
+  }
+
+  .rxis-features .rxis-section-heading p {
+    margin-top: 12px;
+
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .rxis-feature-grid {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .rxis-feature-card {
+    min-height: auto;
+
+    padding: 53px 22px 24px;
+  }
+
+  .rxis-feature-card::before {
+    left: 18px;
+  }
+
+  .rxis-feature-icon-wrap {
+    left: 21px;
+  }
+
+  .rxis-feature-card h3 {
+    font-size: 16px;
+  }
+
+  .rxis-feature-card p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   EXTRA-SMALL MOBILE
+========================================================= */
+
+@media (max-width: 399.98px) {
+  .rxis-features .rxis-section-heading h2 {
+    font-size: 32px;
+  }
+
+  .rxis-feature-card {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-feature-card,
+  .rxis-feature-card::after,
+  .rxis-feature-icon-wrap,
+  .rxis-feature-icon {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   RxIS101 FEATURE ICON — SVG IMAGE
+========================================================= */
+
+.rxis-feature-icon-img {
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  object-fit: contain;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(18%)
+    sepia(95%)
+    saturate(3860%)
+    hue-rotate(345deg)
+    brightness(101%)
+    contrast(86%);
+
+  transition:
+    filter 300ms ease,
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-feature-card:hover .rxis-feature-icon-img {
+  filter:
+    brightness(0)
+    invert(1);
+
+  transform: scale(1.08);
+}
+
+
+
+/* =========================================================
+   RxIS101 FEATURE ICON — FINAL SVG FIX
+========================================================= */
+
+/* Outer circular notch */
+.rxis-feature-icon-wrap {
+  background: #ffffff !important;
+}
+
+/* Inner icon circle */
+.rxis-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--primary);
+  background: #fff2f3 !important;
+
+  border-radius: 50%;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  transform: none;
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 300ms ease;
+}
+
+/* Use the SVG's original colors */
+.rxis-feature-icon-img {
+  display: block;
+
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  filter: none !important;
+
+  transform: none;
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Keep the same pale icon background on hover */
+.rxis-feature-card:hover .rxis-feature-icon {
+  color: var(--primary);
+  background: #fff2f3 !important;
+
+  transform: scale(1.06);
+}
+
+/* Scale the SVG without recoloring it */
+.rxis-feature-card:hover .rxis-feature-icon-img {
+  opacity: 1 !important;
+
+  filter: none !important;
+
+  transform: scale(1.08);
+}
+
+/* Prevent reveal animation from fading only the icon */
+.rxis-feature-card.is-visible .rxis-feature-icon-wrap,
+.rxis-feature-card.is-visible .rxis-feature-icon,
+.rxis-feature-card.is-visible .rxis-feature-icon-img {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+
+/* =========================================================
+   RxIS101 FEATURE CARDS — PRECISE HOVER FIX
+========================================================= */
+
+/*
+  The decorative icon must not create its own hover area.
+  Hover will be controlled only by the card itself.
+*/
+.rxis-feature-icon-wrap,
+.rxis-feature-icon,
+.rxis-feature-icon-img {
+  pointer-events: none;
+}
+
+/* Default icon appearance */
+.rxis-feature-icon {
+  color: var(--primary);
+  background: #fff2f3 !important;
+
+  transition:
+    color 260ms ease,
+    background-color 260ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-feature-icon-img {
+  opacity: 1 !important;
+  filter: none !important;
+
+  transition:
+    filter 260ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+  Only the card currently under the pointer gets the effect.
+*/
+.rxis-feature-card:hover > .rxis-feature-icon-wrap
+  .rxis-feature-icon,
+.rxis-feature-card:focus-within > .rxis-feature-icon-wrap
+  .rxis-feature-icon {
+  color: #ffffff;
+  background: var(--primary) !important;
+
+  transform: scale(1.08);
+}
+
+/*
+  Convert the red SVG to white on the hovered card.
+*/
+.rxis-feature-card:hover > .rxis-feature-icon-wrap
+  .rxis-feature-icon-img,
+.rxis-feature-card:focus-within > .rxis-feature-icon-wrap
+  .rxis-feature-icon-img {
+  filter:
+    brightness(0)
+    invert(1) !important;
+
+  transform: scale(1.08);
+}
+
+/*
+  Keep unhovered cards completely still.
+*/
+.rxis-feature-card:not(:hover)
+  > .rxis-feature-icon-wrap {
+  transform: none;
+}
+
+.rxis-feature-card:not(:hover)
+  > .rxis-feature-icon-wrap
+  .rxis-feature-icon {
+  color: var(--primary);
+  background: #fff2f3 !important;
+
+  transform: none;
+}
+
+.rxis-feature-card:not(:hover)
+  > .rxis-feature-icon-wrap
+  .rxis-feature-icon-img {
+  filter: none !important;
+  transform: none;
+}
+
+/*
+  Stop neighboring cards from reacting through overlapping
+  decorative pseudo-elements.
+*/
+.rxis-feature-card::before,
+.rxis-feature-card::after {
+  pointer-events: none;
+}
+
+/*
+  Prevent delayed stagger transitions from creating a vague
+  hover response after the page reveal has completed.
+*/
+.rxis-feature-card.is-visible {
+  transition-delay: 0ms !important;
+}
+
+
+/* =========================================================
+   RxIS101 — PRODUCT OVERVIEW SECTION
+   Figma aligned
+========================================================= */
+
+.rxis-product-overview {
+  position: relative;
+  overflow: hidden;
+
+  padding: 72px 0 78px;
+
+  background: #ffffff;
+}
+
+.rxis-product-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+  gap: 70px;
+}
+
+/* =========================================================
+   PRODUCT IMAGE AREA
+========================================================= */
+
+.rxis-product-overview-media {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  min-height: 560px;
+
+  padding: 22px 20px 0;
+}
+
+.rxis-product-overview-bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 52%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 232, 235, 0.92),
+      rgba(255, 243, 244, 0.9)
+    );
+
+  border-radius: 34px;
+}
+
+.rxis-product-overview-bg::before {
+  content: "";
+
+  position: absolute;
+
+  top: -55%;
+  left: 12%;
+
+  width: 68%;
+  height: 110%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(231, 34, 47, 0.08),
+      rgba(231, 34, 47, 0) 72%
+    );
+}
+
+.rxis-product-overview-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: min(100%, 510px);
+  max-height: 555px;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  filter:
+    drop-shadow(0 22px 30px rgba(30, 25, 25, 0.14));
+
+  transform-origin: center bottom;
+
+  transition:
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 450ms ease;
+}
+
+.rxis-product-overview-media:hover
+  .rxis-product-overview-image {
+  transform:
+    translateY(-8px)
+    scale(1.018);
+
+  filter:
+    drop-shadow(0 30px 38px rgba(30, 25, 25, 0.18));
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.rxis-product-overview-content {
+  max-width: 640px;
+}
+
+.rxis-product-overview-content .super-head {
+  display: block;
+
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-product-overview-content h2 {
+  margin: 0 0 20px;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(44px, 4vw, 60px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.rxis-product-overview-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.rxis-product-overview-copy p {
+  margin: 0;
+
+  color: #555157;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-product-overview {
+    padding: 64px 0 68px;
+  }
+
+  .rxis-product-overview-grid {
+    gap: 42px;
+  }
+
+  .rxis-product-overview-media {
+    min-height: 500px;
+  }
+
+  .rxis-product-overview-image {
+    width: min(100%, 445px);
+    max-height: 490px;
+  }
+
+  .rxis-product-overview-content h2 {
+    font-size: 50px;
+  }
+
+  .rxis-product-overview-copy p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-product-overview {
+    padding: 58px 0 64px;
+  }
+
+  .rxis-product-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .rxis-product-overview-media {
+    min-height: 500px;
+    max-width: 680px;
+
+    margin: 0 auto;
+  }
+
+  .rxis-product-overview-image {
+    width: min(100%, 470px);
+    max-height: 490px;
+  }
+
+  .rxis-product-overview-content {
+    max-width: 720px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-product-overview {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-product-overview-grid {
+    gap: 34px;
+  }
+
+  .rxis-product-overview-media {
+    min-height: 390px;
+
+    padding: 12px 12px 0;
+  }
+
+  .rxis-product-overview-bg {
+    height: 48%;
+    border-radius: 26px;
+  }
+
+  .rxis-product-overview-image {
+    width: min(100%, 360px);
+    max-height: 385px;
+  }
+
+  .rxis-product-overview-content .super-head {
+    font-size: 12px;
+  }
+
+  .rxis-product-overview-content h2 {
+    margin-bottom: 16px;
+
+    font-size: 40px;
+  }
+
+  .rxis-product-overview-copy {
+    gap: 8px;
+  }
+
+  .rxis-product-overview-copy p {
+    font-size: 13px;
+    line-height: 1.68;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 399.98px) {
+  .rxis-product-overview-media {
+    min-height: 330px;
+  }
+
+  .rxis-product-overview-image {
+    width: min(100%, 305px);
+    max-height: 325px;
+  }
+
+  .rxis-product-overview-content h2 {
+    font-size: 36px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-product-overview-image {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
+
+/* =========================================================
+   RxIS101 — PERFORMANCE & CONNECTIVITY
+========================================================= */
+
+.rxis-performance {
+  position: relative;
+  overflow: hidden;
+
+  padding: 72px 0 78px;
+
+  background: #ffffff;
+}
+
+.rxis-performance-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(430px, 1.05fr);
+
+  align-items: center;
+  gap: 74px;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.rxis-performance-content {
+  max-width: 650px;
+}
+
+.rxis-performance-content .super-head {
+  display: block;
+
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-performance-content h2 {
+  margin: 0 0 20px;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.rxis-performance-content h2 .gradient-text {
+  display: block;
+
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #8b2421 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.rxis-performance-intro {
+  max-width: 620px;
+
+  margin: 0 0 18px;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.rxis-performance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.rxis-performance-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #282528;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.rxis-performance-list li img {
+  display: block;
+  flex: 0 0 auto;
+
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+
+  object-fit: contain;
+
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-performance-list li:hover img {
+  transform: translateX(3px);
+}
+
+.rxis-performance-list li span {
+  display: block;
+
+  flex: 1;
+  min-width: 0;
+}
+
+/* =========================================================
+   DEPLOYMENT IMAGE CARD
+========================================================= */
+
+.rxis-deployment-card {
+  position: relative;
+
+  min-height: 565px;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  background: #f2d9dc;
+
+  box-shadow:
+    0 18px 45px rgba(46, 24, 28, 0.1);
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms ease;
+}
+
+.rxis-deployment-card:hover {
+  transform:
+    translateY(-7px)
+    scale(1.012);
+
+  box-shadow:
+    0 28px 58px rgba(46, 24, 28, 0.15);
+}
+
+.rxis-deployment-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 565px;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-deployment-card:hover
+  .rxis-deployment-image {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+   BOTTOM GLASS PANEL
+========================================================= */
+
+.rxis-deployment-overlay {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+
+  padding: 14px 17px 13px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 17px;
+
+  box-shadow:
+    0 10px 30px rgba(30, 24, 25, 0.1);
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.rxis-deployment-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-transform: uppercase;
+}
+
+.rxis-deployment-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.rxis-deployment-meta > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  min-width: 0;
+}
+
+.rxis-deployment-meta strong {
+  color: #292629;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.rxis-deployment-meta small {
+  color: #625d63;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-performance {
+    padding: 64px 0 68px;
+  }
+
+  .rxis-performance-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(390px, 0.92fr);
+
+    gap: 45px;
+  }
+
+  .rxis-performance-content h2 {
+    font-size: 49px;
+  }
+
+  .rxis-deployment-card,
+  .rxis-deployment-image {
+    min-height: 500px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-performance {
+    padding: 58px 0 64px;
+  }
+
+  .rxis-performance-grid {
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+  }
+
+  .rxis-performance-content {
+    max-width: 760px;
+  }
+
+  .rxis-deployment-card {
+    width: 100%;
+    max-width: 720px;
+    min-height: 520px;
+  }
+
+  .rxis-deployment-image {
+    min-height: 520px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-performance {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-performance-grid {
+    gap: 34px;
+  }
+
+  .rxis-performance-content .super-head {
+    font-size: 12px;
+  }
+
+  .rxis-performance-content h2 {
+    margin-bottom: 16px;
+
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .rxis-performance-intro {
+    margin-bottom: 16px;
+
+    font-size: 13px;
+    line-height: 1.68;
+  }
+
+  .rxis-performance-list {
+    gap: 9px;
+  }
+
+  .rxis-performance-list li {
+    font-size: 12.5px;
+  }
+
+  .rxis-deployment-card,
+  .rxis-deployment-image {
+    min-height: 430px;
+  }
+
+  .rxis-deployment-card {
+    border-radius: 23px;
+  }
+
+  .rxis-deployment-overlay {
+    right: 11px;
+    bottom: 11px;
+    left: 11px;
+
+    padding: 12px 13px;
+
+    border-radius: 14px;
+  }
+
+  .rxis-deployment-meta {
+    gap: 8px;
+  }
+
+  .rxis-deployment-meta strong {
+    font-size: 11px;
+  }
+
+  .rxis-deployment-meta small {
+    font-size: 9px;
+  }
+}
+
+/* =========================================================
+   EXTRA-SMALL MOBILE
+========================================================= */
+
+@media (max-width: 449.98px) {
+  .rxis-performance-content h2 {
+    font-size: 34px;
+  }
+
+  .rxis-deployment-card,
+  .rxis-deployment-image {
+    min-height: 380px;
+  }
+
+  .rxis-deployment-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .rxis-deployment-meta > div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-deployment-card,
+  .rxis-deployment-image,
+  .rxis-performance-list li img {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   RxIS101 — FULL SPECIFICATIONS SHEET
+   Figma-aligned final layout
+========================================================= */
+
+.rxis-specifications {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 0 76px;
+
+  background: #ffffff;
+}
+
+.rxis-specifications-layout {
+  display: grid;
+  grid-template-columns:
+    minmax(310px, 0.7fr)
+    minmax(0, 1.3fr);
+
+  align-items: end;
+  gap: 45px;
+}
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.rxis-specifications-media {
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  min-height: 590px;
+
+  padding: 0 18px;
+}
+
+.rxis-specifications-image-bg {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 73%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 224, 228, 0.92),
+      rgba(255, 239, 241, 0.98)
+    );
+
+  border-radius: 34px 34px 0 0;
+}
+
+.rxis-specifications-image-bg::before {
+  content: "";
+
+  position: absolute;
+
+  top: -30%;
+  left: 50%;
+
+  width: 85%;
+  height: 85%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(231, 34, 47, 0.08),
+      transparent 68%
+    );
+
+  transform: translateX(-50%);
+}
+
+.rxis-specifications-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: min(100%, 355px);
+  max-height: 590px;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  filter:
+    drop-shadow(
+      0 24px 30px rgba(34, 25, 27, 0.16)
+    );
+
+  transform-origin: center bottom;
+
+  transition:
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 450ms ease;
+}
+
+.rxis-specifications-media:hover
+  .rxis-specifications-image {
+  transform:
+    translateY(-7px)
+    scale(1.012);
+
+  filter:
+    drop-shadow(
+      0 31px 38px rgba(34, 25, 27, 0.2)
+    );
+}
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.rxis-specifications-content {
+  position: relative;
+  z-index: 2;
+
+  padding-bottom: 28px;
+}
+
+.rxis-specifications-heading {
+  margin-bottom: 27px;
+}
+
+.rxis-specifications-heading .super-head {
+  display: block;
+
+  margin: 0 0 9px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-specifications-heading h2 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.rxis-specifications-heading h2 .gradient-text {
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #862421 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.rxis-specifications-heading p {
+  max-width: 720px;
+
+  margin: 14px 0 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   PINK PANEL
+========================================================= */
+
+.rxis-specifications-panel {
+  padding: 30px 28px 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 220, 225, 0.94),
+      rgba(255, 232, 235, 0.98)
+    );
+
+  border-radius: 0 32px 32px 0;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.rxis-specification-tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.rxis-specification-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 0 17px;
+
+  color: #393539;
+  background: rgba(255, 255, 255, 0.86);
+
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 260ms ease,
+    background-color 260ms ease,
+    border-color 260ms ease,
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms ease;
+}
+
+.rxis-specification-tab:hover {
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+.rxis-specification-tab.is-active {
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+
+  box-shadow:
+    0 8px 18px rgba(231, 34, 47, 0.2);
+}
+
+/* PDF button */
+
+.rxis-specification-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  color: #ffffff;
+  background: var(--primary);
+
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  transition:
+    background-color 260ms ease,
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms ease;
+}
+
+.rxis-specification-download svg {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.rxis-specification-download:hover,
+.rxis-specification-download:focus-visible {
+  color: #ffffff;
+  background: #a61f27;
+
+  transform:
+    translateY(-2px)
+    rotate(3deg);
+
+  box-shadow:
+    0 9px 20px rgba(231, 34, 47, 0.24);
+}
+
+/* =========================================================
+   TAB PANELS
+========================================================= */
+
+.rxis-specification-tab-panel {
+  display: none;
+
+  animation:
+    rxisSpecificationPanelIn
+    380ms
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+.rxis-specification-tab-panel.is-active {
+  display: block;
+}
+
+.rxis-specification-tab-panel[hidden] {
+  display: none !important;
+}
+
+@keyframes rxisSpecificationPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   SPECIFICATION TABLE
+========================================================= */
+
+.rxis-specification-table {
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 17px;
+}
+
+.rxis-specification-table-head,
+.rxis-specification-row {
+  display: grid;
+  grid-template-columns:
+    minmax(145px, 0.85fr)
+    minmax(0, 1.15fr);
+
+  align-items: center;
+  column-gap: 22px;
+
+  padding: 12px 20px;
+}
+
+.rxis-specification-table-head {
+  color: #393539;
+  background: rgba(255, 247, 248, 0.96);
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-transform: uppercase;
+}
+
+.rxis-specification-row {
+  min-height: 44px;
+
+  border-top: 1px solid rgba(231, 34, 47, 0.12);
+}
+
+.rxis-specification-row > span {
+  color: #666166;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.rxis-specification-row > strong {
+  color: #2b282b;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-specifications {
+    padding: 64px 0 68px;
+  }
+
+  .rxis-specifications-layout {
+    grid-template-columns:
+      minmax(285px, 0.68fr)
+      minmax(0, 1.32fr);
+
+    gap: 30px;
+  }
+
+  .rxis-specifications-media {
+    min-height: 535px;
+  }
+
+  .rxis-specifications-image {
+    width: min(100%, 315px);
+    max-height: 535px;
+  }
+
+  .rxis-specifications-heading h2 {
+    font-size: 48px;
+  }
+
+  .rxis-specifications-panel {
+    padding: 25px 22px 23px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-specifications {
+    padding: 58px 0 64px;
+  }
+
+  .rxis-specifications-layout {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .rxis-specifications-media {
+    min-height: 500px;
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+  .rxis-specifications-image-bg {
+    border-radius: 30px;
+  }
+
+  .rxis-specifications-image {
+    width: min(100%, 310px);
+    max-height: 500px;
+  }
+
+  .rxis-specifications-content {
+    padding-bottom: 0;
+  }
+
+  .rxis-specifications-panel {
+    border-radius: 28px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-specifications {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-specifications-layout {
+    gap: 30px;
+  }
+
+  .rxis-specifications-media {
+    min-height: 400px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .rxis-specifications-image {
+    width: min(100%, 250px);
+    max-height: 400px;
+  }
+
+  .rxis-specifications-heading {
+    margin-bottom: 21px;
+  }
+
+  .rxis-specifications-heading h2 {
+    font-size: 37px;
+  }
+
+  .rxis-specifications-heading p {
+    font-size: 12.5px;
+  }
+
+  .rxis-specifications-panel {
+    padding: 20px 14px 16px;
+
+    border-radius: 22px;
+  }
+
+  .rxis-specification-tabs {
+    gap: 7px;
+
+    margin-bottom: 15px;
+  }
+
+  .rxis-specification-tab {
+    min-height: 38px;
+    padding: 0 12px;
+
+    font-size: 10px;
+  }
+
+  .rxis-specification-download {
+    width: 38px;
+    height: 38px;
+  }
+
+  .rxis-specification-table-head,
+  .rxis-specification-row {
+    grid-template-columns:
+      minmax(105px, 0.75fr)
+      minmax(0, 1.25fr);
+
+    column-gap: 12px;
+
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+
+  .rxis-specification-row > span,
+  .rxis-specification-row > strong {
+    font-size: 10.5px;
+  }
+}
+
+/* =========================================================
+   EXTRA-SMALL MOBILE
+========================================================= */
+
+@media (max-width: 449.98px) {
+  .rxis-specifications-media {
+    min-height: 350px;
+  }
+
+  .rxis-specifications-image {
+    width: min(100%, 220px);
+    max-height: 350px;
+  }
+
+  .rxis-specifications-heading h2 {
+    font-size: 33px;
+  }
+
+  .rxis-specification-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rxis-specification-tab {
+    width: 100%;
+  }
+
+  .rxis-specification-download {
+    width: 38px;
+  }
+
+  .rxis-specification-table-head,
+  .rxis-specification-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .rxis-specification-table-head {
+    display: none;
+  }
+
+  .rxis-specification-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .rxis-specification-row > span {
+    color: var(--primary);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+  }
+
+  .rxis-specification-row > strong {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-specifications-image,
+  .rxis-specification-tab,
+  .rxis-specification-download,
+  .rxis-specification-tab-panel {
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
+
+/* =========================================================
+   RxIS101 — CERTIFICATIONS
+   Figma-aligned final layout
+========================================================= */
+
+.rxis-certifications {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 0 76px;
+
+  background: #ffffff;
+}
+
+.rxis-certifications-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.82fr)
+    minmax(0, 1.18fr);
+
+  align-items: start;
+  gap: 54px;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.rxis-certifications-copy {
+  max-width: 500px;
+}
+
+.rxis-certifications-copy .super-head {
+  display: block;
+
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-certifications-copy h2 {
+  margin: 0 0 19px;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+
+.rxis-certifications-copy h2 .gradient-text {
+  display: block;
+
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #8a2421 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.rxis-certifications-intro {
+  margin: 0 0 25px;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CERTIFICATION STRING
+========================================================= */
+
+.rxis-certification-string {
+  padding: 23px 24px 21px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffe6e9,
+      #fbeef0
+    );
+
+  border-radius: 17px;
+}
+
+.rxis-certification-string h3 {
+  margin: 0 0 12px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.rxis-certification-string p {
+  margin: 0 0 6px;
+
+  color: #565156;
+
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.rxis-certification-string small {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #716c71;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   RIGHT CARD GRID
+========================================================= */
+
+.rxis-certification-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.rxis-certification-card {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 22px 22px 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fffdfd
+    );
+
+  border: 1px solid rgba(231, 34, 47, 0.25);
+  border-radius: 17px;
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.rxis-certification-card:hover {
+  border-color: rgba(231, 34, 47, 0.62);
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 17px 36px rgba(96, 27, 33, 0.08);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.rxis-certification-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 15px;
+
+  background: #fff0f1;
+
+  border-radius: 50%;
+
+  transition:
+    background-color 280ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-certification-icon img {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  object-fit: contain;
+
+  filter: none;
+
+  transition:
+    filter 280ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-certification-card:hover
+  .rxis-certification-icon {
+  background: var(--primary);
+
+  transform: scale(1.08);
+}
+
+.rxis-certification-card:hover
+  .rxis-certification-icon img {
+  filter:
+    brightness(0)
+    invert(1);
+
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   CARD TYPOGRAPHY
+========================================================= */
+
+.rxis-certification-card h3 {
+  margin: 0 0 7px;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.rxis-certification-card strong {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.rxis-certification-card p {
+  margin: 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-certifications {
+    padding: 64px 0 68px;
+  }
+
+  .rxis-certifications-grid {
+    gap: 38px;
+  }
+
+  .rxis-certifications-copy h2 {
+    font-size: 49px;
+  }
+
+  .rxis-certification-card {
+    min-height: 260px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-certifications {
+    padding: 58px 0 64px;
+  }
+
+  .rxis-certifications-grid {
+    grid-template-columns: 1fr;
+
+    gap: 38px;
+  }
+
+  .rxis-certifications-copy {
+    max-width: 720px;
+  }
+
+  .rxis-certification-string {
+    max-width: 520px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-certifications {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-certifications-copy h2 {
+    font-size: 38px;
+  }
+
+  .rxis-certifications-intro {
+    font-size: 13px;
+    line-height: 1.68;
+  }
+
+  .rxis-certification-string {
+    padding: 20px;
+  }
+
+  .rxis-certification-string h3 {
+    font-size: 17px;
+  }
+
+  .rxis-certification-string p {
+    font-size: 15px;
+  }
+
+  .rxis-certification-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .rxis-certification-card {
+    min-height: auto;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 399.98px) {
+  .rxis-certifications-copy h2 {
+    font-size: 34px;
+  }
+
+  .rxis-certification-card {
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-certification-card,
+  .rxis-certification-icon,
+  .rxis-certification-icon img {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
+/* =========================================================
+   RxIS101 — INDUSTRY APPLICATIONS TICKER
+   Home-page card animation + continuous horizontal movement
+========================================================= */
+
+.rxis-industries {
+  position: relative;
+  overflow: hidden;
+
+  padding: 70px 0 78px;
+
+  background: #ffffff;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.rxis-industries-heading {
+  max-width: 900px;
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.rxis-industries-heading .super-head {
+  display: block;
+
+  margin: 0 0 10px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-industries-heading h2 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(42px, 4vw, 58px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+
+.rxis-industries-heading h2 .gradient-text {
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #862421 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.rxis-industries-heading p {
+  max-width: 660px;
+
+  margin: 15px auto 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* =========================================================
+   TICKER
+========================================================= */
+
+.rxis-industries-ticker {
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding: 5px 0 18px;
+
+  /*
+    Slight fade at both edges like a premium ticker.
+  */
+  -webkit-mask-image:
+    linear-gradient(
+      to right,
+      transparent 0,
+      #000 4%,
+      #000 96%,
+      transparent 100%
+    );
+
+  mask-image:
+    linear-gradient(
+      to right,
+      transparent 0,
+      #000 4%,
+      #000 96%,
+      transparent 100%
+    );
+}
+
+.rxis-industries-track {
+  --ticker-distance: 1800px;
+  --ticker-duration: 32s;
+
+  display: flex;
+  align-items: stretch;
+
+  width: max-content;
+
+  animation:
+    rxisIndustryTicker
+    var(--ticker-duration)
+    linear
+    infinite;
+
+  will-change: transform;
+}
+
+/*
+  Pause the complete ticker when a card is hovered
+  or receives keyboard focus.
+*/
+.rxis-industries-ticker:hover
+  .rxis-industries-track,
+.rxis-industries-ticker:focus-within
+  .rxis-industries-track {
+  animation-play-state: paused;
+}
+
+.rxis-industries-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: 24px;
+
+  padding-right: 24px;
+}
+
+@keyframes rxisIndustryTicker {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform:
+      translate3d(
+        calc(-1 * var(--ticker-distance)),
+        0,
+        0
+      );
+  }
+}
+
+/* =========================================================
+   INDUSTRY CARD
+========================================================= */
+
+.rxis-industry-card {
+  position: relative;
+
+  flex: 0 0 370px;
+
+  width: 370px;
+  height: 280px;
+
+  margin: 0;
+}
+
+.rxis-industry-card > a {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  color: inherit;
+  background: #222020;
+
+  border-radius: 22px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 14px 32px rgba(43, 27, 29, 0.08);
+
+  transform:
+    translateZ(0);
+
+  transition:
+    transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms ease;
+}
+
+.rxis-industry-card:hover > a,
+.rxis-industry-card:focus-within > a {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 24px 46px rgba(43, 27, 29, 0.15);
+}
+
+/* Animated red background used on the Home page */
+
+.rxis-industry-red-bg {
+  position: absolute;
+  z-index: 1;
+
+  top: 50%;
+  left: 50%;
+
+  width: 0;
+  height: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e7222f 0%,
+      #81131a 100%
+    );
+
+  border-radius: 22px;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    width 450ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 450ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-red-bg,
+.rxis-industry-card:focus-within
+  .rxis-industry-red-bg {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================================
+   IMAGE LAYER
+========================================================= */
+
+.rxis-industry-inner,
+.rxis-industry-media {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.rxis-industry-inner {
+  z-index: 2;
+}
+
+.rxis-industry-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  transform-origin: center;
+
+  transition:
+    transform 450ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 350ms ease;
+}
+
+.rxis-industry-media::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.67) 0%,
+      rgba(0, 0, 0, 0.18) 58%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+
+  border-radius: inherit;
+}
+
+.rxis-industry-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-media,
+.rxis-industry-card:focus-within
+  .rxis-industry-media {
+  transform: scale(0.46);
+
+  border-radius: 18px;
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-media img,
+.rxis-industry-card:focus-within
+  .rxis-industry-media img {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   ICON AND TITLE
+========================================================= */
+
+.rxis-industry-icon {
+  position: absolute;
+  z-index: 3;
+
+  top: 48%;
+  left: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 54px;
+  height: 54px;
+
+  color: #ffffff;
+  background: var(--primary);
+
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  font-size: 24px;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 260ms ease;
+}
+
+.rxis-industry-media > strong {
+  position: absolute;
+  z-index: 3;
+
+  top: 62%;
+  left: 50%;
+
+  width: max-content;
+  max-width: 88%;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+
+  transform: translateX(-50%);
+
+  transition:
+    opacity 250ms ease,
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-icon,
+.rxis-industry-card:focus-within
+  .rxis-industry-icon {
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.75);
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-media > strong,
+.rxis-industry-card:focus-within
+  .rxis-industry-media > strong {
+  opacity: 0;
+
+  transform:
+    translateX(-50%)
+    translateY(10px);
+}
+
+/* =========================================================
+   HOVER DETAILS
+========================================================= */
+
+.rxis-industry-details {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 25px;
+
+  color: #ffffff;
+
+  opacity: 0;
+
+  transform: scale(0.86);
+
+  transition:
+    opacity 260ms ease,
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-details,
+.rxis-industry-card:focus-within
+  .rxis-industry-details {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+.rxis-industry-details small {
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+.rxis-industry-details > strong {
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.rxis-industry-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: auto;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.rxis-industry-explore i {
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-industry-card:hover
+  .rxis-industry-explore i,
+.rxis-industry-card:focus-within
+  .rxis-industry-explore i {
+  transform:
+    translate(3px, -3px);
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-industries {
+    padding: 64px 0 68px;
+  }
+
+  .rxis-industries-heading {
+    margin-bottom: 44px;
+  }
+
+  .rxis-industry-card {
+    flex-basis: 330px;
+
+    width: 330px;
+    height: 250px;
+  }
+
+  .rxis-industry-media > strong {
+    font-size: 23px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-industries {
+    padding: 58px 0 64px;
+  }
+
+  .rxis-industries-heading {
+    margin-bottom: 40px;
+  }
+
+  .rxis-industries-heading h2 {
+    font-size: 44px;
+  }
+
+  .rxis-industry-card {
+    flex-basis: 310px;
+
+    width: 310px;
+    height: 235px;
+  }
+
+  .rxis-industries-group {
+    gap: 18px;
+    padding-right: 18px;
+  }
+
+  .rxis-industry-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 21px;
+  }
+
+  .rxis-industry-media > strong {
+    font-size: 22px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-industries {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-industries-heading {
+    margin-bottom: 34px;
+  }
+
+  .rxis-industries-heading .super-head {
+    font-size: 12px;
+  }
+
+  .rxis-industries-heading h2 {
+    font-size: 36px;
+  }
+
+  .rxis-industries-heading p {
+    margin-top: 12px;
+
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .rxis-industries-ticker {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .rxis-industry-card {
+    flex-basis: 275px;
+
+    width: 275px;
+    height: 210px;
+  }
+
+  .rxis-industries-group {
+    gap: 14px;
+    padding-right: 14px;
+  }
+
+  .rxis-industry-icon {
+    width: 44px;
+    height: 44px;
+
+    font-size: 19px;
+  }
+
+  .rxis-industry-media > strong {
+    font-size: 20px;
+  }
+
+  .rxis-industry-details {
+    padding: 20px;
+  }
+
+  .rxis-industry-details > strong {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-industries-track {
+    animation: none;
+
+    transform: none;
+  }
+
+  .rxis-industries-ticker {
+    overflow-x: auto;
+
+    scrollbar-width: thin;
+  }
+
+  .rxis-industry-card > a,
+  .rxis-industry-red-bg,
+  .rxis-industry-media,
+  .rxis-industry-media img,
+  .rxis-industry-icon,
+  .rxis-industry-media > strong,
+  .rxis-industry-details {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+   RxIS101 — RELATED PRODUCTS FINAL FIGMA MATCH
+========================================================= */
+
+.rxis-related-products {
+  position: relative;
+  overflow: hidden;
+
+  padding: 64px 0 72px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fffafa 100%
+    );
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.rxis-related-heading {
+  max-width: 720px;
+  margin: 0 auto 72px;
+
+  text-align: center;
+}
+
+.rxis-related-heading .super-head {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.rxis-related-heading h2 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(42px, 4vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.rxis-related-heading h2 .gradient-text {
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #862421 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+}
+
+.rxis-related-heading p {
+  max-width: 540px;
+
+  margin: 13px auto 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.rxis-related-slider-wrap {
+  position: relative;
+
+  width: 100%;
+  max-width: 1220px;
+
+  margin: 0 auto;
+  padding: 58px 46px 12px;
+}
+
+/*
+  Allow the phone to extend above the cards while keeping
+  horizontal overflow controlled by the outer section.
+*/
+.rxis-related-slider {
+  overflow: visible !important;
+}
+
+.rxis-related-slider .swiper-wrapper {
+  align-items: stretch;
+}
+
+.rxis-related-slider .swiper-slide {
+  display: flex;
+
+  height: auto;
+}
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.rxis-related-card {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 285px;
+
+  padding: 116px 18px 18px;
+
+  overflow: visible;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(231, 34, 47, 0.26);
+  border-radius: 13px;
+
+  box-shadow:
+    0 8px 18px rgba(61, 30, 34, 0.06);
+
+  transition:
+    transform 350ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.rxis-related-card:hover {
+  border-color: rgba(231, 34, 47, 0.6);
+
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 19px 36px rgba(61, 30, 34, 0.12);
+}
+
+/* =========================================================
+   PHONE IMAGE
+========================================================= */
+
+.rxis-related-product-media {
+  position: absolute;
+
+  top: -92px;
+  right: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  height: 205px;
+
+  pointer-events: none;
+}
+
+.rxis-related-product-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: auto;
+  max-width: 155px;
+  height: 205px;
+  max-height: 205px;
+
+  object-fit: contain;
+
+  transform:
+    translateY(0)
+    rotate(-7deg);
+
+  transform-origin: center bottom;
+
+  filter:
+    drop-shadow(
+      0 16px 15px rgba(34, 25, 27, 0.18)
+    );
+
+  transition:
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 350ms ease;
+}
+
+.rxis-related-product-shadow {
+  position: absolute;
+
+  right: 22%;
+  bottom: -4px;
+  left: 22%;
+
+  height: 24px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(31, 25, 26, 0.22),
+      transparent 70%
+    );
+
+  filter: blur(7px);
+
+  transform: scaleX(0.85);
+
+  transition:
+    transform 350ms ease,
+    opacity 300ms ease;
+}
+
+.rxis-related-card:hover
+  .rxis-related-product-image {
+  transform:
+    translateY(-8px)
+    rotate(-3deg)
+    scale(1.025);
+
+  filter:
+    drop-shadow(
+      0 23px 20px rgba(34, 25, 27, 0.23)
+    );
+}
+
+.rxis-related-card:hover
+  .rxis-related-product-shadow {
+  opacity: 0.72;
+
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.rxis-related-product-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.rxis-related-product-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  margin-bottom: 9px;
+}
+
+.rxis-related-product-title h3 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.rxis-related-product-title span {
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.rxis-related-product-content p {
+  margin: 0 0 13px;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.rxis-related-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  width: max-content;
+  margin-top: auto;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+
+  text-decoration: none;
+}
+
+.rxis-related-product-link i {
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-related-product-link:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   NAVIGATION ARROWS
+========================================================= */
+
+.rxis-related-prev,
+.rxis-related-next {
+  position: absolute;
+  z-index: 20;
+
+  top: 58%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 250ms ease,
+    background-color 250ms ease,
+    color 250ms ease;
+}
+
+.rxis-related-prev {
+  left: 0;
+
+  color: #333033;
+  background: #f0efef;
+}
+
+.rxis-related-next {
+  right: 0;
+
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.rxis-related-prev:hover,
+.rxis-related-next:hover {
+  transform:
+    translateY(-50%)
+    scale(1.08);
+}
+
+/* Hide mobile controls on desktop */
+.rxis-related-mobile-controls {
+  display: none;
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-related-heading {
+    margin-bottom: 66px;
+  }
+
+  .rxis-related-slider-wrap {
+    padding-right: 42px;
+    padding-left: 42px;
+  }
+
+  .rxis-related-card {
+    min-height: 275px;
+    padding-top: 110px;
+  }
+
+  .rxis-related-product-media {
+    top: -84px;
+    height: 190px;
+  }
+
+  .rxis-related-product-image {
+    max-width: 145px;
+    height: 190px;
+    max-height: 190px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-related-products {
+    padding: 56px 0 62px;
+  }
+
+  .rxis-related-heading {
+    margin-bottom: 62px;
+  }
+
+  .rxis-related-slider-wrap {
+    padding: 52px 38px 10px;
+  }
+
+  .rxis-related-card {
+    min-height: 280px;
+  }
+
+  .rxis-related-product-media {
+    top: -82px;
+    height: 188px;
+  }
+
+  .rxis-related-product-image {
+    max-width: 145px;
+    height: 188px;
+    max-height: 188px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-related-products {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-related-heading {
+    margin-bottom: 58px;
+  }
+
+  .rxis-related-heading h2 {
+    font-size: 36px;
+  }
+
+  .rxis-related-heading p {
+    font-size: 12px;
+  }
+
+  .rxis-related-slider-wrap {
+    padding: 48px 0 8px;
+  }
+
+  .rxis-related-slider {
+    overflow: hidden !important;
+  }
+
+  .rxis-related-card {
+    min-height: 275px;
+
+    padding: 106px 17px 17px;
+  }
+
+  .rxis-related-product-media {
+    top: -76px;
+    height: 176px;
+  }
+
+  .rxis-related-product-image {
+    max-width: 135px;
+    height: 176px;
+    max-height: 176px;
+  }
+
+  .rxis-related-prev,
+  .rxis-related-next {
+    display: none;
+  }
+
+  .rxis-related-mobile-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .rxis-related-mobile-prev,
+  .rxis-related-mobile-next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 50%;
+  }
+
+  .rxis-related-mobile-prev {
+    color: #333033;
+    background: #f0efef;
+  }
+
+  .rxis-related-mobile-next {
+    color: #ffffff;
+    background: var(--primary);
+  }
+}
+
+
+/* =========================================================
+   RxIS101 — RELATED PRODUCTS
+   FINAL FIGMA-MATCHED SECTION
+========================================================= */
+
+.rxis-related-products {
+  position: relative;
+  overflow: hidden;
+
+  padding: 66px 0 72px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #fffafa 100%
+    );
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.rxis-related-heading {
+  max-width: 700px;
+  margin: 0 auto 78px;
+
+  text-align: center;
+}
+
+.rxis-related-heading .super-head {
+  display: block;
+
+  margin: 0 0 8px;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+}
+
+.rxis-related-heading h2 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(38px, 3.6vw, 52px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.rxis-related-heading h2 .gradient-text {
+  color: transparent;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e7222f 0%,
+      #862421 100%
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  font: inherit;
+}
+
+.rxis-related-heading p {
+  max-width: 510px;
+
+  margin: 12px auto 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   SWIPER
+========================================================= */
+
+.rxis-related-slider {
+  width: 100%;
+
+  overflow: visible;
+}
+
+.rxis-related-slider .swiper-wrapper {
+  align-items: stretch;
+}
+
+.rxis-related-slider .swiper-slide {
+  display: flex;
+
+  height: auto;
+
+  padding-top: 88px;
+}
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.rxis-related-card {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  width: 100%;
+  min-height: 270px;
+
+  padding: 104px 20px 19px;
+
+  overflow: visible;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(231, 34, 47, 0.23);
+  border-radius: 12px;
+
+  box-shadow:
+    0 8px 18px rgba(56, 30, 33, 0.07);
+
+  transition:
+    transform 340ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 280ms ease,
+    box-shadow 280ms ease;
+}
+
+.rxis-related-card:hover {
+  border-color: rgba(231, 34, 47, 0.55);
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 34px rgba(56, 30, 33, 0.11);
+}
+
+/* =========================================================
+   PHONE IMAGE
+========================================================= */
+
+.rxis-related-product-media {
+  position: absolute;
+
+  top: -90px;
+  right: 12px;
+  left: 12px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  height: 200px;
+
+  pointer-events: none;
+}
+
+.rxis-related-product-image {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+
+  width: auto;
+  max-width: 150px;
+  height: 200px;
+  max-height: 200px;
+
+  object-fit: contain;
+
+  transform:
+    rotate(-7deg)
+    translateY(0);
+
+  transform-origin: center bottom;
+
+  filter:
+    drop-shadow(
+      0 15px 15px rgba(34, 25, 27, 0.18)
+    );
+
+  transition:
+    transform 460ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 320ms ease;
+}
+
+.rxis-related-product-shadow {
+  position: absolute;
+
+  right: 25%;
+  bottom: -4px;
+  left: 25%;
+
+  height: 22px;
+
+  opacity: 0.7;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(36, 28, 29, 0.26),
+      transparent 70%
+    );
+
+  filter: blur(7px);
+
+  transform: scaleX(0.8);
+
+  transition:
+    transform 320ms ease,
+    opacity 280ms ease;
+}
+
+.rxis-related-card:hover
+  .rxis-related-product-image {
+  transform:
+    rotate(-3deg)
+    translateY(-7px)
+    scale(1.025);
+
+  filter:
+    drop-shadow(
+      0 22px 20px rgba(34, 25, 27, 0.22)
+    );
+}
+
+.rxis-related-card:hover
+  .rxis-related-product-shadow {
+  opacity: 0.9;
+
+  transform: scaleX(1);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.rxis-related-product-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.rxis-related-product-title {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+
+  margin-bottom: 8px;
+}
+
+.rxis-related-product-title h3 {
+  margin: 0;
+
+  color: #222020;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.rxis-related-product-title span {
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+.rxis-related-product-content p {
+  margin: 0 0 12px;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.rxis-related-product-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  width: max-content;
+  margin-top: auto;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+
+  text-decoration: none;
+}
+
+.rxis-related-product-link i {
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.rxis-related-product-link:hover i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   BOTTOM CONTROLS
+========================================================= */
+
+.rxis-related-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 26px;
+}
+
+.rxis-related-prev,
+.rxis-related-next {
+  position: static;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transform: none;
+
+  transition:
+    color 240ms ease,
+    background-color 240ms ease,
+    transform 240ms ease,
+    opacity 240ms ease;
+}
+
+.rxis-related-prev {
+  color: #4a464a;
+  background: #f0efef;
+}
+
+.rxis-related-next {
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.rxis-related-prev:hover,
+.rxis-related-next:hover {
+  transform: scale(1.08);
+}
+
+.rxis-related-prev.swiper-button-disabled,
+.rxis-related-next.swiper-button-disabled {
+  opacity: 0.4;
+
+  cursor: default;
+
+  transform: none;
+}
+
+/* Remove old secondary controls */
+.rxis-related-mobile-controls,
+.rxis-related-mobile-prev,
+.rxis-related-mobile-next {
+  display: none !important;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1400px) {
+  .rxis-related-slider {
+    max-width: 1180px;
+
+    margin: 0 auto;
+  }
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .rxis-related-products {
+    padding: 62px 0 68px;
+  }
+
+  .rxis-related-heading {
+    margin-bottom: 70px;
+  }
+
+  .rxis-related-slider .swiper-slide {
+    padding-top: 82px;
+  }
+
+  .rxis-related-card {
+    min-height: 260px;
+
+    padding-top: 98px;
+  }
+
+  .rxis-related-product-media {
+    top: -84px;
+
+    height: 188px;
+  }
+
+  .rxis-related-product-image {
+    max-width: 140px;
+    height: 188px;
+    max-height: 188px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+  .rxis-related-products {
+    padding: 56px 0 62px;
+  }
+
+  .rxis-related-heading {
+    margin-bottom: 65px;
+  }
+
+  .rxis-related-slider {
+    overflow: hidden;
+  }
+
+  .rxis-related-card {
+    min-height: 265px;
+  }
+
+  .rxis-related-product-media {
+    top: -82px;
+
+    height: 185px;
+  }
+
+  .rxis-related-product-image {
+    max-width: 138px;
+    height: 185px;
+    max-height: 185px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .rxis-related-products {
+    padding: 48px 0 54px;
+  }
+
+  .rxis-related-heading {
+    margin-bottom: 58px;
+  }
+
+  .rxis-related-heading h2 {
+    font-size: 34px;
+  }
+
+  .rxis-related-heading p {
+    font-size: 11px;
+  }
+
+  .rxis-related-slider .swiper-slide {
+    padding-top: 76px;
+  }
+
+  .rxis-related-card {
+    min-height: 255px;
+
+    padding:
+      94px
+      17px
+      17px;
+  }
+
+  .rxis-related-product-media {
+    top: -76px;
+
+    height: 172px;
+  }
+
+  .rxis-related-product-image {
+    max-width: 128px;
+    height: 172px;
+    max-height: 172px;
+  }
+
+  .rxis-related-controls {
+    margin-top: 22px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 399.98px) {
+  .rxis-related-heading h2 {
+    font-size: 31px;
+  }
+
+  .rxis-related-card {
+    min-height: 250px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-related-card,
+  .rxis-related-product-image,
+  .rxis-related-product-shadow,
+  .rxis-related-prev,
+  .rxis-related-next,
+  .rxis-related-product-link i {
+    transform: none;
+    transition: none;
+  }
+}
+
+
+
+/* =========================================================
+   RxIS101 HERO — ONE DESKTOP VIEWPORT
+========================================================= */
+
+@media (min-width: 1200px) {
+  .rxis-page header .navbar {
+    min-height: 86px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .rxis-page header .navbar > .container {
+    max-width: 1240px;
+  }
+
+  .rxis-page header .navbar-brand img {
+    width: 220px;
+    max-width: 220px;
+  }
+
+  .rxis-page header .main-menu {
+    padding: 6px 10px;
+  }
+
+  .rxis-page header .main-menu .nav-link {
+    padding: 9px 12px !important;
+
+    font-size: 14px;
+  }
+
+  .rxis-page .header-inline-search,
+  .rxis-page .header-search-toggle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .rxis-page .header-quote-nav .btn {
+    min-height: 46px;
+    padding: 0 23px;
+
+    font-size: 13px;
+  }
+
+  /*
+    Header plus hero remains inside a standard laptop viewport.
+  */
+  .rxis-hero {
+    display: flex;
+    align-items: center;
+
+    min-height: calc(100svh - 86px);
+    max-height: calc(100svh - 86px);
+
+    padding: 30px 0 34px;
+
+    overflow: hidden;
+  }
+
+  .rxis-hero > .container {
+    position: relative;
+    z-index: 3;
+
+    max-width: 1240px;
+  }
+
+  .rxis-hero-grid {
+    align-items: center;
+
+    min-height: 0;
+
+    gap: 48px;
+  }
+
+  .rxis-hero-content {
+    max-width: 600px;
+  }
+
+  .rxis-hero-badges {
+    margin-bottom: 13px;
+  }
+
+  .rxis-hero-content h1 {
+    margin-bottom: 7px;
+
+    font-size: clamp(54px, 4.6vw, 70px);
+    line-height: 0.98;
+  }
+
+  .rxis-hero-subtitle {
+    margin-bottom: 11px;
+
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .rxis-hero-description {
+    max-width: 570px;
+
+    margin-bottom: 17px;
+
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .rxis-hero-stats {
+    gap: 9px;
+
+    margin-bottom: 18px;
+  }
+
+  .rxis-hero-stat {
+    min-height: 66px;
+    padding: 10px 13px;
+  }
+
+  .rxis-hero-stat strong {
+    font-size: 18px;
+  }
+
+  .rxis-hero-stat small {
+    margin-top: 2px;
+
+    font-size: 9px;
+  }
+
+  .rxis-hero-actions {
+    gap: 11px;
+  }
+
+  .rxis-hero-actions .btn {
+    min-height: 44px;
+    padding: 0 21px;
+
+    font-size: 12px;
+  }
+
+  .rxis-hero-visual {
+    min-height: 510px;
+    max-height: 510px;
+  }
+
+  .rxis-hero-device-stage {
+    min-height: 510px;
+    max-height: 510px;
+  }
+
+  .rxis-hero-device-image {
+    width: auto;
+    max-width: 290px;
+    height: 490px;
+    max-height: 490px;
+
+    object-fit: contain;
+  }
+}
+
+/* Typical laptop screens such as 1366 × 768 */
+
+@media
+  (min-width: 1200px)
+  and (max-height: 820px) {
+  .rxis-page header .navbar {
+    min-height: 76px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .rxis-page header .navbar-brand img {
+    width: 205px;
+    max-width: 205px;
+  }
+
+  .rxis-hero {
+    min-height: calc(100svh - 76px);
+    max-height: calc(100svh - 76px);
+
+    padding-top: 20px;
+    padding-bottom: 22px;
+  }
+
+  .rxis-hero-content h1 {
+    font-size: 58px;
+  }
+
+  .rxis-hero-subtitle {
+    font-size: 18px;
+  }
+
+  .rxis-hero-description {
+    margin-bottom: 13px;
+
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .rxis-hero-stats {
+    margin-bottom: 13px;
+  }
+
+  .rxis-hero-stat {
+    min-height: 59px;
+    padding: 8px 11px;
+  }
+
+  .rxis-hero-stat strong {
+    font-size: 16px;
+  }
+
+  .rxis-hero-device-stage,
+  .rxis-hero-visual {
+    min-height: 455px;
+    max-height: 455px;
+  }
+
+  .rxis-hero-device-image {
+    max-width: 255px;
+    height: 440px;
+    max-height: 440px;
+  }
+}
+
+/* =========================================================
+   RxIS101 HERO PILLS — SHARP TEXT AND CLEAN MOTION
+========================================================= */
+
+.rxis-hero-info-pill {
+  position: absolute;
+  z-index: 12;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  min-width: 122px;
+  padding: 9px 12px;
+
+  color: #2c292c;
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(231, 34, 47, 0.3);
+  border-radius: 999px;
+
+  box-shadow:
+    0 8px 21px rgba(51, 27, 31, 0.09);
+
+  opacity: 1;
+
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  transform: translate3d(0, 0, 0);
+
+  /*
+    Do not animate scale because it blurs text.
+  */
+  animation: none;
+
+  will-change: transform;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.rxis-hero-info-pill:hover {
+  border-color: var(--primary);
+
+  transform: translate3d(0, -3px, 0);
+
+  box-shadow:
+    0 13px 27px rgba(75, 26, 32, 0.13);
+}
+
+.rxis-hero-info-pill img,
+.rxis-hero-info-pill svg,
+.rxis-hero-info-pill i {
+  display: block;
+  flex: 0 0 auto;
+
+  width: 17px;
+  height: 17px;
+
+  filter: none !important;
+}
+
+.rxis-hero-info-pill-copy {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  transform: none !important;
+}
+
+.rxis-hero-info-pill strong {
+  display: block;
+
+  margin: 0;
+
+  color: var(--primary);
+
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+.rxis-hero-info-pill small {
+  display: block;
+
+  margin: 2px 0 0;
+
+  color: #575258;
+
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.15;
+
+  white-space: nowrap;
+}
+
+/* Pill positions */
+
+.rxis-hero-pill-certified {
+  top: 40%;
+  left: 1%;
+}
+
+.rxis-hero-pill-battery {
+  top: 22%;
+  right: 0;
+}
+
+.rxis-hero-pill-protected {
+  right: 2%;
+  bottom: 23%;
+}
+
+/*
+  Only move the whole pill by integer pixels.
+  Avoid fractional movement because it softens text.
+*/
+
+.rxis-hero-pill-certified {
+  animation:
+    rxisSharpPillOne
+    4.6s
+    ease-in-out
+    infinite;
+}
+
+.rxis-hero-pill-battery {
+  animation:
+    rxisSharpPillTwo
+    5.2s
+    ease-in-out
+    infinite;
+}
+
+.rxis-hero-pill-protected {
+  animation:
+    rxisSharpPillThree
+    4.9s
+    ease-in-out
+    infinite;
+}
+
+@keyframes rxisSharpPillOne {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+@keyframes rxisSharpPillTwo {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+}
+
+@keyframes rxisSharpPillThree {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4px, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis-hero-info-pill {
+    animation: none;
+  }
+}
+/* =========================================================
+   RXIS101 FINAL CONSOLIDATED OVERRIDES
+   Keep this block at the absolute end of rxis101.css.
+========================================================= */
+
+.rxis101-page {
+  overflow-x: hidden;
+}
+
+.rxis101-page header {
+  position: relative;
+  z-index: 100;
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.rxis101-page header .navbar > .container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.rxis101-page header .navbar-brand {
+  position: relative;
+  z-index: 5;
+  flex: 0 0 auto;
+  padding: 4px 0;
+}
+
+.rxis101-page header .navbar-brand img {
+  display: block;
+  width: 205px;
+  max-width: 205px;
+  height: auto;
+  transition: width 360ms cubic-bezier(.22,1,.36,1), max-width 360ms cubic-bezier(.22,1,.36,1);
+}
+
+.rxis101-page header .navbar-collapse {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.rxis101-page header .main-menu {
+  width: max-content;
+  margin-left: auto;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.rxis101-page header .main-menu .nav-item {
+  padding: 12px 10px;
+}
+
+.rxis101-page header .main-menu .nav-link {
+  font-size: 14px;
+}
+
+.rxis101-page .header-actions {
+  position: relative;
+  display: flex !important;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  margin-left: 0 !important;
+}
+
+.rxis101-page .header-inline-search {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(231,34,47,.24);
+  border-radius: 999px;
+  transition: width 420ms cubic-bezier(.22,1,.36,1), border-color .25s ease, box-shadow .3s ease;
+}
+
+.rxis101-page .header-inline-search.is-open {
+  width: 300px;
+  border-color: rgba(231,34,47,.42);
+  box-shadow: 0 12px 28px rgba(57,25,29,.10);
+}
+
+.rxis101-page .header-search-toggle {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  color: #222020;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity .18s ease, visibility .18s ease, transform .25s ease;
+}
+
+.rxis101-page .header-inline-search.is-open .header-search-toggle {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(.72);
+  pointer-events: none;
+}
+
+.rxis101-page .header-search-form {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  padding: 4px 5px 4px 14px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(16px);
+  transition: opacity .22s ease .08s, visibility .22s ease .08s, transform .35s cubic-bezier(.22,1,.36,1);
+}
+
+.rxis101-page .header-inline-search.is-open .header-search-form {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+.rxis101-page .header-search-leading-icon {
+  flex: 0 0 auto;
+  color: #6c676c;
+  font-size: 16px;
+}
+
+.rxis101-page .header-search-input {
+  min-width: 0;
+  flex: 1;
+  height: 36px;
+  padding: 0 3px;
+  color: #222020;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font: 400 12px/1 Inter, sans-serif;
+}
+
+.rxis101-page .header-search-input::placeholder { color: #8a858a; }
+.rxis101-page .header-search-input::-webkit-search-cancel-button { display: none; }
+
+.rxis101-page .header-search-submit,
+.rxis101-page .header-search-close {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rxis101-page .header-search-submit {
+  color: #fff;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.rxis101-page .header-search-close {
+  color: #4f4a4f;
+  background: #f3f2f2;
+  border: 1px solid transparent;
+}
+
+.rxis101-page header .header-quote-nav {
+  max-width: 210px;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition: max-width .36s ease, opacity .2s ease, visibility .2s ease, margin .36s ease;
+}
+
+.rxis101-page header .header-quote-nav .btn {
+  min-height: 46px;
+  height: 46px;
+  padding: 0 22px;
+  font-size: 13px;
+}
+
+.rxis101-page header .navbar.search-is-open .header-quote-nav {
+  max-width: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.rxis101-page header .navbar.search-is-open .navbar-brand img {
+  width: 170px;
+  max-width: 170px;
+}
+
+/* Desktop hero: header + hero fit in one normal viewport at 100% zoom. */
+@media (min-width: 1200px) {
+  .rxis101-page header { min-height: 76px; }
+
+  .rxis101-page header .navbar > .container,
+  .rxis101-page .rxis-hero > .container {
+    max-width: 1240px;
+  }
+
+  .rxis101-page .rxis-hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - 76px);
+    height: calc(100svh - 76px);
+    max-height: calc(100svh - 76px);
+    padding: 14px 0 18px;
+    overflow: hidden;
+  }
+
+  .rxis101-page .rxis-hero .row {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    --bs-gutter-y: 0;
+    --bs-gutter-x: 3rem;
+  }
+
+  .rxis101-page .rxis-hero h1 {
+    font-size: clamp(54px, 4.8vw, 70px);
+    line-height: .95;
+  }
+
+  .rxis101-page .rxis-hero .rxis-eyebrow {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  .rxis101-page .rxis-hero .rxis-lead {
+    max-width: 610px;
+    font-size: 12.5px;
+    line-height: 1.58;
+  }
+
+  .rxis101-page .rxis-badges { margin-bottom: 11px; }
+  .rxis101-page .rxis-badges span { padding: 6px 10px; font-size: 10px; }
+
+  .rxis101-page .rxis-quick-specs {
+    gap: 9px;
+    margin: 17px 0 16px;
+  }
+
+  .rxis101-page .rxis-quick-specs > .rxis-quick-spec {
+    min-height: 64px;
+    padding: 11px 10px 9px;
+    border-radius: 13px;
+  }
+
+  .rxis101-page .rxis-quick-specs strong { font-size: 15px; }
+  .rxis101-page .rxis-quick-specs span { font-size: 8px; }
+  .rxis101-page .rxis-actions .btn { min-height: 43px; height: 43px; padding: 0 19px; font-size: 11px; }
+
+  .rxis101-page .rxis-hero-product,
+  .rxis101-page .rxis-phone-stage {
+    min-height: min(500px, calc(100svh - 112px));
+    height: min(500px, calc(100svh - 112px));
+  }
+
+  .rxis101-page .rxis-phone-stage { width: min(350px, 72%); }
+  .rxis101-page .rxis-phone-image {
+    width: min(270px, 78%) !important;
+    max-height: min(470px, calc(100svh - 130px));
+  }
+}
+
+@media (min-width: 1200px) and (max-height: 760px) {
+  .rxis101-page header { min-height: 68px; padding: 6px 0; }
+  .rxis101-page header .navbar-brand img { width: 185px; max-width: 185px; }
+  .rxis101-page .rxis-hero { min-height: calc(100svh - 68px); height: calc(100svh - 68px); max-height: calc(100svh - 68px); padding: 8px 0 12px; }
+  .rxis101-page .rxis-hero h1 { font-size: 52px; }
+  .rxis101-page .rxis-hero .rxis-eyebrow { font-size: 16px; }
+  .rxis101-page .rxis-hero .rxis-lead { font-size: 11.5px; line-height: 1.5; }
+  .rxis101-page .rxis-quick-specs { margin: 12px 0; }
+  .rxis101-page .rxis-quick-specs > .rxis-quick-spec { min-height: 56px; padding: 8px 9px; }
+  .rxis101-page .rxis-phone-image { max-height: calc(100svh - 112px); }
+}
+
+/* Sharp floating callouts: no backdrop blur and no 3D text transform. */
+.rxis101-page .rxis-floating-pill {
+  max-width: 166px;
+  padding: 8px 12px 8px 8px;
+  color: #514c51;
+  background: #fff;
+  border-color: rgba(231,34,47,.28);
+  box-shadow: 0 10px 24px rgba(83,22,29,.09);
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  filter: none !important;
+  transform: translate(0,0);
+  transform-style: flat;
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.rxis101-page .rxis-floating-pill > span:last-child {
+  display: block;
+  transform: none !important;
+}
+
+.rxis101-page .rxis-floating-pill b {
+  font-size: 9px;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.rxis101-page .rxis-floating-pill {
+  font-size: 8px;
+  line-height: 1.2;
+}
+
+.rxis101-page .rxis-floating-pill.callout-one { animation: rxisCrispPillA 4.6s ease-in-out infinite; }
+.rxis101-page .rxis-floating-pill.callout-two { animation: rxisCrispPillB 5.1s ease-in-out infinite; }
+.rxis101-page .rxis-floating-pill.callout-three { animation: rxisCrispPillC 4.9s ease-in-out infinite; }
+
+@keyframes rxisCrispPillA { 0%,100% { transform: translate(0,0); } 50% { transform: translate(0,-5px); } }
+@keyframes rxisCrispPillB { 0%,100% { transform: translate(0,0); } 50% { transform: translate(0,5px); } }
+@keyframes rxisCrispPillC { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-4px,0); } }
+
+/* Deployment card uses the supplied SVG badge. */
+.rxis101-page .rxis-deployment-card { max-width: 520px; min-height: 500px; margin-left: auto; }
+.rxis101-page .rxis-deployment-image { height: 500px; min-height: 0; object-fit: cover; }
+.rxis101-page .rxis-deployment-badge { position: absolute; right: 13px; bottom: 11px; left: 13px; z-index: 4; pointer-events: none; }
+.rxis101-page .rxis-deployment-badge-image { display: block; width: 100%; height: auto !important; min-height: 0 !important; object-fit: contain; filter: drop-shadow(0 7px 16px rgba(35,27,28,.10)); }
+.rxis101-page .rxis-deployment-overlay { display: none !important; }
+
+/* Related products: Figma sizing, three complete cards, controls below, manual only in JS. */
+.rxis101-page .rxis-related-products { padding: 62px 0 68px; overflow: hidden; }
+.rxis101-page .rxis-related-heading { margin-bottom: 36px; }
+.rxis101-page .rxis-related-slider { width: 100%; max-width: 1140px; margin: 0 auto; overflow: hidden !important; padding-top: 78px; }
+.rxis101-page .rxis-related-slider .swiper-slide { display: flex; height: auto; padding-top: 0; }
+.rxis101-page .rxis-related-card { min-height: 268px; padding: 101px 18px 18px; border-radius: 13px; }
+.rxis101-page .rxis-related-product-media { top: -74px; height: 184px; }
+.rxis101-page .rxis-related-product-image { width: auto; max-width: 142px; height: 184px; max-height: 184px; }
+.rxis101-page .rxis-related-controls { display: flex; justify-content: center; gap: 9px; margin-top: 24px; }
+.rxis101-page .rxis-related-prev,
+.rxis101-page .rxis-related-next { position: static; width: 36px; height: 36px; transform: none; }
+.rxis101-page .rxis-related-prev:hover,
+.rxis101-page .rxis-related-next:hover { transform: scale(1.07); }
+
+/* Responsive header and hero */
+@media (max-width: 1199.98px) {
+  .rxis101-page header .navbar > .container { flex-wrap: wrap; }
+  .rxis101-page header .navbar-brand img,
+  .rxis101-page header .navbar.search-is-open .navbar-brand img { width: 160px; max-width: 160px; }
+  .rxis101-page header .navbar-toggler { margin-left: auto; }
+  .rxis101-page header .navbar-collapse { order: 4; flex-basis: 100%; width: 100%; }
+  .rxis101-page .header-actions { display: none !important; }
+  .rxis101-page .rxis-hero { padding: 42px 0 52px; }
+}
+
+@media (max-width: 991.98px) {
+  .rxis101-page .rxis-hero .row { --bs-gutter-y: 2rem; }
+  .rxis101-page .rxis-deployment-card { margin-right: auto; margin-left: auto; }
+  .rxis101-page .rxis-related-slider { max-width: 760px; }
+}
+
+@media (max-width: 767.98px) {
+  .rxis101-page header { padding: 7px 0; }
+  .rxis101-page header .navbar-brand img { width: 132px; max-width: 132px; }
+  .rxis101-page .rxis-hero { padding: 32px 0 44px; }
+  .rxis101-page .rxis-quick-specs { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .rxis101-page .rxis-deployment-card { min-height: 420px; }
+  .rxis101-page .rxis-deployment-image { height: 420px; }
+  .rxis101-page .rxis-related-slider { max-width: 100%; padding-top: 70px; }
+  .rxis101-page .rxis-related-card { min-height: 258px; padding-top: 94px; }
+  .rxis101-page .rxis-related-product-media { top: -68px; height: 168px; }
+  .rxis101-page .rxis-related-product-image { max-width: 130px; height: 168px; max-height: 168px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rxis101-page .rxis-floating-pill { animation: none !important; }
+}
