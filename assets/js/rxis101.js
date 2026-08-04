@@ -225,3 +225,28 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".rxis-industries-track");
+  const group = document.querySelector(".rxis-industries-group");
+
+  if (track && group) {
+    // Duplicate the group to create the infinite scroll effect
+    const clone = group.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    track.appendChild(clone);
+
+    // Dynamically set the ticker distance based on the group's actual width
+    const updateDistance = () => {
+      track.style.setProperty("--ticker-distance", `${group.offsetWidth}px`);
+    };
+
+    updateDistance();
+
+    // Use ResizeObserver to update the distance if the layout changes
+    const resizeObserver = new ResizeObserver(() => {
+      updateDistance();
+    });
+    resizeObserver.observe(group);
+  }
+});
