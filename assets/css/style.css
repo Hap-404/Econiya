@@ -1550,7 +1550,6 @@ header .navbar-nav .nav-link.active:before {
    line-height: 1.05;
    color: #222020;
    margin:10px 0 0;
-   max-width: 520px;
 }
  .newsletter-form {
    display: flex;
