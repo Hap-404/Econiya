@@ -20,31 +20,129 @@
 <header>
   <nav class="navbar navbar-expand-xl">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="245" height="60" alt="Econiya" /></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
-      <div class="collapse navbar-collapse" id="navMenu">
+      <a class="navbar-brand" href="index.html">
+        <img
+          alt="Econiya"
+          height="60"
+          src="assets/images/logo.png"
+          width="245"
+        />
+      </a>
+      <button
+        aria-controls="navMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-bs-target="#navMenu"
+        data-bs-toggle="collapse"
+        type="button"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse test" id="navMenu">
         <ul class="navbar-nav main-menu">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link" href="insights.html">Insights</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="solutions.html">Solutions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="insights.html">Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
         </ul>
       </div>
+      
       <div class="navbar-ml header-actions ms-3">
-        <div class="header-inline-search" id="headerInlineSearch">
-          <button class="header-search-toggle" id="headerSearchToggle" type="button" aria-label="Open search" aria-controls="headerSearchForm" aria-expanded="false"><i class="bi bi-search"></i></button>
-          <form class="header-search-form" id="headerSearchForm" role="search" novalidate>
-            <label class="visually-hidden" for="headerSearchInput">Search Econiya</label>
-            <i class="bi bi-search header-search-leading-icon" aria-hidden="true"></i>
-            <input class="header-search-input" id="headerSearchInput" name="q" type="search" autocomplete="off" placeholder="Search products, solutions or contact" required />
-            <button class="header-search-submit" type="submit" aria-label="Submit search"><i class="bi bi-arrow-right"></i></button>
-            <button class="header-search-close" id="headerSearchClose" type="button" aria-label="Close search"><i class="bi bi-x-lg"></i></button>
-          </form>
-        </div>
-        <ul class="navbar-nav header-quote-nav"><li class="nav-item"><a class="btn btn-primary" href="contact.html">Get a Quote <span class="chat-icon-wrap"><i class="bi bi-chat-dots"></i></span></a></li></ul>
-      </div>
+<!-- Expandable inline search -->
+<div class="header-inline-search" id="headerInlineSearch">
+
+<!-- Closed search button -->
+<button
+class="header-search-toggle"
+id="headerSearchToggle"
+type="button"
+aria-label="Open search"
+aria-controls="headerSearchForm"
+aria-expanded="false"
+>
+<i class="bi bi-search"></i>
+</button>
+
+<!-- Expanded search form -->
+<form
+class="header-search-form"
+id="headerSearchForm"
+role="search"
+novalidate
+>
+<label
+class="visually-hidden"
+for="headerSearchInput"
+>
+Search Econiya
+</label>
+
+<i
+class="bi bi-search header-search-leading-icon"
+aria-hidden="true"
+></i>
+
+<input
+class="header-search-input"
+id="headerSearchInput"
+name="q"
+type="search"
+autocomplete="off"
+placeholder="Search products, solutions or contact"
+required
+/>
+
+<button
+class="header-search-submit"
+type="submit"
+aria-label="Submit search"
+>
+<i class="bi bi-arrow-right"></i>
+</button>
+
+<button
+class="header-search-close"
+id="headerSearchClose"
+type="button"
+aria-label="Close search"
+>
+<i class="bi bi-x-lg"></i>
+</button>
+</form>
+</div>
+
+<!-- Quote button -->
+<ul class="navbar-nav header-quote-nav">
+<li class="nav-item">
+<a
+class="btn btn-primary"
+href="contact.html"
+>
+Get a Quote
+
+<span class="chat-icon-wrap">
+  <i class="bi bi-chat-dots"></i>
+</span>
+</a>
+</li>
+</ul>
+</div>
+
     </div>
   </nav>
 </header>

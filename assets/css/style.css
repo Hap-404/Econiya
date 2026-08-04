@@ -166,14 +166,6 @@ img {
    position:relative;
    display:inline-block;
 }
-header .nav-link svg{
-  position: absolute;
-  left: -10px;
-  top: 18px;
-  width: 70px;
-  height: 25px;
-  display: none;
-}
 .wave path{
     fill:none;
     stroke:#E7222F;
