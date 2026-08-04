@@ -244,7 +244,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 68px 0 76px;
+  padding: 40px 0;
 
   background:
     radial-gradient(
@@ -645,9 +645,6 @@
 ========================================================= */
 
 @media (max-width: 767.98px) {
-  .rxis-features {
-    padding: 50px 0 56px;
-  }
 
   .rxis-features .rxis-section-heading {
     margin-bottom: 46px;
@@ -963,7 +960,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 72px 0 78px;
+  padding: 40px 0;
 
   background: #ffffff;
 }
@@ -1181,9 +1178,6 @@
 ========================================================= */
 
 @media (max-width: 767.98px) {
-  .rxis-product-overview {
-    padding: 48px 0 54px;
-  }
 
   .rxis-product-overview-grid {
     gap: 34px;
@@ -1266,7 +1260,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 72px 0 78px;
+  padding: 40px 0;
 
   background: #ffffff;
 }
@@ -1594,10 +1588,6 @@
 ========================================================= */
 
 @media (max-width: 767.98px) {
-  .rxis-performance {
-    padding: 48px 0 54px;
-  }
-
   .rxis-performance-grid {
     gap: 34px;
   }
@@ -1710,7 +1700,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 70px 0 76px;
+  padding: 40px 0;
 
   background: #ffffff;
 }
@@ -2191,9 +2181,6 @@
 ========================================================= */
 
 @media (max-width: 767.98px) {
-  .rxis-specifications {
-    padding: 48px 0 54px;
-  }
 
   .rxis-specifications-layout {
     gap: 30px;
@@ -2352,7 +2339,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 70px 0 76px;
+  padding: 40px 0;
 
   background: #ffffff;
 }
@@ -2674,9 +2661,6 @@
 ========================================================= */
 
 @media (max-width: 767.98px) {
-  .rxis-certifications {
-    padding: 48px 0 54px;
-  }
 
   .rxis-certifications-copy h2 {
     font-size: 38px;
@@ -2746,7 +2730,7 @@
   position: relative;
   overflow: hidden;
 
-  padding: 70px 0 78px;
+  padding: 40px 0;
 
   background: #ffffff;
 }
@@ -3309,9 +3293,6 @@
 ========================================================= */
 
 @media (max-width: 767.98px) {
-  .rxis-industries {
-    padding: 48px 0 54px;
-  }
 
   .rxis-industries-heading {
     margin-bottom: 34px;
@@ -5261,7 +5242,7 @@
 .rxis101-page .rxis-deployment-overlay { display: none !important; }
 
 /* Related products: Figma sizing, three complete cards, controls below, manual only in JS. */
-.rxis101-page .rxis-related-products { padding: 62px 0 68px; overflow: hidden; }
+.rxis101-page .rxis-related-products { padding: 40px 0; overflow: hidden; }
 .rxis101-page .rxis-related-heading { margin-bottom: 36px; }
 .rxis101-page .rxis-related-slider { width: 100%; max-width: 1140px; margin: 0 auto; overflow: hidden !important; padding-top: 78px; }
 .rxis101-page .rxis-related-slider .swiper-slide { display: flex; height: auto; padding-top: 0; }
