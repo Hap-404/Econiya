@@ -5243,8 +5243,8 @@
 
 /* Related products: Figma sizing, three complete cards, controls below, manual only in JS. */
 .rxis101-page .rxis-related-products { padding: 40px 0; overflow: hidden; }
-.rxis101-page .rxis-related-heading { margin-bottom: 36px; }
-.rxis101-page .rxis-related-slider { width: 100%; max-width: 1140px; margin: 0 auto; overflow: hidden !important; padding-top: 78px; }
+.rxis101-page .rxis-related-heading { margin-bottom: 20px; }
+.rxis101-page .rxis-related-slider { width: 100%; max-width: 1140px; margin: 0 auto; overflow: hidden !important; padding-top: 100px; }
 .rxis101-page .rxis-related-slider .swiper-slide { display: flex; height: auto; padding-top: 0; }
 .rxis101-page .rxis-related-card { min-height: 268px; padding: 101px 18px 18px; border-radius: 13px; }
 .rxis101-page .rxis-related-product-media { top: -74px; height: 184px; }
@@ -5279,7 +5279,7 @@
   .rxis101-page .rxis-quick-specs { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .rxis101-page .rxis-deployment-card { min-height: 420px; }
   .rxis101-page .rxis-deployment-image { height: 420px; }
-  .rxis101-page .rxis-related-slider { max-width: 100%; padding-top: 70px; }
+  .rxis101-page .rxis-related-slider { max-width: 100%; padding-top: 90px; }
   .rxis101-page .rxis-related-card { min-height: 258px; padding-top: 94px; }
   .rxis101-page .rxis-related-product-media { top: -68px; height: 168px; }
   .rxis101-page .rxis-related-product-image { max-width: 130px; height: 168px; max-height: 168px; }
