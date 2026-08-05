@@ -357,7 +357,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* RxIS101 feature card 3D tilt */
 (() => {
   "use strict";
-  const cards = document.querySelectorAll(".rxis-feature-card");
+  const cards = document.querySelectorAll(".rxis-feature-card, .rxis-certification-card");
   if (!cards.length) return;
 
   const prefersReducedMotion = window.matchMedia(
