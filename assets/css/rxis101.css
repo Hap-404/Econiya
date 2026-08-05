@@ -1314,7 +1314,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 34px 28px;
+  gap: 55px 30px;
 
   width: 100%;
   max-width: 1320px;
@@ -1338,7 +1338,8 @@
 
   background: linear-gradient(145deg, #ffffff 0%, #fffdfd 100%);
 
-  border: 1px solid rgba(231, 34, 47, 0.25);
+  --card-border: rgba(231, 34, 47, 0.25);
+  border: 1px solid var(--card-border);
   border-radius: 18px;
 
   transition:
@@ -1348,8 +1349,32 @@
     background-color 300ms ease;
 }
 
+/* 
+  When pointer enters, disable the CSS transform transition so JS can smoothly animate it.
+*/
+.rxis-feature-card.is-tilting {
+  transition:
+    transform 0ms,
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease;
+}
+
+/* 
+  When the pointer leaves, JS clears the inline transform and adds .is-returning 
+  so it smoothly snaps back to the original position.
+*/
+.rxis-feature-card.is-returning {
+  transition:
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease,
+    background-color 300ms ease;
+}
+
 .rxis-feature-card:hover {
-  border-color: rgba(231, 34, 47, 0.65);
+  --card-border: rgba(231, 34, 47, 0.65);
+  border-color: var(--card-border);
 
   transform: translateY(-7px);
 
@@ -1357,58 +1382,38 @@
 }
 
 /*
-  White cover behind the icon creates the curved
-  interruption in the card's upper border.
+  Mask the straight top border to make room for the notch.
 */
-
 .rxis-feature-card::before {
   content: "";
-
   position: absolute;
   z-index: 1;
-
   top: -2px;
-  left: 23px;
-
-  width: 76px;
-  height: 23px;
-
+  left: 20px;
+  width: 72px;
+  height: 4px;
   background: #ffffff;
+  pointer-events: none;
 }
 
-/* Soft highlight on hover */
-
+/*
+  Draw the U-shaped notch directly below the masked area.
+*/
 .rxis-feature-card::after {
   content: "";
-
   position: absolute;
-  z-index: -1;
-
-  top: -25%;
-  left: -45%;
-
-  width: 42%;
-  height: 150%;
-
-  opacity: 0;
-
-  background: linear-gradient(
-    100deg,
-    transparent,
-    rgba(231, 34, 47, 0.035),
-    transparent
-  );
-
-  transform: skewX(-16deg);
-
-  transition:
-    left 650ms cubic-bezier(0.22, 1, 0.36, 1),
-    opacity 250ms ease;
-}
-
-.rxis-feature-card:hover::after {
-  left: 115%;
-  opacity: 1;
+  z-index: 1;
+  top: -1px;
+  left: 17px;
+  width: 78px;
+  height: 40px;
+  border-right: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  border-left: 1px solid var(--card-border);
+  border-radius: 0px 0px 40px 40px;
+  background: #ffffff;
+  pointer-events: none;
+  transition: border-color 300ms ease;
 }
 
 /* =========================================================
@@ -1556,7 +1561,7 @@
   }
 
   .rxis-feature-grid {
-    gap: 32px 20px;
+    gap: 50px 20px;
   }
 
   .rxis-feature-card {
@@ -1596,8 +1601,6 @@
 
   .rxis-feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 34px 22px;
   }
 
   .rxis-feature-card {
@@ -1632,8 +1635,7 @@
 
   .rxis-feature-grid {
     grid-template-columns: 1fr;
-
-    gap: 38px;
+    gap: 50px;
   }
 
   .rxis-feature-card {
@@ -1644,10 +1646,6 @@
 
   .rxis-feature-card::before {
     left: 18px;
-  }
-
-  .rxis-feature-icon-wrap {
-    left: 21px;
   }
 
   .rxis-feature-card h3 {
