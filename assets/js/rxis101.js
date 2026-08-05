@@ -250,25 +250,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const flipper = document.querySelector(".rxis-3d-flipper");
-  if (flipper && "IntersectionObserver" in window) {
+  const flippers = document.querySelectorAll(".rxis-3d-flipper:not(.rxis-related-flipper)");
+  if (flippers.length > 0 && "IntersectionObserver" in window) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            flipper.classList.add("animate-flip");
-            observer.unobserve(flipper);
+            entry.target.classList.add("animate-flip");
+            observer.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.3 },
     );
-    observer.observe(flipper);
-  } else if (flipper) {
-    flipper.classList.add("animate-flip");
+    flippers.forEach(flipper => observer.observe(flipper));
+  } else if (flippers.length > 0) {
+    flippers.forEach(flipper => flipper.classList.add("animate-flip"));
   }
 });
-
 
 (() => {
   "use strict";

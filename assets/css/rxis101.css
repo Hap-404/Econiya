@@ -2645,6 +2645,11 @@
   padding: 0 18px;
 }
 
+/* Prevent delayed stagger transitions from interfering with 3D tilt */
+.rxis-specifications-media.is-visible {
+  transition-delay: 0ms !important;
+}
+
 .rxis-specifications-image-bg {
   position: absolute;
 
@@ -2691,7 +2696,7 @@
   object-fit: contain;
   object-position: center bottom;
 
-  filter: drop-shadow(0 24px 30px rgba(34, 25, 27, 0.16));
+  /* filter: drop-shadow(0 24px 30px rgba(34, 25, 27, 0.16)); */
 
   transform-origin: center bottom;
 

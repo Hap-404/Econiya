@@ -629,16 +629,29 @@
           <div class="rxis-specifications-layout">
             <!-- Product image -->
             <div
-              class="rxis-specifications-media rxis-reveal"
+              class="rxis-specifications-media rxis-reveal rxis-animation-slot"
               data-reveal="left"
             >
               <div class="rxis-specifications-image-bg"></div>
 
-              <img
-                src="assets/images/rxis101/mobile-front.png"
-                alt="RxIS101 intrinsically safe mobile front view"
-                class="rxis-specifications-image"
-              />
+              <div class="rxis-3d-container rxis-specifications-image-wrapper">
+                <div class="rxis-3d-flipper">
+                  <div class="rxis-3d-front">
+                    <img
+                      src="assets/images/rxis101/mobile-front.png"
+                      alt="RxIS101 intrinsically safe mobile front view"
+                      class="rxis-specifications-image"
+                    />
+                  </div>
+                  <div class="rxis-3d-back">
+                    <img
+                      src="assets/images/rxis101/mobile-front.png"
+                      alt="RxIS101 intrinsically safe mobile back view"
+                      class="rxis-specifications-image"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Specifications content -->
