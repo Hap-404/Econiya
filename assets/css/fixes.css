@@ -2955,7 +2955,10 @@ header .header-search-input {
   font-size: 14px;
   line-height: 1;
 }
-
+header .header-search-input:focus,
+header .header-search-input:focus-visible {
+  outline: none !important;
+}
 header .header-search-input::placeholder {
   color: #8a858a;
 }
