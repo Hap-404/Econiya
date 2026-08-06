@@ -15,7 +15,7 @@
           obs.unobserve(entry.target);
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8%" },
+      { threshold: 0.12, rootMargin: "0px 0px -8%" }
     );
     revealItems.forEach((item, index) => {
       item.style.transitionDelay = `${Math.min((index % 6) * 55, 275)}ms`;
@@ -23,18 +23,24 @@
     });
   }
 
-  const tabs = document.querySelectorAll("[data-spec-tab]");
-  const panels = document.querySelectorAll("[data-spec-panel]");
+  const tabs = document.querySelectorAll("[data-specification-tab]");
+  const panels = document.querySelectorAll("[data-specification-panel]");
   tabs.forEach((tab) =>
     tab.addEventListener("click", () => {
-      const key = tab.dataset.specTab;
+      const key = tab.dataset.specificationTab;
       tabs.forEach((button) =>
-        button.classList.toggle("is-active", button === tab),
+        button.classList.toggle("is-active", button === tab)
       );
       panels.forEach((panel) =>
-        panel.classList.toggle("is-active", panel.dataset.specPanel === key),
+        panel.classList.toggle("is-active", panel.dataset.specificationPanel === key)
       );
-    }),
+
+      // Update image based on active tab
+      const specImages = document.querySelectorAll('.rxis-specifications-media .rxis-specifications-image');
+      specImages.forEach(img => {
+        img.classList.toggle("is-active", img.dataset.specImg === key);
+      });
+    })
   );
 
   if (
@@ -439,5 +445,38 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.transform = "";
     });
   });
+})();
+
+
+/* =========================================================================
+   Specifications Overlay Height Fix
+========================================================================= */
+(function() {
+  const layout = document.querySelector('.rxis-specifications-layout');
+  const heading = document.querySelector('.rxis-specifications-heading');
+  
+  if (layout && heading) {
+    const updateOverlayHeight = () => {
+      // Calculate heading height including bottom margin
+      const headingStyle = window.getComputedStyle(heading);
+      const marginBottom = parseFloat(headingStyle.marginBottom) || 0;
+      const totalHeadingHeight = heading.offsetHeight + marginBottom;
+      
+      // Update CSS variable on the layout container
+      layout.style.setProperty('--heading-height', totalHeadingHeight + 'px');
+    };
+    
+    // Initial call
+    updateOverlayHeight();
+    
+    // Update on resize
+    window.addEventListener('resize', updateOverlayHeight);
+    
+    // Fallback using ResizeObserver for more accuracy
+    if ('ResizeObserver' in window) {
+      const resizeObserver = new ResizeObserver(updateOverlayHeight);
+      resizeObserver.observe(heading);
+    }
+  }
 })();
 

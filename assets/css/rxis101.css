@@ -7,7 +7,7 @@
 .rxis-hero {
   position: relative;
   isolation: isolate;
-  padding: 82px 0 70px;
+  padding: 35px 0 70px;
   background: linear-gradient(180deg, #fff 0%, #fff9f9 100%);
 }
 .rxis-hero .hero-particle-canvas {
@@ -40,14 +40,17 @@
   color: #e7222f;
 }
 .rxis-badges span {
+  font-size: 13px;
+  font-weight: 100;
   padding: 7px 11px;
   border-radius: 999px;
-  background: #fff;
-  border: 1px solid rgba(231, 34, 47, 0.22);
+  color: var(--bs-white);
+  background: var(--primary);
+  border: 1px solid var(--primary);
 }
 .rxis-badges span + span {
   color: #fff;
-  background: linear-gradient(135deg, #ff9c2f, #e7222f);
+  background: #FF8D2A;
   border-color: transparent;
 }
 .rxis-eyebrow {
@@ -82,6 +85,12 @@
     700 clamp(20px, 2.1vw, 30px)/1.2 Inter,
     sans-serif;
 }
+.rxis-hero .content-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
 .rxis-lead {
   max-width: 670px;
   color: #575258;
@@ -106,15 +115,14 @@
   display: block;
 }
 .rxis-quick-specs strong {
-  font:
-    700 17px/1.2 Inter,
-    sans-serif;
+  font-size: 22px;
   color: #222020;
+  line-height: 1;
 }
 .rxis-quick-specs span {
-  margin-top: 4px;
+  margin-top: 2px;
   color: #6f696f;
-  font-size: 14px;
+  font-size: 13px;
 }
 .rxis-actions {
   display: flex;
@@ -131,8 +139,6 @@
   min-height: 590px;
 }
 .rxis-hero-product img {
-  width: min(310px, 62%);
-  height: auto;
   filter: drop-shadow(0 24px 28px rgba(33, 24, 25, 0.18));
   animation: rxisFloat 5s ease-in-out infinite;
 }
@@ -790,10 +796,12 @@
 }
 
 /* Quick specification cards */
-.rxis-quick-specs {
-  perspective: 900px;
-}
 .rxis-quick-specs > .rxis-quick-spec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 90px;
   position: relative;
   isolation: isolate;
   min-height: 94px;
@@ -953,11 +961,10 @@
 .rxis-phone-image {
   position: relative;
   z-index: 2;
-  width: min(320px, 80%) !important;
-  max-height: 555px;
   object-fit: contain;
   filter: drop-shadow(0 30px 28px rgba(33, 24, 25, 0.22)) !important;
   transform: translateZ(36px);
+  max-height: 515px;
 }
 
 @keyframes heroPhoneSpin3D {
@@ -1055,16 +1062,16 @@
 }
 .rxis-floating-pill.callout-one {
   top: 18%;
-  right: -2%;
+  right: 3%;
   animation: rxisPillFloatA 4.3s ease-in-out infinite;
 }
 .rxis-floating-pill.callout-two {
   top: 42%;
-  left: -4%;
+  left: 0;
   animation: rxisPillFloatB 5.1s ease-in-out infinite;
 }
 .rxis-floating-pill.callout-three {
-  right: 0;
+  right: 7%;
   bottom: 19%;
   animation: rxisPillFloatC 4.7s ease-in-out infinite;
 }
@@ -1234,9 +1241,7 @@
 .rxis-features {
   position: relative;
   overflow: hidden;
-
-  padding: 40px 0;
-
+  padding: 60px 0 40px;
   background:
     radial-gradient(
       circle at 100% 10%,
@@ -1259,17 +1264,13 @@
 
 .rxis-features .super-head {
   display: block;
-
   margin: 0 0 10px;
-
   color: var(--primary);
-
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
 
@@ -1301,15 +1302,12 @@
 
 .rxis-features .rxis-section-heading p {
   max-width: 760px;
-
   margin: 14px auto 0;
-
   color: #575258;
-
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 2;
 }
 
 /* =========================================================
@@ -1504,11 +1502,9 @@
 
 .rxis-feature-card h3 {
   margin: 0 0 10px;
-
   color: #222020;
-
   font-family: "Inter", sans-serif;
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: -0.015em;
@@ -1516,11 +1512,9 @@
 
 .rxis-feature-card p {
   margin: 0;
-
   color: #575258;
-
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
 }
@@ -1592,7 +1586,7 @@
 
 @media (max-width: 991.98px) {
   .rxis-features {
-    padding: 58px 0 64px;
+    padding: 50px 0 30px;
   }
 
   .rxis-features .rxis-section-heading {
@@ -1930,11 +1924,9 @@
 .rxis-product-overview-bg {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
-
   height: 52%;
-
   background: linear-gradient(
     145deg,
     rgba(255, 232, 235, 0.92),
@@ -1965,19 +1957,13 @@
 .rxis-product-overview-image {
   position: relative;
   z-index: 2;
-
   display: block;
-
   width: min(100%, 510px);
-  max-height: 555px;
-
+  max-height: 700px;
   object-fit: contain;
   object-position: center bottom;
-
   filter: drop-shadow(0 22px 30px rgba(30, 25, 25, 0.14));
-
   transform-origin: center bottom;
-
   transition:
     transform 650ms cubic-bezier(0.22, 1, 0.36, 1),
     filter 450ms ease;
@@ -1999,13 +1985,10 @@
 
 .rxis-product-overview-content .super-head {
   display: block;
-
   margin: 0 0 10px;
-
   color: var(--primary);
-
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
@@ -2033,11 +2016,9 @@
 
 .rxis-product-overview-copy p {
   margin: 0;
-
   color: #555157;
-
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -2080,7 +2061,7 @@
 
 @media (max-width: 991.98px) {
   .rxis-product-overview {
-    padding: 58px 0 64px;
+    padding: 30px 0;
   }
 
   .rxis-product-overview-grid {
@@ -2194,13 +2175,9 @@
 }
 
 .rxis-performance-grid {
-  display: grid;
-  grid-template-columns:
-    minmax(0, 0.95fr)
-    minmax(430px, 1.05fr);
-
+  display: flex;
   align-items: center;
-  gap: 74px;
+  gap: 30px;
 }
 
 /* =========================================================
@@ -2208,22 +2185,18 @@
 ========================================================= */
 
 .rxis-performance-content {
-  max-width: 650px;
+  width: 50%;
 }
 
 .rxis-performance-content .super-head {
   display: block;
-
   margin: 0 0 10px;
-
   color: var(--primary);
-
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
 
@@ -2263,7 +2236,7 @@
   color: #575258;
 
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -2294,7 +2267,7 @@
   color: #282528;
 
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -2302,13 +2275,10 @@
 .rxis-performance-list li img {
   display: block;
   flex: 0 0 auto;
-
-  width: 15px;
-  height: 15px;
-  margin-top: 2px;
-
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
   object-fit: contain;
-
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -2338,8 +2308,6 @@
 
   background: #f2d9dc;
 
-  box-shadow: 0 18px 45px rgba(46, 24, 28, 0.1);
-
   transform-style: preserve-3d;
 
   transition:
@@ -2349,8 +2317,6 @@
 
 .rxis-deployment-card:hover {
   transform: translateY(-7px) scale(1.012);
-
-  box-shadow: 0 28px 58px rgba(46, 24, 28, 0.15);
 }
 
 .rxis-deployment-image {
@@ -2474,10 +2440,11 @@
 
 @media (max-width: 991.98px) {
   .rxis-performance {
-    padding: 58px 0 64px;
+    padding: 30px 0;
   }
 
   .rxis-performance-grid {
+    flex-direction: column;
     grid-template-columns: 1fr;
 
     gap: 42px;
@@ -2485,6 +2452,7 @@
 
   .rxis-performance-content {
     max-width: 760px;
+    width: 100%;
   }
 
   .rxis-deployment-card {
@@ -2613,20 +2581,29 @@
 .rxis-specifications {
   position: relative;
   overflow: hidden;
-
-  padding: 40px 0;
-
+  padding: 40px 0 60px;
   background: #ffffff;
 }
 
 .rxis-specifications-layout {
+  position: relative;
   display: grid;
   grid-template-columns:
     minmax(310px, 0.7fr)
     minmax(0, 1.3fr);
-
   align-items: end;
   gap: 45px;
+}
+
+.rxis-specifications-layout::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 100%;
+  top: var(--heading-height, 100px);
+  border-radius: 50px;
+  background-color: rgba(231, 34, 47, 0.10);
 }
 
 /* =========================================================
@@ -2650,42 +2627,12 @@
   transition-delay: 0ms !important;
 }
 
-.rxis-specifications-image-bg {
-  position: absolute;
-
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  height: 73%;
-
-  background: linear-gradient(
-    145deg,
-    rgba(255, 224, 228, 0.92),
-    rgba(255, 239, 241, 0.98)
-  );
-
-  border-radius: 34px 34px 0 0;
-}
-
-.rxis-specifications-image-bg::before {
-  content: "";
-
-  position: absolute;
-
-  top: -30%;
-  left: 50%;
-
-  width: 85%;
-  height: 85%;
-
-  background: radial-gradient(circle, rgba(231, 34, 47, 0.08), transparent 68%);
-
-  transform: translateX(-50%);
-}
-
 .rxis-specifications-image {
-  position: relative;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 2;
 
   display: block;
@@ -2695,14 +2642,22 @@
 
   object-fit: contain;
   object-position: center bottom;
-
-  /* filter: drop-shadow(0 24px 30px rgba(34, 25, 27, 0.16)); */
-
-  transform-origin: center bottom;
-
+  
+  opacity: 0;
+  visibility: hidden;
   transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
     transform 600ms cubic-bezier(0.22, 1, 0.36, 1),
     filter 450ms ease;
+}
+
+.rxis-specifications-image.is-active {
+  position: relative;
+  left: 0;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
 }
 
 .rxis-specifications-media:hover .rxis-specifications-image {
@@ -2728,13 +2683,10 @@
 
 .rxis-specifications-heading .super-head {
   display: block;
-
   margin: 0 0 9px;
-
   color: var(--primary);
-
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
@@ -2770,13 +2722,10 @@
 
 .rxis-specifications-heading p {
   max-width: 720px;
-
   margin: 14px 0 0;
-
   color: #575258;
-
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.65;
 }
@@ -2786,14 +2735,7 @@
 ========================================================= */
 
 .rxis-specifications-panel {
-  padding: 30px 28px 28px;
-
-  background: linear-gradient(
-    145deg,
-    rgba(255, 220, 225, 0.94),
-    rgba(255, 232, 235, 0.98)
-  );
-
+  padding: 40px 40px 40px 0;
   border-radius: 0 32px 32px 0;
 }
 
@@ -2814,19 +2756,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  min-height: 42px;
-  padding: 0 17px;
-
+  padding: 14px 17px;
   color: #393539;
   background: rgba(255, 255, 255, 0.86);
-
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 999px;
-
   font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1;
 
   cursor: pointer;
@@ -2841,16 +2778,15 @@
 
 .rxis-specification-tab:hover {
   color: var(--primary);
-
   transform: translateY(-2px);
 }
 
 .rxis-specification-tab.is-active {
   color: #ffffff;
-  background: var(--primary);
+  background: linear-gradient(90deg, #e7222f 0%, #8b2421 100%);
   border-color: var(--primary);
-
   box-shadow: 0 8px 18px rgba(231, 34, 47, 0.2);
+  font-weight: 600;
 }
 
 /* PDF button */
@@ -2936,10 +2872,8 @@
 
 .rxis-specification-table {
   overflow: hidden;
-
   background: rgba(255, 255, 255, 0.92);
-
-  border: 1px solid rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(231, 34, 47, 0.12);
   border-radius: 17px;
 }
 
@@ -2949,23 +2883,20 @@
   grid-template-columns:
     minmax(145px, 0.85fr)
     minmax(0, 1.15fr);
-
   align-items: center;
   column-gap: 22px;
-
-  padding: 12px 20px;
+  padding: 10px 25px;
 }
 
 .rxis-specification-table-head {
   color: #393539;
   background: rgba(255, 247, 248, 0.96);
-
   font-family: "Inter", sans-serif;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.3;
-
   text-transform: uppercase;
+  height: 47px;
 }
 
 .rxis-specification-row {
@@ -2976,18 +2907,16 @@
 
 .rxis-specification-row > span {
   color: #666166;
-
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.45;
 }
 
 .rxis-specification-row > strong {
   color: #2b282b;
-
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.45;
 }
@@ -3033,7 +2962,7 @@
 
 @media (max-width: 991.98px) {
   .rxis-specifications {
-    padding: 58px 0 64px;
+    padding: 30px 0;
   }
 
   .rxis-specifications-layout {
@@ -3048,10 +2977,6 @@
     margin: 0 auto;
   }
 
-  .rxis-specifications-image-bg {
-    border-radius: 30px;
-  }
-
   .rxis-specifications-image {
     width: min(100%, 310px);
     max-height: 500px;
@@ -3063,6 +2988,15 @@
 
   .rxis-specifications-panel {
     border-radius: 28px;
+    padding: 20px;
+  }
+  .rxis-specifications-heading {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .rxis-specifications-layout::after {
+    bottom: 0;
+    border-radius: 30px;
   }
 }
 
@@ -3224,9 +3158,7 @@
 .rxis-certifications {
   position: relative;
   overflow: hidden;
-
-  padding: 40px 0;
-
+  padding: 70px 0 40px;
   background: #ffffff;
 }
 
@@ -3256,7 +3188,7 @@
   color: var(--primary);
 
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
@@ -3298,7 +3230,7 @@
   color: #575258;
 
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -3316,36 +3248,29 @@
 }
 
 .rxis-certification-string h3 {
-  margin: 0 0 12px;
-
+  margin: 0 0 15px;
   color: var(--primary);
-
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.3;
 }
 
 .rxis-certification-string p {
   margin: 0 0 6px;
-
   color: #565156;
-
   font-family: "Inter", sans-serif;
-  font-size: 17px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 1.35;
+  line-height: 1.1;
 }
 
 .rxis-certification-string small {
   display: block;
-
-  margin-top: 10px;
-
+  margin-top: 15px;
   color: #716c71;
-
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -3415,8 +3340,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 38px;
-  height: 38px;
+  width: 48px;
+  height: 48px;
 
   margin-bottom: 15px;
 
@@ -3461,38 +3386,31 @@
 ========================================================= */
 
 .rxis-certification-card h3 {
-  margin: 0 0 7px;
-
+  margin: 0;
   color: #222020;
-
   font-family: "Inter", sans-serif;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.35;
 }
 
 .rxis-certification-card strong {
   display: block;
-
   margin-bottom: 10px;
-
   color: var(--primary);
-
   font-family: "Inter", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.45;
 }
 
 .rxis-certification-card p {
   margin: 0;
-
   color: #575258;
-
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 /* =========================================================
@@ -3523,7 +3441,7 @@
 
 @media (max-width: 991.98px) {
   .rxis-certifications {
-    padding: 58px 0 64px;
+    padding: 30px 0;
   }
 
   .rxis-certifications-grid {
@@ -3538,6 +3456,18 @@
 
   .rxis-certification-string {
     max-width: 520px;
+  }
+
+  .rxis-certification-string p {
+    font-size: 20px;
+  }
+
+  .rxis-certification-string h3 {
+    font-size: 26px;
+  }
+
+  .rxis-certification-string small {
+    font-size: 18px;
   }
 }
 
@@ -3636,7 +3566,7 @@
   color: var(--primary);
 
   font-family: "Inter", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
@@ -3678,7 +3608,7 @@
   color: #575258;
 
   font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
@@ -4087,7 +4017,7 @@
 
 @media (max-width: 991.98px) {
   .rxis-industries {
-    padding: 58px 0 64px;
+    padding: 30px 0;
   }
 
   .rxis-industries-heading {
@@ -4119,6 +4049,10 @@
 
   .rxis-industry-media > strong {
     font-size: 22px;
+  }
+
+  .rxis101-page .rxis-related-products {
+    padding: 30px 0;
   }
 }
 
@@ -4180,6 +4114,19 @@
 
   .rxis-industry-details > strong {
     font-size: 21px;
+  }
+
+  .rxis-hero .content-block {
+    gap: 0;
+  }
+
+  .rxis-quick-specs > .rxis-quick-spec {
+    height: auto;
+    min-height: 80px;
+  }
+
+  .rxis-hero-product {
+    min-height: 500px;
   }
 }
 
@@ -4243,7 +4190,7 @@
   color: var(--primary);
 
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.3;
   letter-spacing: 0.08em;
@@ -4284,7 +4231,7 @@
   color: #575258;
 
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -4697,10 +4644,10 @@
     max-height: 176px;
   }
 
-  .rxis-related-prev,
+  /* .rxis-related-prev,
   .rxis-related-next {
     display: none;
-  }
+  } */
 
   .rxis-related-mobile-controls {
     display: flex;
@@ -4777,12 +4724,6 @@
   .rxis-hero {
     display: flex;
     align-items: center;
-
-    min-height: calc(100svh - 86px);
-    max-height: calc(100svh - 86px);
-
-    padding: 30px 0 34px;
-
     overflow: hidden;
   }
 
@@ -4885,14 +4826,6 @@
 /* Typical laptop screens such as 1366 × 768 */
 
 @media (min-width: 1200px) and (max-height: 820px) {
-  .rxis-hero {
-    min-height: calc(100svh - 76px);
-    max-height: calc(100svh - 76px);
-
-    padding-top: 20px;
-    padding-bottom: 22px;
-  }
-
   .rxis-hero-content h1 {
     font-size: 58px;
   }
@@ -5124,17 +5057,6 @@
 
 /* Desktop hero: header + hero fit in one normal viewport at 100% zoom. */
 @media (min-width: 1200px) {
-
-  .rxis101-page .rxis-hero {
-    display: flex;
-    align-items: center;
-    min-height: auto;
-    height: auto;
-    max-height: none;
-    padding: 14px 0 18px;
-    overflow: hidden;
-  }
-
   .rxis101-page .rxis-hero .row {
     width: 100%;
     min-height: 0;
@@ -5180,18 +5102,11 @@
   .rxis101-page .rxis-phone-stage {
     width: min(350px, 72%);
   }
-  .rxis101-page .rxis-phone-image {
-    width: min(270px, 78%) !important;
-    max-height: min(470px, calc(100svh - 130px));
-  }
 }
 
 @media (min-width: 1200px) and (max-height: 760px) {
-  .rxis101-page .rxis-hero {
-    padding: 8px 0 12px;
-  }
   .rxis101-page .rxis-quick-specs {
-    margin: 12px 0;
+    margin: 20px 0;
   }
   .rxis101-page .rxis-quick-specs > .rxis-quick-spec {
     min-height: 56px;
@@ -5201,7 +5116,7 @@
 
 /* Sharp floating callouts: no backdrop blur and no 3D text transform. */
 .rxis101-page .rxis-floating-pill {
-  max-width: 166px;
+  max-width: 175px;
   padding: 8px 12px 8px 8px;
   color: #514c51;
   background: #fff;
@@ -5229,7 +5144,7 @@
 }
 
 .rxis101-page .rxis-floating-pill {
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -5273,20 +5188,20 @@
 
 /* Deployment card uses the supplied SVG badge. */
 .rxis101-page .rxis-deployment-card {
-  max-width: 520px;
-  min-height: 500px;
+  width: 50%;
+  max-width: 600px;
+  min-height: 600px;
   margin-left: auto;
 }
 .rxis101-page .rxis-deployment-image {
-  height: 500px;
+  height: 600px;
   min-height: 0;
   object-fit: cover;
 }
 .rxis101-page .rxis-deployment-badge {
   position: absolute;
-  right: 13px;
-  bottom: 11px;
-  left: 13px;
+  left: 22px;
+  bottom: 22px;
   z-index: 4;
   pointer-events: none;
 }
@@ -5368,6 +5283,7 @@
   .rxis101-page .rxis-deployment-card {
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
   }
   .rxis101-page .rxis-related-slider {
     max-width: 760px;
@@ -5397,6 +5313,8 @@
   .rxis101-page .rxis-related-slider {
     max-width: 100%;
     padding-top: 90px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .rxis101-page .rxis-related-card {
     min-height: 258px;
@@ -5416,5 +5334,81 @@
 @media (prefers-reduced-motion: reduce) {
   .rxis101-page .rxis-floating-pill {
     animation: none !important;
+  }
+}
+
+/* Real-World Deployment Badge New Design */
+.rxis101-page .rxis-deployment-badge {
+  max-width: 483px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 12px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  pointer-events: auto; /* allow text selection */
+  color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.rxis101-page .rxis-deployment-badge h3 {
+  color: #e72d2d;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+.rxis101-page .rxis-deployment-badge ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.rxis101-page .rxis-deployment-badge ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+.rxis101-page .rxis-deployment-badge ul li strong {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222020;
+  line-height: normal;
+}
+
+.rxis101-page .rxis-deployment-badge ul li p {
+  font-size: 14px;
+  color: #222020;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 1199.98px) {
+  .rxis101-page .rxis-deployment-badge {
+    width: calc(100% - 30px);
+    max-width: none;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+  }
+  .rxis101-page .rxis-deployment-badge ul {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .rxis101-page .rxis-deployment-badge {
+    padding: 15px;
+  }
+  .rxis101-page .rxis-deployment-badge ul {
+    gap: 15px;
+    flex-direction: column;
   }
 }
