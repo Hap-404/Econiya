@@ -5419,7 +5419,7 @@
 
 /* 3D Animation */
 
-.rxis-grid-container {
+.rxis-hero-product .rxis-grid-container {
   max-width: 1100px;
   width: 100%;
   display: grid;
@@ -5429,17 +5429,17 @@
 }
 
 @media (min-width: 768px) {
-  .rxis-grid-container {
+  .rxis-hero-product .rxis-grid-container {
     grid-template-columns: 5fr 7fr;
   }
 }
 
-.rxis-media-column {
+.rxis-hero-product .rxis-media-column {
   position: relative;
   transform: rotate(82deg);
 }
 
-.rxis-product-overview-media {
+.rxis-hero-product .rxis-product-overview-media {
   position: relative;
   width: 480px;
   height: 440px;
@@ -5450,7 +5450,7 @@
   cursor: pointer;
 }
 
-.rxis-perspective-box {
+.rxis-hero-product .rxis-perspective-box {
   width: 100%;
   height: 100%;
   position: relative;
@@ -5458,7 +5458,7 @@
   z-index: 10;
 }
 
-.rxis-phone-layer {
+.rxis-hero-product .rxis-phone-layer {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -5467,50 +5467,50 @@
 }
 
 /* LAYER 1: Front Glass */
-.rxis-layer-screen {
+.rxis-hero-product .rxis-layer-screen {
   z-index: 30;
   transform: rotateY(0) rotateX(0) rotateZ(-82deg) translate3d(0, 0, 0);
   opacity: 1;
 }
 
-.rxis-product-overview-media:hover .rxis-layer-screen {
+.rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-screen {
   /* transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, -100px, 100px); */
   transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, 0, 100px) scale(0.8)
 }
 
 /* LAYER 2: Middle Circuit Body */
-.rxis-layer-body {
+.rxis-hero-product .rxis-layer-body {
   z-index: 20;
   transform: rotateY(28deg) rotateX(15deg) rotateZ(-10deg) translate3d(0, 0, 0);
   opacity: 0;
 }
 
-.rxis-product-overview-media:hover .rxis-layer-body {
+.rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-body {
   /* transform: rotateY(-10deg) rotateX(25deg) rotateZ(10deg) translate3d(-40px, 30px, 20px); */
   transform: rotateY(16deg) rotateX(5deg) rotateZ(8deg) translate3d(0, 30px, 20px);
   opacity: 1;
 }
 
 /* LAYER 3: Rear Chassis */
-.rxis-layer-back {
+.rxis-hero-product .rxis-layer-back {
   z-index: 10;
   transform: rotateY(28deg) rotateX(15deg) rotateZ(-10deg) translate3d(0, 0, 0);
   opacity: 0;
 }
 
-.rxis-product-overview-media:hover .rxis-layer-back {
+.rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-back {
   transform: rotateY(5deg) rotateX(55deg) rotateZ(10deg) translate3d(20px, 210px, -40px);
   opacity: 1;
 }
 
 @media (max-width: 767px) {
-  .rxis-product-overview-media:hover .rxis-layer-screen {
+  .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-screen {
     transform: rotateY(8deg) rotateX(45deg) rotateZ(-78deg) translate3d(88px, 8px, 82px) scale(1) ;
   }
-  .rxis-product-overview-media:hover .rxis-layer-body {
+  .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-body {
     transform: rotateY(16deg) rotateX(5deg) rotateZ(8deg) translate3d(0, 20px, 90px);
   }
-  .rxis-product-overview-media:hover .rxis-layer-back {
+  .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-back {
     transform: rotateY(0deg) rotateX(55deg) rotateZ(10deg) translate3d(18px, 100px, -40px);
   }
 }
