@@ -6,6 +6,8 @@
   ).matches;
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
+    const continuousItems = document.querySelectorAll(".rxis-continuous-reveal");
+    continuousItems.forEach((item) => item.classList.add("animate-border"));
   } else {
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -21,6 +23,22 @@
       item.style.transitionDelay = `${Math.min((index % 6) * 55, 275)}ms`;
       observer.observe(item);
     });
+
+    const continuousObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-border");
+          } else {
+            // Remove the class when out of view so it can animate again when re-entering
+            entry.target.classList.remove("animate-border");
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8%" }
+    );
+    const continuousItems = document.querySelectorAll(".rxis-continuous-reveal");
+    continuousItems.forEach((item) => continuousObserver.observe(item));
   }
 
   const tabs = document.querySelectorAll("[data-specification-tab]");

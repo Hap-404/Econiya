@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 0.68;
+  opacity: 0.3;
 }
 .rxis-hero .container {
   z-index: 2;
@@ -123,6 +123,9 @@
   margin-top: 2px;
   color: #6f696f;
   font-size: 13px;
+}
+.rxis-quick-specs .rxis-spec-icon {
+  display: none !important;
 }
 .rxis-actions {
   display: flex;
@@ -2591,7 +2594,7 @@
   grid-template-columns:
     minmax(310px, 0.7fr)
     minmax(0, 1.3fr);
-  align-items: end;
+  /* align-items: end; */
   gap: 45px;
 }
 
@@ -2615,12 +2618,13 @@
   position: relative;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   min-height: 590px;
 
   padding: 0 18px;
+  z-index: 1;
 }
 
 /* Prevent delayed stagger transitions from interfering with 3D tilt */
@@ -2639,7 +2643,7 @@
   display: block;
 
   width: min(100%, 355px);
-  max-height: 590px;
+  /* max-height: 590px; */
 
   object-fit: contain;
   object-position: center bottom;
@@ -3240,12 +3244,55 @@
    CERTIFICATION STRING
 ========================================================= */
 
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
 .rxis-certification-string {
   padding: 23px 24px 21px;
 
-  background: linear-gradient(145deg, #ffe6e9, #fbeef0);
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 
   border-radius: 17px;
+  
+  --border-angle: 0deg;
+  transition: --border-angle 1.5s ease-in-out;
+}
+
+.rxis-certification-string::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 45deg,
+    #ff2d55 0deg,
+    #ff3b30 var(--border-angle),
+    transparent var(--border-angle)
+  );
+  z-index: -2;
+  pointer-events: none;
+}
+
+.rxis-certification-string::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(145deg, #ffe6e9, #fbeef0);
+  border-radius: 15px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.rxis-certification-string.animate-border {
+  --border-angle: 360deg;
 }
 
 .rxis-certification-string h3 {
