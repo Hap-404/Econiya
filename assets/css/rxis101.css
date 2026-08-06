@@ -140,7 +140,7 @@
 }
 .rxis-hero-product img {
   filter: drop-shadow(0 24px 28px rgba(33, 24, 25, 0.18));
-  animation: rxisFloat 5s ease-in-out infinite;
+  /* animation: rxisFloat 5s ease-in-out infinite; */
 }
 .rxis-callout {
   position: absolute;
@@ -673,9 +673,9 @@
     min-height: 470px;
     margin-top: 12px;
   }
-  .rxis-hero-product img {
+  /* .rxis-hero-product img {
     width: min(260px, 65%);
-  }
+  } */
   .rxis-callout {
     font-size: 9px;
     padding: 8px 10px;
@@ -741,9 +741,9 @@
   .rxis-hero-product {
     min-height: 410px;
   }
-  .rxis-hero-product img {
+  /* .rxis-hero-product img {
     width: 220px;
-  }
+  } */
   .rxis-callout {
     max-width: 108px;
   }
@@ -5272,7 +5272,10 @@
 /* Responsive header and hero */
 @media (max-width: 1199.98px) {
   .rxis101-page .rxis-hero {
-    padding: 42px 0 52px;
+    padding: 40px 0 0;
+  }
+  .rxis101-page .rxis-hero .image-block {
+    margin-top: 0;
   }
 }
 
@@ -5410,5 +5413,103 @@
   .rxis101-page .rxis-deployment-badge ul {
     gap: 15px;
     flex-direction: column;
+  }
+}
+
+/* 3D Animation */
+
+.rxis-grid-container {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .rxis-grid-container {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+.rxis-media-column {
+  position: relative;
+  transform: rotate(82deg);
+}
+
+.rxis-product-overview-media {
+  position: relative;
+  width: 480px;
+  height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.rxis-perspective-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.rxis-phone-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* LAYER 1: Front Glass */
+.rxis-layer-screen {
+  z-index: 30;
+  transform: rotateY(0) rotateX(0) rotateZ(-82deg) translate3d(0, 0, 0);
+  opacity: 1;
+}
+
+.rxis-product-overview-media:hover .rxis-layer-screen {
+  /* transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, -100px, 100px); */
+  transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, 0, 100px) scale(0.8)
+}
+
+/* LAYER 2: Middle Circuit Body */
+.rxis-layer-body {
+  z-index: 20;
+  transform: rotateY(28deg) rotateX(15deg) rotateZ(-10deg) translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+.rxis-product-overview-media:hover .rxis-layer-body {
+  /* transform: rotateY(-10deg) rotateX(25deg) rotateZ(10deg) translate3d(-40px, 30px, 20px); */
+  transform: rotateY(16deg) rotateX(5deg) rotateZ(8deg) translate3d(0, 30px, 20px);
+  opacity: 1;
+}
+
+/* LAYER 3: Rear Chassis */
+.rxis-layer-back {
+  z-index: 10;
+  transform: rotateY(28deg) rotateX(15deg) rotateZ(-10deg) translate3d(0, 0, 0);
+  opacity: 0;
+}
+
+.rxis-product-overview-media:hover .rxis-layer-back {
+  transform: rotateY(5deg) rotateX(55deg) rotateZ(10deg) translate3d(20px, 210px, -40px);
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .rxis-product-overview-media:hover .rxis-layer-screen {
+    transform: rotateY(8deg) rotateX(45deg) rotateZ(-78deg) translate3d(88px, 8px, 82px) scale(1) ;
+  }
+  .rxis-product-overview-media:hover .rxis-layer-body {
+    transform: rotateY(16deg) rotateX(5deg) rotateZ(8deg) translate3d(0, 20px, 90px);
+  }
+  .rxis-product-overview-media:hover .rxis-layer-back {
+    transform: rotateY(0deg) rotateX(55deg) rotateZ(10deg) translate3d(18px, 100px, -40px);
   }
 }
