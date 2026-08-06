@@ -2604,6 +2604,7 @@
   top: var(--heading-height, 100px);
   border-radius: 50px;
   background-color: rgba(231, 34, 47, 0.10);
+  pointer-events: none;
 }
 
 /* =========================================================
@@ -2614,7 +2615,7 @@
   position: relative;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
   min-height: 590px;
