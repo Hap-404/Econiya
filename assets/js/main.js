@@ -1834,5 +1834,4 @@ document.addEventListener("DOMContentLoaded", function() {
         track.appendChild(listClone);
     });
 });
-
-
+});
