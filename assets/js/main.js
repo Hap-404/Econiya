@@ -1808,30 +1808,33 @@ $(document).on('click', 'header .navbar-toggler', function () {
     }, 10);
 });
 document.addEventListener("DOMContentLoaded", function() {
-document.addEventListener("DOMContentLoaded", function() {
-    // Infinite Logo Marquee & Alignment
+    // Infinite Logo Marquee
     const logoTracks = document.querySelectorAll('.logo-track');
-    const clientsLogoSections = document.querySelectorAll('.clients-logo');
 
-    // 1. Clone logos to ensure infinite loop works even with few logos
     logoTracks.forEach(track => {
         const list = track.querySelector('.logo-list');
         if (!list) return;
 
         const items = Array.from(list.children);
         let safety = 0;
-        // Duplicate items until there are enough to comfortably fill the screen
-        while (list.children.length < 15 && safety < 10 && items.length > 0) {
+        
+        // Check list width vs screen width to ensure we have enough items
+        // We want the list to be wider than the viewport so the -50% translation is seamless
+        const minItemsNeeded = Math.ceil((window.innerWidth * 1.5) / 200); // roughly 200px per item
+        
+        // Duplicate items until we meet the minimum items needed (or at least 15)
+        const targetCount = Math.max(minItemsNeeded, 15);
+
+        while (list.children.length < targetCount && safety < 20 && items.length > 0) {
             items.forEach(item => {
                 list.appendChild(item.cloneNode(true));
             });
             safety++;
         }
 
-        // Clone the entire list for the seamless -50% translation
+        // Clone the entire list for the seamless -50% CSS translation loop
         const listClone = list.cloneNode(true);
         listClone.setAttribute('aria-hidden', 'true');
         track.appendChild(listClone);
     });
-});
 });
