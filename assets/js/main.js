@@ -1807,3 +1807,32 @@ $(document).on('click', 'header .navbar-toggler', function () {
         }
     }, 10);
 });
+document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
+    // Infinite Logo Marquee & Alignment
+    const logoTracks = document.querySelectorAll('.logo-track');
+    const clientsLogoSections = document.querySelectorAll('.clients-logo');
+
+    // 1. Clone logos to ensure infinite loop works even with few logos
+    logoTracks.forEach(track => {
+        const list = track.querySelector('.logo-list');
+        if (!list) return;
+
+        const items = Array.from(list.children);
+        let safety = 0;
+        // Duplicate items until there are enough to comfortably fill the screen
+        while (list.children.length < 15 && safety < 10 && items.length > 0) {
+            items.forEach(item => {
+                list.appendChild(item.cloneNode(true));
+            });
+            safety++;
+        }
+
+        // Clone the entire list for the seamless -50% translation
+        const listClone = list.cloneNode(true);
+        listClone.setAttribute('aria-hidden', 'true');
+        track.appendChild(listClone);
+    });
+});
+
+
