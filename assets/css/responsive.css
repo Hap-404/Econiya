@@ -123,6 +123,12 @@
     .story-year .year{
         font-size: 50px;
     }
+    .story-slider-wrapper.inner-pages .story-year .year {
+        font-size: 80px;
+    }
+    .story-slider-wrapper.inner-pages .story-slider::before {
+        top: 95px;
+    }
     .story-desc{
         top: 190px;
         left: 15px;
@@ -157,6 +163,9 @@
     .production-item:hover .production-icon {
         transform: none;
     }
+    .story-slider-wrapper.inner-pages .story-desc {
+        font-size: 16px;
+    }
 }
  @media (max-width: 767px) {
      header .navbar-collapse{
@@ -178,14 +187,14 @@
          margin-top: 0;
     }
     .hero-certified {
-    left: -5px;
-    top: 35px;
-    padding: 5px 15px;
-    width: 205px;
-  }
-  .hero-certified small{
-    margin-bottom: 0;
-  }
+        left: -5px;
+        top: 35px;
+        padding: 5px 15px;
+        width: 205px;
+    }
+    .hero-certified small{
+        margin-bottom: 0;
+    }
     .hero-certified h5{
         font-size: 13px;
     }
@@ -278,6 +287,9 @@
     #return-to-top i{
         left: 0;
     }
+    .story-slider-wrapper.inner-pages .story-year .year {
+        font-size: 65px;
+    }
 }
  @media (max-width: 575px) {
      .footer-bottom {
@@ -293,6 +305,18 @@
          gap: 5px;
          max-width: 350px;
          margin: 0 auto;
+    }
+    .story-slider-wrapper.inner-pages .swiper-wrapper {
+        padding-left: 0;
+    }
+    .story-slider-wrapper.inner-pages .story-slider::before {
+        top: 87px;
+    }
+    .story-navigation {
+        margin: 15px 0 30px;
+    }
+    .story-title h3 {
+        font-size: 30px;
     }
 }
 

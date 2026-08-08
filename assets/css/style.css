@@ -3768,6 +3768,10 @@ line-height:28px;
     font-size: 14px;
     line-height: 1.68;
   }
+
+  .story-slider-wrapper.inner-pages .swiper-wrapper {
+    padding-left: 30px;
+  }
 }
 
 /* =========================================================

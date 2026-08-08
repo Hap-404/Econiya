@@ -150,9 +150,9 @@ function initHeroScroll() {
         },
   
         breakpoints: {
-          320: { slidesPerView: 1.7, spaceBetween: 18 },
-          576: { slidesPerView: 2.25, spaceBetween: 26 },
-          768: { slidesPerView: 3, spaceBetween: 44 },
+          320: { slidesPerView: 1, spaceBetween: 18 },
+          576: { slidesPerView: 2, spaceBetween: 26 },
+          768: { slidesPerView: 2, spaceBetween: 44 },
           1200: { slidesPerView: 4, spaceBetween: 70 },
         },
       });
@@ -197,6 +197,7 @@ function initHeroScroll() {
           prevEl: ".cert-prev",
         },
         breakpoints: {
+          320: { slidesPerView: 1, spaceBetween: 20 },
           576: { slidesPerView: 2, spaceBetween: 24 },
           992: { slidesPerView: 3, spaceBetween: 30 }
         }
