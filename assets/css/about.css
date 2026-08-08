@@ -444,9 +444,6 @@
   max-width: 780px;
   margin-inline: auto;
 }
-.certifications {
-  background: linear-gradient(180deg, transparent, #fff6f6);
-}
 .certifications .section-head p {
   max-width: 820px;
   margin-inline: auto;
@@ -596,7 +593,7 @@
   object-fit: contain;
 }
 .about-page .logos {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 .about-page .cta {
   margin-top: 40px;

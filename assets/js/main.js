@@ -185,6 +185,25 @@ function initHeroScroll() {
     }
   }
 
+  function initCertificateSlider() {
+    const certEl = document.querySelector(".certificate-slider");
+    if (certEl) {
+      new Swiper(certEl, {
+        slidesPerView: 1.1,
+        spaceBetween: 20,
+        speed: 600,
+        navigation: {
+          nextEl: ".cert-next",
+          prevEl: ".cert-prev",
+        },
+        breakpoints: {
+          576: { slidesPerView: 2, spaceBetween: 24 },
+          992: { slidesPerView: 3, spaceBetween: 30 }
+        }
+      });
+    }
+  }
+
   function initCtaEffect() {
     const cta = document.querySelector(".cta-content");
     const blob = document.querySelector(".cta-liquid");
@@ -1733,7 +1752,7 @@ function initCtaEffect() {
 
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initHomeScrollRevealTargets();initHomeScrollReveals();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initHomeScrollRevealTargets();initHomeScrollReveals();
 initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
@@ -1789,6 +1808,7 @@ document.addEventListener("DOMContentLoaded", function() {
         track.appendChild(listClone);
     });
 });
+
 
 
 
