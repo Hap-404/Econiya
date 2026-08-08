@@ -938,7 +938,7 @@ header .navbar-nav .nav-link.active:before {
    display:flex;
    justify-content:center;
    gap:16px;
-   margin:40px 0 80px;
+   margin:40px 0 50px;
 }
  .story-prev,.story-next{
    width:48px;
@@ -1048,6 +1048,53 @@ header .navbar-nav .nav-link.active:before {
 }
 .swiper-slide-active .dot {
   transform: scale(1.25);
+}
+
+/* Inner page style */
+.story-slider-wrapper.inner-pages {
+  padding-left: 0;
+}
+.story-slider-wrapper.inner-pages .swiper-wrapper {
+  padding-left: calc((100vw - 1320px)/2);
+}
+.story-slider-wrapper.inner-pages .story-title {
+  position: relative;
+  text-align: center;
+  left: auto;
+  top: auto;
+}
+.story-slider-wrapper.inner-pages .story-year {
+  position: relative;
+  left: auto;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  flex-direction: column;
+}
+.story-slider-wrapper.inner-pages .story-year .dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+}
+.story-slider-wrapper.inner-pages .story-desc {
+  position: relative;
+  text-align: center;
+  top: auto;
+  left: auto;
+}
+.story-slider-wrapper.inner-pages .story-year .year {
+  line-height: normal;
+}
+.story-slider-wrapper.inner-pages .story-slider .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.story-slider-wrapper.inner-pages .story-slider::before {
+  top: 130px;
 }
 @keyframes storypulse{
    0%{
@@ -1440,7 +1487,7 @@ header .navbar-nav .nav-link.active:before {
 }
  .cta-content .btn-outline{
    border-color: #fff;
-   color: #fff;
+   color: #fff !important;
 }
 /***Footer CSS ****/
 /* Newsletter */
@@ -4742,15 +4789,18 @@ letter-spacing: normal;
   transform: translateY(-2px);
 }
 
-.universal-animated-btn:hover .universal-button-text-one {
+.universal-animated-btn:hover .universal-button-text-one,
+.universal-animated-btn:focus .universal-button-text-one {
   transform: translateY(-110%);
 }
 
-.universal-animated-btn:hover .universal-button-text-two {
+.universal-animated-btn:hover .universal-button-text-two,
+.universal-animated-btn:focus .universal-button-text-two {
   transform: translateY(0);
 }
 
-.universal-animated-btn:hover .universal-button-overlay {
+.universal-animated-btn:hover .universal-button-overlay,
+.universal-animated-btn:focus .universal-button-overlay {
   transform: translateY(0);
 }
 

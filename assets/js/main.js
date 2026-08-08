@@ -134,94 +134,46 @@ function initHeroScroll() {
   }
 
   function initSwipers() {
- 
-    const storyEl = document.querySelector(".home-story .story-slider");
-
-if (storyEl) {
-  const storySwiper = new Swiper(storyEl, {
-    slidesPerView: 4,
-    spaceBetween: 70,
-    speed: 650,
-    loop: true,
-
-    navigation: {
-      nextEl: ".home-story .story-next",
-      prevEl: ".home-story .story-prev",
-    },
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1.7,
-        spaceBetween: 18,
-      },
-
-      576: {
-        slidesPerView: 2.25,
-        spaceBetween: 26,
-      },
-
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 44,
-      },
-
-      1200: {
+    const storyEls = document.querySelectorAll(".story-slider");
+  
+    storyEls.forEach(storyEl => {
+      const storySwiper = new Swiper(storyEl, {
         slidesPerView: 4,
         spaceBetween: 70,
-      },
-    },
-  });
-
-  /*
-   * Important:
-   * Swiper arrows only move the year timeline.
-   * They do not select or reveal a milestone.
-   */
-
-  storyEl.addEventListener("click", (event) => {
-    const yearButton = event.target.closest(".story-year");
-
-    if (!yearButton) {
-      return;
-    }
-
-    const clickedMilestone = yearButton.closest(
-      ".story-milestone"
-    );
-
-    if (!clickedMilestone) {
-      return;
-    }
-
-    /*
-     * Remove the previously revealed milestone.
-     */
-    storyEl
-      .querySelectorAll(".story-milestone.is-selected")
-      .forEach((milestone) => {
-        milestone.classList.remove("is-selected");
-
-        const button =
-          milestone.querySelector(".story-year");
-
-        button?.setAttribute(
-          "aria-expanded",
-          "false"
-        );
+        speed: 650,
+        loop: true,
+        slideToClickedSlide: true,
+  
+        navigation: {
+          nextEl: ".story-next",
+          prevEl: ".story-prev",
+        },
+  
+        breakpoints: {
+          320: { slidesPerView: 1.7, spaceBetween: 18 },
+          576: { slidesPerView: 2.25, spaceBetween: 26 },
+          768: { slidesPerView: 3, spaceBetween: 44 },
+          1200: { slidesPerView: 4, spaceBetween: 70 },
+        },
       });
-
-    /*
-     * Reveal only the milestone whose red dot/year
-     * was clicked.
-     */
-    clickedMilestone.classList.add("is-selected");
-
-    yearButton.setAttribute(
-      "aria-expanded",
-      "true"
-    );
-  });
-}
+  
+      storyEl.addEventListener("click", (event) => {
+        const yearButton = event.target.closest(".story-year");
+        if (!yearButton) return;
+  
+        const clickedMilestone = yearButton.closest(".story-milestone");
+        if (!clickedMilestone) return;
+  
+        storyEl.querySelectorAll(".story-milestone.is-selected").forEach((milestone) => {
+          milestone.classList.remove("is-selected");
+          const button = milestone.querySelector(".story-year");
+          button?.setAttribute("aria-expanded", "false");
+        });
+  
+        clickedMilestone.classList.add("is-selected");
+        yearButton.setAttribute("aria-expanded", "true");
+      });
+    });
 
     const productEl = document.querySelector(".productSwiper");
     if (productEl) {
@@ -244,7 +196,6 @@ if (storyEl) {
     });
     cta.addEventListener("mouseleave", () => { blob.style.left = "78%"; blob.style.top = "50%"; });
   }
-
   function initScrollToTop() {
     const button = $("#return-to-top");
     if (!button.length) return;
@@ -1838,3 +1789,9 @@ document.addEventListener("DOMContentLoaded", function() {
         track.appendChild(listClone);
     });
 });
+
+
+
+
+
+
