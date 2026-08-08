@@ -194,7 +194,7 @@
   gap: 40px 30px;
   margin-top: 34px;
 }
-.about-feature-grid article {
+.about-feature-grid article, .purpose-card, .value-card {
   border: 1px solid #efdada;
   border-radius: 18px;
   padding: 45px 20px 20px;
@@ -452,7 +452,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin: 42px 0;
+  margin: 42px 0 !important;
 }
 .certificate-navigation span {
   width: 46px;
@@ -475,6 +475,10 @@
   background: #FFFFFF;
   border: 1px solid #ECD2D3;
   border-radius: 20px 20px 50px 20px;
+  transition: ease 0.3s;
+}
+.certificate-item:hover {
+  border-color: var(--about-red);
 }
 .certificate-item .top-block {
   display: flex;
@@ -491,10 +495,19 @@
   height: 70px;
   border-radius: 50%;
   background-color: rgba(250, 234, 235, 1);
+  transition: ease 0.3s;
 }
 .certificate-item .icon-block img {
   width: 100%;
   max-width: 33px;
+  transition: ease 0.3s;
+}
+.certificate-item:hover .icon-block {
+  background-color: var(--about-red);
+}
+.certificate-item:hover .icon-block img {
+  filter: brightness(0) invert(1) !important;
+  transform: scale(1.08);
 }
 .certificate-item .iso-number {
   font-size: 18px;
@@ -860,7 +873,7 @@
     height: 330px;
   }
   .certificate-navigation {
-    margin: 25px 0 30px;
+    margin: 25px 0 30px !important;
   }
   .certificate-slider .swiper-slide {
     padding-right: 1px;
@@ -879,3 +892,15 @@
     animation: none;
   }
 }
+
+.about-feature-grid article, .purpose-card, .value-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.about-feature-grid article.is-tilting, .purpose-card.is-tilting, .value-card.is-tilting {
+  transition: none !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border-color: var(--about-red);
+  z-index: 2;
+}
+
+

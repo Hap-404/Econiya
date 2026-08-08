@@ -1753,7 +1753,7 @@ function initCtaEffect() {
 
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initHomeScrollRevealTargets();initHomeScrollReveals();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
 initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
@@ -1812,6 +1812,83 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+
+
+
+function initAboutFeatureTiltCards() {
+  const cards = document.querySelectorAll(".about-feature-grid article, .purpose-card, .value-card");
+  if (!cards.length) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (prefersReducedMotion || !supportsFinePointer) return;
+
+  cards.forEach((card) => {
+    let animationFrame = null;
+    let currentRotateX = 0;
+    let currentRotateY = 0;
+    let targetRotateX = 0;
+    let targetRotateY = 0;
+
+    const maximumRotation = 12;
+
+    const renderTilt = () => {
+      currentRotateX += (targetRotateX - currentRotateX) * 0.16;
+      currentRotateY += (targetRotateY - currentRotateY) * 0.16;
+
+      card.style.transform = `perspective(1000px) translateY(-7px) rotateX(${currentRotateX}deg) rotateY(${currentRotateY}deg) translateZ(0)`;
+
+      const movementRemaining = Math.abs(targetRotateX - currentRotateX) + Math.abs(targetRotateY - currentRotateY);
+
+      if (movementRemaining > 0.01) {
+        animationFrame = requestAnimationFrame(renderTilt);
+      } else {
+        animationFrame = null;
+      }
+    };
+
+    const requestRender = () => {
+      if (animationFrame === null) {
+        animationFrame = requestAnimationFrame(renderTilt);
+      }
+    };
+
+    card.addEventListener("pointerenter", () => {
+      card.classList.add("is-tilting");
+    });
+
+    card.addEventListener("pointermove", (event) => {
+      const bounds = card.getBoundingClientRect();
+      const pointerX = event.clientX - bounds.left;
+      const pointerY = event.clientY - bounds.top;
+      const normalizedX = pointerX / bounds.width;
+      const normalizedY = pointerY / bounds.height;
+
+      targetRotateY = (normalizedX - 0.5) * maximumRotation * 2;
+      targetRotateX = (0.5 - normalizedY) * maximumRotation * 2;
+
+      requestRender();
+    });
+
+    card.addEventListener("pointerleave", () => {
+      card.classList.remove("is-tilting");
+      
+      if (animationFrame !== null) {
+        cancelAnimationFrame(animationFrame);
+        animationFrame = null;
+      }
+      
+      targetRotateX = 0;
+      targetRotateY = 0;
+      currentRotateX = 0;
+      currentRotateY = 0;
+      
+      card.style.transform = "";
+    });
+  });
+}
 
 
 
