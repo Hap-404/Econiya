@@ -3727,6 +3727,115 @@ line-height:28px;
   transform: translateY(0);
 }
 
+.specification-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.specification-block .specs-item {
+  border: 1px solid #ECD2D3;
+  border-radius: 20px;
+  padding: 17px;
+  position: relative;
+  background: #fff;
+}
+.specification-block .icon-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background-color: #FAEAEB;
+}
+.specification-block .icon-block img {
+  width: 100%;
+  max-width: 25px;
+}
+.specification-block .title {
+  font-weight: 700;
+  color: #222020;
+  margin-bottom: 12px;
+}
+.specification-block p {
+  line-height: 1.5 !important;
+}
+
+.tablet-certifications {
+  padding: 50px 0;
+}
+.tablet-certifications .app-block {
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #ECD2D3;
+}
+.tablet-certifications .certificate-block {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: rgba(231, 34, 47, 0.05);
+  border: 1px solid #E7222F;
+}
+.tablet-certifications .heading-label {
+  display: block;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  color: #E7222F;
+  text-transform: uppercase;
+}
+.tablet-certifications .title {
+  font-weight: 900;
+  color: #222020;
+  margin-bottom: 20px;
+}
+.tablet-certifications .check-list {
+  font-size: 20px;
+}
+.tablet-certifications .check-list li {
+  margin-bottom: 11px;
+  line-height: 1.4;
+}
+.tablet-certifications .check-list li:last-of-type {
+  margin-bottom: 0;
+}
+.tablet-certifications .check-list li i {
+  color: #E7222F;
+  margin-right: 6px;
+}
+.tablet-certifications .certificate-list li {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.tablet-certifications p {
+  font-size: 18px;
+}
+.tablet-specifications .rxis-specifications-media {
+  padding: 0;
+}
+.tablet-specifications .rxis-specifications-layout {
+  padding: 40px;
+  border-radius: 50px;
+  grid-template-columns: minmax(310px, 0.8fr) minmax(0, 1.3fr);
+  background-color: rgba(231, 34, 47, 0.10);
+}
+.tablet-specifications .rxis-specifications-layout::after {
+  display: none;
+}
+.tablet-specifications .rxis-specifications-panel {
+  padding: 0;
+}
+.tablet-specifications .rxis-specifications-image {
+  width: 100%;
+  max-width: 424px;
+  height: 650px;
+}
+.tablet-specifications .rxis-3d-container {
+  transform: translateX(-33px) rotate(-14deg);
+}
+
+
 /* =========================================================
    LARGE TABLETS
 ========================================================= */
@@ -3812,6 +3921,35 @@ line-height:28px;
 
   .econ-who-title {
     font-size: 52px;
+  }
+
+  .tablet-specifications .rxis-specifications-layout {
+    padding: 25px;
+    border-radius: 28px;
+    grid-template-columns: 1fr;
+  }
+  .tablet-specifications .rxis-specifications-heading {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tablet-certifications .row>:last-of-type {
+    margin-top: 30px;
+  }
+  .tablet-certifications .app-block {
+    padding: 25px;
+  }
+  .tablet-certifications .check-list {
+    font-size: 18px;
+  }
+  .tablet-certifications .check-list li {
+    margin-bottom: 7px;
+  }
+  .tablet-certifications .certificate-block {
+    padding: 25px;
+  }
+  .tablet-certifications .certificate-list li {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -3927,6 +4065,14 @@ line-height:28px;
 
   .econ-who-title {
     font-size: 34px;
+  }
+  
+  .specification-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .specification-block .title {
+    margin-bottom: 10px;
   }
 }
 
@@ -5288,6 +5434,41 @@ letter-spacing: normal;
   font-weight: 600;
 }
 
+.tablet-hero .rxis-hero-product .rxis-product-overview-media {
+  width: 680px;
+}
+
+.tablet-hero .rxis-hero-product .rxis-product-overview-media .rxis-layer-body {
+  transform: none;
+}
+.tablet-hero .rxis-hero-product .rxis-product-overview-media .rxis-layer-back {
+  transform: none;
+}
+.tablet-hero .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-screen {
+  transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, 0, 150px) scale(0.8);
+}
+.tablet-hero .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-body {
+  transform: rotateY(0deg) rotateX(40deg) rotateZ(0deg) translate3d(0, -48px, 0px);
+}
+.tablet-hero .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-back {
+  transform: rotateY(0deg) rotateX(40deg) rotateZ(-3deg) translate3d(0, 56px, 0px);
+}
+.tablet-hero .rxis-hero-product .rxis-phone-layer {
+  width: 100%;
+}
+.tablet-hero .rxis-floating-pill.callout-three {
+  left: -9%;
+  bottom: 15%;
+}
+.tablet-hero .rxis-floating-pill.callout-two {
+  top: 15%;
+  left: -10%;
+}
+.tablet-hero .rxis-floating-pill.callout-one {
+  top: 10%;
+  right: -5%;
+}
+
 /* =========================================================
    RESPONSIVE TYPOGRAPHY
 ========================================================= */
@@ -5298,6 +5479,15 @@ letter-spacing: normal;
     font-size: 48px;
     line-height: 54px;
   }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media {
+    width: 480px;
+  }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media:hover {
+    transform: scale(0.8);
+  }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-screen {
+    transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, 0, 150px) scale(1);
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -5305,6 +5495,24 @@ letter-spacing: normal;
   .expertise-heading h2 {
     font-size: 44px;
     line-height: 50px;
+  }
+  .tablet-hero .rxis-floating-pill.callout-one {
+    right: 0;
+  }
+  .tablet-hero .rxis-floating-pill.callout-two {
+    left: 0;
+  }
+  .rxis101-page .rxis-floating-pill.callout-three {
+    left: 0;
+  }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media:hover {
+    transform: scale(1);
+  }
+  .tablet-hero .rxis-hero-product {
+    min-height: auto;
+  }
+  .tablet-hero .rxis-product-overview-media {
+    min-height: 450px;
   }
 }
 
@@ -5334,6 +5542,15 @@ letter-spacing: normal;
     font-size: 15px;
     line-height: 26px;
   }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media {
+    width: 350px;
+  }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media:hover {
+    transform: scale(0.6);
+  }
+  .tablet-hero .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-screen {
+    transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, 0, 110px) scale(1.3);
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -5341,6 +5558,18 @@ letter-spacing: normal;
   .expertise-heading h2 {
     font-size: 34px;
     line-height: 40px;
+  }
+  .tablet-specifications .rxis-specifications-layout {
+    padding: 20px;
+  }
+  .tablet-certifications .check-list {
+    font-size: 16px;
+  }
+  .tablet-certifications .title {
+    margin-bottom: 15px;
+  }
+  .tablet-certifications p {
+    font-size: 16px;
   }
 }
 

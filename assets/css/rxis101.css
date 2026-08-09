@@ -1336,13 +1336,8 @@
 .rxis-feature-card {
   position: relative;
   isolation: isolate;
-
-  min-height: 230px;
-
   padding: 57px 28px 27px;
-
   overflow: visible;
-
   background: linear-gradient(145deg, #ffffff 0%, #fffdfd 100%);
 
   --card-border: rgba(231, 34, 47, 0.25);
@@ -3035,7 +3030,7 @@
   }
 
   .rxis-specifications-heading p {
-    font-size: 12.5px;
+    font-size: 16px;
   }
 
   .rxis-specifications-panel {
@@ -3053,8 +3048,7 @@
   .rxis-specification-tab {
     min-height: 38px;
     padding: 0 12px;
-
-    font-size: 10px;
+    font-size: 14px;
   }
 
   .rxis-specification-download {
@@ -3128,15 +3122,13 @@
 
   .rxis-specification-row > span {
     color: var(--primary);
-
-    font-size: 9px;
+    font-size: 14px;
     font-weight: 600;
-
     text-transform: uppercase;
   }
 
   .rxis-specification-row > strong {
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 
@@ -5320,7 +5312,7 @@
 /* Responsive header and hero */
 @media (max-width: 1199.98px) {
   .rxis101-page .rxis-hero {
-    padding: 40px 0 0;
+    padding: 40px 0;
   }
   .rxis101-page .rxis-hero .image-block {
     margin-top: 0;
@@ -5521,7 +5513,6 @@
 }
 
 .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-screen {
-  /* transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, -100px, 100px); */
   transform: rotateY(15deg) rotateX(35deg) rotateZ(-80deg) translate3d(90px, 0, 100px) scale(0.8)
 }
 
@@ -5533,7 +5524,6 @@
 }
 
 .rxis-hero-product .rxis-product-overview-media:hover .rxis-layer-body {
-  /* transform: rotateY(-10deg) rotateX(25deg) rotateZ(10deg) translate3d(-40px, 30px, 20px); */
   transform: rotateY(16deg) rotateX(5deg) rotateZ(8deg) translate3d(0, 30px, 20px);
   opacity: 1;
 }
