@@ -1412,16 +1412,8 @@ function initHomeScrollRevealTargets() {
         ".cta .cta-content",
       direction: "up",
     },
-    {
-      selector:
-        "footer .newsletter",
-      direction: "up",
-    },
-    {
-      selector:
-        "footer .footer-top",
-      direction: "up",
-    },
+    
+    
   ];
 
   revealGroups.forEach(({ selector, direction }) => {
@@ -1500,7 +1492,7 @@ function initHomeScrollReveals() {
 
 
 function initPageScrollReveals() {
-  const items = document.querySelectorAll('.scroll-reveal');
+  const items = document.querySelectorAll('.scroll-reveal, .rxis-reveal, .infra-reveal');
   if (!items.length) return;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduced) { items.forEach((item) => item.classList.add('is-visible')); return; }
@@ -1753,7 +1745,7 @@ function initCtaEffect() {
 
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initFacilityTabs(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
 initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
@@ -1818,7 +1810,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function initAboutFeatureTiltCards() {
-  const cards = document.querySelectorAll(".about-feature-grid article, .purpose-card, .value-card");
+  const cards = document.querySelectorAll(".about-feature-grid article, .purpose-card, .value-card, .capability-card");
   if (!cards.length) return;
 
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -1892,4 +1884,46 @@ function initAboutFeatureTiltCards() {
 
 
 
+
+
+
+
+
+
+function initFacilityTabs() {
+  const tabButtons = document.querySelectorAll('.facility-btn');
+  if (!tabButtons.length) return;
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetId = btn.getAttribute('data-target');
+      const allTabs = document.querySelectorAll('.facility-wrapper');
+      allTabs.forEach(tab => {
+        tab.style.display = 'none';
+        tab.classList.remove('active-tab');
+      });
+      const targetTab = document.getElementById(targetId);
+      if (targetTab) {
+        targetTab.style.display = 'grid';
+        targetTab.classList.add('active-tab');
+        const reveals = targetTab.querySelectorAll('.rxis-reveal');
+        reveals.forEach(r => {
+           r.style.opacity = '';
+           r.style.transform = '';
+           r.style.filter = '';
+           r.classList.remove('is-visible');
+           
+           // Force reflow
+           void r.offsetWidth;
+           
+           setTimeout(() => {
+               r.classList.add('is-visible');
+           }, 50);
+        });
+      }
+    });
+  });
+}
 
