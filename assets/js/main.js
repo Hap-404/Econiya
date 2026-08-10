@@ -1513,11 +1513,11 @@ function initEmployeeSpotlight() {
   const tabs = Array.from(document.querySelectorAll('.employee-tab'));
   if (!tabs.length) return;
   const stories = [
-    { name:'Ananya Rao', dept:'Operations', role:'Senior Manufacturing Engineer', image:'assets/images/employee/opt-person.png', quote:'Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.', body:'I joined Econiya as a graduate trainee and today I lead the SMT line for Ex/IS-certified detectors. What kept me here is how seriously the company takes ownership.', moment:'Led the zero-defect programme that brought DPPM below 12.' },
-    { name:'Rohit Verma', dept:'Research & Development', role:'R&D Firmware Engineer', image:'assets/images/employee/doc.png', quote:'You get to touch problems very few people in the world are working on.', body:'Our firmware teams work across intrinsic safety, hazardous-area communications and deterministic edge stacks.', moment:'Shipped a new fail-safe radio stack across three product families.' },
-    { name:'Priya Nair', dept:'Product', role:'Product Manager, IoT Platform', image:'assets/images/employee/pm.png', quote:'Our customers are running assets that cannot stop. That focus keeps our roadmap honest.', body:'Product decisions are grounded in field evidence, operator feedback and direct time with industrial teams.', moment:'Turned field feedback into the next-generation monitoring workflow.' },
-    { name:'Karan Mehta', dept:'Customer Success', role:'Field Service Lead', image:'assets/images/employee/field.png', quote:'I’ve commissioned sites in 11 countries. The tools, the training, the trust — Econiya prepares you to walk into any control room in the world.', body:'Field service is where engineering meets real operations and every detail becomes visible.', moment:'Completed a refinery commissioning ahead of shutdown schedule.' },
-    { name:'Meera Iyer', dept:'Quality', role:'Quality Assurance Specialist', image:'assets/images/employee/qa.png', quote:'Quality here isn’t a checklist — it is a culture.', body:'From the CEO down, everyone respects the quality sign-off and the evidence behind it.', moment:'Built a traceability system covering the complete production line.' }
+    { name:'Ananya Rao', dept:'Operations', role:'Senior Manufacturing Engineer', image:'assets/images/employee/opt-person.png', quote:'"Every device that leaves the line is someone’s life may depend on. That responsibility is what makes this work matter.”', body:'I joined Econiya as a graduate trainee and today I lead the SMT line for Ex/IS-certified detectors. What kept me here is how seriously the company takes ownership.', moment:'Led the zero-defect programme that brought DPPM below 12.' },
+    { name:'Rohit Verma', dept:'Research & Development', role:'R&D Firmware Engineer', image:'assets/images/employee/doc.png', quote:'“You get to touch problems very few people in the world are working on.”', body:'Our firmware teams work across intrinsic safety, hazardous-area communications and deterministic edge stacks.', moment:'Shipped a new fail-safe radio stack across three product families.' },
+    { name:'Priya Nair', dept:'Product', role:'Product Manager, IoT Platform', image:'assets/images/employee/pm.png', quote:'“Our customers are running assets that cannot stop. That focus keeps our roadmap honest.”', body:'Product decisions are grounded in field evidence, operator feedback and direct time with industrial teams.', moment:'Turned field feedback into the next-generation monitoring workflow.' },
+    { name:'Karan Mehta', dept:'Customer Success', role:'Field Service Lead', image:'assets/images/employee/field.png', quote:'“I’ve commissioned sites in 11 countries. The tools, the training, the trust — Econiya prepares you to walk into any control room in the world.”', body:'Field service is where engineering meets real operations and every detail becomes visible.', moment:'Completed a refinery commissioning ahead of shutdown schedule.' },
+    { name:'Meera Iyer', dept:'Quality', role:'Quality Assurance Specialist', image:'assets/images/employee/qa.png', quote:'“Quality here isn’t a checklist — it is a culture.”', body:'From the CEO down, everyone respects the quality sign-off and the evidence behind it.', moment:'Built a traceability system covering the complete production line.' }
   ];
   const els={name:document.getElementById('spotlightName'),dept:document.getElementById('spotlightDept'),role:document.getElementById('spotlightRole'),image:document.getElementById('spotlightImage'),quote:document.getElementById('spotlightQuote'),body:document.getElementById('spotlightBody'),moment:document.getElementById('spotlightMoment')};
   let index=0;
@@ -1540,11 +1540,46 @@ function initCareerJobs() {
 }
 
 function initVideoPlaceholders() {
-  document.querySelectorAll('[data-video-placeholder]').forEach((button)=>button.addEventListener('click',()=>{
-    button.setAttribute('aria-label','Video placeholder ready for final media');
-    button.innerHTML='<i class="bi bi-hourglass-split"></i>';
-    setTimeout(()=>button.innerHTML='<i class="bi bi-play-fill"></i>',900);
-  }));
+  if (document.querySelectorAll('[data-video-placeholder]').length === 0) return;
+
+  let $modal = $('#globalVideoModal');
+  if ($modal.length === 0) {
+    const modalHtml = `
+      <div class="modal fade" id="globalVideoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark border-0">
+            <div class="modal-header border-0 pb-0" style="position: absolute; right: 0; z-index: 10;">
+              <button type="button" class="btn-close btn-close-white m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="ratio ratio-16x9">
+                <iframe id="globalVideoIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    $('body').append(modalHtml);
+    $modal = $('#globalVideoModal');
+    
+    $modal.on('hide.bs.modal', function () {
+      $('#globalVideoIframe').attr('src', '');
+    });
+  }
+
+  document.querySelectorAll('[data-video-placeholder]').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Read URL from data attribute, fallback to dummy if not set
+      let videoUrl = button.getAttribute('data-video-url');
+      if (!videoUrl || videoUrl.includes('YOUR_YOUTUBE_ID')) {
+         videoUrl = 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1&mute=1'; 
+      }
+      $('#globalVideoIframe').attr('src', videoUrl);
+      $modal.modal('show');
+    });
+  });
 }
 
 function initCareerJobInteractions() {
@@ -1745,7 +1780,7 @@ function initCtaEffect() {
 
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
-    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initFacilityTabs(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
+    initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider(); initVideoDiariesSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initFacilityTabs(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
 initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
@@ -1927,3 +1962,24 @@ function initFacilityTabs() {
   });
 }
 
+
+
+function initVideoDiariesSlider() {
+  const videoEl = document.querySelector(".video-swiper");
+  if (videoEl) {
+    new Swiper(videoEl, {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      speed: 600,
+      navigation: {
+        nextEl: ".video-next",
+        prevEl: ".video-prev",
+      },
+      breakpoints: {
+        320: { slidesPerView: 1, spaceBetween: 20 },
+        576: { slidesPerView: 2, spaceBetween: 24 },
+        992: { slidesPerView: 3, spaceBetween: 30 }
+      }
+    });
+  }
+}
