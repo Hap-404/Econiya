@@ -1539,6 +1539,23 @@ function initCareerJobs() {
   search?.addEventListener('input',apply);
 }
 
+function initFaq() {
+  $('.faq-heading').on('click', function() {
+    var $faqItem = $(this).parent('.faq-item');
+    var $content = $(this).siblings('.faq-content');
+    
+    $faqItem.toggleClass('active');
+    $content.slideToggle(300);
+    
+    $faqItem.siblings('.faq-item').removeClass('active').find('.faq-content').slideUp(300);
+  });
+
+  // Open the first FAQ item by default
+  $('.faq-block').each(function() {
+    $(this).find('.faq-item').first().addClass('active').find('.faq-content').show();
+  });
+}
+
 function initVideoPlaceholders() {
   if (document.querySelectorAll('[data-video-placeholder]').length === 0) return;
 
@@ -1781,7 +1798,7 @@ function initCtaEffect() {
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
     initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider(); initVideoDiariesSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initFacilityTabs(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
-initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders();initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
+initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders(); initFaq(); initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
 
 
 
