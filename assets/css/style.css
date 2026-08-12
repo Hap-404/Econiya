@@ -6247,6 +6247,9 @@ letter-spacing: normal;
 .feedback-section {
   padding: 40px 0;
 }
+.feedback-section .section-heading {
+  max-width: none;
+}
 .feedback-wrapper .row {
   row-gap: 24px;
 }
