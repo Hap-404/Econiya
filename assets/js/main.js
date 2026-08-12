@@ -1798,12 +1798,7 @@ function initCtaEffect() {
   $(function () {
     initStickyHeader(); initActiveNavigation(); initHeroScroll(); initCounters();
     initSwipers(); initCtaEffect(); initScrollToTop(); initNewsletter(); initSiteSearch(); initCertificatePreview(); initCertificateSlider(); initVideoDiariesSlider();  initEconWhoAnimation();   initExpertiseParallaxCards(); initGlobalButtonAnimations();  initHeroParticleBackgrounds(); initFacilityTabs(); initAboutFeatureTiltCards(); initHomeScrollRevealTargets();initHomeScrollReveals();
-initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders(); initFaq(); initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect();
-
-
-
-
-
+initPageScrollReveals(); initEmployeeSpotlight(); initCareerJobs(); initVideoPlaceholders(); initFaq(); initCareerJobInteractions(); initCareerHiringProcess(); initCareerCvUpload(); initCtaEffect(); initStoriesTabs();
   });
 })(jQuery);
 
@@ -2000,3 +1995,129 @@ function initVideoDiariesSlider() {
     });
   }
 }
+
+function initStoriesTabs() {
+  const filterBtns = document.querySelectorAll('.story-filters button');
+  const tabs = document.querySelectorAll('.stories-tab .tab-block:not(.mobile-tab-selection) .customer-info');
+  const contents = document.querySelectorAll('.stories-tab .content-items');
+
+  const mobileFilterHeader = document.querySelector('.mobile-story-filters');
+  const filtersContainer = document.querySelector('.story-filters');
+  
+  const mobileTabHeader = document.querySelector('.mobile-tab-selection');
+  const tabBlock = document.querySelector('.stories-tab .tab-block:not(.mobile-tab-selection)');
+
+  if (!tabs.length || !contents.length) return;
+
+  // --- Mobile Dropdown Toggle Logic ---
+  
+  if (mobileFilterHeader && filtersContainer) {
+    mobileFilterHeader.addEventListener('click', (e) => {
+      e.stopPropagation();
+      $(filtersContainer).slideToggle(500);
+      if (tabBlock) $(tabBlock).slideUp(500);
+    });
+  }
+
+  if (mobileTabHeader && tabBlock) {
+    mobileTabHeader.addEventListener('click', (e) => {
+      e.stopPropagation();
+      $(tabBlock).slideToggle(500);
+      if (filtersContainer) $(filtersContainer).slideUp(500);
+    });
+  }
+
+  // Close menus when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileFilterHeader && !mobileFilterHeader.contains(e.target) && !filtersContainer.contains(e.target)) {
+      $(filtersContainer).slideUp(300);
+    }
+    if (mobileTabHeader && !mobileTabHeader.contains(e.target) && !tabBlock.contains(e.target)) {
+      $(tabBlock).slideUp(300);
+    }
+  });
+
+  // --- Core Logic ---
+
+  function switchTab(index) {
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+
+    if (tabs[index]) {
+      tabs[index].classList.add('active');
+      
+      // Update mobile tab header
+      if (mobileTabHeader) {
+        const clonedTab = tabs[index].cloneNode(true);
+        const chevron = document.createElement('i');
+        chevron.className = 'bi bi-chevron-down';
+        chevron.style.marginLeft = 'auto';
+        
+        clonedTab.appendChild(chevron);
+        mobileTabHeader.innerHTML = clonedTab.outerHTML;
+      }
+    }
+    if (contents[index]) {
+      contents[index].classList.add('active');
+    }
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      switchTab(index);
+      if (tabBlock) $(tabBlock).slideUp(300);
+    });
+  });
+
+  function applyFilter(filterCat) {
+    let firstVisibleIndex = -1;
+    let activeTabVisible = false;
+
+    tabs.forEach((tab, index) => {
+      const cat = tab.getAttribute('data-story-category');
+      if (filterCat === 'all' || cat === filterCat) {
+        tab.style.display = ''; 
+        if (firstVisibleIndex === -1) firstVisibleIndex = index;
+        if (tab.classList.contains('active')) activeTabVisible = true;
+      } else {
+        tab.style.display = 'none';
+      }
+    });
+
+    if (!activeTabVisible && firstVisibleIndex !== -1) {
+      switchTab(firstVisibleIndex);
+    } else {
+      // Sync the mobile header to the current active tab
+      tabs.forEach((tab, index) => {
+        if (tab.classList.contains('active')) {
+          switchTab(index);
+        }
+      });
+    }
+  }
+
+  // Initial setup for mobile tab header
+  tabs.forEach((tab, index) => {
+    if (tab.classList.contains('active')) {
+      switchTab(index);
+    }
+  });
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const filterCat = btn.getAttribute('data-story-filter') || btn.getAttribute('data-job-filter');
+      
+      // Update mobile filter header
+      if (mobileFilterHeader) {
+        mobileFilterHeader.innerHTML = `${btn.textContent} <i class="bi bi-chevron-down"></i>`;
+        $(filtersContainer).slideUp(300);
+      }
+
+      applyFilter(filterCat);
+    });
+  });
+}
+
