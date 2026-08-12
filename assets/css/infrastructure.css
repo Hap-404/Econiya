@@ -25,19 +25,7 @@
   background: #fff;
 }
 
-.infrastructure-page .infra-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 10% 12%, rgba(231, 34, 47, .07), transparent 26%),
-    radial-gradient(circle at 88% 22%, rgba(231, 34, 47, .05), transparent 30%),
-    #fff;
-}
-
-.infrastructure-page .infra-particle-canvas {
+.infrastructure-page .hero-particle-canvas {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -552,7 +540,7 @@
   }
 
   .infrastructure-page .stat-box {
-    min-height: 138px;
+    min-height: auto;
   }
 
   .infrastructure-page .capability-grid,
@@ -592,16 +580,19 @@
     display: inline;
   }
 
-  .infrastructure-page .infra-reveal[data-infra-reveal="left"],
-  .infrastructure-page .infra-reveal[data-infra-reveal="right"] {
-    transform: translate3d(0, 30px, 0);
-  }
-
   .infrastructure-page .section-heading h2, 
   .infrastructure-page .facility-heading h2, 
   .infrastructure-page .production-heading, 
   .infrastructure-page .responsible-content h2 {
     font-size: 44px;
+  }
+
+  .capabilities .section-heading {
+    margin-bottom: 50px !important;
+  }
+  .infrastructure-page .capability-card {
+    min-width: 0;
+    padding: 60px 20px 20px;
   }
 }
 
@@ -665,7 +656,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .infrastructure-page .infra-particle-canvas {
+  .infrastructure-page .hero-particle-canvas {
     display: block;
     opacity: .8;
   }
@@ -688,3 +679,4 @@
   border-color: #E2211C; /* using econiya red */
   z-index: 2;
 }
+
