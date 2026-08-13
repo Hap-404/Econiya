@@ -236,12 +236,111 @@ header .navbar-nav .nav-link.active:before {
    display: block;
 }
  header .dropdown-menu {
-   border: none;
-   box-shadow: rgba(0, 0, 51, 0.1) 12px 0px 30px;
-   border-radius: 5px;
-   left: -30px;
-   min-width: 110px;
+  border: none;
+  box-shadow: rgba(0, 0, 51, 0.1) 0 10px 40px;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 665px;
+  top: 100%;
+  border-radius: 20px;
+  padding: 25px;
 }
+.mega-menu-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  transition: ease 0.3s;
+}
+.mega-menu-item .text-box h6 {
+  color: #222020;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.mega-menu-item:hover .text-box h6 {
+  color: var(--primary);
+}
+.mega-menu-item .text-box p {
+  color: #484444;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.mega-menu-item .icon-box {
+  color: var(--primary);
+}
+.mega-menu-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-radius: 20px;
+  background-color: #FFE5E6;
+}
+.mega-menu-cta h4 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #222020;
+  margin-bottom: 0;
+}
+.mega-menu-cta h4 span {
+  color: var(--primary);
+}
+.mega-menu-cta p {
+  font-size: 14px;
+}
+.mega-menu-cta .btn {
+  font-size: 14px;
+  gap: 5px;
+  height: 42px;
+  padding: 5px 15px;
+}
+.dropdown-toggle::after {
+  display: none;
+  border-top: .4em solid;
+  border-right: .4em solid transparent;
+  border-left: .4em solid transparent;
+  width: 12px !important;
+  transform: translateY(13px) !important;
+  left: calc(50% - 10px) !important;
+}
+.products-mega-menu .mega-menu-item {
+  margin-bottom: 5px;
+  align-items: center;
+  cursor: auto;
+}
+.products-mega-menu .mega-menu-item .text-box h6 {
+  margin-bottom: 0;
+}
+.mega-menu-sublinks {
+  padding-left: 13px;
+  padding-bottom: 15px;
+}
+.mega-menu-sublinks li {
+  position: relative;
+  line-height: 25px;
+  padding-left: 15px;
+}
+.mega-menu-sublinks li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+.mega-menu-sublinks li a {
+  color: var(--primary);
+  font-size: 16px;
+}
+.mega-menu-sublinks li a:hover {
+  color: #222020;
+}
+
 /* Search icon button */
  .icon-btn {
    width: 50px;
@@ -7011,6 +7110,7 @@ letter-spacing: normal;
   .rxis-reveal {
     opacity: 1;
     filter: none;
+  }
   .founder-quote .quote-text {
     font-size: 24px;
   }
@@ -7253,6 +7353,244 @@ letter-spacing: normal;
   
   .stories-tab .tab-block:not(.mobile-tab-selection) {
     display: none;
+  }
+}
+
+
+/* --- Mega Menu Styles --- */
+.has-mega-menu {
+  position: relative;
+}
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  width: 750px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  border: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  margin-top: 10px;
+}
+@media (min-width: 1200px) {
+  .has-mega-menu:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.mega-menu-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  color: #222;
+}
+.mega-menu-item:hover {
+  background: #f8f9fa;
+  color: #e7222f;
+}
+.mega-menu-item .icon-box {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e7222f;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.mega-menu-item .text-box h6 {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+.mega-menu-item:hover .text-box h6 {
+  color: #e7222f;
+}
+.mega-menu-item .text-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+/* CTA Block */
+.mega-menu-cta {
+  background-color: #ffe6e6;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.mega-menu-cta::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -40px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, transparent 40%, rgba(231,34,47,0.1) 41%, rgba(231,34,47,0.1) 45%, transparent 46%, transparent 50%, rgba(231,34,47,0.1) 51%, rgba(231,34,47,0.1) 55%, transparent 56%, transparent 60%, rgba(231,34,47,0.1) 61%, rgba(231,34,47,0.1) 65%, transparent 66%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.mega-menu-cta::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(0deg, transparent 45%, rgba(231,34,47,0.1) 45%, rgba(231,34,47,0.1) 55%, transparent 55%), linear-gradient(90deg, transparent 45%, rgba(231,34,47,0.1) 45%, rgba(231,34,47,0.1) 55%, transparent 55%);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+.mega-menu-cta .cta-text {
+  max-width: 65%;
+  position: relative;
+  z-index: 2;
+}
+.mega-menu-cta .cta-text h4 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+.mega-menu-cta .cta-text h4 span {
+  color: #e7222f;
+}
+.mega-menu-cta .cta-text p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 0;
+}
+.mega-menu-cta .cta-btn {
+  background: #e7222f;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+.mega-menu-cta .cta-btn:hover {
+  background: #c91823;
+  color: #fff;
+}
+.mega-menu-cta .cta-btn i {
+  font-size: 18px;
+}
+
+/* Mobile Adjustments for Mega Menu */
+@media (max-width: 1199.98px) {
+  .has-mega-menu {
+    position: static;
+  }
+  .mega-menu {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 15px 0 0 0;
+    margin-top: 0;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: transparent;
+    transform: none !important;
+    border-radius: 0 !important;
+    min-width: 100% !important;
+    padding: 15px !important;
+  }
+  .mega-menu.show {
+    display: block;
+  }
+  .mega-menu-item {
+    padding: 10px 0;
+    margin-bottom: 0 !important;
+  }
+  .mega-menu-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 15px;
+  }
+  .mega-menu-cta .cta-text {
+    max-width: 100%;
+  }
+  .mega-menu-category {
+    margin-bottom: 5px !important;
+  }
+}
+
+
+/* --- Mega Menu Category & Sublinks Styles --- */
+.mega-menu-category {
+  margin-bottom: 20px;
+}
+.mega-menu-category:last-child {
+  margin-bottom: 0;
+}
+.mega-menu-category .mega-menu-item {
+  padding-bottom: 5px;
+}
+.mega-menu-category .mega-menu-item:hover {
+  background: transparent;
+}
+.mega-menu-category .mega-menu-item .text-box h6 {
+  margin-bottom: 0;
+}
+.mega-menu-sublinks {
+  list-style: none;
+  padding: 0 0 0 47px; /* Align text under icon */
+  margin: 0;
+}
+.mega-menu-sublinks li {
+  margin-bottom: 8px;
+}
+.mega-menu-sublinks li:last-child {
+  margin-bottom: 0;
+}
+.mega-menu-sublinks li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+.mega-menu-sublinks li a:hover {
+  color: #e7222f;
+}
+
+@media (max-width: 1199.98px) {
+  .mega-menu-sublinks {
+    padding-left: 20px;
   }
 }
 
