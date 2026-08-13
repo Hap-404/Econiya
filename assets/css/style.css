@@ -3945,6 +3945,9 @@ line-height:28px;
 .tablet-specifications .rxis-3d-container {
   transform: translateX(-33px) rotate(-14deg);
 }
+.vertical-center .rxis-specifications-media {
+  align-items: center;
+}
 
 
 /* =========================================================
