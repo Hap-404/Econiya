@@ -7377,7 +7377,7 @@ letter-spacing: normal;
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 1000;
-  margin-top: 10px;
+  margin-top: 0;
 }
 @media (min-width: 1200px) {
   .has-mega-menu:hover .mega-menu {

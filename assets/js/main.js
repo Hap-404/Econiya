@@ -2121,3 +2121,14 @@ function initStoriesTabs() {
   });
 }
 
+
+$(document).ready(function() {
+    // Allow clicking on Mega Menu top-level links to navigate on Desktop
+    $(".has-mega-menu > a.dropdown-toggle").on("click", function(e) {
+        if (window.innerWidth >= 1200) {
+            e.preventDefault(); // Prevent Bootstrap dropdown behavior
+            window.location.href = $(this).attr("href");
+        }
+    });
+});
+
