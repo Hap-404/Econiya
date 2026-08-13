@@ -2660,6 +2660,10 @@
   visibility: visible;
 }
 
+.wc-images .rxis-specifications-image {
+  max-height: 700px;
+}
+
 .rxis-specifications-media:hover .rxis-specifications-image {
   transform: translateY(-7px) scale(1.012);
 
