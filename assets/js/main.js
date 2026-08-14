@@ -2143,7 +2143,7 @@ $(document).ready(function() {
   if ($productFilterBtns.length > 0 && $productGridItems.length > 0) {
     // Handle Mobile Filter Header Click
     $mobileProductFilterHeader.on("click", function() {
-      $productFiltersContainer.slideToggle(300);
+      $(this).next(".product-filters").slideToggle(300);
     });
 
     // Handle Filter Button Click
@@ -2153,12 +2153,14 @@ $(document).ready(function() {
 
       // Update active state on buttons
       $productFilterBtns.removeClass("active");
-      $btn.addClass("active");
+      
+      // Keep active states in sync across both menus if there are multiple
+      $(`.product-filters button[data-product-filter="${filterCat}"]`).addClass("active");
 
       // Update mobile header text and hide dropdown
       if ($mobileProductFilterHeader.length && window.innerWidth < 1200) {
         $mobileProductFilterHeader.html($btn.text() + ` <i class="bi bi-chevron-down"></i>`);
-        $productFiltersContainer.slideUp(300);
+        $btn.closest('.product-filters').slideUp(300);
       }
 
       // Filter Grid Items

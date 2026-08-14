@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Econiya</title>
+    <meta
+      name="description"
+      content="Latest news, field stories, and updates from Econiya."
+    />
+    <link href="assets/images/favicon.ico" rel="icon" type="image/png" />
+    <link href="assets/css/fonts.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="assets/css/fixes.css" rel="stylesheet" />
+    <link href="assets/css/people-pages.css" rel="stylesheet" />
+  </head>
+  <body class="employee-speaks-page">
+    <a
+      class="visually-hidden-focusable position-fixed top-0 start-0 p-3 bg-white"
+      href="#main-content"
+      style="z-index: 2000"
+      >Skip to main content</a
+    >
+
+    <main id="main-content">
+      <div class="people-hero particle-hero" id="employee-particle-hero">
+        <canvas class="hero-particle-canvas" aria-hidden="true"></canvas>
+        <header>
+          <nav class="navbar navbar-expand-xl">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  alt="Econiya"
+                  height="60"
+                  src="assets/images/logo.png"
+                  width="245"
+                />
+              </a>
+              <button
+                aria-controls="navMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navMenu"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav main-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown has-mega-menu">
+                      <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">About Us</a>
+                      <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-inner">
+                          <div class="row g-4">
+                            <!-- Left Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <a href="about.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-info-circle"></i></div>
+                                <div class="text-box">
+                                  <h6>Who We Are</h6>
+                                  <p>Our Story, Expertise & Commitment</p>
+                                </div>
+                              </a>
+                              <a href="our-team.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-people"></i></div>
+                                <div class="text-box">
+                                  <h6>Our Team</h6>
+                                  <p>Meet the people behind Econiya's success.</p>
+                                </div>
+                              </a>
+                              <a href="employee-speaks.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-play-circle"></i></div>
+                                <div class="text-box">
+                                  <h6>Products</h6>
+                                  <p>Team voices, experiences, and stories.</p>
+                                </div>
+                              </a>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <a href="client-testimonials.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-chat-dots"></i></div>
+                                <div class="text-box">
+                                  <h6>Client Testimonials</h6>
+                                  <p>Proven results, lasting partnerships.</p>
+                                </div>
+                              </a>
+                              <a href="careers.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-briefcase"></i></div>
+                                <div class="text-box">
+                                  <h6>Careers</h6>
+                                  <p>Build your future with us.</p>
+                                </div>
+                              </a>
+                              <a href="infrastructure.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-building"></i></div>
+                                <div class="text-box">
+                                  <h6>Infrastructure</h6>
+                                  <p>Advanced facilities, smarter technology.</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          
+                          <!-- CTA Block -->
+                          <div class="mega-menu-cta">
+                            <div class="cta-text">
+                              <h4>Explore Our <span>Company Profile</span></h4>
+                              <p>Discover our expertise, capabilities, and engineering excellence.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary cta-btn">Download Profile <i class="bi bi-file-earmark-pdf"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <li class="nav-item dropdown has-mega-menu products-mega-menu">
+                      <a class="nav-link dropdown-toggle active" href="products.html" data-bs-toggle="dropdown">Products</a>
+                      <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-inner">
+                          <div class="row g-4">
+                            <!-- Left Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <div class="mega-menu-category">
+                                <a href="products.html#mobile" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-phone"></i></div>
+                                  <div class="text-box">
+                                    <h6>Mobile</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="rfex-11.html">RFEx1.1</a></li>
+                                  <li><a href="rxis101.html">RxIS101</a></li>
+                                  <li><a href="rxis02.html">RxIS02</a></li>
+                                  <li><a href="rxis203.html">RxIS203</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#pos-machine" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-calculator"></i></div>
+                                  <div class="text-box">
+                                    <h6>POS Machine</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="rxip11.html">RxIP1.1</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#gas-detector" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-speedometer2"></i></div>
+                                  <div class="text-box">
+                                    <h6>Gas Detector</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="gas-mini.html">Gas-Mini</a></li>
+                                  <li><a href="gas-max.html">Gas-Max</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <div class="mega-menu-category">
+                                <a href="products.html#tablet" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-tablet"></i></div>
+                                  <div class="text-box">
+                                    <h6>Tablet</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="rxaltitude.html">EcoAltitude</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#wireless-communication" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-broadcast"></i></div>
+                                  <div class="text-box">
+                                    <h6>Wireless Communication</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="ec-cd775.html">EC CD775</a></li>
+                                  <li><a href="ec-cd665.html">EC CD665</a></li>
+                                  <li><a href="ec-cd765.html">EC CD765</a></li>
+                                  <li><a href="ec-cd885.html">EC CD885</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#water-logger" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-droplet"></i></div>
+                                  <div class="text-box">
+                                    <h6>Water Logger</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="eco-log-11.html">Eco-Log 1.1</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!-- CTA Block -->
+                          <div class="mega-menu-cta">
+                            <div class="cta-text">
+                              <h4>Explore All <span>Products</span></h4>
+                              <p>Discover our full range of certified industrial solutions.</p>
+                            </div>
+                            <a href="products.html" class="btn btn-primary cta-btn">View All Products <i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="solutions.html">Solutions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="insights.html">Insights</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="navbar-ml header-actions ms-3">
+                <!-- Expandable inline search -->
+                <div class="header-inline-search" id="headerInlineSearch">
+                  <!-- Closed search button -->
+                  <button
+                    class="header-search-toggle"
+                    id="headerSearchToggle"
+                    type="button"
+                    aria-label="Open search"
+                    aria-controls="headerSearchForm"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+
+                  <!-- Expanded search form -->
+                  <form
+                    class="header-search-form"
+                    id="headerSearchForm"
+                    role="search"
+                    novalidate
+                  >
+                    <label class="visually-hidden" for="headerSearchInput">
+                      Search Econiya
+                    </label>
+
+                    <i
+                      class="bi bi-search header-search-leading-icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <input
+                      class="header-search-input"
+                      id="headerSearchInput"
+                      name="q"
+                      type="search"
+                      autocomplete="off"
+                      placeholder="Search products, solutions or contact"
+                      required
+                    />
+
+                    <button
+                      class="header-search-submit"
+                      type="submit"
+                      aria-label="Submit search"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+
+                    <button
+                      class="header-search-close"
+                      id="headerSearchClose"
+                      type="button"
+                      aria-label="Close search"
+                    >
+                      <i class="bi bi-x-lg"></i>
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Quote button -->
+                <ul class="navbar-nav header-quote-nav">
+                  <li class="nav-item">
+                    <a class="btn btn-primary" href="contact-us.html">
+                      Get a Quote
+
+                      <span class="chat-icon-wrap">
+                        <i class="bi bi-chat-dots"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+        
+        <section class="people-hero-body employee-hero-body">
+          <div class="container">
+            <div class="row align-items-center g-5">
+              <div class="col-lg-5 scroll-reveal" data-reveal="left">
+                <span class="super-head">Econiya Blog</span>
+                <h1>Insights, Ideas & <span class="gradient-text">Innovation</span></h1>
+                <p>Deep-dives into IoT, digital transformation, and industrial automation from the engineers and leaders at Econiya Technologies.</p>
+                <div class="section-btn">
+                  <a class="btn btn-primary" href="about.html">
+                    Get Started <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <a href="tel:912200000000" class="btn btn-outline">
+                    Send an Enquiry
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-7 scroll-reveal" data-reveal="right">
+                <div
+                  class="people-hero-media animation-slot"
+                  data-animation-slot="hero-media"
+                >
+                  <img
+                    src="assets/images/contact-hero-banner.png"
+                    alt="Econiya employees collaborating around industrial equipment"
+                    data-image-slot="employee-hero"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="blog-listing">
+        <div class="container">
+          <div class="section-head text-center scroll-reveal" data-reveal="up">
+            <span class="super-head">LATEST INSIGHTS</span>
+            <h2>Explore our <span class="gradient-text">Blog</span></h2>
+            <p>Articles, updates, and deep dives into industrial tech.</p>
+          </div>
+
+          <div class="filter-block">
+            <div class="mobile-story-filters product-filter-header">All Posts <i class="bi bi-chevron-down"></i></div>
+            <div class="story-filters product-filters" role="group" aria-label="Filter blog categories">
+                <button class="active" data-product-filter="all" type="button">All Posts</button>
+                <button data-product-filter="Mobile" type="button">Mobile</button>
+                <button data-product-filter="Industrial Mobility Solutions" type="button">Industrial Mobility Solutions</button>
+                <button data-product-filter="System Integrators & Automation Partners" type="button">System Integrators & Automation Partners</button>
+            </div>
+          </div>
+
+          <div class="row g-lg-4 g-xl-5">
+            <div class="col-lg-8">
+              <div class="row g-4">
+            
+              <div class="col-lg-6 col-md-6 scroll-reveal product-grid-item" data-category="System Integrators & Automation Partners" data-reveal="up">
+                <a href="blog-detail.html" class="blog-item text-decoration-none d-block h-100">
+                  <article class="employee-story-card h-100 d-flex flex-column">
+                    <div class="story-photo">
+                      <img src="assets/images/1775218585501-01-How-to-Become-a-Safety-Manager.jpg" alt="Mobile Devices" />
+                      <span>Mobile</span>
+                    </div>
+                    <div class="story-copy flex-grow-1 d-flex flex-column">
+                      <div class="blog-content mb-4">
+                        <h3 class="mb-lg-2 mb-xl-3">Engineering Safety & Reliability</h3>
+                        <p>We specialize in Ex/IS certified Wireless Telephony, Radio Communication, and Industrial Automation for the world's most demanding environments.</p>
+                      </div>
+                      
+                      <div class="blog-author-meta d-flex align-items-center mt-auto pt-3">
+                        <img src="assets/images/founder-headshot.png" alt="Admin" class="rounded-circle me-3">
+                        <div class="author-info">
+                          <span class="author-name d-block fw-bold fs-6">Admin</span>
+                          <span class="post-date d-block text-muted small">Apr 4, 2026</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>
+
+              <div class="col-lg-6 col-md-6 scroll-reveal product-grid-item" data-category="Mobile" data-reveal="up">
+                <a href="blog-detail.html" class="blog-item text-decoration-none d-block h-100">
+                  <article class="employee-story-card h-100 d-flex flex-column">
+                    <div class="story-photo">
+                      <img src="assets/images/25917d88517975acb674b7ee31378e05.jpg" alt="Gas Detection" />
+                      <span>Industrial Mobility Solutions</span>
+                    </div>
+                    <div class="story-copy flex-grow-1 d-flex flex-column">
+                      <div class="blog-content mb-4">
+                        <h3 class="mb-lg-2 mb-xl-3">Intrinsically Safe Mobile & Tablet Devices: Built for Hazardous Work Environments</h3>
+                        <p>In high-risk industrial environments, standard consumer smartphones and tablets are not safe to use. Locations such as oil refineries, chemical plants, pharmaceutical units, and gas processing facilities often contain flammable gases, vapors, or combustible dust. A single spark from an uncertified device can lead to serious consequences.</p>
+                      </div>
+                      
+                      <div class="blog-author-meta d-flex align-items-center mt-auto pt-3">
+                        <img src="assets/images/founder-headshot.png" alt="Admin" class="rounded-circle me-3">
+                        <div class="author-info">
+                          <span class="author-name d-block fw-bold fs-6">Admin</span>
+                          <span class="post-date d-block text-muted small">March 28, 2026</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>
+
+              <div class="col-lg-6 col-md-6 scroll-reveal product-grid-item" data-category="Mobile" data-reveal="up">
+                <a href="blog-detail.html" class="blog-item text-decoration-none d-block h-100">
+                  <article class="employee-story-card h-100 d-flex flex-column">
+                    <div class="story-photo">
+                      <img src="assets/images/getac-f110-intrinsically-safe-tablet.png" alt="POS Machine" />
+                      <span>Industrial Mobility Solutions</span>
+                    </div>
+                    <div class="story-copy flex-grow-1 d-flex flex-column">
+                      <div class="blog-content mb-4">
+                        <h3 class="mb-lg-2 mb-xl-3">Industrial Mobility Redefined: How Intrinsically Safe Mobile & Tablet Devices Transform Field Operations</h3>
+                        <p>Industrial operations are evolving. Field teams today are expected to capture data instantly, communicate in real time, and access enterprise systems on the go. However, in hazardous environments such as oil refineries, gas plants, chemical factories, and mining sites, conventional smartphones and tablets are unsafe. Econiya addresses this challenge with a range of intrinsically safe mobile and tablet devices designed specifically for explosive and high-risk environments.</p>
+                      </div>
+                      
+                      <div class="blog-author-meta d-flex align-items-center mt-auto pt-3">
+                        <img src="assets/images/founder-headshot.png" alt="Admin" class="rounded-circle me-3">
+                        <div class="author-info">
+                          <span class="author-name d-block fw-bold fs-6">Admin</span>
+                          <span class="post-date d-block text-muted small">March 23, 2026</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>
+
+              <div class="col-lg-6 col-md-6 scroll-reveal product-grid-item" data-category="Industrial Mobility Solutions" data-reveal="up">
+                <a href="blog-detail.html" class="blog-item text-decoration-none d-block h-100">
+                  <article class="employee-story-card h-100 d-flex flex-column">
+                    <div class="story-photo">
+                      <img src="assets/images/New-F110G7EX-1.png" alt="Tablet" />
+                      <span>Industrial Mobility Solutions</span>
+                    </div>
+                    <div class="story-copy flex-grow-1 d-flex flex-column">
+                      <div class="blog-content mb-4">
+                        <h3 class="mb-3">Intrinsically Safe Mobile & Tablet Solutions by Econiya</h3>
+                        <p>As industries move toward digital operations, one challenge continues to stand out: how to enable mobility in hazardous environments without compromising safety. Econiya addresses this need by offering intrinsically safe mobile and tablet solutions designed for high-risk industrial settings. These devices are purpose-built for environments where flammable gases, vapors, or combustible dust may be present — such as oil refineries, chemical plants, mining sites, and pharmaceutical facilities.</p>
+                      </div>
+                      
+                      <div class="blog-author-meta d-flex align-items-center mt-auto pt-3">
+                        <img src="assets/images/founder-headshot.png" alt="Admin" class="rounded-circle me-3">
+                        <div class="author-info">
+                          <span class="author-name d-block fw-bold fs-6">Admin</span>
+                          <span class="post-date d-block text-muted small">July 02, 2023</span>
+                        </div>
+                      </div>
+                    </div>
+                  </article>
+                </a>
+              </div>        
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="blog-sidebar sticky-top">
+              <div class="sidebar-widget mb-4">
+                <h4 class="widget-title mb-3 pb-3 border-bottom fw-bold fs-5">Categories</h4>
+                <div class="product-filters d-flex flex-column gap-2" role="group" aria-label="Filter blog categories">
+                    <button class="active text-start border-0 bg-transparent px-0 py-2 w-100 d-flex justify-content-between align-items-center fw-medium" data-product-filter="all" type="button">All Posts <i class="bi bi-chevron-right small"></i></button>
+                    <button class="text-start border-0 bg-transparent px-0 py-2 w-100 d-flex justify-content-between align-items-center fw-medium" data-product-filter="Mobile" type="button">Mobile <i class="bi bi-chevron-right small"></i></button>
+                    <button class="text-start border-0 bg-transparent px-0 py-2 w-100 d-flex justify-content-between align-items-center fw-medium" data-product-filter="Industrial Mobility Solutions" type="button">Industrial Mobility Solutions <i class="bi bi-chevron-right small"></i></button>
+                    <button class="text-start border-0 bg-transparent px-0 py-2 w-100 d-flex justify-content-between align-items-center fw-medium" data-product-filter="System Integrators & Automation Partners" type="button">System Integrators & Automation Partners <i class="bi bi-chevron-right small"></i></button>
+                </div>
+              </div>
+              
+              <div class="sidebar-widget blog-tags mb-4">
+                <h4 class="widget-title mb-3 pb-3 border-bottom fw-bold fs-5">Tags</h4>
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="#" class="tag-item">Intrinsically Safe</a>
+                  <a href="#" class="tag-item">ATEX</a>
+                  <a href="#" class="tag-item">Communication</a>
+                  <a href="#" class="tag-item">Safety</a>
+                  <a href="#" class="tag-item">Data Loggers</a>
+                </div>
+              </div>
+
+              <div class="sidebar-widget blog-cta rounded-4 p-4 text-center border">
+                <h4 class="fw-bold mb-3">Need Expert Advice?</h4>
+                <p class="small mb-4">Connect with our team to find the right industrial solutions for your operations.</p>
+                <a href="contact-us.html" class="btn btn-white universal-animated-btn">Contact Us <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta glow bottom-right">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12">
+              <div class="cta-content">
+                <div class="cta-liquid"></div>
+                <div class="section-head scroll-reveal">
+                  <span class="super-head">START YOUR PROJECT</span>
+                  <h2>Ready to Build Better Industrial Solutions?</h2>
+                </div>
+                <p>
+                  Partner with Econiya for end-to-end manufacturing, sourcing,
+                  and supply chain excellence. Our global network is ready to
+                  deliver.
+                </p>
+                <div class="section-btn">
+                  <a class="btn btn-white" href="contact-us.html">
+                    Request an Inquiry <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <a class="btn btn-outline" href="contact-us.html">
+                    Talk to Our Team <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      aria-hidden="true"
+      aria-labelledby="searchModalLabel"
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="searchModalLabel">
+              Search Econiya
+            </h2>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              type="button"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex gap-2" id="siteSearchForm">
+              <label class="visually-hidden" for="siteSearchInput">Search</label
+              ><input
+                class="form-control"
+                id="siteSearchInput"
+                name="q"
+                placeholder="Try products, solutions or contact"
+                required=""
+                type="search"
+              /><button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Newsletter -->
+            <div class="newsletter">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                  <span class="super-head">NEWSLETTER</span>
+                  <h3>Field-tested insights, sent monthly.</h3>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                  <form
+                    class="newsletter-form"
+                    id="newsletterForm"
+                    novalidate=""
+                  >
+                    <input
+                      aria-label="Email address"
+                      autocomplete="email"
+                      class="form-control"
+                      id="newsletterEmail"
+                      name="email"
+                      placeholder="Enter your email"
+                      required=""
+                      type="email"
+                    />
+                    <button class="btn btn-primary" type="submit">
+                      Subscribe <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <p aria-live="polite" class="form-message"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="t-border" />
+        <div class="row footer-top">
+          <div class="col-lg-3">
+            <img
+              alt="Econiya"
+              class="footer-logo"
+              height="60"
+              src="assets/images/logo.png"
+              width="245"
+            />
+            <p>
+              Engineering Ex/IS-certified communication, gas detection and
+              industrial automation for the world's most demanding environments.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>PRODUCTS</h5>
+            <ul>
+              <li>
+                <a href="#">Mobile & Tablets</a>
+              </li>
+              <li>
+                <a href="#">Gas Detectors</a>
+              </li>
+              <li>
+                <a href="#">Radios (DMR/PoC)</a>
+              </li>
+              <li>
+                <a href="#">Water Logger</a>
+              </li>
+              <li>
+                <a href="#">POS Machines</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>INDUSTRIES</h5>
+            <ul>
+              <li>
+                <a href="#">Automotive</a>
+              </li>
+              <li>
+                <a href="#">Oil & Gas</a>
+              </li>
+              <li>
+                <a href="#">Agriculture</a>
+              </li>
+              <li>
+                <a href="#">Construction</a>
+              </li>
+              <li>
+                <a href="#">Food Processing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>COMPANY</h5>
+            <ul>
+              <li>
+                <a href="about.html">About Us</a>
+              </li>
+              <li>
+                <a href="team.html">Our Team</a>
+              </li>
+              <li>
+                <a href="careers.html">Careers</a>
+              </li>
+              <li>
+                <a href="insights.html">Blog</a>
+              </li>
+              <li>
+                <a href="contact-us.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>CONTACT US</h5>
+            <ul class="contact-list">
+              <li>
+                <a class="animation-item" href="mailto:info@econiya.com">
+                  <span class="d-flex flex-shrink-0">
+                    <i class="bi bi-envelope animate_bounce"></i>
+                  </span>
+                  info@econiya.com
+                </a>
+              </li>
+              <li>
+                <a class="animation-item" href="tel:+919876543210">
+                  <span class="d-flex flex-shrink-0">
+                    <i class="bi bi-telephone animate_bounce"></i>
+                  </span>
+                  +91 98765 43210
+                </a>
+              </li>
+              <li class="animation-item">
+                <span class="d-flex flex-shrink-0">
+                  <i class="bi bi-geo-alt animate_bounce"></i>
+                </span>
+                SCO 17-18-19, Second Floor, Sector 17-A, Chandigarh
+              </li>
+            </ul>
+            <div class="social-icons">
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="copyright">
+          <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2026 Econiya. All rights reserved.</p>
+          <ul>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#">Cookie Policy</a>
+            </li>
+          </ul>
+          <!-- Scroll to Top Start -->
+          <button aria-label="Return to top" id="return-to-top" type="button">
+            <i class="bi bi-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/vendor/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

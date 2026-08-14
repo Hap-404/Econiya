@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Econiya</title>
+    <meta
+      name="description"
+      content="Latest news, field stories, and updates from Econiya."
+    />
+    <link href="assets/images/favicon.ico" rel="icon" type="image/png" />
+    <link href="assets/css/fonts.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <link href="assets/css/fixes.css" rel="stylesheet" />
+    <link href="assets/css/people-pages.css" rel="stylesheet" />
+  </head>
+  <body class="employee-speaks-page">
+    <a
+      class="visually-hidden-focusable position-fixed top-0 start-0 p-3 bg-white"
+      href="#main-content"
+      style="z-index: 2000"
+      >Skip to main content</a
+    >
+
+    <main id="main-content">
+      <div class="people-hero particle-hero" id="employee-particle-hero">
+        <canvas class="hero-particle-canvas" aria-hidden="true"></canvas>
+        <header>
+          <nav class="navbar navbar-expand-xl">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  alt="Econiya"
+                  height="60"
+                  src="assets/images/logo.png"
+                  width="245"
+                />
+              </a>
+              <button
+                aria-controls="navMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-bs-target="#navMenu"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                <i class="bi bi-list"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav main-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item dropdown has-mega-menu">
+                      <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">About Us</a>
+                      <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-inner">
+                          <div class="row g-4">
+                            <!-- Left Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <a href="about.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-info-circle"></i></div>
+                                <div class="text-box">
+                                  <h6>Who We Are</h6>
+                                  <p>Our Story, Expertise &amp; Commitment</p>
+                                </div>
+                              </a>
+                              <a href="our-team.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-people"></i></div>
+                                <div class="text-box">
+                                  <h6>Our Team</h6>
+                                  <p>Meet the people behind Econiya's success.</p>
+                                </div>
+                              </a>
+                              <a href="employee-speaks.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-play-circle"></i></div>
+                                <div class="text-box">
+                                  <h6>Products</h6>
+                                  <p>Team voices, experiences, and stories.</p>
+                                </div>
+                              </a>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <a href="client-testimonials.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-chat-dots"></i></div>
+                                <div class="text-box">
+                                  <h6>Client Testimonials</h6>
+                                  <p>Proven results, lasting partnerships.</p>
+                                </div>
+                              </a>
+                              <a href="careers.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-briefcase"></i></div>
+                                <div class="text-box">
+                                  <h6>Careers</h6>
+                                  <p>Build your future with us.</p>
+                                </div>
+                              </a>
+                              <a href="infrastructure.html" class="mega-menu-item">
+                                <div class="icon-box"><i class="bi bi-building"></i></div>
+                                <div class="text-box">
+                                  <h6>Infrastructure</h6>
+                                  <p>Advanced facilities, smarter technology.</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          
+                          <!-- CTA Block -->
+                          <div class="mega-menu-cta">
+                            <div class="cta-text">
+                              <h4>Explore Our <span>Company Profile</span></h4>
+                              <p>Discover our expertise, capabilities, and engineering excellence.</p>
+                            </div>
+                            <a href="#" class="btn btn-primary cta-btn">Download Profile <i class="bi bi-file-earmark-pdf"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <li class="nav-item dropdown has-mega-menu products-mega-menu">
+                      <a class="nav-link dropdown-toggle active" href="products.html" data-bs-toggle="dropdown">Products</a>
+                      <div class="dropdown-menu mega-menu">
+                        <div class="mega-menu-inner">
+                          <div class="row g-4">
+                            <!-- Left Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <div class="mega-menu-category">
+                                <a href="products.html#mobile" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-phone"></i></div>
+                                  <div class="text-box">
+                                    <h6>Mobile</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="rfex-11.html">RFEx1.1</a></li>
+                                  <li><a href="rxis101.html">RxIS101</a></li>
+                                  <li><a href="rxis02.html">RxIS02</a></li>
+                                  <li><a href="rxis203.html">RxIS203</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#pos-machine" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-calculator"></i></div>
+                                  <div class="text-box">
+                                    <h6>POS Machine</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="rxip11.html">RxIP1.1</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#gas-detector" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-speedometer2"></i></div>
+                                  <div class="text-box">
+                                    <h6>Gas Detector</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="gas-mini.html">Gas-Mini</a></li>
+                                  <li><a href="gas-max.html">Gas-Max</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <!-- Right Column -->
+                            <div class="col-lg-6 mega-menu-col">
+                              <div class="mega-menu-category">
+                                <a href="products.html#tablet" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-tablet"></i></div>
+                                  <div class="text-box">
+                                    <h6>Tablet</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="rxaltitude.html">EcoAltitude</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#wireless-communication" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-broadcast"></i></div>
+                                  <div class="text-box">
+                                    <h6>Wireless Communication</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="ec-cd775.html">EC CD775</a></li>
+                                  <li><a href="ec-cd665.html">EC CD665</a></li>
+                                  <li><a href="ec-cd765.html">EC CD765</a></li>
+                                  <li><a href="ec-cd885.html">EC CD885</a></li>
+                                </ul>
+                              </div>
+                              <div class="mega-menu-category">
+                                <a href="products.html#water-logger" class="mega-menu-item">
+                                  <div class="icon-box"><i class="bi bi-droplet"></i></div>
+                                  <div class="text-box">
+                                    <h6>Water Logger</h6>
+                                  </div>
+                                </a>
+                                <ul class="mega-menu-sublinks">
+                                  <li><a href="eco-log-11.html">Eco-Log 1.1</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <!-- CTA Block -->
+                          <div class="mega-menu-cta">
+                            <div class="cta-text">
+                              <h4>Explore All <span>Products</span></h4>
+                              <p>Discover our full range of certified industrial solutions.</p>
+                            </div>
+                            <a href="products.html" class="btn btn-primary cta-btn">View All Products <i class="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="solutions.html">Solutions</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="insights.html">Insights</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="navbar-ml header-actions ms-3">
+                <!-- Expandable inline search -->
+                <div class="header-inline-search" id="headerInlineSearch">
+                  <!-- Closed search button -->
+                  <button
+                    class="header-search-toggle"
+                    id="headerSearchToggle"
+                    type="button"
+                    aria-label="Open search"
+                    aria-controls="headerSearchForm"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-search"></i>
+                  </button>
+
+                  <!-- Expanded search form -->
+                  <form
+                    class="header-search-form"
+                    id="headerSearchForm"
+                    role="search"
+                    novalidate
+                  >
+                    <label class="visually-hidden" for="headerSearchInput">
+                      Search Econiya
+                    </label>
+
+                    <i
+                      class="bi bi-search header-search-leading-icon"
+                      aria-hidden="true"
+                    ></i>
+
+                    <input
+                      class="header-search-input"
+                      id="headerSearchInput"
+                      name="q"
+                      type="search"
+                      autocomplete="off"
+                      placeholder="Search products, solutions or contact"
+                      required
+                    />
+
+                    <button
+                      class="header-search-submit"
+                      type="submit"
+                      aria-label="Submit search"
+                    >
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+
+                    <button
+                      class="header-search-close"
+                      id="headerSearchClose"
+                      type="button"
+                      aria-label="Close search"
+                    >
+                      <i class="bi bi-x-lg"></i>
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Quote button -->
+                <ul class="navbar-nav header-quote-nav">
+                  <li class="nav-item">
+                    <a class="btn btn-primary" href="contact-us.html">
+                      Get a Quote
+
+                      <span class="chat-icon-wrap">
+                        <i class="bi bi-chat-dots"></i>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+        
+        <section class="people-hero-body employee-hero-body py-5">
+          <div class="container">
+            <div class="row align-items-center justify-content-center text-center g-5 pt-5 mt-4">
+              <div class="col-lg-10 scroll-reveal" data-reveal="up">
+                <span class="super-head mb-3 d-inline-block">MOBILE</span>
+                <h1 class="mb-4 display-4 fw-bold">The Future of Intrinsically Safe Mobile Devices</h1>
+                <div class="d-flex align-items-center justify-content-center mt-5">
+                  <img src="assets/images/employee/emp-1.jpg" onerror="this.src='assets/images/employee/emp-hero.png'" alt="Admin" class="rounded-circle me-3 border border-3 border-white shadow-sm" width="60" height="60" style="object-fit: cover;">
+                  <div class="author-info text-start">
+                    <span class="author-name d-block fw-bold fs-5 mb-1">Admin</span>
+                    <span class="post-date d-block text-white-50">October 12, 2023 &bull; 5 min read</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="blog-detail-content py-5 bg-white">
+        <div class="container pb-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 scroll-reveal" data-reveal="up">
+              <img src="assets/images/RFEx11-front.png" alt="Mobile Devices" class="img-fluid rounded-4 shadow-sm mb-5 w-100" style="object-fit: contain; max-height: 500px; background-color: #f8f9fa; padding: 2rem;" />
+              
+              <div class="blog-body fs-5 text-dark" style="line-height: 1.8;">
+                <p class="mb-4 lead">Discover how next-generation intrinsically safe smartphones are revolutionizing communication and safety in hazardous environments around the globe.</p>
+                <p class="mb-4">In modern industrial operations, staying connected is no longer a luxury—it is a critical safety requirement. However, when working in environments where flammable gases, vapors, or combustible dust are present, standard consumer electronics pose a severe ignition risk.</p>
+                
+                <h3 class="mt-5 mb-4 fw-bold">Why Intrinsically Safe Matters</h3>
+                <p class="mb-4">In hazardous areas, the risk of explosion due to sparks or thermal energy is a constant concern. Intrinsically safe (IS) devices are designed from the ground up to prevent these risks by limiting electrical and thermal energy to levels below those required to ignite a specific hazardous atmospheric mixture.</p>
+                
+                <blockquote class="blockquote bg-light border-start border-4 border-danger rounded p-4 my-5">
+                  <p class="fst-italic text-dark mb-0 fs-4">"Safety is not just a feature; it is the foundation upon which modern industrial communication is built."</p>
+                </blockquote>
+                
+                <p class="mb-4">With the introduction of new regulations and the demand for real-time data connectivity, modern devices like the RFEx1.1 are setting new standards in the industry. These devices provide the same high-speed processing power, rich displays, and camera capabilities as standard smartphones, but with robust explosion-proof certifications (ATEX Zone 1/21).</p>
+                
+                <h3 class="mt-5 mb-4 fw-bold">Key Advancements in IS Technology</h3>
+                <ul class="list-group list-group-flush mb-5 ps-3">
+                  <li class="list-group-item bg-transparent border-0 ps-0 mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> <strong>Battery Innovations:</strong> Advanced power management and secure battery enclosures allow for full-shift usage without the risk of thermal runaway.</li>
+                  <li class="list-group-item bg-transparent border-0 ps-0 mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> <strong>Enhanced Connectivity:</strong> Support for 4G/5G and Wi-Fi 6 ensures seamless integration with modern plant networks.</li>
+                  <li class="list-group-item bg-transparent border-0 ps-0 mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i> <strong>Rugged Ergonomics:</strong> Designs that allow for easy operation while wearing heavy industrial gloves, coupled with high-visibility displays.</li>
+                </ul>
+
+                <p class="mb-4">The evolution of IS mobile devices is driving digital transformation in the oil and gas, chemical, and pharmaceutical sectors. By equipping frontline workers with safe, powerful computing tools, companies can streamline field data collection, enhance remote expert assistance, and ultimately create a safer working environment.</p>
+              </div>
+              
+              <!-- Share and Tags -->
+              <div class="d-flex align-items-center justify-content-between border-top border-bottom py-4 mt-5">
+                <div class="tags">
+                  <span class="fw-bold me-2 fs-6">Tags:</span>
+                  <a href="#" class="badge bg-light text-dark border text-decoration-none me-1 px-3 py-2">Mobile</a>
+                  <a href="#" class="badge bg-light text-dark border text-decoration-none me-1 px-3 py-2">Safety</a>
+                  <a href="#" class="badge bg-light text-dark border text-decoration-none px-3 py-2">Innovation</a>
+                </div>
+                <div class="share-buttons">
+                  <span class="fw-bold me-2 fs-6">Share:</span>
+                  <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle me-1" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle me-1" aria-label="Share on Twitter"><i class="bi bi-twitter-x"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle" aria-label="Share via Email"><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+              
+              <!-- Previous / Next Article Links -->
+              <div class="row mt-5 g-4">
+                <div class="col-md-6">
+                  <a href="#" class="d-flex flex-column text-decoration-none text-dark p-4 bg-light rounded-4 h-100 transition-hover-shadow">
+                    <span class="text-muted small text-uppercase mb-2"><i class="bi bi-arrow-left me-1"></i> Previous Article</span>
+                    <h5 class="fw-bold mb-0">Real-time Gas Monitoring in Hazardous Zones</h5>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="d-flex flex-column text-decoration-none text-dark p-4 bg-light rounded-4 h-100 text-md-end transition-hover-shadow">
+                    <span class="text-muted small text-uppercase mb-2">Next Article <i class="bi bi-arrow-right ms-1"></i></span>
+                    <h5 class="fw-bold mb-0">Securing Field Transactions with ATEX POS</h5>
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      aria-hidden="true"
+      aria-labelledby="searchModalLabel"
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="searchModalLabel">
+              Search Econiya
+            </h2>
+            <button
+              aria-label="Close"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              type="button"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-flex gap-2" id="siteSearchForm">
+              <label class="visually-hidden" for="siteSearchInput">Search</label
+              ><input
+                class="form-control"
+                id="siteSearchInput"
+                name="q"
+                placeholder="Try products, solutions or contact"
+                required=""
+                type="search"
+              /><button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Newsletter -->
+            <div class="newsletter">
+              <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                  <span class="super-head">NEWSLETTER</span>
+                  <h3>Field-tested insights, sent monthly.</h3>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                  <form
+                    class="newsletter-form"
+                    id="newsletterForm"
+                    novalidate=""
+                  >
+                    <input
+                      aria-label="Email address"
+                      autocomplete="email"
+                      class="form-control"
+                      id="newsletterEmail"
+                      name="email"
+                      placeholder="Enter your email"
+                      required=""
+                      type="email"
+                    />
+                    <button class="btn btn-primary" type="submit">
+                      Subscribe <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <p aria-live="polite" class="form-message"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="t-border" />
+        <div class="row footer-top">
+          <div class="col-lg-3">
+            <img
+              alt="Econiya"
+              class="footer-logo"
+              height="60"
+              src="assets/images/logo.png"
+              width="245"
+            />
+            <p>
+              Engineering Ex/IS-certified communication, gas detection and
+              industrial automation for the world's most demanding environments.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>PRODUCTS</h5>
+            <ul>
+              <li>
+                <a href="#">Mobile &amp; Tablets</a>
+              </li>
+              <li>
+                <a href="#">Gas Detectors</a>
+              </li>
+              <li>
+                <a href="#">Radios (DMR/PoC)</a>
+              </li>
+              <li>
+                <a href="#">Water Logger</a>
+              </li>
+              <li>
+                <a href="#">POS Machines</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>INDUSTRIES</h5>
+            <ul>
+              <li>
+                <a href="#">Automotive</a>
+              </li>
+              <li>
+                <a href="#">Oil &amp; Gas</a>
+              </li>
+              <li>
+                <a href="#">Agriculture</a>
+              </li>
+              <li>
+                <a href="#">Construction</a>
+              </li>
+              <li>
+                <a href="#">Food Processing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5>COMPANY</h5>
+            <ul>
+              <li>
+                <a href="about.html">About Us</a>
+              </li>
+              <li>
+                <a href="team.html">Our Team</a>
+              </li>
+              <li>
+                <a href="careers.html">Careers</a>
+              </li>
+              <li>
+                <a href="insights.html">Blog</a>
+              </li>
+              <li>
+                <a href="contact-us.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5>CONTACT US</h5>
+            <ul class="contact-list">
+              <li>
+                <a class="animation-item" href="mailto:info@econiya.com">
+                  <span class="d-flex flex-shrink-0">
+                    <i class="bi bi-envelope animate_bounce"></i>
+                  </span>
+                  info@econiya.com
+                </a>
+              </li>
+              <li>
+                <a class="animation-item" href="tel:+919876543210">
+                  <span class="d-flex flex-shrink-0">
+                    <i class="bi bi-telephone animate_bounce"></i>
+                  </span>
+                  +91 98765 43210
+                </a>
+              </li>
+              <li class="animation-item">
+                <span class="d-flex flex-shrink-0">
+                  <i class="bi bi-geo-alt animate_bounce"></i>
+                </span>
+                SCO 17-18-19, Second Floor, Sector 17-A, Chandigarh
+              </li>
+            </ul>
+            <div class="social-icons">
+              <a href="#">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="copyright">
+          <p>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2026 Econiya. All rights reserved.</p>
+          <ul>
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#">Terms of Service</a>
+            </li>
+            <li>
+              <a href="#">Cookie Policy</a>
+            </li>
+          </ul>
+          <!-- Scroll to Top Start -->
+          <button aria-label="Return to top" id="return-to-top" type="button">
+            <i class="bi bi-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/vendor/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
