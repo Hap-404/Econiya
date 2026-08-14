@@ -6789,14 +6789,17 @@ letter-spacing: normal;
 .blog-listing .section-head h2 {
   margin-bottom: 10px;
 }
-.blog-tags .tag-item {
+.blog-tags .tag-item,
+.blog-footer .tags a {
   font-size: 14px;
   padding: 5px 12px;
+  color: #302d31;
   border-radius: 30px;
   border: 1px solid #ECD2D3;
   transition: ease 0.3s;
 }
-.blog-tags .tag-item:hover {
+.blog-tags .tag-item:hover,
+.blog-footer .tags a:hover {
   color: #ffffff;
   border-color: var(--primary);
   background-color: var(--primary);
@@ -6835,6 +6838,45 @@ letter-spacing: normal;
 .post-pagination .page-item a:focus-visible {
   outline: none;
   box-shadow: none;
+}
+
+.share-buttons .btn {
+  padding: 0;
+  color: var(--primary);
+  transition: ease 0.3s;
+}
+.share-buttons .btn:hover i {
+  transform: none;
+  color: #222020;
+}
+
+.table-content a,
+.table-content a .text-danger {
+  color: var(--primary);
+  transition: ease 0.3s;
+}
+.table-content a:hover {
+  color: #222020;
+}
+.latest-post {
+  padding: 40px 0;
+}
+
+.employee-speaks-page .people-hero-media.blog-media > img {
+  max-height: 485px;
+}
+.prev-next-article h5 {
+  transition: ease 0.3s;
+}
+.prev-next-article a:hover h5 {
+  color: var(--primary);
+}
+.prev-next-article a {
+  transition: ease 0.3s;
+  border: 1px solid rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
+.prev-next-article a:hover {
+  border-color: var(--primary) !important;
 }
 
 /* =========================================================
