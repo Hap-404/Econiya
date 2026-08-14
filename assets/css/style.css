@@ -6824,6 +6824,19 @@ letter-spacing: normal;
   object-fit: cover;
 }
 
+.post-pagination .page-item a:hover,
+.post-pagination .page-item.active a {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+.post-pagination .page-item a:focus,
+.post-pagination .page-item a:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
 /* =========================================================
    RESPONSIVE TYPOGRAPHY
 ========================================================= */
