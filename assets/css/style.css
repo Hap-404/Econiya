@@ -3955,6 +3955,7 @@ line-height:28px;
 }
 .products-section .story-filters {
   overflow: visible;
+  flex-wrap: wrap;
 }
 .filter-block {
   margin: 30px 0;
@@ -3982,7 +3983,17 @@ line-height:28px;
   border-color: var(--primary);
 }
 .employee-speaks-page .product-grid-item .story-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0,0,0,0.05);
+}
+.product-grid-item .story-photo img {
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  max-height: 280px;
+  object-fit: revert;
 }
 
 /* =========================================================
@@ -4171,6 +4182,17 @@ line-height:28px;
   .econ-who-text p {
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  .product-grid-item .story-photo img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .employee-speaks-page .product-grid-item .story-copy {
+    padding: 15px;
+  }
+  .employee-speaks-page .product-grid-item .story-copy blockquote {
+    font-size: 16px;
   }
 }
 
@@ -7631,4 +7653,5 @@ letter-spacing: normal;
     padding-left: 20px;
   }
 }
+
 

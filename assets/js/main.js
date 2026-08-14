@@ -1,7 +1,7 @@
 (function ($) {
   "use strict";
 
-  function initStickyHeader() {
+    function initStickyHeader() {
     const update = () => $("header").toggleClass("sticky-header", $(window).scrollTop() >= 100);
     $(window).on("scroll", update);
     update();
@@ -2171,4 +2171,6 @@ $(document).ready(function() {
     });
   }
 });
+
+
 
