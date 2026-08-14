@@ -137,7 +137,7 @@ img {
 /*------- Header Style Start -------*/
  header {
    width: 100%;
-   z-index: 99;
+   z-index: 99 !important;
    padding: 15px 0;
 }
  header .navbar-expand-xl .navbar-collapse {
@@ -3949,6 +3949,41 @@ line-height:28px;
   align-items: center;
 }
 
+/* Products page style */
+.products-section {
+  padding: 40px 0;
+}
+.products-section .story-filters {
+  overflow: visible;
+}
+.filter-block {
+  margin: 30px 0;
+}
+.employee-speaks-page .product-grid-item .story-copy {
+    padding: 25px;
+}
+.employee-speaks-page .product-grid-item .story-person p {
+  font-size: 16px;
+}
+.employee-speaks-page .product-grid-item .story-copy blockquote {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+}
+.product-grid-item .btn-primary.universal-animated-btn {
+  padding: 20px;
+  height: 45px;
+  gap: 10px;
+}
+.product-grid-item .btn-primary.universal-animated-btn i {
+  font-size: 16px;
+}
+.product-grid-item .employee-story-card:hover {
+  border-color: var(--primary);
+}
+.employee-speaks-page .product-grid-item .story-photo {
+  background-color: rgba(0,0,0,0.05);
+}
 
 /* =========================================================
    LARGE TABLETS
@@ -7500,10 +7535,10 @@ letter-spacing: normal;
   z-index: 2;
   white-space: nowrap;
 }
-.mega-menu-cta .cta-btn:hover {
+/* .mega-menu-cta .cta-btn:hover {
   background: #c91823;
   color: #fff;
-}
+} */
 .mega-menu-cta .cta-btn i {
   font-size: 18px;
 }
