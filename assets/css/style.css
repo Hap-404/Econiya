@@ -7410,9 +7410,15 @@ letter-spacing: normal;
     width: 100%;
     margin-bottom: 10px;
   }
-  
   .stories-tab .tab-block:not(.mobile-tab-selection) {
     display: none;
+  }
+  .story-filters.product-filters {
+    padding: 14px;
+    border-radius: 30px;
+  }
+  .story-filters.product-filters button {
+    border-radius: 30px;
   }
 }
 
