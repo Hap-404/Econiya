@@ -6871,6 +6871,20 @@ letter-spacing: normal;
   border-color: var(--primary) !important;
 }
 
+.stats-section {
+  padding: 40px 0;
+}
+.stats-section .stat-box h2 {
+  font-size: 34px;
+}
+.stats-section .stat-box p {
+  line-height: 1.4;
+}
+
+.Where-it-runs {
+  padding: 40px 0;
+}
+
 /* =========================================================
    RESPONSIVE TYPOGRAPHY
 ========================================================= */
@@ -7000,6 +7014,9 @@ letter-spacing: normal;
   }
   .blog-content h3 {
     font-size: 26px;
+  }
+  .stats-section .infra-stats {
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
@@ -7266,6 +7283,9 @@ letter-spacing: normal;
   .testimonials-hero .hero-image img {
     aspect-ratio: 1/1;
     min-height: auto;
+  }
+  .stats-section .infra-stats {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -1822,6 +1822,10 @@
     transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.rxis-feature-icon i {
+  font-size: 28px;
+}
+
 /*
   Only the card currently under the pointer gets the effect.
 */
@@ -3428,6 +3432,10 @@
 /* =========================================================
    CARD TYPOGRAPHY
 ========================================================= */
+
+.data-path .rxis-certification-card h3 {
+  font-size: 28px;
+}
 
 .rxis-certification-card h3 {
   margin: 0;
