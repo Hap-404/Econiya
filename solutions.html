@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
+
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Solutions | Econiya</title>
-<meta content="Solutions page structure is ready for the approved Figma design and content." name="description"/>
+<title>Solutions | Industrial Innovation, Manufacturing &amp; Supply Chain Solutions</title>
+<meta content="Econiya delivers industrial innovation, manufacturing support, automation insight, and supply chain solutions for growing enterprises." name="description"/>
 <meta content="Econiya, industrial innovation, manufacturing solutions, supply chain, automation, logistics, factory consulting" name="keywords"/>
 <meta content="Econiya" name="author"/>
 <meta content="index, follow" name="robots"/>
@@ -17,26 +19,34 @@
 <meta content="https://www.econiya.com/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <link href="assets/images/favicon.ico" rel="icon" type="image/png"/>
+
+
+
 <link href="assets/css/fonts.css" rel="stylesheet"/><link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet"/>
 <!--Swiper Slider CSS--->
 <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 <link href="assets/css/style.css" rel="stylesheet"/>
 <link href="assets/css/responsive.css" rel="stylesheet"/>
-<link href="assets/css/fixes.css" rel="stylesheet"/></head>
-<body><a class="visually-hidden-focusable position-fixed top-0 start-0 p-3 bg-white" href="#main-content" style="z-index:2000">Skip to main content</a>
-  <header>
-  <nav class="navbar navbar-expand-xl">
+<link href="assets/css/fixes.css" rel="stylesheet"/>
+<link href="assets/css/infrastructure.css" rel="stylesheet"/>
+</head>
+<!-- Infrastructure responsive effects v2 -->
+<body class="infrastructure-page"><a class="visually-hidden-focusable position-fixed top-0 start-0 p-3 bg-white" href="#main-content" style="z-index:2000">Skip to main content</a>
+
+<main id="main-content"><div class="bg-wrapper">
+<header>
+    <nav class="navbar navbar-expand-xl">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html">
         <img
-          alt="Econiya"
-          height="60"
-          src="assets/images/logo.png"
-          width="245"
+            alt="Econiya"
+            height="60"
+            src="assets/images/logo.png"
+            width="245"
         />
-      </a>
-      <button
+        </a>
+        <button
         aria-controls="navMenu"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -44,15 +54,15 @@
         data-bs-target="#navMenu"
         data-bs-toggle="collapse"
         type="button"
-      >
+        >
         <i class="bi bi-list"></i>
-      </button>
-      <div class="collapse navbar-collapse test" id="navMenu">
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav main-menu">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown has-mega-menu">
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown has-mega-menu">
                       <a class="nav-link dropdown-toggle" href="about.html" data-bs-toggle="dropdown">About Us</a>
                       <div class="dropdown-menu mega-menu">
                         <div class="mega-menu-inner">
@@ -118,7 +128,7 @@
                         </div>
                       </div>
                     </li>
-          <li class="nav-item dropdown has-mega-menu products-mega-menu">
+            <li class="nav-item dropdown has-mega-menu products-mega-menu">
                       <a class="nav-link dropdown-toggle" href="products.html" data-bs-toggle="dropdown">Products</a>
                       <div class="dropdown-menu mega-menu">
                         <div class="mega-menu-inner">
@@ -215,103 +225,906 @@
                         </div>
                       </div>
                     </li>
-          <li class="nav-item">
+            <li class="nav-item">
             <a class="nav-link" href="solutions.html">Solutions</a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="insights.html">Insights</a>
-          </li>
-          <li class="nav-item">
+            </li>
+            <li class="nav-item">
             <a class="nav-link" href="contact-us.html">Contact Us</a>
-          </li>
+            </li>
         </ul>
-      </div>
-      
-      <div class="navbar-ml header-actions ms-3">
-<!-- Expandable inline search -->
-<div class="header-inline-search" id="headerInlineSearch">
+        </div>
+        
+        <div class="navbar-ml header-actions ms-3">
+    <!-- Expandable inline search -->
+    <div class="header-inline-search" id="headerInlineSearch">
 
-<!-- Closed search button -->
-<button
-class="header-search-toggle"
-id="headerSearchToggle"
-type="button"
-aria-label="Open search"
-aria-controls="headerSearchForm"
-aria-expanded="false"
->
-<i class="bi bi-search"></i>
-</button>
+    <!-- Closed search button -->
+    <button
+    class="header-search-toggle"
+    id="headerSearchToggle"
+    type="button"
+    aria-label="Open search"
+    aria-controls="headerSearchForm"
+    aria-expanded="false"
+    >
+    <i class="bi bi-search"></i>
+    </button>
 
-<!-- Expanded search form -->
-<form
-class="header-search-form"
-id="headerSearchForm"
-role="search"
-novalidate
->
-<label
-class="visually-hidden"
-for="headerSearchInput"
->
-Search Econiya
-</label>
+    <!-- Expanded search form -->
+    <form
+    class="header-search-form"
+    id="headerSearchForm"
+    role="search"
+    novalidate
+    >
+    <label
+    class="visually-hidden"
+    for="headerSearchInput"
+    >
+    Search Econiya
+    </label>
 
-<i
-class="bi bi-search header-search-leading-icon"
-aria-hidden="true"
-></i>
+    <i
+    class="bi bi-search header-search-leading-icon"
+    aria-hidden="true"
+    ></i>
 
-<input
-class="header-search-input"
-id="headerSearchInput"
-name="q"
-type="search"
-autocomplete="off"
-placeholder="Search products, solutions or contact"
-required
-/>
+    <input
+    class="header-search-input"
+    id="headerSearchInput"
+    name="q"
+    type="search"
+    autocomplete="off"
+    placeholder="Search products, solutions or contact"
+    required
+    />
 
-<button
-class="header-search-submit"
-type="submit"
-aria-label="Submit search"
->
-<i class="bi bi-arrow-right"></i>
-</button>
+    <button
+    class="header-search-submit"
+    type="submit"
+    aria-label="Submit search"
+    >
+    <i class="bi bi-arrow-right"></i>
+    </button>
 
-<button
-class="header-search-close"
-id="headerSearchClose"
-type="button"
-aria-label="Close search"
->
-<i class="bi bi-x-lg"></i>
-</button>
-</form>
-</div>
+    <button
+    class="header-search-close"
+    id="headerSearchClose"
+    type="button"
+    aria-label="Close search"
+    >
+    <i class="bi bi-x-lg"></i>
+    </button>
+    </form>
+    </div>
 
-<!-- Quote button -->
-<ul class="navbar-nav header-quote-nav">
-<li class="nav-item">
-<a
-class="btn btn-primary"
-href="contact-us.html"
->
-Get a Quote
+    <!-- Quote button -->
+    <ul class="navbar-nav header-quote-nav">
+    <li class="nav-item">
+    <a
+    class="btn btn-primary"
+    href="contact-us.html"
+    >
+    Get a Quote
 
-<span class="chat-icon-wrap">
-  <i class="bi bi-chat-dots"></i>
-</span>
-</a>
-</li>
-</ul>
-</div>
+    <span class="chat-icon-wrap">
+    <i class="bi bi-chat-dots"></i>
+    </span>
+    </a>
+    </li>
+    </ul>
+    </div>
 
     </div>
-  </nav>
+    </nav>
 </header>
-<main id="main-content"><section class="page-placeholder bg-wrapper"><div class="container"><div class="placeholder-box"><div class="super-head">ECONIYA</div><h1>Solutions</h1><p>Solutions page structure is ready for the approved Figma design and content.</p><a class="btn btn-primary mt-4" href="./index.html">Back to Home <i class="bi bi-arrow-right"></i></a></div></div></section></main><div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal fade" id="searchModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="searchModalLabel">Search Econiya</h2><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body"><form class="d-flex gap-2" id="siteSearchForm"><label class="visually-hidden" for="siteSearchInput">Search</label><input class="form-control" id="siteSearchInput" name="q" placeholder="Try products, solutions or contact" required="" type="search"/><button class="btn btn-primary" type="submit">Search</button></form></div></div></div></div><footer>
+
+<section class="infra-hero particle-hero">
+    <canvas class="hero-particle-canvas" aria-hidden="true"></canvas>
+    <div class="container">
+
+        <div class="infra-grid">
+
+            <!-- Left -->
+
+            <div class="infra-content rxis-reveal" data-reveal="left">
+
+                <span class="section-tag">Solutions</span>
+
+                <h1>Engineered for <span>the areas others avoid</span></h1>
+
+                <p>Certified hardware, connectivity and data platforms deployed where a single spark is unacceptable.</p>
+
+                <div class="hero-btns">
+                  <a class="btn btn-primary" href="contact-us.html">
+                    Get in touch <i class="bi bi-arrow-right"></i>
+                  </a>
+                  <a class="btn btn-outline  hero-secondary-cta" href="products.html">
+                    Explore Products <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="hero-gallery rxis-reveal" data-reveal="right">
+
+                <div class="gallery-top">
+
+                    <img src="assets/images/infrastructure/bridge.png"
+                        alt="Bridge">
+
+                </div>
+
+                <div class="gallery-bottom">
+
+                    <img src="assets/images/infrastructure/power.png"
+                        alt="Power">
+
+                    <img src="assets/images/infrastructure/steel.png"
+                        alt="Steel">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--============================
+                COUNTERS
+        =============================-->
+
+        <div class="infra-stats">
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+
+                <h2 class="counter" data-count="820">
+                    820<span>+</span>
+                </h2>
+
+                <p>Projects Completed</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+
+                <h2 class="counter" data-count="98.4">
+                    98.4<span>%</span>
+                </h2>
+
+                <p>On-Time Delivery</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+
+                <h2 class="counter" data-count="4.2">
+                    $4.2<span>B+</span>
+                </h2>
+
+                <p>Materials Sourced</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <div class="stat-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+
+                <h2>ISO 9001</h2>
+
+                <p>Certified Quality</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="capabilities section-space">
+    <div class="container">
+        <div class="section-heading rxis-reveal" data-rxis-reveal="up">
+            <span class="section-tag">OUR SOLUTIONS</span>
+            <h2>Product Focus - <span>Engineered for the Field.</span></h2>
+            <p>Intrinsically safe devices engineered for the field — scroll to explore our product categories.</p>
+        </div>
+        <div class="capability-grid solutions-grid">
+            <!-- Card 1 -->
+            <div class="capability-card rxis-reveal" data-rxis-reveal="up">
+                <div class="cap-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+                <span class="solution-tag">Rugged connectivity</span>
+                <h3>IoT & IIoT Services</h3>
+                <p>ATEX-certified smartphones and feature phones for hazardous environments, enabling seamless data flow where safety is paramount.</p>
+                <a class="btn btn-primary btn-sm" href="products.html">
+                  Explore <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="capability-card rxis-reveal" data-rxis-reveal="up">
+                <div class="cap-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+                <span class="solution-tag">Worker safety</span>
+                <h3>Hazardous Area Safety</h3>
+                <p>Gas detection, lone-worker protection and permit-to-work digitisation across Zone 1 and Zone 21 areas.</p>
+                <a class="btn btn-primary btn-sm" href="products.html">
+                  Explore <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="capability-card rxis-reveal" data-rxis-reveal="up">
+                <div class="cap-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+                <span class="solution-tag">Plant data</span>
+                <h3>Edge & Automation</h3>
+                <p>Edge gateways, OPC-UA/MQTT integration and control-room dashboards linked to your historian.</p>
+                <a class="btn btn-primary btn-sm" href="products.html">
+                  Explore <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="capability-card rxis-reveal" data-rxis-reveal="up">
+                <div class="cap-icon">
+                    <img src="assets/images/career/iot.svg" alt="iot">
+                </div>
+                <span class="solution-tag">Utilities</span>
+                <h3>Water & Utilities Telemetry</h3>
+                <p>Remote monitoring for pumping stations, treatment plants and distribution networks.</p>
+                <a class="btn btn-primary btn-sm" href="products.html">
+                  Explore <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =====================================
+     FACILITIES SECTION
+====================================== -->
+
+<section class="facilities section-space">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="facility-heading rxis-reveal" data-rxis-reveal="up">
+
+            <span class="section-tag">
+                OUR FACILITIES
+            </span>
+
+            <h2>
+                Three Sites,
+                <span>One Standard</span>
+            </h2>
+
+            <div class="facility-tabs">
+
+                <button class="facility-btn active" data-target="tab-1">
+                    Manufacturing Plant
+                </button>
+
+                <button class="facility-btn" data-target="tab-2">
+                    Development Centre
+                </button>
+
+                <button class="facility-btn" data-target="tab-3">
+                    Distribution Hub
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="facility-wrapper active-tab" id="tab-1">
+
+            <!-- LEFT -->
+
+            <div class="facility-image rxis-reveal" data-rxis-reveal="left">
+
+                <img src="assets/images/infrastructure/plant.png"
+                    alt="Manufacturing Plant">
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="facility-content rxis-reveal" data-rxis-reveal="right">
+
+                <div class="facility-location">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    Karnataka, India
+
+                </div>
+
+                <h3 class="facility-title">
+
+                    Manufacturing Plant
+
+                </h3>
+
+                <p class="facility-desc">
+
+                    Our primary production campus houses six automated lines,
+                    the mechanical shop and final assembly. Built for mixed
+                    high-mix, low-volume industrial runs without losing
+                    repeatability.
+
+                </p>
+
+                <div class="facility-stats">
+
+                    <div class="facility-box">
+
+                        <small>BUILT-UP AREA</small>
+
+                        <h4>82,000 sq.ft</h4>
+
+                    </div>
+
+                    <div class="facility-box">
+
+                        <small>OPERATIONAL SINCE</small>
+
+                        <h4>2016</h4>
+
+                    </div>
+
+                </div>
+
+                    <div class="facility-features">
+
+                    <div>
+
+                        <i class="bi bi-shield-check"></i>
+
+                        6 automated SMT & assembly lines
+
+                    </div>
+
+                    <div>
+
+                        <i class="bi bi-shield-check"></i>
+
+                        Dedicated Ex/IS build corridor
+
+                    </div>
+
+                    <div>
+
+                        <i class="bi bi-shield-check"></i>
+
+                        Rooftop solar covering 38% of load
+
+                    </div>
+
+                    <div>
+
+                        <i class="bi bi-shield-check"></i>
+
+                        24/7 shift operations
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="facility-wrapper " id="tab-2" style="display: none;">
+
+                <!-- LEFT -->
+
+                <div class="facility-image rxis-reveal" data-rxis-reveal="left">
+
+                    <img src="assets/images/infrastructure/steel.png"
+                        alt="Development Centre">
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="facility-content rxis-reveal" data-rxis-reveal="right">
+
+                    <div class="facility-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Pune, India
+
+                    </div>
+
+                    <h3 class="facility-title">
+
+                        Development Centre
+
+                    </h3>
+
+                    <p class="facility-desc">
+
+                        Our innovation hub houses R&amp;D labs and prototyping equipment, advancing our product lifecycle from concept to pilot production.
+
+                    </p>
+
+                    <div class="facility-stats">
+
+                        <div class="facility-box">
+
+                            <small>BUILT-UP AREA</small>
+
+                            <h4>45,000 sq.ft</h4>
+
+                        </div>
+
+                        <div class="facility-box">
+
+                            <small>OPERATIONAL SINCE</small>
+
+                            <h4>2016</h4>
+
+                        </div>
+
+                    </div>
+
+                    <div class="facility-features">
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            6 automated SMT & assembly lines
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Dedicated Ex/IS build corridor
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Rooftop solar covering 38% of load
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            24/7 shift operations
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+        <div class="facility-wrapper " id="tab-3" style="display: none;">
+
+                <!-- LEFT -->
+
+                <div class="facility-image rxis-reveal" data-rxis-reveal="left">
+
+                    <img src="assets/images/infrastructure/power.png"
+                        alt="Distribution Hub">
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="facility-content rxis-reveal" data-rxis-reveal="right">
+
+                    <div class="facility-location">
+
+                        <i class="bi bi-geo-alt"></i>
+
+                        Dubai, UAE
+
+                    </div>
+
+                    <h3 class="facility-title">
+
+                        Distribution Hub
+
+                    </h3>
+
+                    <p class="facility-desc">
+
+                        Our global logistics center ensures rapid deployment worldwide, keeping supply chains agile and responsive.
+
+                    </p>
+
+                    <div class="facility-stats">
+
+                        <div class="facility-box">
+
+                            <small>BUILT-UP AREA</small>
+
+                            <h4>120,000 sq.ft</h4>
+
+                        </div>
+
+                        <div class="facility-box">
+
+                            <small>OPERATIONAL SINCE</small>
+
+                            <h4>2016</h4>
+
+                        </div>
+
+                    </div>
+
+                    <div class="facility-features">
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            6 automated SMT & assembly lines
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Dedicated Ex/IS build corridor
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Rooftop solar covering 38% of load
+
+                        </div>
+
+                        <div>
+
+                            <i class="bi bi-shield-check"></i>
+
+                            24/7 shift operations
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </div>
+
+</section>
+
+
+<!-- ==========================================
+            PRODUCTION FLOW
+=========================================== -->
+
+<section class="production-flow section-space">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="section-heading rxis-reveal" data-rxis-reveal="up">
+
+            <span class="section-tag">
+                PRODUCTION FLOW
+            </span>
+
+            <h2 class="production-heading rxis-reveal" data-rxis-reveal="up">
+                Every Unit Passes
+                <span>Six Gates</span>
+            </h2>
+
+            <p>Nothing leaves the plant on assumption. Each stage writes to a digital birth record that stays with the serial number for its entire service life.</p>
+
+        </div>
+
+        <!-- Grid -->
+
+        <div class="production-grid">
+
+            <!-- 1 -->
+
+            <div class="production-item rxis-reveal" data-rxis-reveal="up">
+
+                <span class="step-no">1</span>
+
+                <div class="production-icon">
+                    <img src="assets/images/career/iot.svg" alt="">
+                </div>
+
+                <h3>Incoming QC</h3>
+
+                <p>
+                    Component-level verification, supplier lot traceability and
+                    moisture-sensitive device control.
+                </p>
+
+            </div>
+
+            <!-- 2 -->
+
+            <div class="production-item rxis-reveal" data-rxis-reveal="up">
+
+                <span class="step-no">2</span>
+
+                <div class="production-icon">
+                    <img src="assets/images/career/iot.svg" alt="">
+                </div>
+
+                <h3>Automated Build</h3>
+
+                <p>
+                    SMT placement, reflow profiling and inline optical
+                    inspection on every board.
+                </p>
+
+            </div>
+
+            <!-- 3 -->
+
+            <div class="production-item rxis-reveal" data-rxis-reveal="up">
+
+                <span class="step-no">3</span>
+
+                <div class="production-icon">
+                    <img src="assets/images/career/iot.svg" alt="">
+                </div>
+
+                <h3>Functional Test</h3>
+
+                <p>
+                    Bed-of-nails and firmware-driven functional testing with
+                    per-unit result archiving.
+                </p>
+
+            </div>
+
+            <!-- 4 -->
+
+            <div class="production-item rxis-reveal" data-rxis-reveal="up">
+
+                <span class="step-no">4</span>
+
+                <div class="production-icon">
+                    <img src="assets/images/career/iot.svg" alt="">
+                </div>
+
+                <h3>Environmental Stress</h3>
+
+                <p>
+                    Thermal cycling, vibration and IP ingress checks on sampled
+                    and certified builds.
+                </p>
+
+            </div>
+
+            <!-- 5 -->
+
+            <div class="production-item rxis-reveal" data-rxis-reveal="up">
+
+                <span class="step-no">5</span>
+
+                <div class="production-icon">
+                    <img src="assets/images/career/iot.svg" alt="">
+                </div>
+
+                <h3>Safety Verification</h3>
+
+                <p>
+                    Dielectric, earth-continuity and intrinsic-safety routine
+                    tests before release.
+                </p>
+
+            </div>
+
+            <!-- 6 -->
+
+            <div class="production-item rxis-reveal" data-rxis-reveal="up">
+
+                <span class="step-no">6</span>
+
+                <div class="production-icon">
+                    <img src="assets/images/career/iot.svg" alt="">
+                </div>
+
+                <h3>Pack & Dispatch</h3>
+
+                <p>
+                    Serialised packing with calibration certificates and digital
+                    birth records.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+        RESPONSIBLE OPERATIONS
+=========================================== -->
+
+<section class="responsible section-space">
+
+    <div class="container">
+
+        <div class="responsible-wrapper">
+
+            <!-- LEFT -->
+
+            <div class="responsible-content">
+
+                <span class="section-tag">
+                    RESPONSIBLE OPERATIONS
+                </span>
+
+                <h2>
+                    Infrastructure that
+                    <span> Earns its Footprint</span>
+                </h2>
+
+                <p>
+
+                    Nothing leaves the plant on assumption.
+                    Each stage writes to a digital birth
+                    record that stays with the serial number
+                    for its entire service life.
+
+                </p>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="responsible-grid">
+
+                <!-- Card -->
+
+                <div class="responsible-card rxis-reveal" data-rxis-reveal="up">
+
+                    <div class="responsible-icon">
+                        <img src="assets/images/career/iot.svg" alt="iot">
+                    </div>
+
+                    <h3>38% Solar-Powered</h3>
+
+                    <p>
+
+                        Rooftop PV array offsetting
+                        more than a third of plant
+                        demand.
+
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="responsible-card rxis-reveal" data-rxis-reveal="up">
+
+                    <div class="responsible-icon">
+                        <img src="assets/images/career/iot.svg" alt="iot">
+                    </div>
+
+                    <h3>Zero Landfill e-Waste</h3>
+
+                    <p>
+
+                        Authorised recycler
+                        partnerships with full
+                        chain-of-custody records.
+
+                    </p>
+
+                </div>
+
+                <!-- Card -->
+
+                <div class="responsible-card rxis-reveal" data-rxis-reveal="up">
+
+                    <div class="responsible-icon">
+                        <img src="assets/images/career/iot.svg" alt="iot">
+                    </div>
+
+                    <h3>Lean Cell Layout</h3>
+
+                    <p>
+
+                        Rooftop PV array offsetting
+                        more than a third of plant
+                        demand.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!--=================================
+        CTA SECTION
+==================================-->
+
+
+
+<div class="container">
+<div class="row d-flex justify-content-center">
+<div class="col-12">
+<div class="cta-content">
+<div class="cta-liquid"></div>
+<div class="section-head">
+<!-- <span class="super-head">START YOUR PROJECT</span> -->
+<h2>Come see the line for yourself</h2>
+</div>
+<p>We host customer audits, factory acceptance tests and engineering walkthroughs every month. Bring your specification — we'll show you exactly how it gets built.</p>
+<div class="section-btn">
+<a class="btn btn-white" href="#"> Schedule a Facility Audit <i class="bi bi-arrow-right"></i>
+</a>
+<!-- <a class="btn btn-outline" href="contact-us.html"> Talk to Our Team <i class="bi bi-arrow-right"></i>
+</a> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></main><div aria-hidden="true" aria-labelledby="searchModalLabel" class="modal fade" id="searchModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="searchModalLabel">Search Econiya</h2><button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button></div><div class="modal-body"><form class="d-flex gap-2" id="siteSearchForm"><label class="visually-hidden" for="siteSearchInput">Search</label><input class="form-control" id="siteSearchInput" name="q" placeholder="Try products, solutions or contact" required="" type="search"/><button class="btn btn-primary" type="submit">Search</button></form></div></div></div></div>
+
+<br/>
+
+<footer>
 <div class="container">
 <div class="row">
 <div class="col-12">
@@ -465,5 +1278,14 @@ Get a Quote
 <!-- Swiper -->
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/infrastructure.js"></script>
 </body>
+
 </html>
+
+
+
+
+
+
+

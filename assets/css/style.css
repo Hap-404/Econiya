@@ -134,6 +134,11 @@ img {
  .btn-check:checked + .btn:focus-visible, .btn.active:focus-visible, .btn.show:focus-visible, .btn:first-child:active:focus-visible, :not(.btn-check) + .btn:active:focus-visible {
    box-shadow: none;
 }
+.btn.btn-sm {
+  padding: 20px;
+  height: 45px;
+  gap: 10px;
+}
 /*------- Header Style Start -------*/
  header {
    width: 100%;
@@ -6877,6 +6882,27 @@ letter-spacing: normal;
 }
 .prev-next-article a:hover {
   border-color: var(--primary) !important;
+}
+
+/* Solutions page */
+
+.infrastructure-page .capability-grid.solutions-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.solutions-grid .capability-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+}
+.solutions-grid .capability-card .solution-tag {
+ align-self: flex-end;
+ margin-top: -38px;
+ font-size: 14px;
+ padding: 3px 10px;
+ border-radius: 22px;
+ border: 1px solid #ECD2D3;
+ opacity: 0.8;
 }
 
 /* =========================================================

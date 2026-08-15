@@ -105,11 +105,11 @@
 }
 
 .infrastructure-page .gallery-top img {
-  height: clamp(250px, 27vw, 340px);
+  height: clamp(250px, 27vw, 280px);
 }
 
 .infrastructure-page .gallery-bottom img {
-  height: clamp(170px, 20vw, 250px);
+  height: clamp(170px, 20vw, 280px);
 }
 
 .infrastructure-page .infra-stats {
@@ -440,11 +440,11 @@
   }
 
   .infrastructure-page .gallery-top img {
-    height: clamp(280px, 50vw, 430px);
+    height: clamp(280px, 50vw, 280px);
   }
 
   .infrastructure-page .gallery-bottom img {
-    height: clamp(190px, 31vw, 290px);
+    height: clamp(190px, 31vw, 280px);
   }
 
   .infrastructure-page .facility-image {
@@ -522,8 +522,8 @@
   }
 
   .infrastructure-page .gallery-top img {
-    height: clamp(220px, 68vw, 330px);
-    border-radius: 20px;
+    height: clamp(220px, 68vw, 200px);
+    border-radius: 17px;
   }
 
   .infrastructure-page .gallery-bottom {
@@ -594,6 +594,9 @@
   .infrastructure-page .capability-card {
     min-width: 0;
     padding: 60px 20px 20px;
+  }
+  .infrastructure-page .capability-grid.solutions-grid {
+    grid-template-columns: 1fr;
   }
 }
 
