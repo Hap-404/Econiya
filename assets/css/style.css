@@ -6884,7 +6884,11 @@ letter-spacing: normal;
 .Where-it-runs {
   padding: 40px 0;
 }
-
+.solutions-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .solutions-image img {
   max-height: 440px;
 }
