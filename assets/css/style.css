@@ -6885,6 +6885,10 @@ letter-spacing: normal;
   padding: 40px 0;
 }
 
+.solutions-image img {
+  max-height: 440px;
+}
+
 /* =========================================================
    RESPONSIVE TYPOGRAPHY
 ========================================================= */
